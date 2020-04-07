@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-bold.woff') format('woff'),
+         url('../fonts/montserrat-bold.ttf') format('truetype'),
+         url('../fonts/montserrat-bold.svg#montserratbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular.woff') format('woff'),
+         url('../fonts/montserrat-regular.ttf') format('truetype'),
+         url('../fonts/montserrat-regular.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand-bold.woff') format('woff'),
+         url('../fonts/quicksand-bold.ttf') format('truetype'),
+         url('../fonts/quicksand-bold.svg#quicksandbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand-regular.woff') format('woff'),
+         url('../fonts/quicksand-regular.ttf') format('truetype'),
+         url('../fonts/quicksand-regular.svg#quicksandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?96xigr');
+  src:  url('../fonts/icomoon.eot?96xigr#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?96xigr') format('truetype'),
+    url('../fonts/icomoon.woff?96xigr') format('woff'),
+    url('../fonts/icomoon.svg?96xigr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_forward_purple:before {
+  content: "\e900";
+}
+.icon-arrow_forward_white:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-emoticon:before {
+  content: "\e902";
+}
+.icon-expand_more_gray1:before {
+  content: "\e903";
+}
+.icon-expand_more_white:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-facebook:before {
+  content: "\e905";
+}
+.icon-instagram:before {
+  content: "\e906";
+}
+.icon-like_button_active:before {
+  content: "\e907";
+  color: #bc9cff;
+}
+.icon-like_button_inActive:before {
+  content: "\e908";
+}
+.icon-location_city:before {
+  content: "\e909";
+}
+.icon-rate_button_inActive:before {
+  content: "\e90a";
+}
+.icon-rate_button_active:before {
+  content: "\e90b";
+}
+.icon-twitter:before {
+  content: "\e90c";
+}
+.icon-whatshot:before {
+  content: "\e90d";
+}
+.icon-expand_more_gray:before {
+  content: "\1f324";
+}
