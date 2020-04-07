@@ -1,0 +1,23 @@
+@import '../../styles/virables.scss';
+
+.text-field {
+    max-width: 20rem;
+    width: 100%;
+    padding: 0.75rem 0.875rem;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: $Dark-75;
+    border: 0.0625rem solid $Dark-25;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    outline: none;
+}
+.text-field:hover, .text-field:focus {
+    border: 0.0625rem solid $Dark-50;
+}
+.text-field::placeholder {
+    color: $Dark-25;
+}
