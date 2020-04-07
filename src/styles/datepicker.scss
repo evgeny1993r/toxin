@@ -101,10 +101,10 @@ div.datepicker--cell.-current- {
     border-radius: 50%;
     position: relative;
 }
-div.datepicker--cell.-current-.-focus- {
+div.datepicker--cell.-current-.-focus-,
+div.datepicker--cell.-current-.-selected- {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color: #FFFFFF;
-
 }
 div.datepicker--cell.-current-.-in-range- {
     position: relative;
