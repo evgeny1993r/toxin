@@ -1,0 +1,20 @@
+mixin item (className, title)
+    .item(class= className)
+        span.item__title= title
+        .item__btns
+            span.item__btn-dic.js-item__btn-dic -
+            span.item__value 0
+            span.item__btn-inc.js-item__btn-inc +
+.dropdown-guests.dropdown-guests_active.js-dropdown-guests
+    h3.title dropdown
+    span.expression.js-expression Сколько гостей
+        i.icon-expand_more_gray
+    .container-parent
+        .container-items-btns
+            .items
+                +item('js-adults', 'Взрослые')
+                +item('js-children', 'Дети')
+                +item('js-babies', 'Младенцы')
+            .btns
+                span.btn-clear.js-btn-clear Очистить
+                span.btn-apply.js-btn-apply Применить
