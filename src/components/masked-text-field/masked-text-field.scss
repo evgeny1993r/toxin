@@ -12,6 +12,7 @@
         line-height: 0.938rem;
         text-transform: uppercase;
         color: $Dark-100;
+        cursor: pointer;
     }
     .masked-text-field__input {
         width: 100%;
@@ -24,6 +25,8 @@
         line-height: 1.5rem;
         color: $Dark-75;
         padding: 0.563rem 0.875rem;
+        outline: none;
+        cursor: pointer;
     }
     .masked-text-field__input::placeholder {
         color: rgba(31, 32, 65, 0.25);
