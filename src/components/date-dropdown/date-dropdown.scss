@@ -1,0 +1,59 @@
+@import '../../styles/virables.scss';
+
+.date-dropdown {
+    width: 320px;
+    display: grid;
+    row-gap: 5px;
+    .labels {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        column-gap: 20px;
+    }
+    .label {
+        width: max-content;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $Dark-100;
+        cursor: pointer;
+    }
+    .inputs {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        column-gap: 20px;
+    }
+    .entry-input, .check-out-input {
+        border: 1px solid $Dark-25;
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: auto 44px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $Dark-75;
+        padding: 11px 0 13px 14px;
+    }
+    .icon-expand_more_gray {
+        font-size: 9px;
+        text-align: center;
+        align-self: center;
+    }
+    #datepicker {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        content: '';
+        opacity: 0;
+        cursor: pointer;
+    }
+}
