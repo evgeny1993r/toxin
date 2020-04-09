@@ -1,22 +1,22 @@
 @import '../../styles/virables.scss';
 
 .date-dropdown {
-    width: 320px;
+    width: 20rem;
     display: grid;
-    row-gap: 5px;
+    row-gap: 0.313rem;
     .labels {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 150px);
-        column-gap: 20px;
+        grid-template-columns: repeat(2, 9.375rem);
+        column-gap: 1.25rem;
     }
     .label {
         width: max-content;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
         text-transform: uppercase;
         color: $Dark-100;
         cursor: pointer;
@@ -25,24 +25,25 @@
         position: relative;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 150px);
-        column-gap: 20px;
+        grid-template-columns: repeat(2, 9.375rem);
+        column-gap: 1.25rem;
     }
     .entry-input, .check-out-input {
-        border: 1px solid $Dark-25;
-        border-radius: 4px;
+        border: 0.063rem solid $Dark-25;
+        border-radius: 0.25rem;
         display: grid;
-        grid-template-columns: auto 44px;
+        grid-template-columns: auto 2.75rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: $Dark-75;
-        padding: 11px 0 13px 14px;
+        padding: 0.688rem 0 0.813rem 0.875rem;
     }
     .icon-expand_more_gray {
-        font-size: 9px;
+        font-size: 0.563rem;
+        line-height: 0.563rem;
         text-align: center;
         align-self: center;
     }
