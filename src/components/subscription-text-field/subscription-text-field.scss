@@ -1,28 +1,42 @@
 @import '../../styles/virables.scss';
 
+/* 
+    1px - 0.063rem +
+    4px - 0.25rem +
+    8px - 0.5rem +
+    9px - 0.563rem
+    10px - 0.625rem +
+    14px - 0.875rem +
+    19px - 1.188rem +
+    24px - 1.5rem +
+    44px - 2.75rem +
+    266px - 16.625rem +
+*/ 
+
 .subscription-text-field {
-    max-width: 266px;
+    max-width: 16.625rem;
     display: grid;
-    grid-template-columns: auto 44px;
-    border: 1px solid $Dark-25;
-    border-radius: 4px;
+    grid-template-columns: auto 2.75rem;
+    border: 0.063rem solid $Dark-25;
+    border-radius: 0.25rem;
     cursor: pointer;
     .subscription-text-field__input {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
-        padding: 10px 0 8px 14px;
+        padding: 9px 0 9px 0.875rem;
         outline: none;
         border: none;
+        border-radius: inherit;
     }
     .subscription-text-field__input::placeholder {
         color: $Dark-25;
     }
     .icon-arrow_forward_purple {
-        font-size: 19px;
+        font-size: 1.188rem;
         text-align: center;
         align-self: center;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -31,4 +45,10 @@
         -moz-background-clip: text;
         background-clip: text;
     }
+}
+.subscription-text-field:hover {
+    border: 0.063rem solid $Dark-50;
+}
+.subscription-text-field_active {
+    border: 0.063rem solid $Dark-50;
 }
