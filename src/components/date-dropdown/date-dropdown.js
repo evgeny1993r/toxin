@@ -4,7 +4,7 @@ import 'air-datepicker/dist/css/datepicker.min.css'
 import '../../styles/datepicker.scss'
 
 function DateDropdown (one_date, two_date) {
-    // Обьявление переменных 
+    // Объявление переменных 
     const $entry_input = $('.entry-input')
     const $check_out_input = $('.check-out-input')
     const icon = `<i class="icon-expand_more_gray"></i>`
@@ -37,8 +37,7 @@ function DateDropdown (one_date, two_date) {
             } else if(date.length === 2) {
                 $check_out_input.html(fd.split(',')[1] + icon) 
             }
-        },
-
+        }
     }).data('datepicker').selectDate([one_date, two_date])
 
     // Создание и добавление кнопки Применить
