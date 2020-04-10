@@ -1,37 +1,37 @@
 @import '../../styles/virables.scss';
 
 .filter-date-dropdown {
-    width: 266px;
+    width: 16.625rem;
     display: grid;
-    row-gap: 5px;
+    row-gap: 0.313rem;
     .filter-date-dropdown__label {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
         text-transform: uppercase;
         color: $Dark-100;
         cursor: pointer;
     }
     .container {
         position: relative;
-        border: 1px solid $Dark-25;
+        border: 0.063rem solid $Dark-25;
     }
     .filter-date-dropdown__input {
         display: grid;
-        grid-template-columns: auto 44px;
+        grid-template-columns: auto 2.75rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
-        padding: 9px 0 9px 14px;
+        padding: 0.563rem 0 0.563rem 0.875rem;
     }
     .icon-expand_more_gray {
-        font-size: 9px;
-        line-height: 9px;
+        font-size: 0.563rem;
+        line-height: 0.563rem;
         text-align: center;
         align-self: center;
     }
