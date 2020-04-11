@@ -41,9 +41,11 @@
         color: $Dark-75;
         padding: 0.688rem 0 0.813rem 0.875rem;
     }
-    .icon-expand_more_gray {
-        font-size: 0.563rem;
-        line-height: 0.563rem;
+    .icon-expand_more {
+        font-size: 12px;
+        line-height: 12px;
+        color: $Dark-50;
+        transform: rotate(-90deg);
         text-align: center;
         align-self: center;
     }

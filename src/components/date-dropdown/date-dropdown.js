@@ -7,7 +7,7 @@ function DateDropdown (one_date, two_date) {
     // Объявление переменных 
     const $entry_input = $('.entry-input')
     const $check_out_input = $('.check-out-input')
-    const icon = `<i class="icon-expand_more_gray"></i>`
+    const icon = `<i class="icon-expand_more"></i>`
 
     // Создание datepicker
     const $datepicker = $('#datepicker-date-dropdown')
