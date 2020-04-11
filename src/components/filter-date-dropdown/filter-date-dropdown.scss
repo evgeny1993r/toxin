@@ -17,6 +17,7 @@
     .container {
         position: relative;
         border: 0.063rem solid $Dark-25;
+        border-radius: 4px;
     }
     .filter-date-dropdown__input {
         display: grid;
@@ -29,10 +30,12 @@
         color: $Dark-75;
         padding: 0.563rem 0 0.563rem 0.875rem;
     }
-    .icon-expand_more_gray {
-        font-size: 0.563rem;
-        line-height: 0.563rem;
-        text-align: center;
+    .icon-expand_more {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        color: $Dark-50;
+        transform: rotate(-90deg);
+        justify-self: center;
         align-self: center;
     }
     #datepicker-filter-date-dropdown {

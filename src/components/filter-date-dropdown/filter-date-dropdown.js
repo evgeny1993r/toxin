@@ -6,7 +6,7 @@ import '../../styles/datepicker.scss'
 function FilterDateDropdown(one_date, two_date) {
     // Объявления переменных
     const $filter_date_dropdown_input = $('.filter-date-dropdown__input')
-    const icon = `<i class="icon-expand_more_gray"></i>`
+    const icon = `<i class="icon-expand_more"></i>`
     const $datepicker = $('#datepicker-filter-date-dropdown')
 
     // Создание datepicker
