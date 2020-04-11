@@ -3,8 +3,9 @@ import './dropdown-guests.scss'
 function DropdownGuests(adults, children, babies) {
 
     const $dropdown_guests = $('.js-dropdown-guests')
+    const $label = $('.js-dropdown-guests__label')
     const $expression = $('.js-expression')
-    const icon = `<i class="icon-expand_more_gray"></i>`
+    const icon = `<i class="icon-expand_more"></i>`
 
     // Кнопки применить и очистить
     const $btn_apply = $('.js-btn-apply')
@@ -53,6 +54,9 @@ function DropdownGuests(adults, children, babies) {
 
     // Открытие / закрытие dropdown-guests
     $expression.on('click', () => {
+        $dropdown_guests.toggleClass('dropdown-guests_active')
+    })
+    $label.on('click', () => {
         $dropdown_guests.toggleClass('dropdown-guests_active')
     })
     

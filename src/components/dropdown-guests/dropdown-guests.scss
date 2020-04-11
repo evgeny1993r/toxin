@@ -2,7 +2,7 @@
 
 .dropdown-guests {
     width: 20rem;
-    .title {
+    .dropdown-guests__label {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -10,6 +10,7 @@
         line-height: 0.9375rem;
         text-transform: uppercase;
         color: $Dark-100;
+        cursor: pointer;
     }
     .expression {
         margin-top: 0.3125rem;
@@ -28,9 +29,11 @@
         padding: 0.6875rem 0 0.6875rem 0.9375rem;
         user-select: none;
     }
-    .icon-expand_more_gray {
-        font-size: 0.5rem;
-        line-height: 0.5rem;
+    .icon-expand_more {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        color: $Dark-50;
+        transform: rotate(-90deg);
         justify-self: center;
         align-self: center;
     }
