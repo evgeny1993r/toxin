@@ -7,10 +7,11 @@ function FilterDateDropdown(one_date, two_date) {
     // Объявления переменных
     const $filter_date_dropdown_input = $('.filter-date-dropdown__input')
     const icon = `<i class="icon-expand_more_gray"></i>`
-    const $datepicker = $('#datepicker')
+    const $datepicker = $('#datepicker-filter-date-dropdown')
 
     // Создание datepicker
     $datepicker.datepicker({
+        classes: 'datepicker-filter-date-dropdown',
         navTitles: {
             days: 'MM <i>yyyy</i>'
         },
@@ -44,7 +45,7 @@ function FilterDateDropdown(one_date, two_date) {
         text: 'Применить',
         'data-action': 'hide'
     })
-    const $datepicker_buttons = $('.datepicker--buttons')
+    const $datepicker_buttons = $('.datepicker-filter-date-dropdown').find('.datepicker--buttons')
     $datepicker_buttons.append(button_apply)
 }
 
