@@ -10,8 +10,9 @@ function DateDropdown (one_date, two_date) {
     const icon = `<i class="icon-expand_more_gray"></i>`
 
     // Создание datepicker
-    const $datepicker = $('#datepicker')
+    const $datepicker = $('#datepicker-date-dropdown')
     $datepicker.datepicker({
+        classes: 'datepicker-date-dropdown',
         navTitles: {
             days: 'MM <i>yyyy</i>'
         },
@@ -46,7 +47,7 @@ function DateDropdown (one_date, two_date) {
         text: 'Применить',
         'data-action': 'hide'
     })
-    const $datepicker_buttons = $('.datepicker--buttons')
+    const $datepicker_buttons = $('.datepicker-date-dropdown').find('.datepicker--buttons')
     $datepicker_buttons.append(button_apply)
 }
 
