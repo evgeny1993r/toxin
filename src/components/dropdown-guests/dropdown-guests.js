@@ -3,8 +3,8 @@ import './dropdown-guests.scss'
 function DropdownGuests(adults, children, babies) {
 
     const $dropdown_guests = $('.js-dropdown-guests')
-    const $label = $('.js-dropdown-guests__label')
-    const $expression = $('.js-expression')
+    const $label = $('.js-label')
+    const $expression = $dropdown_guests.find('.js-expression')
     const icon = `<i class="icon-expand_more"></i>`
 
     // Кнопки применить и очистить
@@ -32,7 +32,7 @@ function DropdownGuests(adults, children, babies) {
         let expression = 'Сколько гостей'
 
         if(number_guests === 0) {
-            $expression.html(expression + icon)
+            expression = expression
         } else if(number_guests === 1) {
             expression = `${number_guests} гость`
         } else if(number_guests >= 2 && number_guests <= 4) {
