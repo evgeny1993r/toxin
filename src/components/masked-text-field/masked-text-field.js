@@ -3,9 +3,10 @@ import 'air-datepicker'
 import 'air-datepicker/dist/css/datepicker.min.css'
 import '../../styles/datepicker.scss'
 
-$(document).ready(() => {
+function MaskedTextField () {
     const $masked_text_field_input = $('.js-masked-text-field__input')
     $masked_text_field_input.datepicker({
+        classes: 'datepicker-masked-text-field',
         navTitles: {
             days: 'MM <i>yyyy</i>'
         },
@@ -21,13 +22,17 @@ $(document).ready(() => {
         `,
         offset: 7,
         clearButton: true
-    }).data('datepicker')
+    })
 
     const button_apply = $('<span>', {
         class: 'datepicker--button',
         text: 'Применить',
         'data-action': 'hide'
     })
-    const $datepicker_buttons = $('.datepicker--buttons')
+    const $datepicker_buttons = $('.datepicker-masked-text-field').find('.datepicker--buttons')
     $datepicker_buttons.append(button_apply)
-})
+}
+
+export {
+    MaskedTextField
+}
