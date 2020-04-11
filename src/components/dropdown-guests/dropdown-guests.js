@@ -54,10 +54,10 @@ function DropdownGuests(adults, children, babies) {
 
     // Открытие / закрытие dropdown-guests
     $expression.on('click', () => {
-        $dropdown_guests.toggleClass('dropdown-guests_active')
+        $dropdown_guests.addClass('dropdown-guests_active')
     })
     $label.on('click', () => {
-        $dropdown_guests.toggleClass('dropdown-guests_active')
+        $dropdown_guests.addClass('dropdown-guests_active')
     })
     
     // Закрытие dropdown-guests по click вне элемента
