@@ -1,0 +1,55 @@
+@import '../../styles/virables.scss';
+
+/* 
+    1px - 0.063rem
+    8px - 0.5rem
+    10px - 0.625rem
+    12px - 0.75rem
+    20px - 1.25rem
+    40px - 2.5rem
+*/ 
+
+.like-button {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background: $Dark-25;
+    padding: 1px;
+    cursor: pointer;
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        background: #FFFFFF;
+        border-radius: inherit;
+    }
+    .icon-like_button_inActive, .icon-like_button_active {
+        font-size: 8px;
+        line-height: 8px;
+        justify-self: center;
+    }
+    .icon-like_button_inActive {
+        color: $Dark-25;
+    }
+    .icon-like_button_active {
+        color: $Purple;
+    }
+    .icon-like_button_active {
+        color: $Purple;
+    }
+    .like-button__value {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        color: $Dark-25;
+    }
+}
+.like-button_active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.like-button_active .like-button__value {
+    color: $Purple;
+}
