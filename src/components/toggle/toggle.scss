@@ -1,25 +1,25 @@
 @import '../../styles/virables.scss';
 
 /* 
-    1px - 0.063rem
-    4px - 0.25rem
-    10px - 0.625rem
-    12px - 0.75rem
-    14px - 0.875rem
-    20px - 1.25rem
-    24px - 1.5rem
-    40px - 2.5rem
+    1px - 0.063rem +
+    4px - 0.25rem +
+    10px - 0.625rem +
+    12px - 0.75rem +
+    14px - 0.875rem +
+    20px - 1.25rem +
+    24px - 1.5rem +
+    40px - 2.5rem +
 */ 
 
 .toggle {
     display: grid;
-    grid-template-columns: 40px auto;
-    column-gap: 10px;
+    grid-template-columns: 2.5rem auto;
+    column-gap: 0.625rem;
     transition: 1s;
     .toggle__input {
         position: relative;
-        width: 40px;
-        height: 20px;
+        width: 2.5rem;
+        height: 1.25rem;
         cursor: pointer;
         outline: none;
         -moz-appearance: none;
@@ -33,33 +33,33 @@
         top: 0;
         left: 0;
         content: '';
-        border: 1px solid $Dark-25;
-        border-radius: 10px;
+        border: 0.063rem solid $Dark-25;
+        border-radius: 0.625rem;
         box-sizing: border-box;
     }
     .toggle__input::after {
         position: absolute;
-        width: 12px;
-        height: 12px;
-        left: 4px;
-        top: 4px;
+        width: 0.75rem;
+        height: 0.75rem;
+        left: 0.25rem;
+        top: 0.25rem;
         content: '';
         background: $Dark-25;
         border-radius: 50%;
     }
     .toggle__input:checked::before {
-        border: 1px solid $Purple;
+        border: 0.063rem solid $Purple;
     }
     .toggle__input:checked::after {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        left: 24px;
+        left: 1.5rem;
     }
     .toggle__label {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
         cursor: pointer;
     }
