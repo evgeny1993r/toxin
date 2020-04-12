@@ -1,11 +1,11 @@
 @import '../../styles/virables.scss';
 
 /*
-    1px - 0.063rem
-    10px - 0.625rem
-    12px - 0.75rem
-    14px - 0.875rem
-    20px - 1.25rem
+    1px - 0.063rem +
+    10px - 0.625rem +
+    12px - 0.75rem +
+    14px - 0.875rem +
+    20px - 1.25rem +
     24px - 1.5rem
 */ 
 
@@ -13,16 +13,16 @@
     width: max-content;
     display: grid;
     grid-template-columns: repeat(2, max-content);
-    column-gap: 20px;
+    column-gap: 1.25rem;
     .button {
         display: grid;
-        grid-template-columns: 20px auto;
-        column-gap: 10px;
+        grid-template-columns: 1.25rem auto;
+        column-gap: 0.625rem;
     }
     .button__input {
         position: relative;
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
         display: grid;
         outline: none;
         cursor: pointer;
@@ -38,16 +38,16 @@
         left: 0;
         content: '';
         box-sizing: border-box;
-        border: 1px solid $Dark-25;
+        border: 0.063rem solid $Dark-25;
         border-radius: 50%;
     }
     .button__input:checked::before {
-        border: 1px solid $Purple;
+        border: 0.063rem solid $Purple;
     }
     .button__input:checked::after {
         position: absolute;
-        width: 12px;
-        height: 12px;
+        width: 0.75rem;
+        height: 0.75rem;
         content: '';
         background: $Purple;
         border-radius: 50%;
@@ -58,8 +58,8 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
         cursor: pointer;
     }
