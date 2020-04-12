@@ -1,0 +1,10 @@
+.rate-button {
+    .icon-rate_button_active, .icon-rate_button_inActive {
+        font-size: 1.406rem;
+        line-height: 1.406rem;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
