@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "jquery-range": "^1.0.0"
   },
   "description": ""
 }
