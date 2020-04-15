@@ -1,35 +1,35 @@
 /* 
-    12px - 0.75rem
-    15px - 0.938rem
-    18px - 1.125rem
-    22px - 1.375rem
-    44px - 2.75rem
+    12px - 0.75rem +
+    15px - 0.938rem +
+    18px - 1.125rem +
+    22px - 1.375rem +
+    44px - 2.75rem +
     320px - 20rem
 */ 
 
 .btn {
-    max-width: 320px;
+    max-width: 20rem;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
+    border-radius: 1.375rem;
     display: grid;
-    grid-template-columns: auto 44px;
-    grid-template-rows: 44px;
+    grid-template-columns: auto 2.75rem;
+    grid-template-rows: 2.75rem;
     justify-items: center;
     align-items: center;
     .btn__text {
-        padding-left: 44px;
+        padding-left: 2.75rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
         text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
     }
     .btn__icon {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 1.125rem;
+        line-height: 1.125rem;
         color: #FFFFFF;
     }
 }
