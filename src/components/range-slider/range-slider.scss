@@ -1,0 +1,69 @@
+@import '../../styles/virables.scss';
+
+/* 
+    1px - 0.0625rem
+    2px - 0.125rem
+    3px - 0.1875rem
+    6px - 0.375rem
+    16px - 1rem
+*/ 
+
+.range-slider {
+    width: 266px;
+    .range-slider__container {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+        margin-bottom: 22px;
+    }
+    .title {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $Dark-100
+    }
+    .range-slider__value {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $Dark-50;
+    }
+    .range-slider__text {
+        display: block;
+        margin-top: 10px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $Dark-50;
+    }
+}
+div.slider-container {
+    div.back-bar {
+        height: 6px;
+        background: #FFFFFF;
+        border: 1px solid $Dark-25;
+        border-radius: 3px;
+            div.selected-bar {
+            background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border-radius: 3px;
+            height: 6px;
+            top: -1px;
+        }
+    }
+    div.pointer.low, div.pointer.high {
+        width: 16px;
+        height: 16px;
+        top: -6px;
+        background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        border: 2px solid #ffffff;
+        cursor: pointer;
+    }
+}
