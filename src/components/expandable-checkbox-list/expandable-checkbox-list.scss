@@ -13,7 +13,7 @@
     18px - 1.125rem +
     20px - 1.25rem +
     44px - 2.75rem +
-    266px - 16.625rem
+    266px - 16.625rem +
 */ 
 
 .expandable-checkbox-list {
@@ -38,6 +38,9 @@
         color: $Dark-50;
     }
     .item-list {
+        width: 16.625rem;
+        position: absolute;
+        background: #FFFFFF;
         display: none;
         row-gap: 0.625rem;
         margin-top: 0.188rem;
