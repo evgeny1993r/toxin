@@ -1,12 +1,12 @@
 @import '../../styles/virables.scss';
 
 /* 
-    6px - 0.375rem
-    10px - 0.625rem
-    14px - 0.875rem
-    16px - 1rem
-    19px - 1.188rem
-    20px - 1.25rem
+    6px - 0.375rem +
+    10px - 0.625rem +
+    14px - 0.875rem +
+    16px - 1rem +
+    19px - 1.188rem +
+    20px - 1.25rem +
     24px - 1.5rem
 */ 
 
@@ -16,35 +16,35 @@
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
+        font-size: 1.188rem;
+        line-height: 1.5rem;
         color: $Dark-100;
-        margin-left: 20px;
+        margin-left: 1.25rem;
     }
     .item-list {
-        margin-top: 16px;
+        margin-top: 1rem;
         display: grid;
-        row-gap: 10px;
+        row-gap: 0.625rem;
     }
     .item {
         list-style-type: none;
         display: grid;
         grid-template-columns: max-content auto;
-        column-gap: 10px;
+        column-gap: 0.625rem;
     }
     .item__circle {
-        width: 10px;
-        height: 10px;
+        width: 0.625rem;
+        height: 0.625rem;
         background: $Dark-25;
         border-radius: 50%;
-        margin-top: 6px;
+        margin-top: 0.375rem;
     }
     .item__text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
     }
 }
