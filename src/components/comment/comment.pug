@@ -1,0 +1,10 @@
+mixin comment(img, name, date, state, value, text)
+    .comment 
+        .container-one
+            img.container-one__icon(src= img, alt="icon")
+            span.container-one__name #{name}
+            span.container-one__date #{date}
+        .container-two
+            include ../like-button/like-button.pug 
+            +like-button(state, value)
+            p.container-two__text #{text}
