@@ -34,13 +34,13 @@
         display: grid;
         row-gap: 0.625rem;
     }
-    .create-account {
+    .container-sign-up {
         margin-top: 1.875rem;
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
     }
-    .create-account__text {
+    .container-sign-up__text {
         align-self: center;
         font-family: Montserrat, sans-serif;
         font-style: normal;
