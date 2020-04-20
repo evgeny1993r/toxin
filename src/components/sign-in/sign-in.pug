@@ -1,0 +1,11 @@
+form.sign-in 
+    h3.title Войти
+    .container-text-field
+        include ../text-field/text-field.pug 
+        +text-field('text', 'Email')
+        +text-field('password', 'Пароль')
+    include ../buttons/buttons.pug 
+    +button('btn_fourth', 'Войти')
+    .create-account
+        span.create-account__text Нет аккаунта на Toxin?
+        +button('btn_second_active', 'Создать')
