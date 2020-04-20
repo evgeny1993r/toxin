@@ -1,60 +1,59 @@
 @import '../../styles/virables.scss';
 
-/*
-    2px - 0.125rem +
-    4px - 0.25rem +
-    12px - 0.75rem +
-    14px - 0.875rem +
-    15px - 0.938rem +
-    20px - 1.25rem +
+/* 
+    2px - 0.125rem
+    12px - 0.75rem
+    13px - 0.813rem
+    14px - 0.875rem
+    15px - 0.938rem
+    18px - 1.125rem
+    20px - 1.25rem
     22px - 1.375rem
 */ 
 
-.btn-first, .btn-second, .btn-third {
-    width: max-content;
+.btn {
+    display: inline-block;
+    cursor: pointer;
+}
+.btn_first, .btn_first_active {
+    padding: 15px 20px 14px 20px;
+    border-radius: 22px;
+    .btn__value {
+        color: #ffffff;
+    }
+}
+.btn_first, .btn_second {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+.btn_first_active, .btn_second_active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);  
+}
+.btn_second, .btn_second_active {
+    padding: 2px;
+    border-radius: 22px;
+    .btn__value {
+        padding: 13px 18px 12px 18px;
+        color: $Purple;
+        background: #ffffff;
+        border-radius: inherit;
+    }
+}
+.btn_third {
+    .btn__value {
+        color: $Dark-50;
+    }
+}
+.btn_third_active {
+    .btn__value {
+        color: $Purple;
+    }
+}
+.btn__value {
+    display: block;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.938rem;
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
-    cursor: pointer;
-}
-.btn-first, .btn-second {
-    padding: 0.875rem 1.25rem 0.938rem 1.25rem;
-    border-radius: 1.375rem;
-}
-.btn-first {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    color: #FFFFFF;
-}
-.btn-first_active {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
-}
-.btn-second {
-    position: relative;
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    color: $Purple;  
-}
-.btn-second::before {
-    position: absolute;
-    width: calc(100% - 0.25rem);
-    height: calc(100% - 0.25rem);
-    top: 0.125rem;
-    left: 0.125rem;
-    content: 'click me';
-    background: #FFFFFF;
-    border-radius: inherit;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-}
-.btn-second_active {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);   
-}
-.btn-third {
-    color: $Dark-50;
-}
-.btn-third_active {
-    color: $Purple;
 }
