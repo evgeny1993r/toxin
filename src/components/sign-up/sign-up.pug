@@ -1,0 +1,18 @@
+form.sign-up 
+    h1.title Регистрация аккаунта
+    .container-text-field-one
+        include ../text-field/text-field.pug 
+        +text-field('text', 'Имя')
+        +text-field('text', 'Фамилия')
+    include ../radio-buttons/radio-buttons.pug 
+    include ../masked-text-field/masked-text-field.pug
+    h3.title Данные для входа в сервис 
+    .container-text-field-two 
+        +text-field('text', 'Email')
+        +text-field('password', 'Пароль')
+    include ../toggle/toggle.pug 
+    include ../buttons/buttons.pug 
+    +button('btn_fourth', 'Перейти к оплате')
+    .container-sign-in 
+        span.container-sign-in__text Уже есть аккаунт на Toxin
+        +button('btn_second_active', 'Войти')
