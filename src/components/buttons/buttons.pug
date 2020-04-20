@@ -1,3 +1,6 @@
 mixin button(className, value)
     .btn(class= className)
         span.btn__value #{value}
+        if(className == 'btn_fourth')
+            i.icon-arrow_forward
+        
