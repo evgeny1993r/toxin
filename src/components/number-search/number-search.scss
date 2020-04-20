@@ -1,36 +1,36 @@
 @import '../../styles/virables.scss';
 
 /* 
-    1px - 0.063rem
-    4px - 0.25rem
-    21px - 1.313rem
-    24px - 1.5rem
-    25px - 1.563rem
-    30px - 1.875rem
-    33px - 2.063rem
-    40px - 2.5rem
+    1px - 0.063rem +
+    4px - 0.25rem +
+    21px - 1.313rem +
+    24px - 1.5rem +
+    25px - 1.563rem +
+    30px - 1.875rem +
+    33px - 2.063rem +
+    40px - 2.5rem +
     380px - 23.75rem
 */ 
 
 .number-search {
-    width: 380px;
+    width: 23.75rem;
     background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 40px 30px 30px 30px;
+    border: 0.063rem solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 1.563rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    padding: 2.5rem 1.875rem 1.875rem 1.875rem;
     .title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 1.5rem;
+        line-height: 1.875rem;
         color: $Dark-100;
     }
     .date-dropdown, .dropdown-guests {
-        margin-top: 21px;
+        margin-top: 1.313rem;
     }
     .btn.btn_fourth {
-        margin-top: 33px;
+        margin-top: 2.063rem;
     }
 }
