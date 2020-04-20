@@ -1,71 +1,71 @@
 @import '../../styles/virables.scss';
 
 /* 
-    1px - 0.063rem
-    4px - 0.25rem
-    5px - 0.313rem
-    10px - 0.625rem
-    12px - 0.75rem
-    14px - 0.875rem
-    15px - 0.938rem
-    18px - 1.125rem
-    20px - 1.25rem
-    24px - 1.5rem
-    25px - 1.563rem
-    30px - 1.875rem
-    40px - 2.5rem
-    380px - 23.75rem
+    1px - 0.063rem +
+    4px - 0.25rem +
+    5px - 0.313rem +
+    10px - 0.625rem +
+    12px - 0.75rem +
+    14px - 0.875rem +
+    15px - 0.938rem +
+    18px - 1.125rem +
+    20px - 1.25rem +
+    24px - 1.5rem +
+    25px - 1.563rem +
+    30px - 1.875rem +
+    40px - 2.5rem +
+    380px - 23.75rem +
 */ 
 
 .sign-up {
-    width: 380px;
-    padding: 40px 30px 30px 30px;
+    width: 23.75rem;
+    padding: 2.5rem 1.875rem 1.875rem 1.875rem;
     background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    border: 0.063rem solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 1.563rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
     h1.title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 1.5rem;
+        line-height: 1.875rem;
         color: $Dark-100;
     }
     .container-text-field-one {
-        margin-top: 20px;
+        margin-top: 1.25rem;
         display: grid;
-        row-gap: 10px;
+        row-gap: 0.625rem;
     }
     .radio-buttons {
-        margin-top: 10px;
+        margin-top: 0.625rem;
     }
     .masked-text-field {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
     h3.title {
-        margin-top: 20px;
+        margin-top: 1.25rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
         text-transform: uppercase;
         color: $Dark-100;
     }
     .container-text-field-two {
-        margin-top: 5px;
+        margin-top: 0.313rem;
         display: grid;
-        row-gap: 10px;
+        row-gap: 0.625rem;
     }
     .toggle {
-        margin-top: 10px;
+        margin-top: 0.625rem;
     }
     .btn.btn_fourth {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
     .container-sign-in {
-        margin-top: 30px;
+        margin-top: 1.875rem;
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
@@ -75,8 +75,8 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: #000000;
     }
 }
