@@ -1,0 +1,164 @@
+@import '../../styles/virables.scss';
+
+/* 
+    1px - 
+    4px - 
+    5px - 
+    10px - 
+    12px - 
+    14px - 
+    15px - 
+    16px - 
+    18px - 
+    19px - 
+    20px - 
+    22px - 
+    23px - 
+    24px - 
+    25px - 
+    30px - 
+    35px -  
+    40px - 
+    43px - 
+    75px - 
+    380px - 
+*/ 
+
+.check {
+    width: 380px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 43px 30px 30px 30px;
+    .info {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+    }
+    .container-number {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        column-gap: 5px;
+        align-items: end;
+    }
+    .container-number__symbol {
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $Dark-100;
+    }
+    .container-number__number {
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: $Dark-100;
+    }
+    .container-number__number-state {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $Purple;
+    }
+    .container-price {
+        align-self: end;
+    }
+    .container-price__price {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: $Dark-50;
+    }
+    .container-price__time {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: $Dark-50;
+    }
+    .date-dropdown {
+        margin-top: 23px;
+    }
+    .dropdown-guests {
+        margin-top: 20px;
+    }
+    .date {
+        display: grid;
+        row-gap: 10px;
+        margin-top: 18px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $Dark-75;
+    }
+    .price-accommodation {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+        line-height: 24px;
+    }
+    .discount, .collection {
+        display: grid;
+        grid-template-columns: auto 20px 75px;
+        column-gap: 5px;
+    }
+    .discount__icon, .collection__icon {
+        width: 100%;
+        height: 20px;
+        border: 1px solid $Dark-25;
+        border-radius: 50%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        color: $Dark-25;
+        cursor: pointer;
+    }
+    .discount__total, .collection__total  {
+        text-align: right;
+    }
+    .discount {
+        white-space: nowrap;
+    }
+    .collection {
+        line-height: 18px;
+    }
+    .total {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: max-content auto max-content;
+        column-gap: 5px;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 22px;
+        color: $Dark-100;
+    }
+    .total__line {
+        width: 100%;
+        height: 1px;
+        background: $Dark-25;
+        align-self: end;
+        margin-bottom: 5px;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+}
