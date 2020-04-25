@@ -10,15 +10,15 @@ mixin check(number, number_state, price, discount, collection)
                 span.container-price__time в сутки
         include ../date-dropdown/date-dropdown.pug 
         include ../dropdown-guests/dropdown-guests.pug 
-        .date
-            .price-accommodation
-                span.price-accommodation__price.js-price-accommodation__price-time 
+        .data
+            p.price-accommodation 
+                span.price-accommodation__price-time.js-price-accommodation__price-time 
                 span.price-accommodation__total.js-price-accommodation__total 
-            .discount 
+            p.discount 
                 span.discount__text Сбор за услуги: скидка #{discount}₽ 
                 span.discount__icon i 
                 span.discount__total 0₽ 
-            .collection 
+            p.collection 
                 span.collection__text Сбор за дополнительные услуги 
                 span.collection__icon i 
                 span.collection__total #{collection}₽ 
