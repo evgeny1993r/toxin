@@ -29,6 +29,7 @@ function DateDropdown (one_date, two_date) {
         offset: 7,
         clearButton: true,
         range: true,
+        minDate: new Date(),
         onSelect(fd, date, inst) {
             if(date.length === 0) {
                 $entry_input.html(`ДД.ММ.ГГГГ ${icon}`)
@@ -43,12 +44,14 @@ function DateDropdown (one_date, two_date) {
 
     // Создание и добавление кнопки Применить
     const button_apply = $('<span>', {
-        class: 'datepicker--button',
+        class: 'datepicker--button js-datepicker__apply',
         text: 'Применить',
         'data-action': 'hide'
     })
     const $datepicker_buttons = $('.datepicker-date-dropdown').find('.datepicker--buttons')
     $datepicker_buttons.append(button_apply)
+    
+    return $datepicker.data('datepicker')
 }
 
 export {
