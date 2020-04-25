@@ -1,36 +1,36 @@
 @import '../../styles/virables.scss';
 
 /* 
-    1px - 
-    4px - 
-    5px - 
-    10px - 
-    12px - 
-    14px - 
-    15px - 
-    16px - 
-    18px - 
-    19px - 
-    20px - 
-    22px - 
-    23px - 
-    24px - 
-    25px - 
-    30px - 
-    35px -  
-    40px - 
-    43px - 
-    75px - 
-    380px - 
+    1px - 0.063rem
+    4px - 0.25rem
+    5px - 0.313rem
+    10px - 0.625rem
+    12px - 0.75rem
+    14px - 0.875rem
+    15px - 0.938rem
+    16px - 1rem
+    18px - 1.125rem
+    19px - 1.188rem
+    20px - 1.25rem
+    22px - 1.375rem
+    23px - 1.438rem
+    24px - 1.5rem
+    25px - 1.563rem
+    30px - 1.875rem
+    35px - 0.188rem
+    40px - 2.5rem
+    43px - 2.688rem
+    75px - 4.688rem
+    380px - 23.75rem
 */ 
 
 .check {
     width: 380px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 43px 30px 30px 30px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px 29px 30px 29px;
     .info {
         display: grid;
         grid-template-columns: repeat(2, max-content);
@@ -47,7 +47,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 23px;
         color: $Dark-100;
     }
     .container-number__number {
@@ -55,7 +55,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
-        line-height: 24px;
+        line-height: 30px;
         color: $Dark-100;
     }
     .container-number__number-state {
@@ -63,7 +63,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 12px;
-        line-height: 15px;
+        line-height: 20px;
         text-transform: uppercase;
         color: $Purple;
     }
@@ -75,7 +75,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 21px;
         color: $Dark-50;
     }
     .container-price__time {
@@ -87,15 +87,18 @@
         color: $Dark-50;
     }
     .date-dropdown {
-        margin-top: 23px;
+        margin-top: 20px;
     }
     .dropdown-guests {
         margin-top: 20px;
     }
-    .date {
+    .data {
+        margin-top: 17px;
+    }
+    .price-accommodation {
         display: grid;
-        row-gap: 10px;
-        margin-top: 18px;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -103,16 +106,17 @@
         line-height: 24px;
         color: $Dark-75;
     }
-    .price-accommodation {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        justify-content: space-between;
-        line-height: 24px;
-    }
-    .discount, .collection {
+    .discount {
+        margin-top: 10px;
         display: grid;
         grid-template-columns: auto 20px 75px;
         column-gap: 5px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $Dark-75;
     }
     .discount__icon, .collection__icon {
         width: 100%;
@@ -130,34 +134,47 @@
         color: $Dark-25;
         cursor: pointer;
     }
-    .discount__total, .collection__total  {
-        text-align: right;
-    }
-    .discount {
-        white-space: nowrap;
+    .discount__total, .collection__total {
+        justify-self: end;
     }
     .collection {
+        margin-top: 13px;
+        display: grid;
+        grid-template-columns: auto 20px 75px;
+        column-gap: 5px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
         line-height: 18px;
+        color: $Dark-75;
     }
     .total {
-        margin-top: 35px;
+        margin-top: 30px;
         display: grid;
         grid-template-columns: max-content auto max-content;
         column-gap: 5px;
-        font-family: sans-serif;
+    }
+    .total__title {
+        font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 19px;
-        line-height: 22px;
+        line-height: 24px;
         color: $Dark-100;
     }
     .total__line {
-        width: 100%;
-        height: 1px;
-        background: $Dark-25;
-        align-self: end;
+        border-bottom: 1px dashed $Dark-25;
         margin-bottom: 5px;
     }
+    .total__price {
+        font-family: Quicksand, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+        color: $Dark-100;
+    } 
     .btn {
         margin-top: 20px;
     }
