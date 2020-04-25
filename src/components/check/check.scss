@@ -1,36 +1,36 @@
 @import '../../styles/virables.scss';
 
 /* 
-    1px - 0.063rem
-    4px - 0.25rem
-    5px - 0.313rem
-    10px - 0.625rem
-    12px - 0.75rem
-    14px - 0.875rem
-    15px - 0.938rem
-    16px - 1rem
-    18px - 1.125rem
-    19px - 1.188rem
-    20px - 1.25rem
-    22px - 1.375rem
-    23px - 1.438rem
-    24px - 1.5rem
-    25px - 1.563rem
-    30px - 1.875rem
-    35px - 0.188rem
-    40px - 2.5rem
-    43px - 2.688rem
-    75px - 4.688rem
-    380px - 23.75rem
+    1px - 0.063rem +
+    4px - 0.25rem +
+    5px - 0.313rem +
+    10px - 0.625rem +
+    12px - 0.75rem + 
+    13px - 0.813rem +
+    14px - 0.875rem +
+    16px - 1rem + 
+    17px - 1.063rem +
+    18px - 1.125rem +
+    19px - 1.188rem +
+    20px - 1.25rem +
+    21px - 1.313rem +
+    23px - 1.438rem +
+    24px - 1.5rem +
+    25px - 1.563rem +
+    29px - 1.813rem +
+    30px - 1.875rem +
+    40px - 2.5rem +
+    75px - 4.688rem +
+    380px - 23.75rem +
 */ 
 
 .check {
-    width: 380px;
+    width: 23.75rem;
     background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    padding: 40px 29px 30px 29px;
+    border: 0.063rem solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 1.563rem rgba(0, 0, 0, 0.2);
+    padding: 2.5rem 1.813rem 1.875rem 1.813rem;
     .info {
         display: grid;
         grid-template-columns: repeat(2, max-content);
@@ -39,31 +39,31 @@
     .container-number {
         display: grid;
         grid-template-columns: repeat(3, max-content);
-        column-gap: 5px;
+        column-gap: 0.313rem;
         align-items: end;
     }
     .container-number__symbol {
         font-family: sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 14px;
-        line-height: 23px;
+        font-size: 0.875rem;
+        line-height: 1.438rem;
         color: $Dark-100;
     }
     .container-number__number {
         font-family: sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 1.5rem;
+        line-height: 1.875rem;
         color: $Dark-100;
     }
     .container-number__number-state {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
         text-transform: uppercase;
         color: $Purple;
     }
@@ -74,26 +74,26 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 0.875rem;
+        line-height: 1.313rem;
         color: $Dark-50;
     }
     .container-price__time {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 0.75rem;
+        line-height: 1rem;
         color: $Dark-50;
     }
     .date-dropdown {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
     .dropdown-guests {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
     .data {
-        margin-top: 17px;
+        margin-top: 1.063rem;
     }
     .price-accommodation {
         display: grid;
@@ -102,26 +102,26 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
     }
     .discount {
-        margin-top: 10px;
+        margin-top: 0.625rem;
         display: grid;
-        grid-template-columns: auto 20px 75px;
-        column-gap: 5px;
+        grid-template-columns: auto 1.25rem 4.688rem;
+        column-gap: 0.313rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
     }
     .discount__icon, .collection__icon {
         width: 100%;
-        height: 20px;
-        border: 1px solid $Dark-25;
+        height: 1.25rem;
+        border: 0.063rem solid $Dark-25;
         border-radius: 50%;
         display: grid;
         justify-content: center;
@@ -129,8 +129,8 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 0.75rem;
+        line-height: 0.875rem;
         color: $Dark-25;
         cursor: pointer;
     }
@@ -138,44 +138,44 @@
         justify-self: end;
     }
     .collection {
-        margin-top: 13px;
+        margin-top: 0.813rem;
         display: grid;
-        grid-template-columns: auto 20px 75px;
-        column-gap: 5px;
+        grid-template-columns: auto 1.25rem 4.688rem;
+        column-gap: 0.313rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: $Dark-75;
     }
     .total {
-        margin-top: 30px;
+        margin-top: 1.875rem;
         display: grid;
         grid-template-columns: max-content auto max-content;
-        column-gap: 5px;
+        column-gap: 0.313rem;
     }
     .total__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
+        font-size: 1.188rem;
+        line-height: 1.5rem;
         color: $Dark-100;
     }
     .total__line {
-        border-bottom: 1px dashed $Dark-25;
-        margin-bottom: 5px;
+        border-bottom: 0.063rem dashed $Dark-25;
+        margin-bottom: 0.313rem;
     }
     .total__price {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
+        font-size: 1.188rem;
+        line-height: 1.5rem;
         color: $Dark-100;
     } 
     .btn {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 }
