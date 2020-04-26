@@ -1,0 +1,33 @@
+mixin room(img_one, img_two, img_three, img_four, number, number_state, price_value, rate_button_value, reviews_value)
+    .room
+        .slider 
+            .images.js-images 
+                img.image(src= img_one, alt="Image")
+                img.image(src= img_two, alt="Image")
+                img.image(src= img_three, alt="Image")
+                img.image(src= img_four, alt="Image")
+            .btn-left.js-btn-left
+                i.icon-expand_more
+            .btn-right.js-btn-right
+                i.icon-expand_more 
+            .circles.js-circles 
+                .circle.circle_active 
+                .circle 
+                .circle 
+                .circle 
+        .content 
+            .info-one
+                .room-info
+                    span.room-info__symbol № 
+                    span.room-info__number #{number}
+                    span.room-info__number-state #{number_state}
+                .price-info
+                    span.price-info__value #{price_value}₽ 
+                    span.price-info__time в сутки
+            .line
+            .info-two
+                include ../rate-button/rate-button.pug 
+                +rate-button(rate_button_value)
+                .reviews
+                    span.reviews__value #{reviews_value} 
+                    span.reviews__text Отзывов
