@@ -1,44 +1,44 @@
 @import '../../styles/virables.scss';
 
 /*
-    1px - 0.063rem
-    3.5px - 0.219rem
-    4px - 0.25rem
-    5px - 0.313rem
-    7.5px - 0.469rem
-    10px - 0.625rem
-    12px - 0.75rem
-    14px - 0.875rem
-    15px - 0.938rem
-    16.3px - 1.019rem
-    18px - 1.125rem
-    19px - 1.188rem
-    20px - 1.25rem
-    23px - 1.438rem
-    41.25px - 2.578rem
-    44px - 2.75rem
+    1px - 0.063rem +
+    3.5px - 0.219rem +
+    4px - 0.25rem +
+    5px - 0.313rem +
+    7.5px - 0.469rem +
+    10px - 0.625rem +
+    12px - 0.75rem +
+    14px - 0.875rem +
+    15px - 0.938rem +
+    16.3px - 1.019rem +
+    18px - 1.125rem +
+    19px - 1.188rem +
+    20px - 1.25rem +
+    23px - 1.438rem +
+    41.25px - 2.578rem +
+    44px - 2.75rem +
     270px - 16.875rem
 */ 
 
 .room {
-    width: 270px;
+    width: 16.875rem;
     background: #FFFFFF;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    border-radius: 4px;
+    box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
+    border-radius: 0.25rem;
     .slider {
         position: relative;
         display: grid;
-        grid-template-columns: 44px auto 44px;
+        grid-template-columns: 2.75rem auto 2.75rem;
     }
     .images {
         overflow: hidden;
         grid-column: 1 / 4;
         grid-row: 1 / 2;
         display: grid;
-        grid-template-columns: repeat(4, 270px);
+        grid-template-columns: repeat(4, 16.875rem);
     }
     .image {
-        border-radius: 4px 4px 0 0;
+        border-radius: 0.25rem 0.25rem 0 0;
         transition: 1s;
     }
     .btn-left, .btn-right {
@@ -49,22 +49,22 @@
         align-content: center;
         cursor: pointer;
         .icon-expand_more {
-            font-size: 12px;
-            line-height: 12px;
+            font-size: 0.75rem;
+            line-height: 0.75rem;
             color: #ffffff;
         }
     }
     .btn-left {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        border-radius: 4px 0 0 0;
+        border-radius: 0.25rem 0 0 0;
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
         
     }
     .btn-right {
         grid-column: 3 / 4;
         grid-row: 1 / 2;
-        border-radius: 0 4px 0 0;
+        border-radius: 0 0.25rem 0 0;
         background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
         .icon-expand_more {
             transform: rotate(180deg);
@@ -73,25 +73,25 @@
     .circles {
         position: absolute;
         z-index: 3;
-        bottom: 15px;
-        right: 15px;
-        width: 41.25px;
+        bottom: 0.938rem;
+        right: 0.938rem;
+        width: 2.578rem;
         display: grid;
-        grid-template-columns: repeat(4, 7.5px);
-        grid-template-rows: 7.5px;
-        column-gap: 3.5px;
+        grid-template-columns: repeat(4, 0.469rem);
+        grid-template-rows: 0.469rem;
+        column-gap: 0.219rem;
     }
     .circle {
         width: 100%;
         height: 100%;
-        border: 1px solid #ffffff;
+        border: 0.063rem solid #ffffff;
         border-radius: 50%;
     }
     .circle_active {
         background: #ffffff;
     }
     .content {
-        padding: 20px;
+        padding: 1.25rem;
     }
     .info-one {
         display: grid;
@@ -101,27 +101,27 @@
     }
     .room-info__symbol {
         font-family: Quicksand, sans-serif;
-        font-size: 14px;
-        line-height: 16.3px;
+        font-size: 0.875rem;
+        line-height: 1.019rem;
         font-weight: bold;
         font-style: normal;
         color: $Dark-100;
     }
     .room-info__number {
         font-family: Quicksand, sans-serif;
-        font-size: 19px;
-        line-height: 23px;
+        font-size: 1.188rem;
+        line-height: 1.438rem;
         font-weight: bold;
         font-style: normal;
         color: $Dark-100;
     }
     .room-info__number-state {
-        padding-left: 5px;
+        padding-left: 0.313rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
         text-transform: uppercase;
         color: $Purple;
     }
@@ -129,21 +129,21 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: $Dark-50;
     }
     .price-info__time {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 12px;
-        line-height: 18px;
+        font-size: 0.75rem;
+        line-height: 1.125rem;
         color: $Dark-50;
     }
     .line {
-        margin: 10px 0;
-        height: 1px;
+        margin: 0.625rem 0;
+        height: 0.063rem;
         background: rgba(31, 32, 65, 0.1);
     }
     .info-two {
@@ -153,10 +153,10 @@
         align-items: center;
     }
     .reviews {
-        font-family: Montserrat;
+        font-family: Montserrat, sans-serif;
         font-style: normal;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: $Dark-50;
     }
     .reviews__value {
