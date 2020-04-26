@@ -1,13 +1,13 @@
-mixin check(number, number_state, price, discount, collection)
+mixin check(number, number_state, price_value, discount, collection)
     .check 
         .info
-            .container-number
-                span.container-number__symbol №
-                span.container-number__number #{number}
-                span.container-number__number-state #{number_state}
-            .container-price
-                span.container-price__price #{price}₽   
-                span.container-price__time в сутки
+            .room-info
+                span.room-info__symbol № 
+                span.room-info__number #{number}
+                span.room-info__number-state #{number_state}
+            .price-info
+                span.price-info__value #{price_value}₽ 
+                span.price-info__time в сутки
         include ../date-dropdown/date-dropdown.pug 
         include ../dropdown-guests/dropdown-guests.pug 
         .data

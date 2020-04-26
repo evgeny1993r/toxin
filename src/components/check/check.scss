@@ -8,15 +8,18 @@
     12px - 0.75rem + 
     13px - 0.813rem +
     14px - 0.875rem +
+    15px - 0.938rem +
     16px - 1rem + 
     17px - 1.063rem +
     18px - 1.125rem +
     19px - 1.188rem +
     20px - 1.25rem +
     21px - 1.313rem +
+    22px - 1.375rem +
     23px - 1.438rem +
     24px - 1.5rem +
     25px - 1.563rem +
+    28px - 1.75rem +
     29px - 1.813rem +
     30px - 1.875rem +
     40px - 2.5rem +
@@ -29,65 +32,59 @@
     background: #FFFFFF;
     border: 0.063rem solid rgba(0, 0, 0, 0.12);
     border-radius: 0.25rem;
-    box-shadow: 0px 0px 1.563rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1.563rem rgba(0, 0, 0, 0.2);
     padding: 2.5rem 1.813rem 1.875rem 1.813rem;
     .info {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
-    }
-    .container-number {
-        display: grid;
-        grid-template-columns: repeat(3, max-content);
-        column-gap: 0.313rem;
         align-items: end;
     }
-    .container-number__symbol {
-        font-family: sans-serif;
+    .room-info__symbol {
+        font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 0.875rem;
-        line-height: 1.438rem;
+        line-height: 1rem;
         color: $Dark-100;
     }
-    .container-number__number {
+    .room-info__number {
         font-family: sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 1.5rem;
-        line-height: 1.875rem;
+        line-height: 1.75rem;
         color: $Dark-100;
     }
-    .container-number__number-state {
+    .room-info__number-state {
+        padding-left: 0.313rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 0.75rem;
-        line-height: 1.25rem;
+        line-height: 0.938rem;
         text-transform: uppercase;
         color: $Purple;
     }
-    .container-price {
-        align-self: end;
-    }
-    .container-price__price {
+    .price-info {}
+    .price-info__value {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 0.875rem;
-        line-height: 1.313rem;
+        line-height: 1.125rem;
         color: $Dark-50;
     }
-    .container-price__time {
+    .price-info__time {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 0.75rem;
-        line-height: 1rem;
+        line-height: 1.125rem;
         color: $Dark-50;
     }
     .date-dropdown {
-        margin-top: 1.25rem;
+        margin-top: 1.375rem;
     }
     .dropdown-guests {
         margin-top: 1.25rem;
