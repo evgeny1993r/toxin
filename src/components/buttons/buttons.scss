@@ -24,6 +24,7 @@
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
     border-radius: 1.375rem;
+    cursor: pointer;
 }
 .btn-one__value {
     display: block;
@@ -46,6 +47,7 @@
     padding: 0.125rem;
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
     border-radius: 1.375rem;
+    cursor: pointer;
 }
 .btn-two__value {
     display: block;
@@ -68,6 +70,7 @@
 }
 .btn-three {
     display: inline-block;
+    cursor: pointer;
 }
 .btn-three__value {
     display: block;
@@ -91,6 +94,7 @@
     align-items: center;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 1.375rem;
+    cursor: pointer;
 }
 .btn-four__value {
     font-family: Montserrat, sans-serif;
