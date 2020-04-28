@@ -1,0 +1,24 @@
+mixin header(first_name, last_name)
+    header.header 
+        img.logo(src=require("../src/images/logotip.svg").default, alt="Logotip")
+        nav.nav 
+            ul.nav__item-list
+                li.nav__item 
+                    a.nav__link(href="#") О нас
+                li.nav__item
+                    a.nav__link.nav__link_dropdown(href="#") Услуги
+                        i.icon-expand_more
+                li.nav__item
+                    a.nav__link(href="#") Вакансии
+                li.nav__item
+                    a.nav__link(href="#") Новости
+                li.nav__item
+                    a.nav__link.nav__link_dropdown(href="#") Соглашения
+                        i.icon-expand_more
+        if(first_name == '' && last_name == '')
+            .buttons 
+                include ../buttons/buttons.pug 
+                +btn('btn-two', 'btn-two_active btn-two_small', 'Войти')
+                +btn('btn-one', 'btn-one_active btn-one_small', 'Зарегистрироваться')
+        else 
+            span.name #{first_name} #{last_name}
