@@ -1,37 +1,37 @@
 @import '../../styles/virables.scss';
 
 /*
-    2px - 0.125rem
-    7px - 0.438rem
-    8px - 0.5rem
-    9px - 0.563rem
-    10px - 0.625rem
-    12px - 0.75rem
-    13px - 0.813rem
-    14px - 0.875rem
-    15px - 0.938rem
-    17px - 1.063rem
-    18px - 1.125rem
-    20px - 1.25rem
-    22px - 1.375rem
-    44px - 2.75rem
-    320px - 20rem
+    2px - 0.125rem +
+    7px - 0.438rem +
+    8px - 0.5rem +
+    9px - 0.563rem +
+    10px - 0.625rem +
+    12px - 0.75rem +
+    13px - 0.813rem +
+    14px - 0.875rem +
+    15px - 0.938rem +
+    17px - 1.063rem +
+    18px - 1.125rem +
+    20px - 1.25rem +
+    22px - 1.375rem +
+    44px - 2.75rem +
+    320px - 20rem +
 */ 
 
 .btn-one {
     display: inline-block;
-    padding: 14px 20px 15px 20px;
+    padding: 0.875rem 1.25rem 0.938rem 1.25rem;
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    border-radius: 22px;
+    border-radius: 1.375rem;
 }
 .btn-one__value {
     display: block;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
     text-transform: uppercase;
     color: #FFFFFF;
 }
@@ -39,43 +39,43 @@
     background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
 }
 .btn-one_small {
-    padding: 9px 20px 10px 20px;
+    padding: 0.563rem 1.25rem 0.625rem 1.25rem;
 }
 .btn-two {
     display: inline-block;
-    padding: 2px;
+    padding: 0.125rem;
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    border-radius: 22px;
+    border-radius: 1.375rem;
 }
 .btn-two__value {
     display: block;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
     text-transform: uppercase;
     color: $Purple;
     border-radius: inherit;
-    padding: 12px 18px 13px 18px;
+    padding: 0.75rem 1.125rem 0.813rem 1.125rem;
     background: #FFFFFF;
 }
 .btn-two_active {
     background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
 }
 .btn-two_small .btn-two__value {
-    padding: 7px 18px 8px 18px;
+    padding: 0.438rem 1.125rem 0.5rem 1.125rem;
 }
 .btn-three {
     display: inline-block;
 }
 .btn-three__value {
     display: block;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
     text-transform: uppercase;
     color: $Dark-50;
 }
@@ -83,29 +83,29 @@
     color: $Purple;
 }
 .btn-four {
-    width: 320px;
+    width: 20rem;
     display: grid;
-    grid-template-columns: auto 44px;
-    grid-template-rows: 44px;
+    grid-template-columns: auto 2.75rem;
+    grid-template-rows: 2.75rem;
     justify-items: center;
     align-items: center;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
+    border-radius: 1.375rem;
 }
 .btn-four__value {
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding-left: 44px;
+    padding-left: 2.75rem;
 }
 .icon-arrow_forward {
     justify-self: center;
     color: #FFFFFF;
-    font-size: 17px;
-    line-height: 17px;
+    font-size: 1.063rem;
+    line-height: 1.063rem;
 }
