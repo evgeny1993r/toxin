@@ -1,0 +1,68 @@
+mixin footer()
+    footer.footer-desktop
+        section.section-one
+            .logotip
+                img.logotip__img(src=require("../src/images/logotip.svg").default, alt="Logotip")
+                p.logotip__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            .navigation
+                ul.navigation__item-list 
+                    li.navigation__item-total Навигация
+                    li.navigation__item 
+                        a.navigation__link(href="#") О нас
+                    li.navigation__item 
+                        a.navigation__link(href="#") Новости
+                    li.navigation__item 
+                        a.navigation__link(href="#") Служба поддержки
+                    li.navigation__item 
+                        a.navigation__link(href="#") Услуги
+            .about 
+                ul.about__item-list 
+                    li.about__item-total О нас
+                    li.about__item 
+                        a.about__link(href="#") О сервисе
+                    li.about__item 
+                        a.about__link(href="#") Наша команда
+                    li.about__item 
+                        a.about__link(href="#") Вакансии
+                    li.about__item 
+                        a.about__link(href="#") Инвесторы
+            .support-service
+                ul.support-service__item-list
+                    li.support-service__item-total Служба поддержки
+                    li.support-service__item 
+                        a.support-service__link(href="#") Соглашения
+                    li.support-service__item 
+                        a.support-service__link(href="#") Сообщества
+                    li.support-service__item 
+                        a.support-service__link(href="#") Связь с нами
+            .sublist
+                span.sublist__total Подписка 
+                p.sublist__text Получайте специальные предложения и новости сервиса
+                include ../subscription-text-field/subscription-text-field.pug 
+        section.section-two 
+            span.right-text Copyright © 2018 Toxin отель. Все права зачищены.
+            .social-networks
+                ul.social-networks__item-list 
+                    li.social-networks__item 
+                        a.social-networks__link(href="#")
+                            i.icon-twitter
+                    li.social-networks__item 
+                        a.social-networks__link(href="#")
+                            i.icon-facebook
+                    li.social-networks__item 
+                        a.social-networks__link(href="#")
+                            i.icon-instagram
+    footer.footer-mobile 
+        img.logotip(src=require("../src/images/logotip.svg").default, alt="Logotip")
+        p.text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        .social-networks
+            ul.social-networks__item-list 
+                li.social-networks__item 
+                    a.social-networks__link(href="#")
+                        i.icon-twitter
+                li.social-networks__item 
+                    a.social-networks__link(href="#")
+                        i.icon-facebook
+                li.social-networks__item 
+                    a.social-networks__link(href="#")
+                        i.icon-instagram
