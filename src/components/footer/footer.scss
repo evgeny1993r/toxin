@@ -1,58 +1,59 @@
 @import '../../styles/virables.scss';
 
 /*
-    1px - 0.063rem
-    5px - 0.313rem
-    10px - 0.625rem
-    12px - 0.75rem
-    14px - 0.875rem
-    15px - 0.938rem
-    17px - 1.063rem
-    18px - 1.125rem
-    20px - 1.25rem
-    21px - 1.313rem
-    22px - 1.375rem
-    23px - 1.438rem
-    24px - 1.5rem
-    100px - 6.25rem
-    110px - 6.875rem
-    160px - 10rem
-    260px - 16.25rem
-    1280px - 80rem
+    1px - 0.063rem +
+    5px - 0.313rem +
+    10px - 0.625rem +
+    12px - 0.75rem +
+    14px - 0.875rem +
+    15px - 0.938rem +
+    17px - 1.063rem +
+    18px - 1.125rem +
+    20px - 1.25rem +
+    21px - 1.313rem +
+    22px - 1.375rem +
+    23px - 1.438rem +
+    24px - 1.5rem +
+    100px - 6.25rem +
+    110px - 6.875rem +
+    140px - 8.75rem +
+    160px - 10rem +
+    260px - 16.25rem +
+    1280px - 80rem +
     1366px - 85.375rem
 */
 
 .footer-desktop {
     .section-one {
         display: grid;
-        grid-template-columns: 260px repeat(3, 160px) 260px;
+        grid-template-columns: 16.25rem repeat(3, 10rem) 16.25rem;
         justify-content: space-between;
-        padding: 100px 10%;
+        padding: 6.25rem 8.75rem;
         background: #FFFFFF;
-        box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+        box-shadow: 0 0.063rem 0px rgba(31, 32, 65, 0.1);
     }
     @media(max-width: 1366px) {
         .section-one {
-            padding: 100px 5%;
+            padding: 6.25rem 5%;
         }
     }
     .logotip {}
     .logotip__img {}
     .logotip__text {
-        margin-top: 14px;
+        margin-top: 0.875rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
     }
     .navigation, .about, .support-service {
-        margin-top: 5px;
+        margin-top: 0.313rem;
     }
     .navigation__item-list, .about__item-list, .support-service__item-list {
         display: grid;
-        row-gap: 20px;
+        row-gap: 1.25rem;
         align-content: start;
     }
     .navigation__item-total, .about__item-total, .support-service__item-total {
@@ -60,19 +61,19 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
         text-transform: uppercase;
         color: $Dark-100;
-        margin-bottom: 1px;
+        margin-bottom: 0.063rem;
     }
     .navigation__item, .about__item, .support-service__item {
         list-style: none;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
     }
     .navigation__link, .about__link, .support-service__link {
         text-decoration: none;
@@ -81,7 +82,7 @@
     .sublist {
         display: grid;
         align-content: start;
-        margin-top: 5px;
+        margin-top: 0.313rem;
     }
     .sublist__total {
         list-style: none;
@@ -89,58 +90,58 @@
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
         text-transform: uppercase;
         color: $Dark-100;
     }
     .sublist__text {
-        margin-top: 18px;
+        margin-top: 1.125rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
     }
     .subscription-text-field {
-        margin-top: 21px;
+        margin-top: 1.313rem;
     }
     .section-two {
         background: #FFFFFF;
-        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-        margin-top: 1px;
-        padding: 23px 10%;
+        box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
+        margin-top: 0.063rem;
+        padding: 1.438rem 8.75rem;
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
         align-items: center;
     }
-    @media(max-width: 1366px) {
+    @media(max-width: 85.375rem) {
         .section-two {
-            padding: 23px 5%;
+            padding: 1.438rem 5%;
         }
     }
     .right-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
         color: $Dark-75;
     }
     .social-networks {}
     .social-networks__item-list {
         display: grid;
         grid-template-columns: repeat(3, max-content);
-        column-gap: 20px;
+        column-gap: 1.25rem;
     }
     .social-networks__item {
         list-style: none;
         font-style: normal;
         font-weight: normal;
-        font-size: 22px;
-        line-height: 24px;
+        font-size: 1.375rem;
+        line-height: 1.5rem;
     }
     .social-networks__link {
         color: transparent;
@@ -150,7 +151,7 @@
         background-clip: text;
     }    
 }
-@media(max-width: 1280px) {
+@media(max-width: 80rem) {
     .footer-desktop {
         display: none;
     }
@@ -159,17 +160,17 @@
     display: none;
     justify-items: center;
     align-content: center;
-    padding: 100px 5% 110px 5%;
+    padding: 6.25rem 5% 6.875rem 5%;
     height: max-content;
     .logotip {}
     .text {
-        margin-top: 20px;
+        margin-top: 1.25rem;
         text-align: center;
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: $Dark-75;
     }
     .social-networks {
@@ -178,25 +179,25 @@
     .social-networks__item-list {
         display: grid;
         grid-template-columns: repeat(3, max-content);
-        column-gap: 20px;
+        column-gap: 1.25rem;
     }
     .social-networks__item {
         list-style: none;
         font-style: normal;
         font-weight: normal;
-        font-size: 22px;
-        line-height: 24px;
+        font-size: 1.375rem;
+        line-height: 1.5rem;
     }
     .social-networks__link {
+        display: inline-block;
         color: transparent;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
     } 
-
 }
-@media(max-width: 1280px) {
+@media(max-width: 80rem) {
     .footer-mobile {
         display: grid;
     }
