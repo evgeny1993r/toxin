@@ -86,7 +86,7 @@
     color: $Purple;
 }
 .btn-four {
-    width: 20rem;
+    max-width: 20rem;
     display: grid;
     grid-template-columns: auto 2.75rem;
     grid-template-rows: 2.75rem;
