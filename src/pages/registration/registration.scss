@@ -1,0 +1,15 @@
+/* 
+    30px - 1.875rem
+*/ 
+
+.registration {
+    .content {
+        background: url('../../images/background_authorization_registration.png');
+        background-position: center;
+        background-size: cover;
+        padding: 1.875rem 0;
+
+        display: grid;
+        justify-content: center;
+    }
+}
