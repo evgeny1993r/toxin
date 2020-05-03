@@ -6,6 +6,10 @@ import { MaskedTextField } from '../masked-text-field/masked-text-field'
 import '../toggle/toggle'
 import '../buttons/buttons'
 
-$(document).ready(() => {
-    MaskedTextField()
-})
+function SignUp () {
+    MaskedTextField()    
+}
+
+export {
+    SignUp
+}
