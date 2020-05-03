@@ -1,6 +1,6 @@
 /* 
     163px - 10.188rem
-    668px - 41.75rem
+    768px - 48rem
 */ 
 
 .authorization {
@@ -10,9 +10,9 @@
         background: url('../../images/background_authorization_registration.png');
         background-position: center;
         background-size: cover;
-        padding: 163px 0;
+        padding: 10.188rem 0;
     }
-    @media(max-width: 768px) {
+    @media(max-width: 48rem) {
         .content {
             padding: 15% 0;
         }
