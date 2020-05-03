@@ -6,6 +6,7 @@
     5px - 0.313rem +
     10px - 0.625rem +
     12px - 0.75rem +
+    13px - 0.813rem +
     14px - 0.875rem +
     15px - 0.938rem +
     18px - 1.125rem +
@@ -61,7 +62,7 @@
     .toggle {
         margin-top: 0.625rem;
     }
-    .btn.btn_fourth {
+    .btn-four {
         margin-top: 1.25rem;
     }
     .container-sign-in {
@@ -69,6 +70,7 @@
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
+        column-gap: 0.625rem;
     }
     .container-sign-in__text {
         align-self: center;
@@ -78,5 +80,14 @@
         font-size: 0.875rem;
         line-height: 1.125rem;
         color: #000000;
+    }
+    .btn-two__value {
+        padding: 0.75rem 1.5rem 0.813rem 1.5rem;
+    }
+}
+@media(max-width: 480px) {
+    .sign-up {
+        max-width: 23.75rem;
+        width: auto;
     }
 }
