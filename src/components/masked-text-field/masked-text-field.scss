@@ -32,3 +32,9 @@
         color: rgba(31, 32, 65, 0.25);
     }
 }
+@media(max-width: 30rem) {
+    .masked-text-field {
+        max-width: 20rem;
+        width: auto;
+    }
+}
