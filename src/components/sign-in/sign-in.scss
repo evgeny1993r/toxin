@@ -39,6 +39,7 @@
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
+        column-gap: 10px;
     }
     .container-sign-up__text {
         align-self: center;
@@ -48,5 +49,11 @@
         font-size: 0.875rem;
         line-height: 1.125rem;
         color: #000000;
+    }
+}
+@media(max-width: 480px) {
+    .sign-in {
+        max-width: 23.75rem;
+        width: auto;
     }
 }
