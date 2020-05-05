@@ -19,6 +19,7 @@
     140px - 8.75rem +
     160px - 10rem +
     260px - 16.25rem +
+    840px - 52.5rem +
     1280px - 80rem +
     1366px - 85.375rem
 */
@@ -200,5 +201,10 @@
 @media(max-width: 80rem) {
     .footer-mobile {
         display: grid;
+    }
+}
+@media(max-width: 52.5rem) {
+    .footer-mobile {
+        padding: 10%;
     }
 }
