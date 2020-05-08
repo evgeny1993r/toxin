@@ -1,6 +1,6 @@
 import './like-button.scss'
 
-$(document).ready(() => {
+function LikeButton () {
     const $like_button = $('.js-like-button')
     $like_button.on('click', (e) => {
         const $icon = $(e.currentTarget).find('.js-icon')
@@ -18,5 +18,9 @@ $(document).ready(() => {
             $(e.currentTarget).addClass('like-button_active')
             $like_button_value.text(value + 1)
         }
-    })
-})
+    })    
+}
+
+export {
+    LikeButton
+}
