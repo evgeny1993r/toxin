@@ -1,115 +1,80 @@
 @import '../../styles/virables.scss';
 
 /*
-    2px - 0.125rem +
-    7px - 0.438rem +
-    8px - 0.5rem +
-    9px - 0.563rem +
-    10px - 0.625rem +
-    12px - 0.75rem +
-    13px - 0.813rem +
-    14px - 0.875rem +
-    15px - 0.938rem +
-    17px - 1.063rem +
-    18px - 1.125rem +
-    20px - 1.25rem +
-    22px - 1.375rem +
-    44px - 2.75rem +
-    320px - 20rem +
+    2px - 0.125rem 
+    12px - 0.75rem 
+    13px - 0.813rem 
+    14px - 0.875rem 
+    15px - 0.938rem 
+    18px - 1.125rem 
+    20px - 1.25rem 
+    22px - 1.375rem 
+    44px - 2.75rem 
+    320px - 20rem 
 */ 
 
-.btn-one {
+.btn {
     display: inline-block;
-    padding: 0.875rem 1.25rem 0.938rem 1.25rem;
-    box-sizing: border-box;
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    border-radius: 1.375rem;
     cursor: pointer;
 }
-.btn-one__value {
-    display: block;
+.btn__value {
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.938rem;
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
-    color: #FFFFFF;
 }
-.btn-one_active {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
+.btn_first {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
 }
-.btn-one_small {
-    padding: 0.563rem 1.25rem 0.625rem 1.25rem;
+.btn_first:hover {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%)
 }
-.btn-two {
+.btn_first .btn__value {
     display: inline-block;
-    padding: 0.125rem;
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    border-radius: 1.375rem;
-    cursor: pointer;
+    color: #ffffff;
+    padding: 14px 20px 15px 20px;
 }
-.btn-two__value {
-    display: block;
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.938rem;
-    text-transform: uppercase;
-    color: $Purple;
+.btn_second {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    padding: 2px;
+}
+.btn_second:hover {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%)
+}
+.btn_second .btn__value {
+    display: inline-block;
     border-radius: inherit;
-    padding: 0.75rem 1.125rem 0.813rem 1.125rem;
-    background: #FFFFFF;
+    background: #ffffff;
+    color: $Purple;
+    padding: 12px 18px 13px 18px;
 }
-.btn-two_active {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
+.btn_third .btn__value {
+    color: $Purple;
 }
-.btn-two_small .btn-two__value {
-    padding: 0.438rem 1.125rem 0.5rem 1.125rem;
-}
-.btn-three {
-    display: inline-block;
-    cursor: pointer;
-}
-.btn-three__value {
-    display: block;
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.938rem;
-    text-transform: uppercase;
+.btn_third:hover .btn__value {
     color: $Dark-50;
 }
-.btn-three_active .btn-three__value {
-    color: $Purple;
-}
-.btn-four {
-    max-width: 20rem;
-    display: grid;
-    grid-template-columns: auto 2.75rem;
-    grid-template-rows: 2.75rem;
+.btn_fourth {
+    width: 320px;
+    display: inline-grid;
+    grid-template-columns: auto 44px;
     justify-items: center;
     align-items: center;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 1.375rem;
-    cursor: pointer;
+    border-radius: 22px;
 }
-.btn-four__value {
-    font-family: Montserrat, sans-serif;
+.btn_fourth .btn__value {
+    color: #ffffff;
+    padding: 14px 0 15px 44px;
+}
+.btn_fourth .icon-arrow_forward {
+    color: #ffffff;
     font-style: normal;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.938rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding-left: 2.75rem;
-}
-.icon-arrow_forward {
-    justify-self: center;
-    color: #FFFFFF;
-    font-size: 1.063rem;
-    line-height: 1.063rem;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
 }

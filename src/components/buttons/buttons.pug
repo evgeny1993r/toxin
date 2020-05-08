@@ -1,5 +1,5 @@
-mixin btn(class_name, modifier, value)
-    div(class= class_name + ' ' + modifier)
-        span(class= class_name + '__value') #{value}
-        if(class_name == 'btn-four')
+mixin btn(modifier, value)
+    div(class= 'btn ' + modifier)
+        span(class= 'btn__value') #{value}
+        if(modifier == 'btn_fourth')
             i.icon-arrow_forward
