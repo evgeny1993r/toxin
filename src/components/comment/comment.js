@@ -1,2 +1,10 @@
 import './comment.scss'
-import '../like-button/like-button'
+import  { LikeButton } from '../like-button/like-button'
+
+function Comment () {
+    LikeButton()
+}
+
+export {
+    Comment
+}
