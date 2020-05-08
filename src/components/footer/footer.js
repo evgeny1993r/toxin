@@ -1,3 +1,11 @@
 import './footer.scss'
 
-import '../subscription-text-field/subscription-text-field'
+import { SubscriptionTextField } from '../subscription-text-field/subscription-text-field'
+
+function Footer () {
+    SubscriptionTextField()
+}
+
+export { 
+    Footer
+}
