@@ -2,6 +2,10 @@
 
 /*
     2px - 0.125rem +
+    7px - 0.438rem +
+    8px - 0.5rem +
+    9px - 0.563rem +
+    10px - 0.625rem
     12px - 0.75rem +
     13px - 0.813rem +
     14px - 0.875rem +
@@ -10,7 +14,7 @@
     20px - 1.25rem +
     22px - 1.375rem +
     44px - 2.75rem +
-    320px - 20rem 
+    320px - 20rem +
 */ 
 
 .btn {
@@ -37,6 +41,9 @@
     color: #ffffff;
     padding: 0.875rem 1.25rem 0.938rem 1.25rem;
 }
+.btn_first.btn_small .btn__value {
+    padding: 0.563rem 1.25rem 0.625rem 1.25rem;
+}
 .btn_second {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 1.375rem;
@@ -51,6 +58,9 @@
     background: #ffffff;
     color: $Purple;
     padding: 0.75rem 1.125rem 0.813rem 1.125rem;
+}
+.btn_second.btn_small .btn__value {
+    padding: 0.438rem 1.125rem 0.5rem 1.125rem;
 }
 .btn_third .btn__value {
     color: $Purple;
