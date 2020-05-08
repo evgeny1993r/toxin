@@ -18,7 +18,7 @@ mixin header(first_name, last_name)
         if(first_name == '' && last_name == '')
             .buttons 
                 include ../buttons/buttons.pug 
-                +btn('btn-two', 'btn-two_active btn-two_small', 'Войти')
-                +btn('btn-one', 'btn-one_active btn-one_small', 'Зарегистрироваться')
+                +btn('btn_second btn_small', 'Войти')
+                +btn('btn_first btn_small', 'Зарегистрироваться')
         else 
             span.name #{first_name} #{last_name}
