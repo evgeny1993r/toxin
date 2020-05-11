@@ -38,12 +38,14 @@
         color: $Dark-50;
     }
     .item-list {
+        z-index: 3;
         width: 16.625rem;
         position: absolute;
         background: #FFFFFF;
         display: none;
         row-gap: 0.625rem;
         margin-top: 0.188rem;
+        padding-bottom: 0.938rem;
     }
     .item {
         display: grid;
