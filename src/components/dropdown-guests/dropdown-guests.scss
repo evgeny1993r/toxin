@@ -40,7 +40,8 @@
     }
     .container-parent {
         position: relative;
-        width: 20rem;
+        max-width: 20rem;
+        min-width: 16.625rem;
         z-index: 3;
     }
     .container-items-btns {
