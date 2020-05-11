@@ -1,7 +1,8 @@
 @import '../../styles/virables.scss';
 
 .dropdown-guests {
-    width: 20rem;
+    max-width: 20rem;
+    min-width: 16.625rem;
     .label {
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -40,6 +41,7 @@
     .container-parent {
         position: relative;
         width: 20rem;
+        z-index: 3;
     }
     .container-items-btns {
         position: absolute;
