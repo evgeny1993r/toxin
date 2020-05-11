@@ -40,6 +40,7 @@
     .container-parent {
         position: relative;
         width: 16.625rem;
+        z-index: 2;
     }
     .container-items-btns {
         position: absolute;
