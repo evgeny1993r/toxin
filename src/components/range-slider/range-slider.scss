@@ -17,8 +17,7 @@
 .range-slider {
     width: 16.625rem;
     .range-slider__container {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
+        display: flex;
         justify-content: space-between;
         margin-bottom: 1.375rem;
     }
