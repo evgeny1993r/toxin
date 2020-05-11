@@ -1,0 +1,69 @@
+@import '../../styles/virables.scss';
+
+/*
+    1px - 0.063rem
+    10px - 0.625rem
+    16px - 1rem
+    20px - 1.25rem
+    24px - 1.5rem
+    30px - 1.875rem
+    33px - 2.063rem
+    40px - 2.5rem
+    60px - 3.75rem
+    70px - 4.375rem
+    140px - 8.75rem
+    266px - 16.625rem
+    270px - 16.875rem
+*/ 
+
+.search-room {
+    .content {
+        display: grid;
+        grid-template-columns: 266px auto;
+        padding: 30px 140px 70px 140px;
+        column-gap: 60px;
+    }
+    .dropdown-guests {
+        margin-top: 20px;
+    }
+    .range-slider {
+        margin-top: 30px;
+    }
+    .checkbox-buttons {
+        margin-top: 30px;
+    }
+    .rich-checkbox-buttons {
+        margin-top: 33px;
+    }
+    .dropdown-number {
+        margin-top: 30px;
+    }
+    .expandable-checkbox-list {
+        margin-top: 16px;
+    }
+    .pagination {
+        margin-top: 20px;
+    }
+    #rooms-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 270px);
+        justify-content: space-between;
+        grid-gap: 20px 10px;
+    }
+    #pagination-container {
+        margin-top: 40px;
+    }
+    .title {
+        font-family: Quicksand, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        color: $Dark-100;
+    }
+    .line {
+        width: 100%;
+        height: 1px;
+        background: $Dark-25;
+    }
+}
