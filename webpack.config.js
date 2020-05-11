@@ -53,7 +53,8 @@ module.exports = {
             $: 'jquery',
             '$': 'jquery',
             'jQuery': 'jquery',
-            'jquery': 'jquery'
+            'jquery': 'jquery',
+            'window.jQuery' : 'jquery'
         })
     ]
 }
