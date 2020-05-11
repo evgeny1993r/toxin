@@ -2,10 +2,10 @@ mixin room(img_one, img_two, img_three, img_four, number, number_state, price_va
     .room
         .slider 
             .images.js-images 
-                img.image(src= img_one, alt="Image")
-                img.image(src= img_two, alt="Image")
-                img.image(src= img_three, alt="Image")
-                img.image(src= img_four, alt="Image")
+                img.image(src= img_one, alt="Image", data-translatex="0")
+                img.image(src= img_two, alt="Image", data-translatex="0")
+                img.image(src= img_three, alt="Image", data-translatex="0")
+                img.image(src= img_four, alt="Image", data-translatex="0")
             .btn-left.js-btn-left
                 i.icon-expand_more
             .btn-right.js-btn-right
@@ -15,7 +15,7 @@ mixin room(img_one, img_two, img_three, img_four, number, number_state, price_va
                 .circle 
                 .circle 
                 .circle 
-        .content 
+        .container-info
             .info-one
                 .room-info
                     span.room-info__symbol № 
