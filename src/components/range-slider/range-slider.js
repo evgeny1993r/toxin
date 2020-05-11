@@ -5,6 +5,7 @@ import 'jquery-range/jquery.range.css'
 function RangeSlider () {
     const $range_slider_value = $('.range-slider__value')
     const $range_slider_input = $('.range-slider__input')
+
     $range_slider_input.jRange({
         from: 0,
         to: 15000,
@@ -33,7 +34,8 @@ function RangeSlider () {
             } 
         }
     })
-    $range_slider_input.jRange('setValue', '5000,10000')    
+
+    $range_slider_input.jRange('setValue', '5000,10000')
 }
 
 export {
