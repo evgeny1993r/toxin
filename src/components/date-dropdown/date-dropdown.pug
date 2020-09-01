@@ -1,10 +1,13 @@
-.date-dropdown 
-    .labels 
-        label.label(for="datepicker-date-dropdown") Прибытие
-        label.label(for="datepicker-date-dropdown") Выезд
-    .inputs 
-        span.entry-input ДД.ММ.ГГГГ 
-            i.icon-expand_more
-        span.check-out-input ДД.ММ.ГГГГ
-            i.icon-expand_more
-        input#datepicker-date-dropdown(type="text")
+mixin date-dropdown(id, isShowTitles)
+    if(isShowTitles)
+        .date-dropdown.js-date-dropdown 
+            .date-dropdown__entry.js-date-dropdown__entry
+                input.date-dropdown__input.js-date-dropdown__input(type="text" value="ДД.ММ.ГГГГ" readonly) 
+                i.icon-expand_more 
+            .date-dropdown__check-out.js-date-dropdown__check-out
+                input.date-dropdown__input.js-date-dropdown__input(type="text" value="ДД.ММ.ГГГГГ" readonly)
+                i.icon-expand_more 
+            div.date-dropdown__container-datepicker(id=id)    
+    else 
+        div.date-dropdown__container-datepicker(id=id)  
+    
