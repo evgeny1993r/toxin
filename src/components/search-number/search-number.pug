@@ -1,0 +1,12 @@
+mixin search-number(dateDropdownId, dropdownGuestsId)
+    form.search-number
+        h1.search-number__title Найдем номера под ваши пожелания
+        .search-number__date-dropdown-titles 
+            h3.search-number__date-dropdown-title прибытие
+            h3.search-number__date-dropdown-title выезд 
+        include ../date-dropdown/date-dropdown.pug
+        +date-dropdown(dateDropdownId, true)
+        h3.search-number__dropdown-guests-title гости
+        div(id=dropdownGuestsId) 
+        include ../buttons/buttons.pug 
+        +btn('submit', 'btn_fourth', 'Подобрать номер')

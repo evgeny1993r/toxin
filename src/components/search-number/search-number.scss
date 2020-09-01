@@ -1,0 +1,66 @@
+@import '../../styles/virables.scss';
+
+/* 
+    380px - 23.75rem +
+    40px - 2.5rem +
+    30px - 1.875rem +
+    28px - 1.75rem +
+    25px - 1.5625rem +
+    24px - 1.5rem +
+    20px - 1.25rem +
+    15px - 0.9375rem +
+    12px - 0.75rem +
+    5px - 0.3125rem +
+    4px - 0.25rem +
+    1px - 0.0625rem +
+*/ 
+
+.search-number {
+    width: 23.75rem;
+    background: #FFFFFF;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    padding: 2.5rem 1.875rem 1.875rem 1.875rem;
+    .search-number__title {
+        font-family: Quicksand, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        color: $Dark-100;
+    }
+    .search-number__date-dropdown-titles {
+        margin-top: 1.5625rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.25rem;
+    }
+    .search-number__date-dropdown-title {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: $Dark-100;
+    }
+    .date-dropdown,
+    .dropdown-guests {
+        margin-top: 0.3125rem;
+    }
+    .search-number__dropdown-guests-title {
+        margin-top: 1.25rem;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: $Dark-100;
+    }
+    .btn.btn_fourth {
+        margin-top: 1.875rem;
+    }
+}
