@@ -11,17 +11,7 @@
 */ 
 
 .bullet-list {
-    .title {
-        font-family: Quicksand, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.188rem;
-        line-height: 1.5rem;
-        color: $Dark-100;
-        margin-left: 1.25rem;
-    }
     .item-list {
-        margin-top: 1rem;
         display: grid;
         row-gap: 0.625rem;
     }
