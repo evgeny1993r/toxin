@@ -2,67 +2,60 @@ import './room.scss'
 
 import '../rate-button/rate-button'
 
-function Room () {
-
-    // Объявление переменных 
-    const $btn_left = $('.js-btn-left')
-    const $btn_right = $('.js-btn-right')
-
-    $btn_right.on('click', (e) => {
-        const $room = $(e.target).parents('.room')
-        const $image_items = $room.find('.js-images').children()
-        const $circle_items = $room.find('.js-circles').children()
-
-        let value = Number($image_items.attr('data-translatex'))
-        if(value === -810) return 
-        value += -270
+function Room() {
+    const $room = $('.room')
+    $room.each((idx, el) => {
+        const $btnLeft = $(el).find('.room__btn-left')
+        const $btnRight = $(el).find('.room__btn-right')
+        const $images = $(el).find('.room__images')
+        const $image = $(el).find('.room__image')
+        const $circle = $(el).find('.room__circle')
         
-        if(value === 0) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(0).addClass('circle_active')
-        } else if(value === -270) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(1).addClass('circle_active')
-        } else if(value === -540) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(2).addClass('circle_active')
-        } else if(value === -810) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(3).addClass('circle_active')
-        }
+        let width$images = 0 
+        $image.each((idx, el) => {
+            width$images = width$images - $(el).width()
+        })
 
-        $image_items.css({'transform': `translateX(${value}px)`})
-        $image_items.attr('data-translatex', value)
-    })
+        const WIDTH_$IMAGE = $image.width()
 
-    $btn_left.on('click', (e) => {
-        const $room = $(e.target).parents('.room')
-        const $image_items = $room.find('.js-images').children()
-        const $circle_items = $room.find('.js-circles').children()
+        let translateValue = 0
 
-        let value = Number($image_items.attr('data-translatex'))
-        if(value === 0) return 
-        value += 270
-        
-        if(value === 0) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(0).addClass('circle_active')
-        } else if(value === -270) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(1).addClass('circle_active')
-        } else if(value === -540) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(2).addClass('circle_active')
-        } else if(value === -810) {
-            $circle_items.removeClass('circle_active')
-            $circle_items.eq(3).addClass('circle_active')
-        }
+        $btnLeft.on('click', () => {
+            if(translateValue >= 0) return 
+            translateValue = translateValue + WIDTH_$IMAGE
+            $images.css({ transform: `translateX(${translateValue}px)`})
 
-        $image_items.css({'transform': `translateX(${value}px)`})
-        $image_items.attr('data-translatex', value)
+            let new_idx = 0
+
+            $circle.each((idx, el) => {
+                if($(el).hasClass('room__circle_active')) {
+                    $(el).removeClass('room__circle_active')
+                    new_idx = idx - 1
+                }
+            })
+
+            $($circle[new_idx]).addClass('room__circle_active')
+        })
+
+        $btnRight.on('click', () => {
+            if(translateValue <= width$images + WIDTH_$IMAGE) return 
+            translateValue = translateValue - WIDTH_$IMAGE
+            $images.css({ transform: `translateX(${translateValue}px)`})
+
+            let new_idx = 0
+
+            $circle.each((idx, el) => {
+                if($(el).hasClass('room__circle_active')) {
+                    $(el).removeClass('room__circle_active')
+                    new_idx = idx + 1
+                }
+            })
+
+            $($circle[new_idx]).addClass('room__circle_active')
+        })
     })
 }
 
 export {
-    Room
+    Room 
 }

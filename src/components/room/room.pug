@@ -1,33 +1,33 @@
-mixin room(img_one, img_two, img_three, img_four, number, number_state, price_value, rate_button_value, reviews_value)
+mixin room(roomImgName, roomNumber, roomState, roomPrice, rateButtonValue, commentsValue)
     .room
-        .slider 
-            .images.js-images 
-                img.image(src= img_one, alt="Image", data-translatex="0")
-                img.image(src= img_two, alt="Image", data-translatex="0")
-                img.image(src= img_three, alt="Image", data-translatex="0")
-                img.image(src= img_four, alt="Image", data-translatex="0")
-            .btn-left.js-btn-left
-                i.icon-expand_more
-            .btn-right.js-btn-right
+        .room__slider
+            .room__images 
+                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+            .room__btn-left 
                 i.icon-expand_more 
-            .circles.js-circles 
-                .circle.circle_active 
-                .circle 
-                .circle 
-                .circle 
-        .container-info
-            .info-one
-                .room-info
-                    span.room-info__symbol № 
-                    span.room-info__number #{number}
-                    span.room-info__number-state #{number_state}
-                .price-info
-                    span.price-info__value #{price_value}₽ 
-                    span.price-info__time в сутки
-            .line
-            .info-two
-                include ../rate-button/rate-button.pug 
-                +rate-button(rate_button_value)
-                .reviews
-                    span.reviews__value #{reviews_value} 
-                    span.reviews__text Отзывов
+            .room__btn-right 
+                i.icon-expand_more 
+            .room__circles
+                .room__circle.room__circle_active 
+                .room__circle
+                .room__circle
+                .room__circle
+        .room__info 
+            .room__container-one
+                p.room__number
+                    span.room__number-symbol № 
+                    span.room__number-value #{roomNumber}
+                    span.room__number-state #{roomState}
+                p.room__price
+                    span.room__price-value #{roomPrice}₽ 
+                    span.room__price-text в сутки
+            .room__line
+            .room__container-two
+                include ../rate-button/rate-button.pug
+                +rate-button(rateButtonValue)
+                p.room__comments
+                    span.room__comments-value #{commentsValue} 
+                    span.room__comments-text Отзывов

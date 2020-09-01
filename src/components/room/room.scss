@@ -1,168 +1,167 @@
 @import '../../styles/virables.scss';
 
 /*
-    1px - 0.063rem +
-    3.5px - 0.219rem +
-    4px - 0.25rem +
-    5px - 0.313rem +
-    7.5px - 0.469rem +
-    10px - 0.625rem +
-    12px - 0.75rem +
-    14px - 0.875rem +
-    15px - 0.938rem +
-    16.3px - 1.019rem +
-    18px - 1.125rem +
-    19px - 1.188rem +
-    20px - 1.25rem +
-    23px - 1.438rem +
-    41.25px - 2.578rem +
-    44px - 2.75rem +
     270px - 16.875rem +
-*/ 
+    182px - 11.375rem +
+    44px - 2.75rem +
+    22px - 1.375rem +
+    20px - 1.25rem +
+    19px - 1.1875rem +
+    18px - 1.125rem +
+    16px - 1rem +
+    15px - 0.9375rem +
+    14px - 0.875rem +
+    13px - 0.8125rem +
+    12px - 0.75rem +
+    10px - 0.625rem +
+    7.5px - 0.46875rem +
+    5px - 0.3125rem +
+    4px - 0.25rem +
+    3.75px - 0.234375rem +
+    1px - 0.0625rem +
+*/
 
 .room {
     width: 16.875rem;
     background: #FFFFFF;
     box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     border-radius: 0.25rem;
-    .slider {
-        position: relative;
-        display: grid;
-        grid-template-columns: 2.75rem auto 2.75rem;
-    }
-    .images {
-        overflow: hidden;
-        grid-column: 1 / 4;
-        grid-row: 1 / 2;
-        display: grid;
-        grid-template-columns: repeat(4, 16.875rem);
-    }
-    .image {
-        border-radius: 0.25rem 0.25rem 0 0;
-        transition: 1s;
-    }
-    .btn-left, .btn-right {
-        position: relative;
-        z-index: 2;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-        cursor: pointer;
-        .icon-expand_more {
-            font-size: 0.75rem;
-            line-height: 0.75rem;
-            color: #ffffff;
-        }
-    }
-    .btn-left {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        border-radius: 0.25rem 0 0 0;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-        
-    }
-    .btn-right {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-        border-radius: 0 0.25rem 0 0;
-        background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-        .icon-expand_more {
-            transform: rotate(180deg);
-        }
-    }
-    .circles {
-        position: absolute;
-        z-index: 3;
-        bottom: 0.938rem;
-        right: 0.938rem;
-        width: 2.578rem;
-        display: grid;
-        grid-template-columns: repeat(4, 0.469rem);
-        grid-template-rows: 0.469rem;
-        column-gap: 0.219rem;
-    }
-    .circle {
-        width: 100%;
-        height: 100%;
-        border: 0.063rem solid #ffffff;
-        border-radius: 50%;
-    }
-    .circle_active {
-        background: #ffffff;
-    }
-    .container-info {
-        padding: 1.25rem;
-    }
-    .info-one {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        justify-content: space-between;
-        align-items: end;
-    }
-    .room-info__symbol {
-        font-family: Quicksand, sans-serif;
-        font-size: 0.875rem;
-        line-height: 1.019rem;
-        font-weight: bold;
-        font-style: normal;
-        color: $Dark-100;
-    }
-    .room-info__number {
-        font-family: Quicksand, sans-serif;
-        font-size: 1.188rem;
-        line-height: 1.438rem;
-        font-weight: bold;
-        font-style: normal;
-        color: $Dark-100;
-    }
-    .room-info__number-state {
-        padding-left: 0.313rem;
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.938rem;
-        text-transform: uppercase;
-        color: $Purple;
-    }
-    .price-info__value {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-        color: $Dark-50;
-    }
-    .price-info__time {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 1.125rem;
-        color: $Dark-50;
-    }
-    .line {
-        margin: 0.625rem 0;
-        height: 0.063rem;
-        background: rgba(31, 32, 65, 0.1);
-    }
-    .info-two {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        justify-content: space-between;
-        align-items: center;
-    }
-    .reviews {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-        color: $Dark-50;
-    }
-    .reviews__value {
-        font-weight: bold;
-    }
-    .reviews__text {
-        font-weight: normal;
-    }
+}
+.room:hover .room__btn-left,
+.room:hover .room__btn-right {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+}
+.room__slider {
+    display: grid;
+    grid-template-columns: 2.75rem 11.375rem 2.75rem;
+    overflow: hidden;
+}
+.room__images {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(4, 16.875rem);
+    transition: 1s;
+}
+.room__image {
+    width: 100%;
+}
+.room__btn-left, 
+.room__btn-right {
+    position: relative;
+    grid-row: 1 / 2;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+}
+.room__btn-left {
+    grid-column: 1 / 2;
+}
+.room__btn-right {
+    grid-column: 3 / 4;
+    transform: rotate(180deg);
+}
+.room__btn-left .icon-expand_more,
+.room__btn-right .icon-expand_more {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8125rem;
+    line-height: 0.8125rem;
+    color: #ffffff;
+}
+.room__circles {
+    position: relative;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: end;
+    width: max-content;
+    padding: 0 0.9375rem 0.9375rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 0.46875rem);
+    grid-template-rows: 0.46875rem;
+    column-gap: 0.234375rem;
+}
+.room__circle {
+    border: 0.0625rem solid #ffffff;
+    border-radius: 50%;
+}
+.room__circle_active {
+    background: #ffffff;
+}
+
+.room__info {
+    padding: 1.25rem;
+    display: grid;
+    row-gap: 0.625rem;
+}
+.room__container-one {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: end;
+}
+.room__number {
+    font-style: normal;
+}
+.room__number-symbol {
+    font-family: Quicksand, sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: $Dark-100;
+}
+.room__number-value {
+    font-family: Quicksand, sans-serif;
+    font-weight: bold;
+    font-size: 1.1875rem;
+    line-height: 1.375rem;
+    color: $Dark-100;
+}
+.room__number-state {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: $Purple;
+    margin-left: 0.3125rem;
+}
+.room__price {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    color: $Dark-50;
+    line-height: 1.125rem;
+}
+.room__price-value {
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+.room__price-text {
+    font-weight: normal;
+    font-size: 0.75rem;
+}
+.room__line {
+    background: rgba(31, 32, 65, 0.1);
+    height: 0.0625rem;
+}
+.room__container-two {
+    display: grid;
+    grid-template-columns: 120px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.room__comments {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: $Dark-50;
+}
+.room__comments-value {
+    font-weight: bold;
+}
+.room__comments-text {
+    font-weight: normal;
 }
