@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="../src/images/logotip-gray.svg")
+        title Cards
+    body
+        include ../../components/logo-gray/logo-gray.pug 
+        .cards 
+            .cards__container-one
+                include ../../components/search-number/search-number.pug
+                +search-number('js-date-dropdown', 'js-dropdown-guests')
+                include ../../components/sign-up/sign-up.pug 
+                +sign-up('js-masked-text-field')
+            .cards__container-two
+                include ../../components/check/check.pug 
+                +check('888', 'люкс', '9 990', 'js-date-dropdown-two', 'js-dropdown-guests-two')
+                include ../../components/sign-in/sign-in.pug
+            .cards__container-three
+                include ../../components/date-dropdown/date-dropdown.pug 
+                +date-dropdown('js-date-dropdown-four', false)
+                include ../../components/room/room.pug 
+                +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
+                +room('room-two.jpg', '840', '', '9 990', '4', '65')
