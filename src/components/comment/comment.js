@@ -1,7 +1,8 @@
 import './comment.scss'
-import  { LikeButton } from '../like-button/like-button'
 
-function Comment () {
+import { LikeButton } from '../like-button/like-button'
+
+function Comment() {
     LikeButton()
 }
 

@@ -1,10 +1,11 @@
-mixin comment(img, name, date, state, value, text)
-    .comment 
-        .container-one
-            img.container-one__icon(src= img, alt="icon")
-            span.container-one__name #{name}
-            span.container-one__date #{date}
-        .container-two
+mixin comment(imgName, name, time, likeButtonClass, likeButtonValue, text)
+    .comment
+        .comment__container-one
+            img.comment__img(src=require(`../../images/${imgName}`).default, alt="Userpic")
+            .comment__titles 
+                h3.comment__title-one #{name}
+                h3.comment__title-two #{time}
+        .comment__container-two
             include ../like-button/like-button.pug 
-            +like-button(state, value)
-            p.container-two__text #{text}
+            +like-button(likeButtonClass, likeButtonValue)
+            .comment__text #{text}
