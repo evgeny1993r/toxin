@@ -1,5 +1,3 @@
-mixin btn(modifier, value)
-    div(class= 'btn ' + modifier)
-        span(class= 'btn__value') #{value}
-        if(modifier == 'btn_fourth')
-            i.icon-arrow_forward
+mixin btn(type, modifier, value)
+    input(type=type, class="btn js-btn " + modifier, value=value)
+            

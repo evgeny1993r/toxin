@@ -1,96 +1,90 @@
 @import '../../styles/virables.scss';
 
 /*
-    2px - 0.125rem +
-    7px - 0.438rem +
-    8px - 0.5rem +
-    9px - 0.563rem +
-    10px - 0.625rem
-    12px - 0.75rem +
-    13px - 0.813rem +
-    14px - 0.875rem +
-    15px - 0.938rem +
-    18px - 1.125rem +
-    20px - 1.25rem +
-    22px - 1.375rem +
-    44px - 2.75rem +
-    95px - 5.938rem +
-    99px - 6.188rem +
     320px - 20rem +
+    100px - 6.25rem + 
+    99px - 6.1875rem +
+    22px - 1.375rem +
+    20px - 1.25rem +
+    18px - 1.125rem +
+    15px - 0.9375rem +
+    14px - 0.875rem +
+    13px - 0.8125rem +
+    12px - 0.75rem +
+    10px - 0.625rem +
+    9px - 0.5625rem +
+    8px - 0.5rem +
+    7px - 0.4375rem
+    2px - 0.125rem +
+    1px - 0.0625rem +
 */ 
 
 .btn {
-    display: inline-block;
-    cursor: pointer;
-}
-.btn__value {
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
-    line-height: 0.938rem;
+    line-height: 0.9375rem;
     text-transform: uppercase;
+    cursor: pointer;
+}
+.btn_hover {
+    opacity: 0.5;
 }
 .btn_first {
-    min-width: 6.188rem;
+    min-width: 6.1875rem;
+    padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
+    color: #FFFFFF;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 1.375rem;
+    border: none;
 }
-.btn_first:hover {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%)
-}
-.btn_first .btn__value {
-    display: inline-block;
-    color: #ffffff;
-    padding: 0.875rem 1.25rem 0.938rem 1.25rem;
-}
-.btn_first.btn_small .btn__value {
-    padding: 0.563rem 1.25rem 0.625rem 1.25rem;
+.btn_first.btn_small {
+    min-width: auto;
+    padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
 }
 .btn_second {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    min-width: 6.1875rem;
+    padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
+    color: $Purple;
+    background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-origin: border-box;
+    background-clip: border-box, content-box;
+    border: 0.125rem solid transparent;
     border-radius: 1.375rem;
-    padding: 0.125rem;
+    box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
 }
-.btn_second:hover {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%)
-}
-.btn_second .btn__value {
-    min-width: 5.938rem;
-    text-align: center;
-    display: inline-block;
-    border-radius: inherit;
-    background: #ffffff;
-    color: $Purple;
-    padding: 0.75rem 1.125rem 0.813rem 1.125rem;
-}
-.btn_second.btn_small .btn__value {
+.btn_second.btn_small {
     min-width: auto;
-    padding: 0.438rem 1.125rem 0.5rem 1.125rem;
+    padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
 }
-.btn_third .btn__value {
+.btn_third {
     color: $Purple;
+    border: none;
+    background: none;
 }
-.btn_third:hover .btn__value {
+.btn_third.btn_hover {
     color: $Dark-50;
+    opacity: 1;
 }
 .btn_fourth {
     width: 20rem;
-    display: inline-grid;
-    grid-template-columns: auto 2.75rem;
-    justify-items: center;
-    align-items: center;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    padding: 0.875rem 0 0.9375rem 0;
+    color: #FFFFFF;
+    background: url('../../images/arrow-forward.svg') no-repeat right center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border: none;
     border-radius: 1.375rem;
 }
-.btn_fourth .btn__value {
-    color: #ffffff;
-    padding: 0.875rem 0 0.938rem 2.75rem;
-}
-.btn_fourth .icon-arrow_forward {
-    color: #ffffff;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.125rem;
-    line-height: 1.125rem;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
