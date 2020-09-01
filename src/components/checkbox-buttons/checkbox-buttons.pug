@@ -3,7 +3,6 @@ mixin item(value, id, state)
         input.item__input(type="checkbox" id= id checked= state)
         label.item__label(for= id) #{value}
 .checkbox-buttons 
-    h3.title checkbox buttons 
     .item-list
         +item('Можно курить', 'smoke', false)
         +item('Можно с питомцами', 'pets', true)
