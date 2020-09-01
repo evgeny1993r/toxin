@@ -3,10 +3,32 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="./src/images/logotip-gray.svg")
         title FSD
     body
-        //include ../src/pages/authorization/authorization.pug 
-        //include ../src/pages/registration/registration.pug 
-        //include ../src/pages/landing-page/landing-page.pug
-        //include ../src/pages/room-details/room-details.pug 
-        //include ../src/pages/search-room/search-room.pug 
+        .content-nav 
+            h1.title-one Pages & ui-kit
+                h3.title-two ui-kit
+                nav.nav 
+                    ul.nav__list 
+                        li.nav__item
+                            a.nav__link(href="./pages/colors-type.html") Colors & Type
+                        li.nav__item 
+                            a.nav__link(href="./pages/cards.html") Cards
+                        li.nav__item 
+                            a.nav__link(href="./pages/headers-footers.html") Headers & Footers
+                        li.nav__item
+                            a.nav__link(href="./pages/form-elements.html") Form Elements
+                h3.title-two Pages 
+                nav.nav 
+                    ul.nav__list 
+                        li.nav__item 
+                            a.nav__link(href="./pages/landing-page.html") Landing Page
+                        li.nav__item
+                            a.nav__link(href="./pages/search-room.html") Seacrh Room
+                        li.nav__item
+                            a.nav__link(href="./pages/room-details.html") Room Details
+                        li.nav__item 
+                            a.nav__link(href="./pages/registration.html") Registration
+                        li.nav__item
+                            a.nav__link(href='./pages/authorization.html') Authorization
