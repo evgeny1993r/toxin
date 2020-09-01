@@ -13,8 +13,8 @@
 */ 
 
 .paginationjs {
+    width: max-content;
     display: grid;
-    justify-items: center;
     row-gap: 0.625rem;
     .paginationjs-pages > ul {
         display: flex;
@@ -89,5 +89,6 @@
         font-size: 0.875rem;
         line-height: 1.25rem;
         color: $Dark-75;
+        text-align: center;
     }
 }

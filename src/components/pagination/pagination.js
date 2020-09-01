@@ -2,23 +2,21 @@ import './pagination.scss'
 
 import 'paginationjs/dist/pagination'
 
-import { Room } from '../room/room'
-
-function Pagination () {
+function Pagination (classNameItems, containerItems, containerPagination, method) {
     let source = []
-    const items = $('.room')
+    const items = $(`.${classNameItems}`)
     for(let i = 0; i < items.length; i++) {
         source.push($(items[i]).html())
     }
     function template(data) {
         let html = ''
         $.each(data, function(index, item){
-            html += `<div class="room"> ${item} </div>`
+            html += `<div class="${classNameItems}"> ${item} </div>`
         })
         return html
     }
     
-    $('#pagination-container').pagination({
+    $(`#${containerPagination}`).pagination({
         dataSource: source,
         pageSize: 12,
         showPrevious: false,
@@ -28,8 +26,8 @@ function Pagination () {
         formatNavigator: '<span>1 - 12 из 100+ вариантов аренды</span>',
         callback: function(data, pagination) {
             var html = template(data)
-            $('#rooms-container').html(html)
-            Room()
+            $(`#${containerItems}`).html(html)
+            if(method) method()
         }
     })
 }
