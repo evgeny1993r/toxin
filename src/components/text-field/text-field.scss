@@ -15,7 +15,7 @@
     box-sizing: border-box;
     outline: none;
 }
-.text-field:hover, .text-field:focus {
+.text-field:focus, .text-field:hover {
     border: 0.0625rem solid $Dark-50;
 }
 .text-field::placeholder {
