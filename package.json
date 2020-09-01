@@ -1,11 +1,10 @@
 {
-  "name": "fsd-second-task",
+  "name": "toxin",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open",
-    "build": "webpack"
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "author": "Evgeny Radevsky",
   "license": "ISC",
@@ -21,14 +20,13 @@
     "pug-loader": "^2.4.0",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "jquery": "^3.4.1",
-    "jquery-range": "^1.0.0",
     "paginationjs": "^2.1.5"
   },
   "description": ""
