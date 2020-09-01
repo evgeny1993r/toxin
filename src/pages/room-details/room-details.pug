@@ -1,29 +1,40 @@
-- var image_src_one = require('../src/images/userpic_one.png').default
-- var image_src_two = require('../src/images/userpic_two.png').default
-.room-details 
-    include ../../components/header/header.pug 
-    +header('', '')
-    .images 
-        .image-one
-        .image-two
-        .image-three
-    .content 
-        .container
-            .about-number
-                include ../../components/intelligence/intelligence.pug 
-                include ../../components/impression/impression.pug 
-            .comments
-                .block-title
-                    h3.block-title__text Отзывы посетителей номера
-                    span.block-title__number 2 отзыва
-                include ../../components/comment/comment.pug 
-                +comment(image_src_one, 'Мурад Сарафанов', '5 дней назад', 'active', '12', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-                +comment(image_src_two, 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
-            .information
-                include ../../components/bullet-list/bullet-list.pug 
-                include ../../components/cancel/cancel.pug 
-        include ../../components/check/check.pug 
-        +check('888', 'люкс', '9 900', '2 179', '300')
-    .line
-    include ../../components/footer/footer.pug 
-    +footer()
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="../src/images/logotip-gray.svg")
+        title Room Details
+    body
+        .room-details 
+            include ../../components/header/header.pug 
+            +header('', '')
+            .image-list
+                .image-list__image-one 
+                .image-list__image-two 
+                .image-list__image-three
+            .content 
+                .section
+                    .section__one
+                        .intelligence-container 
+                            h3.intellegence-container__title Сведения о номере
+                            include ../../components/intelligence/intelligence.pug 
+                        include ../../components/impression/impression.pug 
+                    .section__two
+                        .comments
+                            .comments__titles 
+                                h3.comments__title-one Отзывы посетителей номера
+                                h3.comments__title-two 2 отзыва
+                            include ../../components/comment/comment.pug 
+                            +comment('userpic-one.png', 'Мурад Сарафанов', '5 дней назад', 'active', '12', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                            +comment('userpic-two.png', 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+                    .section__three 
+                        .bullet-list-container 
+                            h3.bullet-list-container__title Правила
+                            include ../../components/bullet-list/bullet-list.pug 
+                        include ../../components/cancel/cancel.pug
+                include ../../components/check/check.pug 
+                +check('888', 'люкс', '9 990', 'js-date-dropdown', 'js-dropdown-guests')
+            .line 
+            include ../../components/footer/footer.pug 
+            +footer()
