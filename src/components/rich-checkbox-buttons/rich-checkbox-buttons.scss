@@ -16,17 +16,7 @@
 
 .rich-checkbox-buttons {
     width: 16.625rem;
-    .title {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.938rem;
-        text-transform: uppercase;
-        color: $Dark-100;
-    }
     .item-list {
-        margin-top: 1rem;
         display: grid;
         row-gap: 0.625rem;
     }
