@@ -1,31 +1,38 @@
-mixin check(number, number_state, price_value, discount, collection)
-    .check 
-        .info
-            .room-info
-                span.room-info__symbol № 
-                span.room-info__number #{number}
-                span.room-info__number-state #{number_state}
-            .price-info
-                span.price-info__value #{price_value}₽ 
-                span.price-info__time в сутки
-        include ../date-dropdown/date-dropdown.pug 
-        include ../dropdown-guests/dropdown-guests.pug 
+mixin check(numberValue, numberState, numberPrice, dateDropdownId, dropdownGuestsId)
+    form.check 
+        .data-number
+            p.data-number__number
+                span.data-number__number-symbol № 
+                span.data-number__number-value #{numberValue}
+                span.data-number__number-state #{numberState}
+            p.data-number__price
+                span.data-number__price-value #{numberPrice}₽
+                span.data-number__price-text  в сутки
+        .date-dropdown-container 
+            .date-dropdown-container__titles 
+                h3.date-dropdown-container__title-one прибытие 
+                h3.date-dropdown-container__title-two выезд
+            include ../date-dropdown/date-dropdown.pug 
+            +date-dropdown(dateDropdownId, true)
+        .dropdown-guests-container 
+            h3.dropdown-guests-container__title гости
+            div(id=dropdownGuestsId)
         .data
-            p.price-accommodation 
-                span.price-accommodation__price-time.js-price-accommodation__price-time 
-                span.price-accommodation__total.js-price-accommodation__total 
-            p.discount 
-                span.discount__text Сбор за услуги: скидка #{discount}₽ 
-                span.discount__icon i 
-                span.discount__total 0₽ 
-            p.collection 
-                span.collection__text Сбор за дополнительные услуги 
-                span.collection__icon i 
-                span.collection__total #{collection}₽ 
-        .total
-            span.total__title Итого
-            span.total__line 
+            p.price
+                span.price__text.js-price__text
+                span.price__value.js-price__value
+            p.discount
+                span.discount__text.js-discount__text 
+                span.discount__icon i
+                span.discount__price.js-discount__price 
+            p.collecting 
+                span.collecting__text.js-collecting__text
+                span.collecting__icon i
+                span.collecting__price.js-collecting__price
+        .total 
+            span.total__title Итого 
+            span.total__line
             span.total__price.js-total__price
         include ../buttons/buttons.pug 
-        +btn('btn_fourth', 'Забронировать')
+        +btn('submit', 'btn_fourth', 'забронировать')
 

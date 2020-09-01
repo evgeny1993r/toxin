@@ -1,50 +1,75 @@
 import './check.scss'
 
 import { DateDropdown } from '../date-dropdown/date-dropdown'
-import { DropdownGuests } from '../dropdown-guests/dropdown-guests'
-import '../buttons/buttons'
+import '../../components/dropdown-guests/dropdown-guests'
+import '../../components/dropdown-guests/dropdown-guests.css'
+import '../../components/buttons/buttons'
 
-function Check (price, date, guests, discount, collection) {
+function Check(
+    dateDropdownId, 
+    dateDropdownisShow, 
+    dateDropdownDateOne, 
+    dateDropdownDateTwo,
+    dropdownGuestsId,
+    dropdownGuestsValue,
+    price, discount, collecting) {
 
-    // Функция, которая форматирует строку цены 
-    function textFormatting (text) {
-        const arr = String(text).split('')
-        const arr_reverse = arr.reverse()
-        const new_arr = arr_reverse.slice(0, 3).concat([' ']).concat(arr_reverse.slice(3, arr_reverse.length))
-        const new_arr_reverse = new_arr.reverse()
-        const new_text = new_arr_reverse.join('') + '₽'
-        return new_text
+    const $check = $('.check')
+    const $dateDropdown = DateDropdown(dateDropdownId, dateDropdownisShow, dateDropdownDateOne, dateDropdownDateTwo)
+    $(`#${dropdownGuestsId}`).dropdownGuests(dropdownGuestsValue)
+
+    const $priceText = $check.find('.js-price__text')
+    const $priceValue = $check.find('.js-price__value')
+    const $discountText = $check.find('.js-discount__text')
+    const $discountPrice = $check.find('.js-discount__price')
+    const $collectingText = $check.find('.js-collecting__text')
+    const $collectingPrice = $check.find('.js-collecting__price')
+    const $totalPrice = $check.find('.js-total__price')
+    const $dateDropdownBtnApply = $dateDropdown.$el.find('.js-datepicker__apply')
+
+    function createTextPrice(value) {
+        const arr = String(value).split('')
+        const ARR_LENGTH = arr.length
+        arr.splice(ARR_LENGTH - 3, 0, ' ')
+        return arr.join('')
     }
 
-    // Добавление данных в DateDropdown, DropdownGuests
-    const datepicker = DateDropdown(date.entry, date.check_out)
-    DropdownGuests(guests[0], guests[1], guests[2])
+    function createStringPrice() {
+        const TIME_VALUE = ($dateDropdown.selectedDates[1] - $dateDropdown.selectedDates[0]) / 86400000
+        let timeText = 'суток'
+        if(TIME_VALUE === 1) {
+            timeText = 'сутки'
+        }
 
-    // Функция создания и монтирования данных
-    function createCheck (entry, check_out) {
-        const $price_accommodation_price_time = $('.js-price-accommodation__price-time')
-        const new_price = textFormatting(price)
-        const days = (check_out - entry) / 1000 / 60 / 60 / 24 
-        const expression_price = `${new_price} x ${days} суток`
-        $price_accommodation_price_time.text(expression_price)
-
-        const $price_accommodation_total = $('.js-price-accommodation__total')
-        const expression_total = textFormatting(price * days)
-        $price_accommodation_total.text(expression_total)
-
-        const $total_price = $('.js-total__price')
-        $total_price.text(textFormatting((price * days) - discount + collection))
+        $priceText.text(`${createTextPrice(price)}₽ x ${TIME_VALUE} ${timeText}`)
+        $priceValue.text(`${createTextPrice(TIME_VALUE * price)}₽`)
     }
 
-    // Вызов функции createCheck по click на apply (datepicker)
-    const $datepicker_apply = $('.js-datepicker__apply')
-    $datepicker_apply.on('click', () => {
-        createCheck(datepicker.selectedDates[0], datepicker.selectedDates[1])
+    function createStringDiscount() {
+        $discountText.text(`Сбор за услуги: скидка ${createTextPrice(discount)}₽`)
+        $discountPrice.text(`0₽`)
+    }
+
+    function createStringCollection() {
+        $collectingText.text(`Сбор за дополнительные услуги`)
+        $collectingPrice.text(`${collecting}₽`)
+    }
+
+    function createStringTotal() {
+        $totalPrice.text(`${createTextPrice(($dateDropdown.selectedDates[1] - $dateDropdown.selectedDates[0]) / 86400000 * price - discount + collecting)}₽`)
+    }
+
+    $dateDropdownBtnApply.on('click', () => {
+        createStringPrice()
+        createStringTotal()
     })
 
-    createCheck(date.entry, date.check_out)
+    createStringPrice()
+    createStringDiscount()
+    createStringCollection()
+    createStringTotal()
 }
 
 export {
-    Check  
+    Check 
 }
