@@ -10,6 +10,7 @@
     12px - 0.75rem +
     14px - 0.875rem +
     15px - 0.938rem +
+    17px - 1.0625rem +
     18px - 1.125rem +
     20px - 1.25rem +
     44px - 2.75rem +
@@ -28,7 +29,6 @@
         color: $Dark-100;
         display: grid;
         grid-template-columns: auto 2.75rem;
-        grid-template-rows: 2.75rem;
         align-items: center;
         cursor: pointer;
     }
@@ -44,8 +44,7 @@
         background: #FFFFFF;
         display: none;
         row-gap: 0.625rem;
-        margin-top: 0.188rem;
-        padding-bottom: 0.938rem;
+        padding: 1.0625rem 0 0.938rem 0;
     }
     .item {
         display: grid;

@@ -2,16 +2,17 @@ mixin item(value, id, state)
     .item 
         input.item__input(type="checkbox" id= id checked= state)
         label.item__label(for= id) #{value}
-.expandable-checkbox-list 
-    h3.title Дополнительные удобства 
-        i.icon.icon-expand_more
-    .item-list 
-        +item('Завтрак', 'breakfast', false)
-        +item('Письменный стол', 'table', true)
-        +item('Стул для кормления', 'chair', true)
-        +item('Кроватка', 'bed', true)
-        +item('Телевизор', 'television-one', false)
-        +item('Шампунь', 'shampoo-one', false)
-        +item('Телевизор', 'television-two', false)
-        +item('Шампунь', 'shampoo-two', false)
+mixin expandable-checkbox-list(title)
+    .expandable-checkbox-list.js-expandable-checkbox-list 
+        h3.title #{title}
+            i.icon.icon-expand_more
+        .item-list 
+            +item('Завтрак', 'breakfast', false)
+            +item('Письменный стол', 'table', true)
+            +item('Стул для кормления', 'chair', true)
+            +item('Кроватка', 'bed', true)
+            +item('Телевизор', 'television-one', false)
+            +item('Шампунь', 'shampoo-one', false)
+            +item('Телевизор', 'television-two', false)
+            +item('Шампунь', 'shampoo-two', false)
 

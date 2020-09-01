@@ -1,14 +1,16 @@
 import './expandable-checkbox-list.scss'
 
 function ExpandableCheckboxList () {
-    const $expandable_checkbox_list = $('.expandable-checkbox-list')
-    $expandable_checkbox_list.on('click', (e) => {
-        $(e.currentTarget).addClass('expandable-checkbox-list_active')
+    const $expandableCheckboxList = $('.js-expandable-checkbox-list')
+    $expandableCheckboxList.each((idx, el) => {
+        $(el).on('click', () => {
+            $(el).addClass('expandable-checkbox-list_active')
+        })
     })
 
     $(document).on('click', (e) => {
-        if($(e.target).parents('.expandable-checkbox-list').length === 0) {
-            $expandable_checkbox_list.removeClass('expandable-checkbox-list_active')
+        if($(e.target).parents('.js-expandable-checkbox-list').length === 0) {
+            $expandableCheckboxList.removeClass('expandable-checkbox-list_active')
         }
     })    
 }
