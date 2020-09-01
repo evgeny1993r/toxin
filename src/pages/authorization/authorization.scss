@@ -1,20 +1,29 @@
 /* 
-    163px - 10.188rem
-    768px - 48rem
+    1024px - 64rem +
+    700px - 43.75rem +
+    500px - 31.25rem +
+    480px - 30rem +
+    400px - 25rem
 */ 
 
 .authorization {
+    display: grid;
+    grid-template-rows: max-content 43.75rem max-content;
     .content {
+        background: url('../../images/background-authorization-registration.jpg') no-repeat center;
+        background-size: cover;
         display: grid;
         justify-content: center;
-        background: url('../../images/background_authorization_registration.png');
-        background-position: center;
-        background-size: cover;
-        padding: 10.188rem 0;
+        align-content: center;
     }
-    @media(max-width: 48rem) {
-        .content {
-            padding: 15% 0;
-        }
+}
+@media(max-width: 64rem) {
+    .authorization {
+        grid-template-rows: max-content 31.25rem max-content;
+    }
+}
+@media(max-width: 30rem) {
+    .authorization {
+        grid-template-rows: max-content 25rem max-content;
     }
 }
