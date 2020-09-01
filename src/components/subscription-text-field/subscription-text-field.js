@@ -1,13 +1,13 @@
 import './subscription-text-field.scss'
 
 function SubscriptionTextField () {
-    const $subscription_text_field = $('.subscription-text-field')
-    const $subscription_text_field_input = $('.subscription-text-field__input')
-    $subscription_text_field_input.on('focus', () => {
-        $subscription_text_field.addClass('subscription-text-field_active')
+    const $subscriptionTextField = $('.subscription-text-field')
+    const $subscriptionTextFieldInput = $('.subscription-text-field__input')
+    $subscriptionTextFieldInput.on('focus', () => {
+        $subscriptionTextField.addClass('subscription-text-field_active')
     })
-    $subscription_text_field_input.on('blur', () => {
-        $subscription_text_field.removeClass('subscription-text-field_active')
+    $subscriptionTextFieldInput.on('blur', () => {
+        $subscriptionTextField.removeClass('subscription-text-field_active')
     })
 }
 
