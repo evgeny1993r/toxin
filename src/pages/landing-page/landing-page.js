@@ -1,14 +1,11 @@
+import { Header } from '../../components/header/header'
+import { SearchNumber } from '../../components/search-number/search-number'
+import { Footer } from '../../components/footer/footer'
+
 import './landing-page.scss'
 
-import { Header } from '../../components/header/header'
-import { NumberSearch } from '../../components/number-search/number-search'
-import '../../components/footer/footer'
-
-function LandingPage () {
+$(document).ready(() => {
     Header()
-    NumberSearch()
-}
-
-export {
-    LandingPage
-}
+    SearchNumber('js-date-dropdown', false, 'js-dropdown-guests', [0, 0, 0])
+    Footer()
+})

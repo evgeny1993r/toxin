@@ -1,7 +1,17 @@
-.landing-page 
-    include ../../components/header/header.pug 
-    +header('', '')
-    .content 
-        include ../../components/number-search/number-search.pug 
-    include ../../components/footer/footer.pug 
-    +footer()
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="../src/images/logotip-gray.svg")
+        title Landing Page
+    body
+        .landing-page 
+            include ../../components/header/header.pug 
+            +header('', '')
+            .content 
+                include ../../components/search-number/search-number.pug 
+                +search-number('js-date-dropdown', 'js-dropdown-guests')
+            include ../../components/footer/footer.pug 
+            +footer()
+                
