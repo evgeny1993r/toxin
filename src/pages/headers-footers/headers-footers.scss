@@ -1,0 +1,16 @@
+@import '../../styles/virables.scss';
+
+/*
+    40px - 2.5rem +
+    62px - 3.875rem +
+*/ 
+
+body {
+    background: #E5E5E5;
+}
+
+.headers-footers {
+    margin-top: 3.875rem;
+    display: grid;
+    row-gap: 2.5rem;
+}
