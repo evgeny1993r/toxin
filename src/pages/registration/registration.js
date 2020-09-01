@@ -2,13 +2,10 @@ import './registration.scss'
 
 import { Header } from '../../components/header/header'
 import { SignUp } from '../../components/sign-up/sign-up'
-import '../../components/footer/footer'
+import { Footer } from '../../components/footer/footer'
 
-function Registration () {
+$(document).ready(() => {
     Header()
-    SignUp()
-}
-
-export {
-    Registration
-}
+    SignUp('js-masked-text-field')
+    Footer()
+})
