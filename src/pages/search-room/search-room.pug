@@ -1,290 +1,83 @@
-- 
-    var rooms = [
-        {
-            image_one: require('../src/images/rooms/room_one.png').default,
-            image_two: require('../src/images/rooms/room_one.png').default,
-            image_three: require('../src/images/rooms/room_one.png').default,
-            image_four: require('../src/images/rooms/room_one.png').default,
-            number: '888',
-            number_state: 'люкс',
-            price_value: '9 900', 
-            rate_button_value: '5', 
-            reviews_value: '145'
-        },
-        {
-            image_one: require('../src/images/rooms/room_two.png').default,
-            image_two: require('../src/images/rooms/room_two.png').default,
-            image_three: require('../src/images/rooms/room_two.png').default,
-            image_four: require('../src/images/rooms/room_two.png').default,
-            number: '840',
-            number_state: '',
-            price_value: '9 900', 
-            rate_button_value: '4', 
-            reviews_value: '65'
-        },
-        {
-            image_one: require('../src/images/rooms/room_three.png').default,
-            image_two: require('../src/images/rooms/room_three.png').default,
-            image_three: require('../src/images/rooms/room_three.png').default,
-            image_four: require('../src/images/rooms/room_three.png').default,
-            number: '980',
-            number_state: 'люкс',
-            price_value: '8 500', 
-            rate_button_value: '3', 
-            reviews_value: '35'
-        },
-        {
-            image_one: require('../src/images/rooms/room_four.png').default,
-            image_two: require('../src/images/rooms/room_four.png').default,
-            image_three: require('../src/images/rooms/room_four.png').default,
-            image_four: require('../src/images/rooms/room_four.png').default,
-            number: '856',
-            number_state: '',
-            price_value: '7 300', 
-            rate_button_value: '5', 
-            reviews_value: '19'
-        },
-        {
-            image_one: require('../src/images/rooms/room_five.png').default,
-            image_two: require('../src/images/rooms/room_five.png').default,
-            image_three: require('../src/images/rooms/room_five.png').default,
-            image_four: require('../src/images/rooms/room_five.png').default,
-            number: '740',
-            number_state: '',
-            price_value: '6 000', 
-            rate_button_value: '4', 
-            reviews_value: '44'
-        },
-        {
-            image_one: require('../src/images/rooms/room_six.png').default,
-            image_two: require('../src/images/rooms/room_six.png').default,
-            image_three: require('../src/images/rooms/room_six.png').default,
-            image_four: require('../src/images/rooms/room_six.png').default,
-            number: '982',
-            number_state: '',
-            price_value: '5 800', 
-            rate_button_value: '3', 
-            reviews_value: '56'
-        },
-        {
-            image_one: require('../src/images/rooms/room_seven.png').default,
-            image_two: require('../src/images/rooms/room_seven.png').default,
-            image_three: require('../src/images/rooms/room_seven.png').default,
-            image_four: require('../src/images/rooms/room_seven.png').default,
-            number: '678',
-            number_state: '',
-            price_value: '5 500', 
-            rate_button_value: '5', 
-            reviews_value: '45'
-        },
-        {
-            image_one: require('../src/images/rooms/room_eight.png').default,
-            image_two: require('../src/images/rooms/room_eight.png').default,
-            image_three: require('../src/images/rooms/room_eight.png').default,
-            image_four: require('../src/images/rooms/room_eight.png').default,
-            number: '450',
-            number_state: '',
-            price_value: '5 300', 
-            rate_button_value: '4', 
-            reviews_value: '39'
-        },
-        {
-            image_one: require('../src/images/rooms/room_nine.png').default,
-            image_two: require('../src/images/rooms/room_nine.png').default,
-            image_three: require('../src/images/rooms/room_nine.png').default,
-            image_four: require('../src/images/rooms/room_nine.png').default,
-            number: '350',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '3', 
-            reviews_value: '77'
-        },
-        {
-            image_one: require('../src/images/rooms/room_ten.png').default,
-            image_two: require('../src/images/rooms/room_ten.png').default,
-            image_three: require('../src/images/rooms/room_ten.png').default,
-            image_four: require('../src/images/rooms/room_ten.png').default,
-            number: '666',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '5', 
-            reviews_value: '25'
-        },
-        {
-            image_one: require('../src/images/rooms/room_eleven.png').default,
-            image_two: require('../src/images/rooms/room_eleven.png').default,
-            image_three: require('../src/images/rooms/room_eleven.png').default,
-            image_four: require('../src/images/rooms/room_eleven.png').default,
-            number: '444',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '3', 
-            reviews_value: '15'
-        },
-        {
-            image_one: require('../src/images/rooms/room_twelve.png').default,
-            image_two: require('../src/images/rooms/room_twelve.png').default,
-            image_three: require('../src/images/rooms/room_twelve.png').default,
-            image_four: require('../src/images/rooms/room_twelve.png').default,
-            number: '352',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '3', 
-            reviews_value: '55'
-        },
-        {
-            image_one: require('../src/images/rooms/room_twelve.png').default,
-            image_two: require('../src/images/rooms/room_twelve.png').default,
-            image_three: require('../src/images/rooms/room_twelve.png').default,
-            image_four: require('../src/images/rooms/room_twelve.png').default,
-            number: '352',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '3', 
-            reviews_value: '55'
-        },
-        {
-            image_one: require('../src/images/rooms/room_eleven.png').default,
-            image_two: require('../src/images/rooms/room_eleven.png').default,
-            image_three: require('../src/images/rooms/room_eleven.png').default,
-            image_four: require('../src/images/rooms/room_eleven.png').default,
-            number: '444',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '3', 
-            reviews_value: '15'
-        },
-        {
-            image_one: require('../src/images/rooms/room_ten.png').default,
-            image_two: require('../src/images/rooms/room_ten.png').default,
-            image_three: require('../src/images/rooms/room_ten.png').default,
-            image_four: require('../src/images/rooms/room_ten.png').default,
-            number: '666',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '5', 
-            reviews_value: '25'
-        },
-        {
-            image_one: require('../src/images/rooms/room_nine.png').default,
-            image_two: require('../src/images/rooms/room_nine.png').default,
-            image_three: require('../src/images/rooms/room_nine.png').default,
-            image_four: require('../src/images/rooms/room_nine.png').default,
-            number: '350',
-            number_state: '',
-            price_value: '5 000', 
-            rate_button_value: '3', 
-            reviews_value: '77'
-        },
-        {
-            image_one: require('../src/images/rooms/room_eight.png').default,
-            image_two: require('../src/images/rooms/room_eight.png').default,
-            image_three: require('../src/images/rooms/room_eight.png').default,
-            image_four: require('../src/images/rooms/room_eight.png').default,
-            number: '450',
-            number_state: '',
-            price_value: '5 300', 
-            rate_button_value: '4', 
-            reviews_value: '39'
-        },
-        {
-            image_one: require('../src/images/rooms/room_seven.png').default,
-            image_two: require('../src/images/rooms/room_seven.png').default,
-            image_three: require('../src/images/rooms/room_seven.png').default,
-            image_four: require('../src/images/rooms/room_seven.png').default,
-            number: '678',
-            number_state: '',
-            price_value: '5 500', 
-            rate_button_value: '5', 
-            reviews_value: '45'
-        },
-        {
-            image_one: require('../src/images/rooms/room_six.png').default,
-            image_two: require('../src/images/rooms/room_six.png').default,
-            image_three: require('../src/images/rooms/room_six.png').default,
-            image_four: require('../src/images/rooms/room_six.png').default,
-            number: '982',
-            number_state: '',
-            price_value: '5 800', 
-            rate_button_value: '3', 
-            reviews_value: '56'
-        },
-        {
-            image_one: require('../src/images/rooms/room_five.png').default,
-            image_two: require('../src/images/rooms/room_five.png').default,
-            image_three: require('../src/images/rooms/room_five.png').default,
-            image_four: require('../src/images/rooms/room_five.png').default,
-            number: '740',
-            number_state: '',
-            price_value: '6 000', 
-            rate_button_value: '4', 
-            reviews_value: '44'
-        },
-        {
-            image_one: require('../src/images/rooms/room_four.png').default,
-            image_two: require('../src/images/rooms/room_four.png').default,
-            image_three: require('../src/images/rooms/room_four.png').default,
-            image_four: require('../src/images/rooms/room_four.png').default,
-            number: '856',
-            number_state: '',
-            price_value: '7 300', 
-            rate_button_value: '5', 
-            reviews_value: '19'
-        },
-        {
-            image_one: require('../src/images/rooms/room_three.png').default,
-            image_two: require('../src/images/rooms/room_three.png').default,
-            image_three: require('../src/images/rooms/room_three.png').default,
-            image_four: require('../src/images/rooms/room_three.png').default,
-            number: '980',
-            number_state: 'люкс',
-            price_value: '8 500', 
-            rate_button_value: '3', 
-            reviews_value: '35'
-        },
-        {
-            image_one: require('../src/images/rooms/room_two.png').default,
-            image_two: require('../src/images/rooms/room_two.png').default,
-            image_three: require('../src/images/rooms/room_two.png').default,
-            image_four: require('../src/images/rooms/room_two.png').default,
-            number: '840',
-            number_state: '',
-            price_value: '9 900', 
-            rate_button_value: '4', 
-            reviews_value: '65'
-        },
-        {
-            image_one: require('../src/images/rooms/room_one.png').default,
-            image_two: require('../src/images/rooms/room_one.png').default,
-            image_three: require('../src/images/rooms/room_one.png').default,
-            image_four: require('../src/images/rooms/room_one.png').default,
-            number: '888',
-            number_state: 'люкс',
-            price_value: '9 900', 
-            rate_button_value: '5', 
-            reviews_value: '145'
-        }
-    ]
-
-.search-room 
-    include ../../components/header/header.pug 
-    +header('', '')
-    .content 
-        aside.sidebar
-            include ../../components/filter-date-dropdown/filter-date-dropdown.pug 
-            include ../../components/dropdown-guests/dropdown-guests.pug 
-            include ../../components/range-slider/range-slider.pug 
-            include ../../components/checkbox-buttons/checkbox-buttons.pug 
-            include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
-            include ../../components/dropdown-number/dropdown-number.pug 
-            include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
-        .container 
-            h1.rooms-title Номера, которые мы для вас подобрали
-            include ../../components/pagination/pagination.pug
-                - for(var i = 0; i <= 8; i++)
-                        each obj in rooms
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="../src/images/logotip-gray.svg")
+        title Search Room
+    body
+        .search-room 
+            include ../../components/header/header.pug 
+            +header('', '')
+            .content 
+                .sidebar 
+                    .filter-date-dropdown-container 
+                        h3.filter-date-dropdown-container__title даты пребывания в отеле
+                        include ../../components/filter-date-dropdown/filter-date-dropdown.pug 
+                        +filter-date-dropdown('js-filter-date-dropdown')
+                    .dropdown-guests-container 
+                        h3.dropdown-guests-container__title гости 
+                        #dropdown-guests 
+                    .range-slider-container
+                        .range-slider-container__titles 
+                            h3.range-slider-container__title-one диапазон цены
+                            input.range-slider-container__title-two(type="text", id='js-range-slider-input')
+                        #range-slider 
+                        span.range-slider-container__text Стоимость за сутки пребывания в номере
+                    .checkbox-buttons-container 
+                        h3.checkbox-buttons-container__title checkbox buttons
+                        include ../../components/checkbox-buttons/checkbox-buttons.pug
+                    .rich-checkbox-buttons-container 
+                        h3.rich-checkbox-buttons-container__title доступность
+                        include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+                    .dropdown-number-container 
+                        h3.dropdown-number-container__title удобства номера 
+                        #dropdown-number 
+                    include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+                    +expandable-checkbox-list('дополнительные удобства')
+                .rooms
+                    h1.title Номера, которые мы для вас подобрали
+                    .pagination 
+                        #pagination__rooms-container
                             include ../../components/room/room.pug 
-                            +room(obj.image_one, obj.image_two, obj.image_three, obj.image_four, obj.number, obj.number_state, obj.price_value, obj.rate_button_value, obj.reviews_value)
-    .line     
-    include ../../components/footer/footer.pug 
-    +footer()
+                            - for(var i = 0; i <= 6; i++) 
+                                +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
+                                +room('room-two.jpg', '840', '', '9 990', '4', '65')
+                                +room('room-three.jpg', '980', 'люкс', '8 500', '3', '35')
+                                +room('room-four.jpg', '856', '', '7 300', '5', '19')
+                                +room('room-five.jpg', '740', '', '6 000', '4', '44')
+                                +room('room-six.jpg', '982', '', '5 800', '3', '56')
+                                +room('room-seven.jpg', '678', '', '5 500', '5', '45')
+                                +room('room-eight.jpg', '450', '', '5 300', '4', '39')
+                                +room('room-nine.jpg', '350', '', '5 000', '3', '77')
+                                +room('room-ten.jpg', '666', '', '5 000', '5', '25')
+                                +room('room-eleven.jpg', '444', '', '5 000', '3', '15')
+                                +room('room-twelve.jpg', '352', '', '5 000', '3', '55') 
+                                +room('room-twelve.jpg', '352', '', '5 000', '3', '55')
+                                +room('room-eleven.jpg', '444', '', '5 000', '3', '15')
+                                +room('room-ten.jpg', '666', '', '5 000', '5', '25')
+                                +room('room-nine.jpg', '350', '', '5 000', '3', '77')
+                                +room('room-eight.jpg', '450', '', '5 300', '4', '39')
+                                +room('room-seven.jpg', '678', '', '5 500', '5', '45')
+                                +room('room-six.jpg', '982', '', '5 800', '3', '56')
+                                +room('room-five.jpg', '740', '', '6 000', '4', '44')
+                                +room('room-four.jpg', '856', '', '7 300', '5', '19')
+                                +room('room-three.jpg', '980', 'люкс', '8 500', '3', '35')
+                                +room('room-two.jpg', '840', '', '9 990', '4', '65')
+                                +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
+                            +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
+                            +room('room-two.jpg', '840', '', '9 990', '4', '65')
+                            +room('room-three.jpg', '980', 'люкс', '8 500', '3', '35')
+                            +room('room-four.jpg', '856', '', '7 300', '5', '19')
+                            +room('room-five.jpg', '740', '', '6 000', '4', '44')
+                            +room('room-six.jpg', '982', '', '5 800', '3', '56')
+                            +room('room-seven.jpg', '678', '', '5 500', '5', '45')
+                            +room('room-eight.jpg', '450', '', '5 300', '4', '39')
+                            +room('room-nine.jpg', '350', '', '5 000', '3', '77')
+                            +room('room-ten.jpg', '666', '', '5 000', '5', '25')
+                            +room('room-eleven.jpg', '444', '', '5 000', '3', '15')
+                            +room('room-twelve.jpg', '352', '', '5 000', '3', '55')    
+                        #pagination__container
+            .line 
+            include ../../components/footer/footer.pug 
+            +footer()

@@ -1,108 +1,177 @@
 @import '../../styles/virables.scss';
 
 /*
-    1px - 0.063rem +
-    10px - 0.625rem +
-    16px - 1rem +
-    20px - 1.25rem +
-    24px - 1.5rem +
-    30px - 1.875rem +
-    33px - 2.063rem +
-    40px - 2.5rem +
-    60px - 3.75rem +
-    70px - 4.375rem +
-    140px - 8.75rem +
-    266px - 16.625rem +
-    270px - 16.875rem +
-    580px - 36.25rem +
-    1024px - 64rem +
+    1746px - 109.125rem +
+    1500px - 93.75rem +
     1366px - 85.375rem +
-    1440px - 90rem +
+    1024px - 64rem +
+    980px - 61.25rem +
+    540px - 33.75rem +
+    270px - 16.875rem +
+    266px - 16.625rem +
+    140px - 8.75rem +
+    100px - 6.25rem +
+    70px - 4.375rem +
+    60px - 3.75rem +
+    40px - 2.5rem +
+    30px - 1.875rem +
+    28px - 1.75rem +
+    24px - 1.5rem +
+    20px - 1.25rem +
+    16px - 1rem +
+    15px - 0.9375rem +
+    14px - 0.875rem +
+    12px - 0.75rem + 
+    8px - 0.5rem +
+    5px - 0.3125rem +
+    1px - 0.0625rem +
 */ 
 
 .search-room {
     .content {
+        margin-top: 1.875rem;
+        padding: 0 8.75rem;
         display: grid;
         grid-template-columns: 16.625rem auto;
-        padding: 1.875rem 8.75rem 4.375rem 8.75rem;
         column-gap: 3.75rem;
+        align-items: start;
     }
     @media(max-width: 85.375rem) {
         .content {
-            padding: 1.875rem 5%;
+            padding: 0 5%;
         }
     }
-    @media(max-width: 36.25rem) {
+    @media(max-width: 64rem) {
         .content {
-            grid-template-columns: auto;
-            justify-content: center;
+            grid-template-columns: 16.625rem auto;
+            justify-content: space-between;
         }
     }
-    .dropdown-guests {
-        width: 16.625rem;
+    @media(max-width: 33.75rem) {
+        .content {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media(max-width: 33.75rem) {
+        .sidebar {
+            max-width: 16.625rem;
+        }
+    }
+    .dropdown-guests-container {
         margin-top: 1.25rem;
     }
-    .range-slider {
-        width: 16.625rem;
-        margin-top: 1.875rem;
-    }
-    .checkbox-buttons {
-        margin-top: 1.875rem;
-    }
-    .rich-checkbox-buttons {
-        margin-top: 2.063rem;
-    }
-    .dropdown-number {
-        margin-top: 1.875rem;
-    }
+    .range-slider-container,
+    .checkbox-buttons-container,
+    .rich-checkbox-buttons-container,
+    .dropdown-number-container,
     .expandable-checkbox-list {
-        margin-top: 1rem;
+        margin-top: 1.875rem;
     }
-    .pagination {
-        margin-top: 1.25rem;
-    }
-    #rooms-container {
+    .filter-date-dropdown-container,
+    .dropdown-guests-container,
+    .dropdown-number-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 16.875rem);
-        justify-content: space-between;
-        grid-gap: 1.25rem 0.625rem;
+        row-gap: 0.3125rem;
     }
-    @media(max-width: 90rem) {
-        #rooms-container {
+    .checkbox-buttons-container,
+    .rich-checkbox-buttons-container {
+        display: grid;
+        row-gap: 1rem;
+    }
+    .range-slider-container__titles {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+    }
+    .filter-date-dropdown-container__title,
+    .dropdown-guests-container__title,
+    .range-slider-container__title-one,
+    .checkbox-buttons-container__title,
+    .rich-checkbox-buttons-container__title,
+    .dropdown-number-container__title {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: $Dark-100;
+    }
+    .range-slider-container__title-two {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: $Dark-50;
+        text-align: right;
+        background: none;
+        border: none;
+        width: 6.25rem;
+    }
+    #range-slider {
+        margin: 1rem 0 0.5rem 0;
+    }
+    .range-slider-container__text {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.75rem;
+        line-height: 0.875rem;
+        color: $Dark-50;
+    }
+    #pagination__rooms-container {
+        display: grid;
+        grid-template-columns: repeat(4, 16.875rem);
+        justify-content: space-between;
+        row-gap: 1.25rem;
+    }
+    @media(max-width: 109.125rem) {
+        #pagination__rooms-container {
+            grid-template-columns: repeat(3, 16.875rem);
+        }
+    }
+    @media(max-width: 93.75rem) {
+        #pagination__rooms-container {
             grid-template-columns: repeat(2, 16.875rem);
             justify-content: space-around;
         }
     }
     @media(max-width: 64rem) {
-        #rooms-container {
-            grid-template-columns: auto;
-            justify-content: center;
+        #pagination__rooms-container {
+            column-gap: 1.25rem;
         }
     }
-    #pagination-container {
-        margin-top: 2.5rem;
+    @media(max-width: 61.25rem) {
+        #pagination__rooms-container {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
     }
-    .rooms-title {
+    .title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 1.5rem;
-        line-height: 1.875rem;
+        line-height: 1.75rem;
         color: $Dark-100;
+        margin-bottom: 1.25rem;
     }
-    @media(max-width: 90rem) {
-        .rooms-title {
+    @media(max-width: 93.75rem) {
+        .title {
             text-align: center;
         }
     }
-    @media(max-width: 36.25rem) {
-        .rooms-title {
-            margin-top: 30px;
-        }
+    #pagination__container {
+        margin-top: 2.5rem;
+        display: grid;
+        justify-content: center;
+        padding-bottom: 4.375rem;
     }
     .line {
         width: 100%;
-        height: 0.063rem;
+        height: 0.0625rem;
         background: $Dark-25;
     }
 }
