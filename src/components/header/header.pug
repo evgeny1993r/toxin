@@ -1,24 +1,24 @@
 mixin header(first_name, last_name)
-    header.header 
-        img.logo(src=require("../src/images/logotip.svg").default, alt="Logotip")
+    header.header.js-header 
+        img.logotip(src=require("../../images/logotip.svg").default, alt="Logotip")
         nav.nav 
             ul.nav__item-list
                 li.nav__item 
-                    a.nav__link(href="#") О нас
+                    a.nav__link.js-nav__link(href="#") О нас
                 li.nav__item
-                    a.nav__link.nav__link_dropdown(href="#") Услуги
+                    a.nav__link.js-nav__link.nav__link_dropdown(href="#") Услуги
                         i.icon-expand_more
                 li.nav__item
-                    a.nav__link(href="#") Вакансии
+                    a.nav__link.js-nav__link(href="#") Вакансии
                 li.nav__item
-                    a.nav__link(href="#") Новости
+                    a.nav__link.js-nav__link(href="#") Новости
                 li.nav__item
-                    a.nav__link.nav__link_dropdown(href="#") Соглашения
+                    a.nav__link.js-nav__link.nav__link_dropdown(href="#") Соглашения
                         i.icon-expand_more
         if(first_name == '' && last_name == '')
             .buttons 
                 include ../buttons/buttons.pug 
-                +btn('btn_second btn_small', 'Войти')
-                +btn('btn_first btn_small', 'Зарегистрироваться')
+                +btn('button', 'btn_second btn_small', 'Войти')
+                +btn('button', 'btn_first btn_small', 'Зарегистрироваться')
         else 
             span.name #{first_name} #{last_name}

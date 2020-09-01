@@ -22,11 +22,12 @@
 
 .header {
     padding: 0.938rem 8.75rem;
+    background: #ffffff;
     box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     display: grid;
     grid-template-columns: max-content auto max-content;
     column-gap: 1.25rem;
-    .logo {
+    .logotip {
         width: 6.606rem;
         height: auto;
     }
