@@ -6,8 +6,8 @@ import { MaskedTextField } from '../masked-text-field/masked-text-field'
 import '../toggle/toggle'
 import '../buttons/buttons'
 
-function SignUp () {
-    MaskedTextField()    
+function SignUp(idMaskedTextField) {
+    MaskedTextField(idMaskedTextField)
 }
 
 export {

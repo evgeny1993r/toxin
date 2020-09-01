@@ -1,18 +1,22 @@
-form.sign-up 
-    h1.title Регистрация аккаунта
-    .container-text-field-one
+mixin sign-up(idMaskedTextField)
+    form.sign-up 
+        h1.sign-up__title Регистрация аккаунта
         include ../text-field/text-field.pug 
-        +text-field('text', 'Имя')
-        +text-field('text', 'Фамилия')
-    include ../radio-buttons/radio-buttons.pug 
-    include ../masked-text-field/masked-text-field.pug
-    h3.title Данные для входа в сервис 
-    .container-text-field-two 
-        +text-field('text', 'Email')
-        +text-field('password', 'Пароль')
-    include ../toggle/toggle.pug 
-    include ../buttons/buttons.pug 
-    +btn('btn_fourth', 'Перейти к оплате')
-    .container-sign-in 
-        span.container-sign-in__text Уже есть аккаунт на Toxin
-        +btn('btn_second', 'Войти')
+        .sign-up__text-fields-one 
+            +text-field('text', 'Имя')
+            +text-field('text', 'Фамилия')
+        include ../radio-buttons/radio-buttons.pug 
+        h3.sign-up__masked-text-field-title Дата рождения
+        include ../masked-text-field/masked-text-field.pug 
+        +masked-text-field(idMaskedTextField)
+        h3.sign-up__text-fields-title Данные для входа в сервис 
+        .sign-up__text-fields-two 
+            +text-field('email', 'Email')
+            +text-field('password', 'Пароль')
+        include ../toggle/toggle.pug 
+        +toggle('toggle-one', false)
+        include ../buttons/buttons.pug 
+        +btn('submit', 'btn_fourth', 'Перейти к оплате')
+        .sign-up__container-sign-in 
+            span.sign-up__sign-in-text Уже есть аккаунт на Toxin
+            +btn('button', 'btn_second', 'Войти')
