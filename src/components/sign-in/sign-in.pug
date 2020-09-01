@@ -1,11 +1,11 @@
 form.sign-in 
-    h1.title Войти
-    .container-text-field
+    .sign-in__title Войти 
+    .sign-in__text-fields
         include ../text-field/text-field.pug 
-        +text-field('text', 'Email')
+        +text-field('email', 'Email')
         +text-field('password', 'Пароль')
     include ../buttons/buttons.pug 
-    +btn('btn_fourth', 'Войти')
-    .container-sign-up
-        span.container-sign-up__text Нет аккаунта на Toxin?
-        +btn('btn_second', 'Создать')
+    +btn('submit', 'btn_fourth', 'Войти')
+    .sign-in__container-sign-up 
+        span.sign-in__sign-up-text Нет аккаунта на Toxin?
+        +btn('button', 'btn_second', 'Создать')

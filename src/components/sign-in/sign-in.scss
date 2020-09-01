@@ -1,49 +1,51 @@
 @import '../../styles/virables.scss';
 
 /* 
-    1px - 0.063rem +
-    4px - 0.25rem +
-    10px - 0.625rem +
-    14px - 0.875rem +
-    18px - 1.125rem +
-    20px - 1.25rem +
-    24px - 1.5rem +
-    25px - 1.563rem +
-    30px - 1.875rem +
-    40px - 2.5rem +
     380px - 23.75rem +
-    480px - 30rem +
+    40px - 2.5rem +
+    30px - 1.875rem +
+    28px - 1.75rem +
+    25px - 1.5625rem +
+    24px - 1.5rem +
+    20px - 1.25rem +
+    18px - 1.125rem +
+    14px - 0.875rem +
+    10px - 0.625rem
+    4px - 0.25rem +
+    1px - 0.0625rem
 */ 
 
 .sign-in {
-    width: 23.75rem;
+    max-width: 23.75rem;
     background: #FFFFFF;
-    border: 0.063rem solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0 0 1.563rem rgba(0, 0, 0, 0.2);
+    border: 0.0625rem solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
     padding: 2.5rem 1.875rem 1.875rem 1.875rem;
-    .title {
+    .sign-in__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 1.5rem;
-        line-height: 1.875rem;
+        line-height: 1.75rem;
         color: $Dark-100;
     }
-    .container-text-field {
-        margin: 1.25rem 0;
+    .sign-in__text-fields {
+        margin-top: 1.25rem;
         display: grid;
         row-gap: 0.625rem;
     }
-    .container-sign-up {
+    .btn.btn_fourth {
+        margin-top: 1.25rem;
+    }
+    .sign-in__container-sign-up {
         margin-top: 1.875rem;
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
-        column-gap: 0.625rem;
+        align-items: center;
     }
-    .container-sign-up__text {
-        align-self: center;
+    .sign-in__sign-up-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
