@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="../src/images/logotip-gray.svg")
+        title Form Elements 
+    body
+        include ../../components/logo-gray/logo-gray.pug 
+        .form-elements 
+            .container-one
+                .container-one__one
+                    .text-field-container 
+                        .text-field-container__titles
+                            h3.text-field-container__title-one text field
+                            h3.text-field-container__title-two default
+                        include ../../components/text-field/text-field.pug  
+                        +text-field('text', 'Email')
+                    .dropdown-guests-container-one
+                        .dropdown-guests-container-one__titles 
+                            h3.dropdown-guests-container-one__title-one dropdown 
+                            h3.dropdown-guests-container-one__title-two default
+                        #dropdown-guests-one 
+                    
+                    .masked-text-field-container 
+                        .masked-text-field-container__titles
+                            h3.masked-text-field-container__title-one masked text field 
+                            h3.masked-text-field-container__title-two default
+                        include ../../components/masked-text-field/masked-text-field.pug 
+                        +masked-text-field('js-masked-text-field')
+
+                    .date-dropdown-container
+                        .date-dropdown-container__titles 
+                            h3.date-dropdown-container__title-one date dropdown 
+                            h3.date-dropdown-container__title-two date dropdown 
+                        include ../../components/date-dropdown/date-dropdown.pug 
+                        +date-dropdown('js-date-dropdown', true)
+
+                    .filter-date-dropdown-container 
+                        h3.filter-date-dropdown-container__title filter date dropdown 
+                        include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+                        +filter-date-dropdown('js-filter-date-dropdown') 
+
+                    .subscription-text-field-container 
+                        h3.subscription-text-field-container__title subscription text field 
+                        include ../../components/subscription-text-field/subscription-text-field.pug 
+
+                .container-one__two
+                    .checkbox-buttons-container 
+                        h3.checkbox-buttons-container__title checkbox buttons 
+                        include ../../components/checkbox-buttons/checkbox-buttons.pug 
+
+                    .radio-buttons-container 
+                        h3.radio-buttons-container__title radio buttons 
+                        include ../../components/radio-buttons/radio-buttons.pug 
+
+                    .toggle-container 
+                        h3.toggle-container__title toggle 
+                        .toggle-container__item-list 
+                            include ../../components/toggle/toggle.pug
+                            +toggle('toggle-one', true) 
+                            +toggle('toggle-two', false)
+
+                    .like-button-container 
+                        h3.like-button-container__title like button 
+                        .like-button-container__item-list 
+                            include ../../components/like-button/like-button.pug 
+                            +like-button('inActive', '2')
+                            +like-button('active', '12')
+
+                    .rate-button-container 
+                        h3.rate-button-container__title rate button 
+                        .rate-button-container__item-list 
+                            include ../../components/rate-button/rate-button.pug 
+                            +rate-button('4')
+                            +rate-button('5')
+
+                .container-one__three
+                    .range-slider-container 
+                        .range-slider-container__titles 
+                            h3.range-slider-container__title-one range slider
+                            input.range-slider-container__title-two(type="text", id="js-range-slider-input")
+                        #js-range-slider
+
+                    .buttons-container 
+                        h3.buttons-container__title buttons 
+                        include ../../components/buttons/buttons.pug 
+                        .buttons-container__containers
+                            .buttons-container__container-one
+                                +btn('button', 'btn_first', 'click me')
+                                +btn('button', 'btn_first btn_hover', 'click me')
+                                +btn('button', 'btn_second', 'click me')
+                                +btn('button', 'btn_second btn_hover', 'click me')
+                            .buttons-container__container-two
+                                +btn('button', 'btn_third', 'click me')
+                                +btn('button', 'btn_third btn_hover', 'click me')
+                            +btn('button', 'btn_fourth', 'Перейти к оплате')
+
+                    .pagination-container 
+                        h3.pagination-container__title pagination
+                        .pagination 
+                            .pagintaion__container-items#js-pagination__container-items
+                                - for(var i = 0; i <= 170; i++) 
+                                    .pagination__item 
+                            .pagination__container#js-pagination__container 
+
+            
+            .container-two 
+                .dropdown-number-container-one
+                    .dropdown-number-container-one__titles
+                        h3.dropdown-number-container-one__title-one dropdown
+                        h3.dropdown-number-container-one__title-two default
+                    #dropdown-number-one
+                .dropdown-guests-container-two
+                    h3.dropdown-guests-container-two__title dropdown 
+                    #dropdown-guests-two
+                .dropdown-guests-container-three
+                    h3.dropdown-guests-container-three__title dropdown
+                    #dropdown-guests-three
+
+            .container-three 
+                include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
+                +expandable-checkbox-list('expandable checkbox list')
+                .rich-checkbox-buttons-container
+                    h3.rich-checkbox-buttons-container__title rich checkbox buttons 
+                    include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+                .bullet-list-container 
+                    h3.bullet-list-container__title bullet list
+                    include ../../components/bullet-list/bullet-list.pug 
+            
+            .container-four 
+                include ../../components/intelligence/intelligence.pug 
+                include ../../components/comment/comment.pug 
+                +comment(
+                    'userpic-one.png', 
+                    'Мурад Сарафанов', 
+                    '5 дней назад', 
+                    'active', 
+                    '12', 
+                    ` 
+                        Великолепный матрас на кровати в основной спальне! 
+                        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+                        Выкрикивал комплименты повару — никто не жаловался из соседей.
+                    `
+                )
+            

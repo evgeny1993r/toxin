@@ -1,0 +1,315 @@
+@import '../../styles/virables.scss';
+
+/*
+    1440px - 90rem +
+    1280px - 80rem +
+    1160px - 72.5rem +
+    640px - 40rem +
+    320px - 20rem +
+    266px - 16.625rem +
+    260px - 16.25rem +
+    150px - 9.375rem +
+    100px - 6.25rem +
+    99px - 6.1875rem +
+    65px - 4.0625rem +
+    55px - 3.4375rem +
+    40px - 2.5rem +
+    30px - 1.875rem +
+    20px - 1.25rem +
+    16px - 1rem +
+    15px - 0.9375rem +
+    12px - 0.75rem +
+    10px - 0.625rem +
+    5px - 0.3125rem
+*/ 
+
+.form-elements {
+    display: grid;
+    align-content: start;
+    padding-bottom: 1.875rem;
+    .container-one {
+        width: 72.5rem;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: 20rem 16.25rem 20rem;
+        justify-content: space-between;
+        margin: 4.0625rem 0 0 0;
+    }
+    @media(max-width: 90rem) {
+        .container-one {
+            width: 100%;
+            padding: 0 10%;
+        }
+    }
+    @media(max-width: 80rem) {
+        .container-one {
+            padding: 0 5%;
+            grid-template-columns: 20rem 16.25rem;
+            justify-content: space-around;
+        }
+    }
+    @media(max-width: 40rem) {
+        .container-one {
+            padding: 0 3%;
+            grid-template-columns: 20rem;
+        }
+    }
+    .text-field-container,
+    .dropdown-guests-container-one,
+    .masked-text-field-container,
+    .date-dropdown-container,
+    .filter-date-dropdown-container,
+    .subscription-text-field-container,
+    .dropdown-number-container-one,
+    .dropdown-guests-container-two,
+    .dropdown-guests-container-three {
+        display: grid;
+        row-gap: 0.3125rem;
+    }
+    @media(max-width: 40rem) {
+        .dropdown-guests-container-two {
+            margin-top: 2.5rem;
+        }
+    }
+    .dropdown-number-container-one,
+    .range-slider-container {
+        width: 16.625rem;
+    }
+    .checkbox-buttons-container,
+    .radio-buttons-container,
+    .toggle-container,
+    .like-button-container,
+    .rate-button-container,
+    .pagination-container,
+    .range-slider-container,
+    .buttons-container,
+    .rich-checkbox-buttons-container,
+    .bullet-list-container {
+        display: grid;
+        row-gap: 1rem;
+    }
+    @media(max-width: 80rem) {
+        .range-slider-container {
+            margin-top: 2.5rem;
+        }
+    }
+    @media(max-width: 40rem) {
+        .checkbox-buttons-container {
+            margin-top: 2.5rem;
+        }
+    }
+    .dropdown-guests-container-one,
+    .masked-text-field-container {
+        margin-top: 1.25rem;
+    }
+    .dropdown-guests-container-three {
+        margin-top: 2.5rem;
+    }
+    .date-dropdown-container,
+    .filter-date-dropdown-container,
+    .subscription-text-field-container {
+        margin-top: 2.5rem;
+    }
+    .radio-buttons-container,
+    .toggle-container,
+    .like-button-container,
+    .rate-button-container,
+    .buttons-container,
+    .pagination-container {
+        margin-top: 2.5rem;
+    }
+    .text-field-container__titles,
+    .dropdown-guests-container-one__titles,
+    .masked-text-field-container__titles,
+    .dropdown-number-container-one__titles,
+    .range-slider-container__titles {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+    }
+    .date-dropdown-container__titles {
+        display: grid;
+        grid-template-columns: repeat(2, 9.375rem);
+        column-gap: 1.25rem;
+    }
+    .text-field-container__title-one,
+    .dropdown-guests-container-one__title-one,
+    .masked-text-field-container__title-one,
+    .date-dropdown-container__title-one,
+    .date-dropdown-container__title-two,
+    .filter-date-dropdown-container__title,
+    .subscription-text-field-container__title,
+    .checkbox-buttons-container__title,
+    .radio-buttons-container__title,
+    .toggle-container__title,
+    .like-button-container__title,
+    .rate-button-container__title,
+    .range-slider-container__title-one,
+    .buttons-container__title,
+    .pagination-container__title,
+    .dropdown-number-container-one__title-one,
+    .dropdown-guests-container-two__title,
+    .dropdown-guests-container-three__title,
+    .rich-checkbox-buttons-container__title,
+    .bullet-list-container__title {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: $Dark-100;
+    }
+    .text-field-container__title-two,
+    .dropdown-guests-container-one__title-two,
+    .masked-text-field-container__title-two,
+    .dropdown-number-container-one__title-two {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-align: right;
+        text-transform: uppercase;
+        color: $Dark-50;
+    }
+    .range-slider-container__title-two {
+        border: none;
+        background: #ffffff;
+        text-align: right;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: $Dark-50;
+    }
+    .toggle-container__item-list {
+        display: grid;
+        row-gap: 0.625rem;
+    }
+    .like-button-container__item-list {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 0.625rem;
+    }
+    .rate-button-container__item-list {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 1.25rem;
+    }
+    .buttons-container__containers {
+        display: grid;
+        row-gap: 1.875rem;
+    }
+    .buttons-container__container-one {
+        display: grid;
+        grid-template-columns: repeat(2, 6.1875rem);
+        gap: 1.875rem 1.25rem;
+    }
+    .buttons-container__container-two {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 1.25rem;
+    }
+    .container-two {
+        margin-top: 6.25rem;
+        width: 72.5rem;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: repeat(3, 20rem);
+        justify-content: space-between;
+    }
+    @media(max-width: 90rem) {
+        .container-two {
+            width: 100%;
+            padding: 0 10%;
+        }
+    }
+    @media(max-width: 80rem) {
+        .container-two {
+            grid-template-columns: repeat(2, 20rem);
+            justify-content: space-around;
+            padding: 0 5%;
+        }
+    }
+    @media(max-width: 40rem) {
+        .container-two {
+            padding: 0 3%;
+            grid-template-columns: 20rem;
+        }
+    }
+    .container-three {
+        margin-top: 3.4375rem;
+        width: 72.5rem;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: repeat(3, 20rem);
+        justify-content: space-between;
+    }
+    @media(max-width: 90rem) {
+        .container-three {
+            width: 100%;
+            padding: 0 10%;
+        }
+    }
+    @media(max-width: 80rem) {
+        .container-three {
+            padding: 0 5%;
+            grid-template-columns: repeat(2, 20rem);
+            grid-template-rows: 0.9375rem auto;
+            justify-content: space-around;
+            row-gap: 2.5rem;
+        }
+    }
+    @media(max-width: 40rem) {
+        .container-three {
+            padding: 0 3%;
+            grid-template-columns: 20rem;
+        }
+    }
+    .container-four {
+        margin-top: 6.25rem;
+        width: 72.5rem;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: repeat(3, 20rem);
+        justify-content: space-between;
+        padding-bottom: 1.875rem;
+    }
+    @media(max-width: 90rem) {
+        .container-four {
+            width: 100%;
+            padding: 0 10%;
+        }
+    }
+    @media(max-width: 80rem) {
+        .container-four {
+            width: 100%;
+            padding: 0 5%;
+            grid-template-columns: repeat(2, 20rem);
+            justify-content: space-around;
+        }
+    }
+    @media(max-width: 40rem) {
+        .container-four {
+            padding: 0 3%;
+            grid-template-columns: 20rem;
+        }
+    }
+    .comment {
+        grid-column: 2 / 4;
+    }
+    @media(max-width: 80rem) {
+        .comment {
+            grid-column: 2 / 3;
+        }
+    }
+    @media(max-width: 40rem) {
+        .comment {
+            margin-top: 2.5rem;
+            grid-column: 1 / 2;
+        }
+    }
+}
