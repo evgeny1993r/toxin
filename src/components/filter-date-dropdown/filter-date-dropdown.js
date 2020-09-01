@@ -3,11 +3,11 @@ import 'air-datepicker'
 import 'air-datepicker/dist/css/datepicker.min.css'
 import '../../styles/datepicker.scss'
 
-function FilterDateDropdown(one_date, two_date) {
+function FilterDateDropdown(id, oneDate, twoDate) {
     // Объявления переменных
-    const $filter_date_dropdown_input = $('.filter-date-dropdown__input')
+    const $datepicker = $(`#${id}`)
+    const $filterDateDropdownInput = $datepicker.siblings('.js-filter-date-dropdown__input')
     const icon = `<i class="icon-expand_more"></i>`
-    const $datepicker = $('#datepicker-filter-date-dropdown')
 
     // Создание datepicker
     $datepicker.datepicker({
@@ -32,21 +32,39 @@ function FilterDateDropdown(one_date, two_date) {
         multipleDatesSeparator: ' - ',
         onSelect(fd, date, inst) {
             if(fd === '') {
-                $filter_date_dropdown_input.html(`ДД.ММ - ДД.ММ ${icon}`)  
+                $filterDateDropdownInput.html(`ДД.ММ - ДД.ММ ${icon}`)  
             } else {
-                $filter_date_dropdown_input.html(`${fd} ${icon}`)                
+                $filterDateDropdownInput.html(`${fd} ${icon}`)                
             }
         }
-    }).data('datepicker').selectDate([one_date, two_date])
+    }).data('datepicker').selectDate([oneDate, twoDate])
+    $datepicker.hide()
+
+    $filterDateDropdownInput.on('click', () => {
+        $datepicker.show()
+    })
+
+    $(document).on('click', (e) => {
+        if($(e.target).attr('class') === undefined) {
+            $datepicker.hide()
+        } else {
+            if($(`.${$(e.target).attr('class').split(' ')[0]}`).parents('.filter-date-dropdown').length === 0) {
+                $datepicker.hide()
+            }
+        }
+    })
 
     // Создание и добавление кнопки Применить
-    const button_apply = $('<span>', {
+    const $datepickerButtons = $datepicker.find('.datepicker--buttons')
+    const buttonApply = $('<span>', {
         class: 'datepicker--button',
         text: 'Применить',
-        'data-action': 'hide'
+        'data-action': 'hide',
+        on: {
+            click: () => $datepicker.hide()
+        }
     })
-    const $datepicker_buttons = $('.datepicker-filter-date-dropdown').find('.datepicker--buttons')
-    $datepicker_buttons.append(button_apply)
+    $datepickerButtons.append(buttonApply)
 }
 
 export {

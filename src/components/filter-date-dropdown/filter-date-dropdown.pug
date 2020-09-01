@@ -1,6 +1,5 @@
-.filter-date-dropdown 
-    label.filter-date-dropdown__label(for="datepicker-filter-date-dropdown") даты пребывания в отеле
-    .container
-        span.filter-date-dropdown__input ДД.ММ - ДД.ММ
+mixin filter-date-dropdown(id)
+    .filter-date-dropdown.js-filter-date-dropdown 
+        span.filter-date-dropdown__input.js-filter-date-dropdown__input ДД.ММ - ДД.ММ
             i.icon-expand_more
-        input#datepicker-filter-date-dropdown(type="text")
+        div(id=id)
