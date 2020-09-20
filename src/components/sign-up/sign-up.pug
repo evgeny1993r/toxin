@@ -1,4 +1,4 @@
-mixin sign-up(idMaskedTextField)
+mixin sign-up()
     form.sign-up 
         h1.sign-up__title Регистрация аккаунта
         include ../text-field/text-field.pug 
@@ -7,8 +7,7 @@ mixin sign-up(idMaskedTextField)
             +text-field('text', 'Фамилия')
         include ../radio-buttons/radio-buttons.pug 
         h3.sign-up__masked-text-field-title Дата рождения
-        include ../masked-text-field/masked-text-field.pug 
-        +masked-text-field(idMaskedTextField)
+        include ../masked-text-field/masked-text-field.pug
         h3.sign-up__text-fields-title Данные для входа в сервис 
         .sign-up__text-fields-two 
             +text-field('email', 'Email')

@@ -1,5 +1,3 @@
-import './subscription-text-field.scss'
-
 function SubscriptionTextField () {
     const $subscriptionTextField = $('.subscription-text-field')
     const $subscriptionTextFieldInput = $('.subscription-text-field__input')

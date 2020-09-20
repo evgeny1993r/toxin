@@ -2,10 +2,10 @@ mixin date-dropdown(id, isShowTitles)
     if(isShowTitles)
         .date-dropdown.js-date-dropdown 
             .date-dropdown__entry.js-date-dropdown__entry
-                input.date-dropdown__input.js-date-dropdown__input(type="text" value="ДД.ММ.ГГГГ" readonly) 
+                input.date-dropdown__input-entry.js-date-dropdown__input-entry(type="text" value="ДД.ММ.ГГГГ" readonly) 
                 i.icon-expand_more 
             .date-dropdown__check-out.js-date-dropdown__check-out
-                input.date-dropdown__input.js-date-dropdown__input(type="text" value="ДД.ММ.ГГГГГ" readonly)
+                input.date-dropdown__input-check-out.js-date-dropdown__input-check-out(type="text" value="ДД.ММ.ГГГГГ" readonly)
                 i.icon-expand_more 
             div.date-dropdown__container-datepicker(id=id)    
     else 
