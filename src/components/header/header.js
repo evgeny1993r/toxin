@@ -1,3 +1,7 @@
+import './header.scss'
+
+import '../buttons/buttons'
+
 function Header () {
     const $header = $('.js-header')
     $header.each((idx, el) => {

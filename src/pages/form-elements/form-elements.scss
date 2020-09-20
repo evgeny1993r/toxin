@@ -27,7 +27,6 @@
     display: grid;
     align-content: start;
     padding-bottom: 1.875rem;
-    background: #ffffff;
     .container-one {
         width: 72.5rem;
         justify-self: center;
@@ -102,6 +101,9 @@
     .dropdown-guests-container-one,
     .masked-text-field-container {
         margin-top: 1.25rem;
+    }
+    .dropdown-guests-container-three {
+        margin-top: 2.5rem;
     }
     .date-dropdown-container,
     .filter-date-dropdown-container,

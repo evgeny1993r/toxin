@@ -1,3 +1,5 @@
+import './like-button.scss'
+
 function LikeButton () {
     const $likeButton = $('.js-like-button')
     $likeButton.each((idx, el) => {

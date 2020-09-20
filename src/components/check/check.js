@@ -1,8 +1,23 @@
-function Check(price, discount, collecting) {
+import './check.scss'
+
+import { DateDropdown } from '../date-dropdown/date-dropdown'
+import '../../components/dropdown-guests/dropdown-guests'
+import '../../components/dropdown-guests/dropdown-guests.css'
+import '../../components/buttons/buttons'
+
+function Check(
+    dateDropdownId, 
+    dateDropdownisShow, 
+    dateDropdownDateOne, 
+    dateDropdownDateTwo,
+    dropdownGuestsId,
+    dropdownGuestsValue,
+    price, discount, collecting) {
 
     const $check = $('.check')
-    const $dateDropdownEntryInput = $check.find('.js-date-dropdown__input-entry')
-    const $dateDropdownCheckOutInput = $check.find('.js-date-dropdown__input-check-out')
+    const $dateDropdown = DateDropdown(dateDropdownId, dateDropdownisShow, dateDropdownDateOne, dateDropdownDateTwo)
+    $(`#${dropdownGuestsId}`).dropdownGuests(dropdownGuestsValue)
+
     const $priceText = $check.find('.js-price__text')
     const $priceValue = $check.find('.js-price__value')
     const $discountText = $check.find('.js-discount__text')
@@ -10,7 +25,7 @@ function Check(price, discount, collecting) {
     const $collectingText = $check.find('.js-collecting__text')
     const $collectingPrice = $check.find('.js-collecting__price')
     const $totalPrice = $check.find('.js-total__price')
-
+    const $dateDropdownBtnApply = $dateDropdown.$el.find('.js-datepicker__apply')
 
     function createTextPrice(value) {
         const arr = String(value).split('')
@@ -20,22 +35,14 @@ function Check(price, discount, collecting) {
     }
 
     function createStringPrice() {
-        let timeValue = 0
+        const TIME_VALUE = ($dateDropdown.selectedDates[1] - $dateDropdown.selectedDates[0]) / 86400000
         let timeText = 'суток'
+        if(TIME_VALUE === 1) {
+            timeText = 'сутки'
+        }
 
-        setTimeout(() => {
-            timeValue = ($dateDropdownCheckOutInput.data('date') - $dateDropdownEntryInput.data('date')) / 86400000
-
-            if(timeValue === 1) {
-                timeText = 'сутки'
-            }
-
-            $priceText.text(`${createTextPrice(price)}₽ x ${timeValue} ${timeText}`)
-            $priceValue.text(`${createTextPrice(timeValue * price)}₽`)
-        }, 100)
-
-        
-
+        $priceText.text(`${createTextPrice(price)}₽ x ${TIME_VALUE} ${timeText}`)
+        $priceValue.text(`${createTextPrice(TIME_VALUE * price)}₽`)
     }
 
     function createStringDiscount() {
@@ -49,19 +56,13 @@ function Check(price, discount, collecting) {
     }
 
     function createStringTotal() {
-        setTimeout(() => {
-            $totalPrice.text(`${createTextPrice(($dateDropdownCheckOutInput.data('date') - $dateDropdownEntryInput.data('date')) / 86400000 * price - discount + collecting)}₽`)
-        }, 200)
-        
+        $totalPrice.text(`${createTextPrice(($dateDropdown.selectedDates[1] - $dateDropdown.selectedDates[0]) / 86400000 * price - discount + collecting)}₽`)
     }
 
-    setTimeout(() => {
-        const $dateDropdownBtnApply = $check.find('.js-datepicker__apply')    
-        $dateDropdownBtnApply.on('click', () => {
-            createStringPrice()
-            createStringTotal()
-        })
-    }, 100)
+    $dateDropdownBtnApply.on('click', () => {
+        createStringPrice()
+        createStringTotal()
+    })
 
     createStringPrice()
     createStringDiscount()

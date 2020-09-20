@@ -1,3 +1,7 @@
+import './room.scss'
+
+import '../rate-button/rate-button'
+
 function Room() {
     const $room = $('.room')
     $room.each((idx, el) => {

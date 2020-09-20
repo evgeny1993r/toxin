@@ -1,8 +1,10 @@
+import './masked-text-field.scss'
 import 'air-datepicker'
 import 'air-datepicker/dist/css/datepicker.min.css'
+import '../../styles/datepicker.scss'
 
-function MaskedTextField () {
-    const $maskedTextField = $('.masked-text-field__input')
+function MaskedTextField (id) {
+    const $maskedTextField = $(`#${id}`)
     $maskedTextField.datepicker({
         classes: 'datepicker-masked-text-field',
         navTitles: {

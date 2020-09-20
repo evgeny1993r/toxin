@@ -1,3 +1,5 @@
+import './pagination.scss'
+
 import 'paginationjs/dist/pagination'
 
 function Pagination (classNameItems, containerItems, containerPagination, method) {
@@ -14,24 +16,20 @@ function Pagination (classNameItems, containerItems, containerPagination, method
         return html
     }
     
-    const $containerPagination = $(`#${containerPagination}`)
-    if($containerPagination.length !== 0) {
-        $containerPagination.pagination({
-            dataSource: source,
-            pageSize: 12,
-            showPrevious: false,
-            nextText: `<i class="icon-arrow_forward"></i>`,
-            pageRange: 1,
-            showNavigator: true,
-            formatNavigator: '<span>1 - 12 из 100+ вариантов аренды</span>',
-            callback: function(data, pagination) {
-                var html = template(data)
-                $(`#${containerItems}`).html(html)
-                if(method) method()
-            }
-        })    
-    }
-    
+    $(`#${containerPagination}`).pagination({
+        dataSource: source,
+        pageSize: 12,
+        showPrevious: false,
+        nextText: `<i class="icon-arrow_forward"></i>`,
+        pageRange: 1,
+        showNavigator: true,
+        formatNavigator: '<span>1 - 12 из 100+ вариантов аренды</span>',
+        callback: function(data, pagination) {
+            var html = template(data)
+            $(`#${containerItems}`).html(html)
+            if(method) method()
+        }
+    })
 }
 
 export {
