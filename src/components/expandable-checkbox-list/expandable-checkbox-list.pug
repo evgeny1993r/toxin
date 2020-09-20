@@ -4,7 +4,7 @@ mixin item(value, id, state)
         label.item__label(for= id) #{value}
 mixin expandable-checkbox-list(title)
     .expandable-checkbox-list.js-expandable-checkbox-list 
-        h3.title #{title}
+        h3.expandable-checkbox-list__title #{title}
             i.icon.icon-expand_more
         .item-list 
             +item('Завтрак', 'breakfast', false)

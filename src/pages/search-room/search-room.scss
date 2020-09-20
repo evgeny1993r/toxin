@@ -28,6 +28,7 @@
 */ 
 
 .search-room {
+    background: #ffffff;
     .content {
         margin-top: 1.875rem;
         padding: 0 8.75rem;
@@ -110,7 +111,7 @@
         border: none;
         width: 6.25rem;
     }
-    #range-slider {
+    .range-slider {
         margin: 1rem 0 0.5rem 0;
     }
     .range-slider-container__text {
@@ -121,7 +122,7 @@
         line-height: 0.875rem;
         color: $Dark-50;
     }
-    #pagination__rooms-container {
+    .pagination__rooms-container {
         display: grid;
         grid-template-columns: repeat(4, 16.875rem);
         justify-content: space-between;
@@ -163,7 +164,7 @@
             text-align: center;
         }
     }
-    #pagination__container {
+    .pagination__container {
         margin-top: 2.5rem;
         display: grid;
         justify-content: center;

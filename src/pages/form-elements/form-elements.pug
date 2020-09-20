@@ -6,8 +6,8 @@ html(lang="ru")
         link(rel="icon" href="../src/images/logotip-gray.svg")
         title Form Elements 
     body
-        include ../../components/logo-gray/logo-gray.pug 
         .form-elements 
+            include ../../components/logo-gray/logo-gray.pug 
             .container-one
                 .container-one__one
                     .text-field-container 
@@ -20,26 +20,25 @@ html(lang="ru")
                         .dropdown-guests-container-one__titles 
                             h3.dropdown-guests-container-one__title-one dropdown 
                             h3.dropdown-guests-container-one__title-two default
-                        #dropdown-guests-one 
+                        #js-dropdown-guests-one 
                     
                     .masked-text-field-container 
                         .masked-text-field-container__titles
                             h3.masked-text-field-container__title-one masked text field 
                             h3.masked-text-field-container__title-two default
-                        include ../../components/masked-text-field/masked-text-field.pug 
-                        +masked-text-field('js-masked-text-field')
+                        include ../../components/masked-text-field/masked-text-field.pug
 
                     .date-dropdown-container
                         .date-dropdown-container__titles 
                             h3.date-dropdown-container__title-one date dropdown 
                             h3.date-dropdown-container__title-two date dropdown 
                         include ../../components/date-dropdown/date-dropdown.pug 
-                        +date-dropdown('js-date-dropdown', true)
+                        +date-dropdown('js-date-dropdown-one', true)
 
                     .filter-date-dropdown-container 
                         h3.filter-date-dropdown-container__title filter date dropdown 
                         include ../../components/filter-date-dropdown/filter-date-dropdown.pug
-                        +filter-date-dropdown('js-filter-date-dropdown') 
+                        +filter-date-dropdown('js-filter-date-dropdown-one') 
 
                     .subscription-text-field-container 
                         h3.subscription-text-field-container__title subscription text field 
@@ -79,8 +78,8 @@ html(lang="ru")
                     .range-slider-container 
                         .range-slider-container__titles 
                             h3.range-slider-container__title-one range slider
-                            input.range-slider-container__title-two(type="text", id="js-range-slider-input")
-                        #js-range-slider
+                            input.range-slider-container__title-two(type="text", id="js-range-slider-input-one")
+                        #js-range-slider-one
 
                     .buttons-container 
                         h3.buttons-container__title buttons 
@@ -99,10 +98,10 @@ html(lang="ru")
                     .pagination-container 
                         h3.pagination-container__title pagination
                         .pagination 
-                            .pagintaion__container-items#js-pagination__container-items
+                            .pagintaion__container-items#js-pagination__container-items-one
                                 - for(var i = 0; i <= 170; i++) 
                                     .pagination__item 
-                            .pagination__container#js-pagination__container 
+                            .pagination__container#js-pagination__container-one
 
             
             .container-two 
@@ -110,13 +109,13 @@ html(lang="ru")
                     .dropdown-number-container-one__titles
                         h3.dropdown-number-container-one__title-one dropdown
                         h3.dropdown-number-container-one__title-two default
-                    #dropdown-number-one
+                    #js-dropdown-number-one
                 .dropdown-guests-container-two
                     h3.dropdown-guests-container-two__title dropdown 
-                    #dropdown-guests-two
+                    #js-dropdown-guests-two
                 .dropdown-guests-container-three
                     h3.dropdown-guests-container-three__title dropdown
-                    #dropdown-guests-three
+                    #js-dropdown-guests-three
 
             .container-three 
                 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 

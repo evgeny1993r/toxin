@@ -1,1 +1,0 @@
-import './intelligence.scss'
