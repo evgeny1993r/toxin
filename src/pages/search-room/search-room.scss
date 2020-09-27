@@ -29,7 +29,7 @@
 
 .search-room {
     background: #ffffff;
-    .content {
+    &__content {
         margin-top: 1.875rem;
         padding: 0 8.75rem;
         display: grid;
@@ -38,58 +38,58 @@
         align-items: start;
     }
     @media(max-width: 85.375rem) {
-        .content {
+        &__content {
             padding: 0 5%;
         }
     }
     @media(max-width: 64rem) {
-        .content {
+        &__content {
             grid-template-columns: 16.625rem auto;
             justify-content: space-between;
         }
     }
     @media(max-width: 33.75rem) {
-        .content {
+        &__content {
             grid-template-columns: 1fr;
         }
     }
     @media(max-width: 33.75rem) {
-        .sidebar {
+        &__sidebar {
             max-width: 16.625rem;
         }
     }
-    .dropdown-guests-container {
+    &__container-dropdown-guests {
         margin-top: 1.25rem;
     }
-    .range-slider-container,
-    .checkbox-buttons-container,
-    .rich-checkbox-buttons-container,
-    .dropdown-number-container,
+    &__container-range-slider,
+    &__container-checkbox-buttons,
+    &__container-rich-checkbox-buttons,
+    &__container-dropdown-number,
     .expandable-checkbox-list {
         margin-top: 1.875rem;
     }
-    .filter-date-dropdown-container,
-    .dropdown-guests-container,
-    .dropdown-number-container {
+    &__container-filter-date-dropdown,
+    &__container-dropdown-guests,
+    &__container-dropdown-number {
         display: grid;
         row-gap: 0.3125rem;
     }
-    .checkbox-buttons-container,
-    .rich-checkbox-buttons-container {
+    &__container-checkbox-buttons,
+    &__container-rich-checkbox-buttons {
         display: grid;
         row-gap: 1rem;
     }
-    .range-slider-container__titles {
+    &__range-slider-titles {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
     }
-    .filter-date-dropdown-container__title,
-    .dropdown-guests-container__title,
-    .range-slider-container__title-one,
-    .checkbox-buttons-container__title,
-    .rich-checkbox-buttons-container__title,
-    .dropdown-number-container__title {
+    &__filter-date-dropdown-title,
+    &__dropdown-guests-title,
+    &__range-slider-title-one,
+    &__checkbox-buttons-title,
+    &__rich-checkbox-buttons-title,
+    &__dropdown-number-title {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -98,7 +98,7 @@
         text-transform: uppercase;
         color: $Dark-100;
     }
-    .range-slider-container__title-two {
+    &__range-slider-title-two {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -111,10 +111,10 @@
         border: none;
         width: 6.25rem;
     }
-    .range-slider {
+    &__range-slider {
         margin: 1rem 0 0.5rem 0;
     }
-    .range-slider-container__text {
+    &__range-slider-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -122,35 +122,35 @@
         line-height: 0.875rem;
         color: $Dark-50;
     }
-    .pagination__rooms-container {
+    &__container-pagination-rooms {
         display: grid;
         grid-template-columns: repeat(4, 16.875rem);
         justify-content: space-between;
         row-gap: 1.25rem;
     }
     @media(max-width: 109.125rem) {
-        #pagination__rooms-container {
+        &__container-pagination-rooms {
             grid-template-columns: repeat(3, 16.875rem);
         }
     }
     @media(max-width: 93.75rem) {
-        #pagination__rooms-container {
+        &__container-pagination-rooms {
             grid-template-columns: repeat(2, 16.875rem);
             justify-content: space-around;
         }
     }
     @media(max-width: 64rem) {
-        #pagination__rooms-container {
+        &__container-pagination-rooms {
             column-gap: 1.25rem;
         }
     }
     @media(max-width: 61.25rem) {
-        #pagination__rooms-container {
+        &__container-pagination-rooms {
             grid-template-columns: 1fr;
             justify-items: center;
         }
     }
-    .title {
+    &__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -160,17 +160,17 @@
         margin-bottom: 1.25rem;
     }
     @media(max-width: 93.75rem) {
-        .title {
+        &__title {
             text-align: center;
         }
     }
-    .pagination__container {
+    &__container-pagination {
         margin-top: 2.5rem;
         display: grid;
         justify-content: center;
         padding-bottom: 4.375rem;
     }
-    .line {
+    &__line {
         width: 100%;
         height: 0.0625rem;
         background: $Dark-25;

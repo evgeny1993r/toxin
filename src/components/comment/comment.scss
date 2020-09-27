@@ -12,35 +12,35 @@
     display: grid;
     align-content: start;
     row-gap: 0.625rem;
-    .comment__container-one,
-    .comment__container-two {
+    &__container-one,
+    &__container-two {
         display: grid;
         grid-template-columns: 3.125rem auto;
         column-gap: 0.625rem;
     }
-    .comment__img {
+    &__img {
         width: 100%;
         border: 0.125rem solid #ffffff;
         border-radius: 50%;
     }
-    .comment__title-one,
-    .comment__title-two,
-    .comment__text {
+    &__title-one,
+    &__title-two,
+    &__text {
         font-family: Montserrat;
         font-style: normal;
         font-size: 0.875rem;
         line-height: 1.5rem;
         color: rgba(31, 32, 65, 0.75);
     }
-    .comment__title-one {
+    &__title-one {
         font-weight: bold;
     }
-    .comment__title-two,
-    .comment__text {
+    &__title-two,
+    &__text {
         font-weight: normal;
 
     }
-    .comment .like-button {
+    & .like-button {
         justify-self: center;
     }
 }

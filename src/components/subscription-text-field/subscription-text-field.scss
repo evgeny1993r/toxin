@@ -20,7 +20,7 @@
     border: 0.063rem solid $Dark-25;
     border-radius: 0.25rem;
     cursor: pointer;
-    .subscription-text-field__input {
+    &__input {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -32,10 +32,10 @@
         border: none;
         border-radius: inherit;
     }
-    .subscription-text-field__input::placeholder {
+    &__input::placeholder {
         color: $Dark-25;
     }
-    .icon-arrow_forward {
+    &__icon {
         font-size: 1.188rem;
         text-align: center;
         align-self: center;
@@ -45,10 +45,8 @@
         -moz-background-clip: text;
         background-clip: text;
     }
-}
-.subscription-text-field:hover {
-    border: 0.063rem solid $Dark-50;
-}
-.subscription-text-field_active {
-    border: 0.063rem solid $Dark-50;
+    &:hover,
+    &_active {
+        border: 0.063rem solid $Dark-50;
+    }
 }

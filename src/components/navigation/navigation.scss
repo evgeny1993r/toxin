@@ -1,4 +1,4 @@
-@import '../styles/virables.scss';
+@import '../../styles/virables.scss';
 
 /*
     40px - 2.5rem +
@@ -12,12 +12,12 @@
     10px - 0.625rem +
 */ 
 
-.content-nav {
+.navigation {
     display: grid;
     min-height: 100vh;
     justify-content: center;
     align-content: center;
-    .title-one {
+    &__title-h1 {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -26,7 +26,7 @@
         color: $Dark-100;
         margin-top: 2.5rem;
     }
-    .title-two {
+    &__title-h3 {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -34,19 +34,16 @@
         line-height: 0.9375rem;
         text-transform: uppercase;
         color: $Dark-100;
-        margin-top: 2.5rem;
+        margin: 2.5rem 0 1rem 0;
     }
-    .nav {
-        margin-top: 1.25rem;
-    }
-    .nav__list {
+    &__list {
         display: grid;
         row-gap: 0.625rem;
     }
-    .nav__item {
+    &__item {
         list-style: none;
     }
-    .nav__link {
+    &__link {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;

@@ -26,142 +26,142 @@
     background: #FFFFFF;
     box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     border-radius: 0.25rem;
-}
-.room:hover .room__btn-left,
-.room:hover .room__btn-right {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-}
-.room__slider {
-    display: grid;
-    grid-template-columns: 2.75rem 11.375rem 2.75rem;
-    overflow: hidden;
-}
-.room__images {
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    display: grid;
-    grid-template-columns: repeat(4, 16.875rem);
-    transition: 1s;
-}
-.room__image {
-    width: 100%;
-}
-.room__btn-left, 
-.room__btn-right {
-    position: relative;
-    grid-row: 1 / 2;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    cursor: pointer;
-}
-.room__btn-left {
-    grid-column: 1 / 2;
-}
-.room__btn-right {
-    grid-column: 3 / 4;
-    transform: rotate(180deg);
-}
-.room__btn-left .icon-expand_more,
-.room__btn-right .icon-expand_more {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8125rem;
-    line-height: 0.8125rem;
-    color: #ffffff;
-}
-.room__circles {
-    position: relative;
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    justify-self: end;
-    align-self: end;
-    width: max-content;
-    padding: 0 0.9375rem 0.9375rem 0;
-    display: grid;
-    grid-template-columns: repeat(4, 0.46875rem);
-    grid-template-rows: 0.46875rem;
-    column-gap: 0.234375rem;
-}
-.room__circle {
-    border: 0.0625rem solid #ffffff;
-    border-radius: 50%;
-}
-.room__circle_active {
-    background: #ffffff;
-}
+    &:hover &__btn-left,
+    &:hover &__btn-right {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    }
+    &__slider {
+        display: grid;
+        grid-template-columns: 2.75rem 11.375rem 2.75rem;
+        overflow: hidden;
+    }
+    &__images {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-columns: repeat(4, 16.875rem);
+        transition: 1s;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__btn-left, 
+    &__btn-right {
+        position: relative;
+        grid-row: 1 / 2;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__btn-left {
+        grid-column: 1 / 2;
+    }
+    &__btn-right {
+        grid-column: 3 / 4;
+        transform: rotate(180deg);
+    }
+    &__btn-left .icon-expand_more,
+    .room__btn-right .icon-expand_more {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.8125rem;
+        line-height: 0.8125rem;
+        color: #ffffff;
+    }
+    &__circles {
+        position: relative;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        justify-self: end;
+        align-self: end;
+        width: max-content;
+        padding: 0 0.9375rem 0.9375rem 0;
+        display: grid;
+        grid-template-columns: repeat(4, 0.46875rem);
+        grid-template-rows: 0.46875rem;
+        column-gap: 0.234375rem;
+    }
+    &__circle {
+        border: 0.0625rem solid #ffffff;
+        border-radius: 50%;
+    }
+    &__circle_active {
+        background: #ffffff;
+    }
 
-.room__info {
-    padding: 1.25rem;
-    display: grid;
-    row-gap: 0.625rem;
-}
-.room__container-one {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: space-between;
-    align-items: end;
-}
-.room__number {
-    font-style: normal;
-}
-.room__number-symbol {
-    font-family: Quicksand, sans-serif;
-    font-weight: bold;
-    font-size: 0.875rem;
-    line-height: 1rem;
-    color: $Dark-100;
-}
-.room__number-value {
-    font-family: Quicksand, sans-serif;
-    font-weight: bold;
-    font-size: 1.1875rem;
-    line-height: 1.375rem;
-    color: $Dark-100;
-}
-.room__number-state {
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
-    text-transform: uppercase;
-    color: $Purple;
-    margin-left: 0.3125rem;
-}
-.room__price {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    color: $Dark-50;
-    line-height: 1.125rem;
-}
-.room__price-value {
-    font-weight: bold;
-    font-size: 0.875rem;
-}
-.room__price-text {
-    font-weight: normal;
-    font-size: 0.75rem;
-}
-.room__line {
-    background: rgba(31, 32, 65, 0.1);
-    height: 0.0625rem;
-}
-.room__container-two {
-    display: grid;
-    grid-template-columns: 120px auto;
-    justify-content: space-between;
-    align-items: center;
-}
-.room__comments {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    color: $Dark-50;
-}
-.room__comments-value {
-    font-weight: bold;
-}
-.room__comments-text {
-    font-weight: normal;
+    &__info {
+        padding: 1.25rem;
+        display: grid;
+        row-gap: 0.625rem;
+    }
+    &__container-one {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+        align-items: end;
+    }
+    &__number {
+        font-style: normal;
+    }
+    &__number-symbol {
+        font-family: Quicksand, sans-serif;
+        font-weight: bold;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        color: $Dark-100;
+    }
+    &__number-value {
+        font-family: Quicksand, sans-serif;
+        font-weight: bold;
+        font-size: 1.1875rem;
+        line-height: 1.375rem;
+        color: $Dark-100;
+    }
+    &__number-state {
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: $Purple;
+        margin-left: 0.3125rem;
+    }
+    &__price {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        color: $Dark-50;
+        line-height: 1.125rem;
+    }
+    &__price-value {
+        font-weight: bold;
+        font-size: 0.875rem;
+    }
+    &__price-text {
+        font-weight: normal;
+        font-size: 0.75rem;
+    }
+    &__line {
+        background: rgba(31, 32, 65, 0.1);
+        height: 0.0625rem;
+    }
+    &__container-two {
+        display: grid;
+        grid-template-columns: 120px auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__comments {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        color: $Dark-50;
+    }
+    &__comments-value {
+        font-weight: bold;
+    }
+    &__comments-text {
+        font-weight: normal;
+    }
 }

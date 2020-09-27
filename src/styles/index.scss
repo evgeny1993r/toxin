@@ -1,5 +1,6 @@
 @import './virables.scss';
 
+
 * {
     margin: 0;
     padding: 0;
@@ -19,4 +20,8 @@
     html {
         font-size: 13px;
     }
+}
+body {
+    display: grid;
+    min-height: 100vh;
 }

@@ -30,13 +30,13 @@
     box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
     padding: 2.5rem 1.875rem 1.875rem 1.875rem;
-    .data-number {
+    &__room-data {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
         align-items: end;
     }
-    .data-number__number-symbol {
+    &__room-number-symbol {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -44,7 +44,7 @@
         line-height: 1rem;
         color: $Dark-100;
     }
-    .data-number__number-value {
+    &__room-number-value {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -52,7 +52,7 @@
         line-height: 1.75rem;
         color: $Dark-100;
     }
-    .data-number__number-state {
+    &__room-number-state {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -62,7 +62,7 @@
         color: $Purple;
         margin-left: 0.3125rem;
     }
-    .data-number__price-value {
+    &__room-price-value {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -70,7 +70,7 @@
         line-height: 1.125rem;
         color: $Dark-50;
     }
-    .data-number__price-text {
+    &__room-price-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -78,16 +78,16 @@
         line-height: 1.125rem;
         color: $Dark-50;
     }
-    .date-dropdown-container {
+    &__date-dropdown-container {
         margin-top: 1.25rem;
     }
-    .date-dropdown-container__titles {
+    &__date-dropdown-titles {
         display: grid;
         grid-template-columns: repeat(2, 9.375rem);
         column-gap: 1.25rem;
     }
-    .date-dropdown-container__title-one,
-    .date-dropdown-container__title-two {
+    &__date-dropdown-title-one,
+    &__date-dropdown-title-two {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -95,14 +95,12 @@
         line-height: 0.9375rem;
         text-transform: uppercase;
         color: $Dark-100;
+        margin-bottom: 0.3125rem;
     }
-    .date-dropdown {
-        margin-top: 0.3125rem;
-    }
-    .dropdown-guests-container {
+    &__dropdown-guests-container {
         margin-top: 1.25rem;
     }
-    .dropdown-guests-container__title {
+    &__dropdown-guests-title {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -110,16 +108,16 @@
         line-height: 0.9375rem;
         text-transform: uppercase;
         color: $Dark-100;
+        margin-bottom: 0.3125rem;
     }
-    .dropdown-guests {
-        margin-top: 0.3125rem;
-    }
-    .data {
+    &__data {
         margin-top: 1.25rem;
         display: grid;
         row-gap: 0.625rem;
     }
-    .price, .discount, .collecting {
+    &__price, 
+    &__discount, 
+    &__collecting {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -127,16 +125,17 @@
         line-height: 1.125rem;
         color: $Dark-75;
     }
-    .price {
+    &__price {
         display: grid;
         grid-template-columns: auto 4.6875rem;
     }
-    .discount, .collecting {
+    &__discount, 
+    &__collecting {
         display: grid;
         grid-template-columns: auto 1.25rem 4.6875rem;
     }
-    .discount__icon,
-    .collecting__icon {
+    &__discount-icon,
+    &__collecting-icon {
         display: grid;
         justify-content: center;
         align-content: center;
@@ -152,19 +151,20 @@
         color: $Dark-25;
         cursor: pointer;
     }
-    .price__value, 
-    .discount__price,
-    .collecting__price {
+    &__price-value, 
+    &__discount-price,
+    &__collecting-price {
         text-align: right;
     }
-    .total {
+    &__total {
         margin-top: 1.875rem;
         display: grid;
         grid-template-columns: max-content auto max-content;
         align-items: end;
+        margin-bottom: 1.25rem;
     }
-    .total__title,
-    .total__price {
+    &__total-title,
+    &__total-price {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -172,10 +172,7 @@
         line-height: 1.125rem;
         color:$Dark-100;
     }
-    .total__line {
+    &__total-line {
         border-bottom: 0.0625rem dashed $Dark-25;
-    }
-    .btn {
-        margin-top: 1.25rem;
     }
 }

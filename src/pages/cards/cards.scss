@@ -10,17 +10,23 @@
     40px - 2.5rem
 */ 
 
-body {
-    background: #E5E5E5;
-}
 .cards {
-    margin: 4.375rem auto 0 auto;
-    max-width: 72.5rem;
-    display: grid;
-    grid-template-columns: 23.75rem 23.75rem 20rem;
-    justify-content: space-between;
-    align-items: start;
-    padding-bottom: 4.375rem;
+    background: #E5E5E5;
+    &__content {
+        margin: 4.375rem auto 0 auto;
+        max-width: 72.5rem;
+        display: grid;
+        grid-template-columns: 23.75rem 23.75rem 20rem;
+        justify-content: space-between;
+        align-items: start;
+        padding-bottom: 4.375rem;
+    }
+    &__container-one,
+    &__container-two,
+    &__container-three {
+        display: grid;
+        row-gap: 2.5rem;
+    }
 }
 @media(max-width: 90rem) {
     .cards {
@@ -35,10 +41,4 @@ body {
         padding: 0 10%;
         justify-items: center;
     }
-}
-.cards__container-one,
-.cards__container-two,
-.cards__container-three {
-    display: grid;
-    row-gap: 2.5rem;
 }

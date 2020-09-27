@@ -16,7 +16,7 @@
     background: $Dark-25;
     padding: 0.063rem;
     cursor: pointer;
-    .container {
+    &__container {
         height: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -24,7 +24,7 @@
         background: #FFFFFF;
         border-radius: inherit;
     }
-    .icon-like_button_inActive, .icon-like_button_active {
+    &__icon {
         font-size: 0.5rem;
         line-height: 0.5rem;
         justify-self: center;
@@ -35,10 +35,7 @@
     .icon-like_button_active {
         color: $Purple;
     }
-    .icon-like_button_active {
-        color: $Purple;
-    }
-    .like-button__value {
+    &__value {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -46,10 +43,10 @@
         line-height: 0.75rem;
         color: $Dark-25;
     }
-}
-.like-button_active {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-.like-button_active .like-button__value {
-    color: $Purple;
+    &_active {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    &_active &__value {
+        color: $Purple;
+    }
 }

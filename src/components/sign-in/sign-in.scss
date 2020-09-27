@@ -22,7 +22,7 @@
     box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
     padding: 2.5rem 1.875rem 1.875rem 1.875rem;
-    .sign-in__title {
+    &__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -30,7 +30,7 @@
         line-height: 1.75rem;
         color: $Dark-100;
     }
-    .sign-in__text-fields {
+    &__text-fields {
         margin-top: 1.25rem;
         display: grid;
         row-gap: 0.625rem;
@@ -38,14 +38,14 @@
     .btn.btn_fourth {
         margin-top: 1.25rem;
     }
-    .sign-in__container-sign-up {
+    &__container-sign-up {
         margin-top: 1.875rem;
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
         align-items: center;
     }
-    .sign-in__sign-up-text {
+    &__sign-up-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;

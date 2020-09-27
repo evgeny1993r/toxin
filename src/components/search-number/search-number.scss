@@ -23,7 +23,7 @@
     box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
     padding: 2.5rem 1.875rem 1.875rem 1.875rem;
-    .search-number__title {
+    &__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -31,13 +31,13 @@
         line-height: 1.75rem;
         color: $Dark-100;
     }
-    .search-number__date-dropdown-titles {
+    &__date-dropdown-titles {
         margin-top: 1.5625rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1.25rem;
     }
-    .search-number__date-dropdown-title {
+    &__date-dropdown-title {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -50,7 +50,7 @@
     .dropdown-guests {
         margin-top: 0.3125rem;
     }
-    .search-number__dropdown-guests-title {
+    &__dropdown-guests-title {
         margin-top: 1.25rem;
         font-family: Montserrat, sans-serif;
         font-style: normal;

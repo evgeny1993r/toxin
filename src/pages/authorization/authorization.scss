@@ -9,7 +9,7 @@
 .authorization {
     display: grid;
     grid-template-rows: max-content 43.75rem max-content;
-    .content {
+    &__content {
         background: url('../../images/background-authorization-registration.jpg') no-repeat center;
         background-size: cover;
         display: grid;

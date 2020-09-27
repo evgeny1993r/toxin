@@ -28,7 +28,7 @@
     align-content: start;
     padding-bottom: 1.875rem;
     background: #ffffff;
-    .container-one {
+    &__section-one {
         width: 72.5rem;
         justify-self: center;
         display: grid;
@@ -37,119 +37,119 @@
         margin: 4.0625rem 0 0 0;
     }
     @media(max-width: 90rem) {
-        .container-one {
+        &__section-one {
             width: 100%;
             padding: 0 10%;
         }
     }
     @media(max-width: 80rem) {
-        .container-one {
+        &__section-one {
             padding: 0 5%;
             grid-template-columns: 20rem 16.25rem;
             justify-content: space-around;
         }
     }
     @media(max-width: 40rem) {
-        .container-one {
+        &__section-one {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
-    .text-field-container,
-    .dropdown-guests-container-one,
-    .masked-text-field-container,
-    .date-dropdown-container,
-    .filter-date-dropdown-container,
-    .subscription-text-field-container,
-    .dropdown-number-container-one,
-    .dropdown-guests-container-two,
-    .dropdown-guests-container-three {
+    &__container-text-field,
+    &__container-one-dropdown-guests,
+    &__container-masked-text-field,
+    &__container-date-dropdown,
+    &__container-filter-date-dropdown,
+    &__container-subscription-text-field,
+    &__container-one-dropdown-number,
+    &__container-two-dropdown-guests,
+    &__container-three-dropdown-guests {
         display: grid;
         row-gap: 0.3125rem;
     }
     @media(max-width: 40rem) {
-        .dropdown-guests-container-two {
+        &__container-two-dropdown-guests {
             margin-top: 2.5rem;
         }
     }
-    .dropdown-number-container-one,
-    .range-slider-container {
+    &__container-one-dropdown-number,
+    &__container-range-slider {
         width: 16.625rem;
     }
-    .checkbox-buttons-container,
-    .radio-buttons-container,
-    .toggle-container,
-    .like-button-container,
-    .rate-button-container,
-    .pagination-container,
-    .range-slider-container,
-    .buttons-container,
-    .rich-checkbox-buttons-container,
-    .bullet-list-container {
+    &__container-checkbox-buttons,
+    &__container-radio-buttons,
+    &__container-toggle,
+    &__container-like-button,
+    &__container-rate-button,
+    &__container-pagination,
+    &__container-range-slider,
+    &__container-buttons,
+    &__container-rich-checkbox-buttons,
+    &__container-bullet-list {
         display: grid;
         row-gap: 1rem;
     }
     @media(max-width: 80rem) {
-        .range-slider-container {
+        &__container-range-slider {
             margin-top: 2.5rem;
         }
     }
     @media(max-width: 40rem) {
-        .checkbox-buttons-container {
+        &__container-checkbox-buttons {
             margin-top: 2.5rem;
         }
     }
-    .dropdown-guests-container-one,
-    .masked-text-field-container {
+    &__container-one-dropdown-guests,
+    &__container-masked-text-field {
         margin-top: 1.25rem;
     }
-    .date-dropdown-container,
-    .filter-date-dropdown-container,
-    .subscription-text-field-container {
+    &__container-date-dropdown,
+    &__container-filter-date-dropdown,
+    &__container-subscription-text-field {
         margin-top: 2.5rem;
     }
-    .radio-buttons-container,
-    .toggle-container,
-    .like-button-container,
-    .rate-button-container,
-    .buttons-container,
-    .pagination-container {
+    &__container-radio-buttons,
+    &__container-toggle,
+    &__container-like-button,
+    &__container-rate-button,
+    &__container-buttons,
+    &__container-pagination {
         margin-top: 2.5rem;
     }
-    .text-field-container__titles,
-    .dropdown-guests-container-one__titles,
-    .masked-text-field-container__titles,
-    .dropdown-number-container-one__titles,
-    .range-slider-container__titles {
+    &__text-field-titles,
+    &__dropdown-guests-titles,
+    &__masked-text-field-titles,
+    &__dropdown-number-titles,
+    &__range-slider-titles {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
     }
-    .date-dropdown-container__titles {
+    &__date-dropdown-titles {
         display: grid;
         grid-template-columns: repeat(2, 9.375rem);
         column-gap: 1.25rem;
     }
-    .text-field-container__title-one,
-    .dropdown-guests-container-one__title-one,
-    .masked-text-field-container__title-one,
-    .date-dropdown-container__title-one,
-    .date-dropdown-container__title-two,
-    .filter-date-dropdown-container__title,
-    .subscription-text-field-container__title,
-    .checkbox-buttons-container__title,
-    .radio-buttons-container__title,
-    .toggle-container__title,
-    .like-button-container__title,
-    .rate-button-container__title,
-    .range-slider-container__title-one,
-    .buttons-container__title,
-    .pagination-container__title,
-    .dropdown-number-container-one__title-one,
-    .dropdown-guests-container-two__title,
-    .dropdown-guests-container-three__title,
-    .rich-checkbox-buttons-container__title,
-    .bullet-list-container__title {
+    &__text-field-title-one,
+    &__dropdown-guests-title-one,
+    &__masked-text-field-title-one,
+    &__date-dropdown-title-one,
+    &__date-dropdown-title-two,
+    &__filter-date-dropdown-title,
+    &__subscription-text-field-title,
+    &__checkbox-buttons-title,
+    &__radio-buttons-title,
+    &__toggle-title,
+    &__like-button-title,
+    &__rate-button-title,
+    &__range-slider-title-one,
+    &__buttons-title,
+    &__pagination-title,
+    &__dropdown-number-title-one,
+    &__dropdown-guests-title,
+    &__dropdown-guests-title,
+    &__rich-checkbox-buttons-title,
+    &__bullet-list-title {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -158,10 +158,10 @@
         text-transform: uppercase;
         color: $Dark-100;
     }
-    .text-field-container__title-two,
-    .dropdown-guests-container-one__title-two,
-    .masked-text-field-container__title-two,
-    .dropdown-number-container-one__title-two {
+    &__text-field-title-two,
+    &__dropdown-guests-title-two,
+    &__masked-text-field-title-two,
+    &__dropdown-number-title-two {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -171,7 +171,7 @@
         text-transform: uppercase;
         color: $Dark-50;
     }
-    .range-slider-container__title-two {
+    &__range-slider-title-two {
         border: none;
         background: #ffffff;
         text-align: right;
@@ -183,35 +183,35 @@
         text-transform: uppercase;
         color: $Dark-50;
     }
-    .toggle-container__item-list {
+    &__toggle-tem-list {
         display: grid;
         row-gap: 0.625rem;
     }
-    .like-button-container__item-list {
+    &__like-button-item-list {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         column-gap: 0.625rem;
     }
-    .rate-button-container__item-list {
+    &__rate-button-item-list {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         column-gap: 1.25rem;
     }
-    .buttons-container__containers {
+    &__containers-buttons {
         display: grid;
         row-gap: 1.875rem;
     }
-    .buttons-container__container-one {
+    &__container-one-buttons {
         display: grid;
         grid-template-columns: repeat(2, 6.1875rem);
         gap: 1.875rem 1.25rem;
     }
-    .buttons-container__container-two {
+    &__container-two-buttons {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         column-gap: 1.25rem;
     }
-    .container-two {
+    &__section-two {
         margin-top: 6.25rem;
         width: 72.5rem;
         justify-self: center;
@@ -220,25 +220,25 @@
         justify-content: space-between;
     }
     @media(max-width: 90rem) {
-        .container-two {
+        &__section-two {
             width: 100%;
             padding: 0 10%;
         }
     }
     @media(max-width: 80rem) {
-        .container-two {
+        &__section-two {
             grid-template-columns: repeat(2, 20rem);
             justify-content: space-around;
             padding: 0 5%;
         }
     }
     @media(max-width: 40rem) {
-        .container-two {
+        &__section-two {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
-    .container-three {
+    &__section-three {
         margin-top: 3.4375rem;
         width: 72.5rem;
         justify-self: center;
@@ -247,13 +247,13 @@
         justify-content: space-between;
     }
     @media(max-width: 90rem) {
-        .container-three {
+        &__section-three {
             width: 100%;
             padding: 0 10%;
         }
     }
     @media(max-width: 80rem) {
-        .container-three {
+        &__section-three {
             padding: 0 5%;
             grid-template-columns: repeat(2, 20rem);
             grid-template-rows: 0.9375rem auto;
@@ -262,12 +262,12 @@
         }
     }
     @media(max-width: 40rem) {
-        .container-three {
+        &__section-three {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
-    .container-four {
+    &__section-four {
         margin-top: 6.25rem;
         width: 72.5rem;
         justify-self: center;
@@ -277,13 +277,13 @@
         padding-bottom: 1.875rem;
     }
     @media(max-width: 90rem) {
-        .container-four {
+        &__section-four {
             width: 100%;
             padding: 0 10%;
         }
     }
     @media(max-width: 80rem) {
-        .container-four {
+        &__section-four {
             width: 100%;
             padding: 0 5%;
             grid-template-columns: repeat(2, 20rem);
@@ -291,7 +291,7 @@
         }
     }
     @media(max-width: 40rem) {
-        .container-four {
+        &__section-four {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }

@@ -27,53 +27,56 @@
     line-height: 0.9375rem;
     text-transform: uppercase;
     cursor: pointer;
-}
-.btn_hover {
-    opacity: 0.5;
-}
-.btn_first {
-    min-width: 6.1875rem;
-    padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
-    color: #FFFFFF;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 1.375rem;
-    border: none;
-}
-.btn_first.btn_small {
-    min-width: auto;
-    padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
-}
-.btn_second {
-    min-width: 6.1875rem;
-    padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
-    color: $Purple;
-    background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
-    background-origin: border-box;
-    background-clip: border-box, content-box;
-    border: 0.125rem solid transparent;
-    border-radius: 1.375rem;
-    box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
-}
-.btn_second.btn_small {
-    min-width: auto;
-    padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
-}
-.btn_third {
-    color: $Purple;
-    border: none;
-    background: none;
-}
-.btn_third.btn_hover {
-    color: $Dark-50;
-    opacity: 1;
-}
-.btn_fourth {
-    width: 20rem;
-    padding: 0.875rem 0 0.9375rem 0;
-    color: #FFFFFF;
-    background: url('../../images/arrow-forward.svg') no-repeat right center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border: none;
-    border-radius: 1.375rem;
+    &_first {
+        min-width: 6.1875rem;
+        padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
+        color: #FFFFFF;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 1.375rem;
+        border: none;
+    }
+    &_first-not-active {
+        opacity: 0.5;
+    }
+    &_first-small {
+        min-width: auto;
+        padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
+    }
+    &_second {
+        min-width: 6.1875rem;
+        padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
+        color: $Purple;
+        background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
+        background-origin: border-box;
+        background-clip: border-box, content-box;
+        border: 0.125rem solid transparent;
+        border-radius: 1.375rem;
+        box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
+    }
+    &_second-not-active {
+        opacity: 0.5;
+    }
+    &_second-small {
+        min-width: auto;
+        padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
+    }
+    &_third {
+        color: $Purple;
+        border: none;
+        background: none;
+    }
+    &_third-not-active {
+        color: $Dark-50;
+        opacity: 1;
+    }
+    &_fourth {
+        width: 20rem;
+        padding: 0.875rem 0 0.9375rem 0;
+        color: #FFFFFF;
+        background: url('../../images/arrow-forward.svg') no-repeat right center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border: none;
+        border-radius: 1.375rem;
+    }
 }
 
 

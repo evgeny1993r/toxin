@@ -5,12 +5,12 @@
     62px - 3.875rem +
 */ 
 
-body {
-    background: #E5E5E5;
-}
-
 .headers-footers {
-    margin-top: 3.875rem;
-    display: grid;
-    row-gap: 2.5rem;
+    background: #e5e5e5;
+    min-height: 100%;
+    &__content {
+        margin-top: 3.875rem;
+        display: grid;
+        row-gap: 2.5rem;
+    }
 }
