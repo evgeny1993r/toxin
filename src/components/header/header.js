@@ -1,12 +1,14 @@
-function Header () {
-    const $header = $('.js-header')
-    $header.each((idx, el) => {
-        const $nav_link = $(el).find('.js-nav__link')
-        $nav_link.on('click', (e) => {
-            $nav_link.removeClass('nav__link_active')
-            $(e.currentTarget).addClass('nav__link_active')
+class Header {
+    constructor() {
+        this.$header = $('.js-header')
+        this.$header.each((idx, el) => {
+            const $header_link = $(el).find('.js-header__link')
+            $header_link.on('click', (e) => {
+                $header_link.removeClass('header__link_active')
+                $(e.currentTarget).addClass('header__link_active')
+            })
         })
-    })
+    }
 }
 
 export {

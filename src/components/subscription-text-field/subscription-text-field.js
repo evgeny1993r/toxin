@@ -1,12 +1,14 @@
-function SubscriptionTextField () {
-    const $subscriptionTextField = $('.subscription-text-field')
-    const $subscriptionTextFieldInput = $('.subscription-text-field__input')
-    $subscriptionTextFieldInput.on('focus', () => {
-        $subscriptionTextField.addClass('subscription-text-field_active')
-    })
-    $subscriptionTextFieldInput.on('blur', () => {
-        $subscriptionTextField.removeClass('subscription-text-field_active')
-    })
+class SubscriptionTextField {
+    constructor() {
+        this.$subscriptionTextField = $('.js-subscription-text-field')
+        this.$subscriptionTextFieldInput = this.$subscriptionTextField.find('.js-subscription-text-field__input')
+        this.$subscriptionTextFieldInput.on('focus', () => {
+            this.$subscriptionTextField.addClass('subscription-text-field_active')
+        })
+        this.$subscriptionTextFieldInput.on('blur', () => {
+            this.$subscriptionTextField.removeClass('subscription-text-field_active')
+        })
+    }
 }
 
 export {

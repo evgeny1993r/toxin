@@ -1,4 +1,4 @@
-import { DateDropdown } from './date-dropdown'
+import { DateDropdown } from './Date-dropdown'
 
 new DateDropdown('js-date-dropdown-one', false, new Date('5 October, 2020'), undefined)
 new DateDropdown('js-date-dropdown-two', false, undefined, undefined)

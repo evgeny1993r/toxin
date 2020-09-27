@@ -1,3 +1,3 @@
-import { ExpandableCheckboxList } from './expandable-checkbox-list'
+import { ExpandableCheckboxList } from './Expandable-checkbox-list'
 
 new ExpandableCheckboxList()

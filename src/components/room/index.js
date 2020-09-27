@@ -1,3 +1,3 @@
-import { Room } from './room'
+import { Room } from './Room'
 
 new Room()

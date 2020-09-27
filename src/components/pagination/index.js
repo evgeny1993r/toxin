@@ -1,4 +1,4 @@
-import { Pagination } from './pagination'
+import { Pagination } from './Pagination'
 
-new Pagination('pagination__item', 'js-pagination__container-items-one', 'js-pagination__container-one')
-new Pagination('room', 'js-pagination__rooms-container-two', 'js-pagination__container-two')
+new Pagination('js-form-elements__pagination-item', 'js-form-elements__container-items-pagintaionjs', 'js-form-elements__container-paginationjs')
+new Pagination('room', 'js-search-room__container-pagination-rooms', 'js-search-room__container-pagination')

@@ -1,3 +1,3 @@
-import { LikeButton } from './like-button'
+import { LikeButton } from './Like-button'
 
 new LikeButton()

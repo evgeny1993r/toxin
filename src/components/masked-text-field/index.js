@@ -1,3 +1,3 @@
-import { MaskedTextField } from './masked-text-field'
+import { MaskedTextField } from './Masked-text-field'
 
 new MaskedTextField()
