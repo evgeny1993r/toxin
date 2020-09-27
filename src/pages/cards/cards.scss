@@ -21,24 +21,24 @@
         align-items: start;
         padding-bottom: 4.375rem;
     }
+    @media(max-width: 90rem) {
+        &__content {
+            grid-template-columns: repeat(2, 23.75rem);
+            justify-content: space-evenly;
+            row-gap: 2.5rem;
+        }
+    }
+    @media(max-width: 64rem) {
+        &__content {
+            grid-template-columns: 1fr;
+            padding: 0 10%;
+            justify-items: center;
+        }
+    }
     &__container-one,
     &__container-two,
     &__container-three {
         display: grid;
         row-gap: 2.5rem;
-    }
-}
-@media(max-width: 90rem) {
-    .cards {
-        grid-template-columns: repeat(2, 23.75rem);
-        justify-content: space-evenly;
-        row-gap: 2.5rem;
-    }
-}
-@media(max-width: 64rem) {
-    .cards {
-        grid-template-columns: 1fr;
-        padding: 0 10%;
-        justify-items: center;
     }
 }

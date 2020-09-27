@@ -164,6 +164,11 @@
             text-align: center;
         }
     }
+    @media(max-width: 33.75rem) {
+        &__title {
+            margin-top: 2rem;
+        }
+    }
     &__container-pagination {
         margin-top: 2.5rem;
         display: grid;

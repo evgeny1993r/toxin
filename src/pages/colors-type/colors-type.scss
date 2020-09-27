@@ -31,6 +31,18 @@
         justify-content: space-between;
         background: #ffffff;
     }
+    @media(max-width: 90rem) {
+        &__content {
+            min-width: 100%;
+            padding: 0 10%;
+        }
+    }
+    @media(max-width: 64rem) {
+        &__content {
+            grid-template-columns: 1fr;
+            row-gap: 4.0625rem;
+        }
+    }
     &__colors-item-list {
         display: grid;
         row-gap: 1.25rem;
@@ -142,17 +154,4 @@
         line-height: 1.5rem;
         color: $Dark-75;
     }    
-}
-
-@media(max-width: 90rem) {
-    .colors-type {
-        min-width: 100%;
-        padding: 0 10%;
-    }
-}
-@media(max-width: 64rem) {
-    .colors-type {
-        grid-template-columns: 1fr;
-        row-gap: 4.0625rem;
-    }
 }
