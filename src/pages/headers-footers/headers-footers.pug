@@ -6,10 +6,11 @@ html(lang="ru")
         link(rel="icon" href="../src/images/logotip-gray.svg")
         title Headers & Footers
     body
-        include ../../components/logo-gray/logo-gray.pug 
         .headers-footers
-            include ../../components/header/header.pug 
-            +header('', '')
-            +header('Юлий', 'Цезарь')
-            include ../../components/footer/footer.pug 
-            +footer()
+            include ../../components/logotip/logotip.pug 
+            +logotip('gray')
+            .headers-footers__content  
+                include ../../components/header/header.pug 
+                +header('', '')
+                +header('Юлий', 'Цезарь')
+                include ../../components/footer/footer.pug

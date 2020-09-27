@@ -1,11 +1,11 @@
 mixin like-button(state, value)
     if(state == 'inActive')
         .like-button.js-like-button
-            .container 
-                i.js-icon.icon-like_button_inActive 
+            .like-button__container 
+                i.like-button__icon.js-like-button__icon.icon-like_button_inActive 
                 span.like-button__value.js-like-button__value #{value}
     else if(state == 'active')
         .like-button.js-like-button.like-button_active
-            .container 
-                i.js-icon.icon-like_button_active 
+            .like-button__container 
+                i.like-button__icon.js-like-button__icon.icon-like_button_active 
                 span.like-button__value.js-like-button__value #{value}

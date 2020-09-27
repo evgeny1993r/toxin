@@ -6,35 +6,37 @@ html(lang="ru")
         link(rel="icon" href="../src/images/logotip-gray.svg")
         title Colors & Type
     body
-        mixin colors_item(color, opacity, text_one, text_two)
-            li.colors__item
-                .colors__color(style={background: color, opacity: opacity})
-                .colors__texts
-                    span.colors__text-one #{text_one} 
-                    span.colors__text-two #{text_two}
+        mixin colorsItem(color, opacity, textOne, textTwo)
+            li.colors-type__colors-item
+                .colors-type__colors-color(style={background: color, opacity: opacity})
+                .colors-type__colors-texts
+                    span.colors-type__colors-text-one #{textOne} 
+                    span.colors-type__colors-text-two #{textTwo}
 
-        include ../../components/logo-gray/logo-gray.pug 
         .colors-type
-            .colors
-                ul.colors__item-list
-                    +colors_item('#1F2041', '', 'Dark Shade 100%', '#1F2041')
-                    +colors_item('#1F2041', '0.75', 'Dark Shade 75% ', '#1F2041')
-                    +colors_item('#1F2041', '0.5', 'Dark Shade 50% ', '#1F2041')
-                    +colors_item('#1F2041', '0.25', 'Dark Shade 25%', '#1F2041')
-                    +colors_item('#1F2041', '0.05', 'Dark Shade 5%', '#1F2041')
-                    +colors_item('#BC9CFF', '', 'Purple', '#BC9CFF')
-                    +colors_item('#6FCF97', '', 'Green', '#6FCF97')
-            .type
-                ul.type__item-list
-                    li.type__item
-                        h1.type__h1-one H1
-                        h1.type__h1-two This one is the sub-section or widget title
-                    li.type__item
-                        h2.type__h2-one H2
-                        h2.type__h2-two Next one is the item title inside widgets
-                    li.type__item
-                        h3.type__h3-one H3
-                        h3.type__h3-two This is a label or CTA text
-                    li.type__item
-                        p.type__body-one Body 
-                        p.type__body-two This is the body text which is used for most of the design, like paragraphs, lists, etc
+            include ../../components/logotip/logotip.pug
+            +logotip('gray')
+            .colors-type__content 
+                .colors-type__colors
+                    ul.colors-type__colors-item-list
+                        +colorsItem('#1F2041', '', 'Dark Shade 100%', '#1F2041')
+                        +colorsItem('#1F2041', '0.75', 'Dark Shade 75% ', '#1F2041')
+                        +colorsItem('#1F2041', '0.5', 'Dark Shade 50% ', '#1F2041')
+                        +colorsItem('#1F2041', '0.25', 'Dark Shade 25%', '#1F2041')
+                        +colorsItem('#1F2041', '0.05', 'Dark Shade 5%', '#1F2041')
+                        +colorsItem('#BC9CFF', '', 'Purple', '#BC9CFF')
+                        +colorsItem('#6FCF97', '', 'Green', '#6FCF97')
+                .colors-type__type
+                    ul.colors-type__type-item-list
+                        li.colors-type__type-item
+                            h1.colors-type__type-h1-one H1
+                            h1.colors-type__type-h1-two This one is the sub-section or widget title
+                        li.colors-type__type-item
+                            h2.colors-type__type-h2-one H2
+                            h2.colors-type__type-h2-two Next one is the item title inside widgets
+                        li.colors-type__type-item
+                            h3.colors-type__type-h3-one H3
+                            h3.colors-type__type-h3-two This is a label or CTA text
+                        li.colors-type__type-item
+                            p.colors-type__type-body-one Body 
+                            p.colors-type__type-body-two This is the body text which is used for most of the design, like paragraphs, lists, etc

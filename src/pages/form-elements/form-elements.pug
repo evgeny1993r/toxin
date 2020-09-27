@@ -7,127 +7,128 @@ html(lang="ru")
         title Form Elements 
     body
         .form-elements 
-            include ../../components/logo-gray/logo-gray.pug 
-            .container-one
-                .container-one__one
-                    .text-field-container 
-                        .text-field-container__titles
-                            h3.text-field-container__title-one text field
-                            h3.text-field-container__title-two default
+            include ../../components/logotip/logotip.pug 
+            +logotip('gray')
+            section.form-elements__section-one
+                .form-elements__container-one
+                    .form-elements__container-text-field 
+                        .form-elements__text-field-titles
+                            h3.form-elements__text-field-title-one text field
+                            h3.form-elements__text-field-title-two default
                         include ../../components/text-field/text-field.pug  
                         +text-field('text', 'Email')
-                    .dropdown-guests-container-one
-                        .dropdown-guests-container-one__titles 
-                            h3.dropdown-guests-container-one__title-one dropdown 
-                            h3.dropdown-guests-container-one__title-two default
+                    .form-elements__container-one-dropdown-guests
+                        .form-elements__dropdown-guests-titles 
+                            h3.form-elements__dropdown-guests-title-one dropdown 
+                            h3.form-elements__dropdown-guests-title-two default
                         #js-dropdown-guests-one 
                     
-                    .masked-text-field-container 
-                        .masked-text-field-container__titles
-                            h3.masked-text-field-container__title-one masked text field 
-                            h3.masked-text-field-container__title-two default
+                    .form-elements__container-masked-text-field
+                        .form-elements__masked-text-field-titles
+                            h3.form-elements__masked-text-field-title-one masked text field 
+                            h3.form-elements__masked-text-field-title-two default
                         include ../../components/masked-text-field/masked-text-field.pug
 
-                    .date-dropdown-container
-                        .date-dropdown-container__titles 
-                            h3.date-dropdown-container__title-one date dropdown 
-                            h3.date-dropdown-container__title-two date dropdown 
+                    .form-elements__container-date-dropdown
+                        .form-elements__date-dropdown-titles 
+                            h3.form-elements__date-dropdown-title-one date dropdown 
+                            h3.form-elements__date-dropdown-title-two date dropdown 
                         include ../../components/date-dropdown/date-dropdown.pug 
                         +date-dropdown('js-date-dropdown-one', true)
 
-                    .filter-date-dropdown-container 
-                        h3.filter-date-dropdown-container__title filter date dropdown 
+                    .form-elements__container-filter-date-dropdown
+                        h3.form-elements__filter-date-dropdown-title filter date dropdown 
                         include ../../components/filter-date-dropdown/filter-date-dropdown.pug
                         +filter-date-dropdown('js-filter-date-dropdown-one') 
 
-                    .subscription-text-field-container 
-                        h3.subscription-text-field-container__title subscription text field 
+                    .form-elements__container-subscription-text-field
+                        h3.form-elements__subscription-text-field-title subscription text field 
                         include ../../components/subscription-text-field/subscription-text-field.pug 
 
-                .container-one__two
-                    .checkbox-buttons-container 
-                        h3.checkbox-buttons-container__title checkbox buttons 
+                .form-elements__container-two
+                    .form-elements__container-checkbox-buttons
+                        h3.form-elements__checkbox-buttons-title checkbox buttons 
                         include ../../components/checkbox-buttons/checkbox-buttons.pug 
 
-                    .radio-buttons-container 
-                        h3.radio-buttons-container__title radio buttons 
+                    .form-elements__container-radio-buttons
+                        h3.form-elements__radio-buttons-title radio buttons 
                         include ../../components/radio-buttons/radio-buttons.pug 
 
-                    .toggle-container 
-                        h3.toggle-container__title toggle 
-                        .toggle-container__item-list 
+                    .form-elements__container-toggle
+                        h3.form-elements__toggle-title toggle 
+                        .form-elements__toggle-item-list 
                             include ../../components/toggle/toggle.pug
                             +toggle('toggle-one', true) 
                             +toggle('toggle-two', false)
 
-                    .like-button-container 
-                        h3.like-button-container__title like button 
-                        .like-button-container__item-list 
+                    .form-elements__container-like-button
+                        h3.form-elements__like-button-title like button 
+                        .form-elements__like-button-item-list 
                             include ../../components/like-button/like-button.pug 
                             +like-button('inActive', '2')
                             +like-button('active', '12')
 
-                    .rate-button-container 
-                        h3.rate-button-container__title rate button 
-                        .rate-button-container__item-list 
+                    .form-elements__container-rate-button
+                        h3.form-elements__rate-button-title rate button 
+                        .form-elements__rate-button-item-list 
                             include ../../components/rate-button/rate-button.pug 
                             +rate-button('4')
                             +rate-button('5')
 
-                .container-one__three
-                    .range-slider-container 
-                        .range-slider-container__titles 
-                            h3.range-slider-container__title-one range slider
-                            input.range-slider-container__title-two(type="text", id="js-range-slider-input-one")
+                .form-elements__container-three
+                    .form-elements__container-range-slider
+                        .form-elements__range-slider-titles 
+                            h3.form-elements__range-slider-title-one range slider
+                            input.form-elements__range-slider-title-two(type="text", id="js-range-slider-input-one")
                         #js-range-slider-one
 
-                    .buttons-container 
-                        h3.buttons-container__title buttons 
+                    .form-elements__container-buttons
+                        h3.form-elements__buttons-title buttons 
                         include ../../components/buttons/buttons.pug 
-                        .buttons-container__containers
-                            .buttons-container__container-one
+                        .form-elements__containers-buttons
+                            .form-elements__container-one-buttons
                                 +btn('button', 'btn_first', 'click me')
-                                +btn('button', 'btn_first btn_hover', 'click me')
+                                +btn('button', 'btn_first btn_first-not-active', 'click me')
                                 +btn('button', 'btn_second', 'click me')
-                                +btn('button', 'btn_second btn_hover', 'click me')
-                            .buttons-container__container-two
+                                +btn('button', 'btn_second btn_second-not-active', 'click me')
+                            .form-elements__container-two-buttons
                                 +btn('button', 'btn_third', 'click me')
-                                +btn('button', 'btn_third btn_hover', 'click me')
+                                +btn('button', 'btn_third btn_third-not-active', 'click me')
                             +btn('button', 'btn_fourth', 'Перейти к оплате')
 
-                    .pagination-container 
-                        h3.pagination-container__title pagination
-                        .pagination 
-                            .pagintaion__container-items#js-pagination__container-items-one
+                    .form-elements__container-pagination
+                        h3.form-elements__pagination-title pagination
+                        .form-elements__pagination 
+                            .form-elements__container-items-pagintaion#js-form-elements__container-items-pagintaionjs
                                 - for(var i = 0; i <= 170; i++) 
-                                    .pagination__item 
-                            .pagination__container#js-pagination__container-one
+                                    .form-elements__pagination-item.js-form-elements__pagination-item
+                            .form-elements__container-paginationjs#js-form-elements__container-paginationjs
 
             
-            .container-two 
-                .dropdown-number-container-one
-                    .dropdown-number-container-one__titles
-                        h3.dropdown-number-container-one__title-one dropdown
-                        h3.dropdown-number-container-one__title-two default
+            section.form-elements__section-two 
+                .form-elements__container-one-dropdown-number
+                    .form-elements__dropdown-number-titles
+                        h3.form-elements__dropdown-number-title-one dropdown
+                        h3.form-elements__dropdown-number-title-two default
                     #js-dropdown-number-one
-                .dropdown-guests-container-two
-                    h3.dropdown-guests-container-two__title dropdown 
+                .form-elements__container-two-dropdown-guests
+                    h3.form-elements__dropdown-guests-title dropdown 
                     #js-dropdown-guests-two
-                .dropdown-guests-container-three
-                    h3.dropdown-guests-container-three__title dropdown
+                .form-elements__container-three-dropdown-guests
+                    h3.form-elements__dropdown-guests-title dropdown
                     #js-dropdown-guests-three
 
-            .container-three 
+            section.form-elements__section-three 
                 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
                 +expandable-checkbox-list('expandable checkbox list')
-                .rich-checkbox-buttons-container
-                    h3.rich-checkbox-buttons-container__title rich checkbox buttons 
+                .form-elements__container-rich-checkbox-buttons
+                    h3.form-elements__rich-checkbox-buttons-title rich checkbox buttons 
                     include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
-                .bullet-list-container 
-                    h3.bullet-list-container__title bullet list
+                .form-elements__container-bullet-list
+                    h3.form-elements__bullet-list-title bullet list
                     include ../../components/bullet-list/bullet-list.pug 
             
-            .container-four 
+            section.form-elements__section-four 
                 include ../../components/intelligence/intelligence.pug 
                 include ../../components/comment/comment.pug 
                 +comment(

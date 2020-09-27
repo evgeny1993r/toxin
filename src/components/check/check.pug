@@ -1,38 +1,38 @@
 mixin check(numberValue, numberState, numberPrice, dateDropdownId, dropdownGuestsId)
     form.check 
-        .data-number
-            p.data-number__number
-                span.data-number__number-symbol № 
-                span.data-number__number-value #{numberValue}
-                span.data-number__number-state #{numberState}
-            p.data-number__price
-                span.data-number__price-value #{numberPrice}₽
-                span.data-number__price-text  в сутки
-        .date-dropdown-container 
-            .date-dropdown-container__titles 
-                h3.date-dropdown-container__title-one прибытие 
-                h3.date-dropdown-container__title-two выезд
+        .check__room-data
+            p.check__room-number
+                span.check__room-number-symbol № 
+                span.check__room-number-value #{numberValue}
+                span.check__room-number-state #{numberState}
+            p.check__room-price
+                span.check__room-price-value #{numberPrice}₽
+                span.check__room-price-text  в сутки
+        .check__date-dropdown-container 
+            .check__date-dropdown-titles 
+                h3.check__date-dropdown-title-one прибытие 
+                h3.check__date-dropdown-title-two выезд
             include ../date-dropdown/date-dropdown.pug 
             +date-dropdown(dateDropdownId, true)
-        .dropdown-guests-container 
-            h3.dropdown-guests-container__title гости
+        .check__dropdown-guests-container 
+            h3.check__dropdown-guests-title гости
             div(id=dropdownGuestsId)
-        .data
-            p.price
-                span.price__text.js-price__text
-                span.price__value.js-price__value
-            p.discount
-                span.discount__text.js-discount__text 
-                span.discount__icon i
-                span.discount__price.js-discount__price 
-            p.collecting 
-                span.collecting__text.js-collecting__text
-                span.collecting__icon i
-                span.collecting__price.js-collecting__price
-        .total 
-            span.total__title Итого 
-            span.total__line
-            span.total__price.js-total__price
+        .check__data
+            p.check__price
+                span.check__price-text.js-check__price-text
+                span.check__price-value.js-check__price-value
+            p.check__discount
+                span.check__discount-text.js-check__discount-text 
+                span.check__discount-icon i
+                span.check__discount-price.js-check__discount-price 
+            p.check__collecting 
+                span.check__collecting-text.js-check__collecting-text
+                span.check__collecting-icon i
+                span.check__collecting-price.js-check__collecting-price
+        .check__total 
+            span.check__total-title Итого 
+            span.check__total-line
+            span.check__total-price.js-check__total-price
         include ../buttons/buttons.pug 
         +btn('submit', 'btn_fourth', 'забронировать')
 

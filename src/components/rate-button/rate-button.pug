@@ -1,38 +1,31 @@
+mixin item-active()
+    span.rate-button__item 
+        i.rate-button__icon.icon-rate_button_active
+
+mixin item-inActive()
+    span.rate-button__item
+        i.rate-button__icon.icon-rate_button_inActive
+
 mixin rate-button(value)
     if value == 3 
         .rate-button
-            span.rate-button__item 
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_inActive
-            span.rate-button__item
-                i.icon-rate_button_inActive
+            +item-active()
+            +item-active()
+            +item-active()
+            +item-inActive()
+            +item-inActive()
     else if value == 4 
         .rate-button 
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_inActive
+            +item-active()
+            +item-active()
+            +item-active()
+            +item-active()
+            +item-inActive()
     else if value == 5
-        .rate-button 
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
-            span.rate-button__item 
-                i.icon-rate_button_active
-            span.rate-button__item
-                i.icon-rate_button_active
+        .rate-button
+            +item-active()
+            +item-active()
+            +item-active()
+            +item-active()
+            +item-active()
 

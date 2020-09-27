@@ -9,32 +9,31 @@ html(lang="ru")
         .room-details 
             include ../../components/header/header.pug 
             +header('', '')
-            .image-list
-                .image-list__image-one 
-                .image-list__image-two 
-                .image-list__image-three
-            .content 
-                .section
-                    .section__one
-                        .intelligence-container 
-                            h3.intellegence-container__title Сведения о номере
+            .room-details__image-list
+                .room-details__image-one 
+                .room-details__image-two 
+                .room-details__image-three
+            .room-details__content 
+                .room-details__containers
+                    .room-details__container-one
+                        .room-details__intelligence 
+                            h3.room-details__intellegence-title Сведения о номере
                             include ../../components/intelligence/intelligence.pug 
                         include ../../components/impression/impression.pug 
-                    .section__two
-                        .comments
-                            .comments__titles 
-                                h3.comments__title-one Отзывы посетителей номера
-                                h3.comments__title-two 2 отзыва
+                    .room-details__container-two
+                        .room-details__comments
+                            .room-details__comments-titles 
+                                h3.room-details__comments-title-one Отзывы посетителей номера
+                                h3.room-details__comments-title-two 2 отзыва
                             include ../../components/comment/comment.pug 
                             +comment('userpic-one.png', 'Мурад Сарафанов', '5 дней назад', 'active', '12', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
                             +comment('userpic-two.png', 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
-                    .section__three 
-                        .bullet-list-container 
-                            h3.bullet-list-container__title Правила
+                    .room-details__container-three 
+                        .room-details__bullet-list 
+                            h3.room-details__bullet-list-title Правила
                             include ../../components/bullet-list/bullet-list.pug 
                         include ../../components/cancel/cancel.pug
                 include ../../components/check/check.pug 
                 +check('888', 'люкс', '9 990', 'js-date-dropdown-six', 'js-dropdown-guests-seven')
-            .line 
-            include ../../components/footer/footer.pug 
-            +footer()
+            .room-details__line 
+            include ../../components/footer/footer.pug

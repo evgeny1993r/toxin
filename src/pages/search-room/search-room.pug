@@ -9,36 +9,36 @@ html(lang="ru")
         .search-room 
             include ../../components/header/header.pug 
             +header('', '')
-            .content 
-                .sidebar 
-                    .filter-date-dropdown-container 
-                        h3.filter-date-dropdown-container__title даты пребывания в отеле
+            .search-room__content 
+                .search-room__sidebar 
+                    .search-room__container-filter-date-dropdown
+                        h3.search-room__filter-date-dropdown-title даты пребывания в отеле
                         include ../../components/filter-date-dropdown/filter-date-dropdown.pug 
                         +filter-date-dropdown('js-filter-date-dropdown-two')
-                    .dropdown-guests-container 
-                        h3.dropdown-guests-container__title гости 
+                    .search-room__container-dropdown-guests
+                        h3.search-room__dropdown-guests-title гости 
                         #js-dropdown-guests-eight 
-                    .range-slider-container
-                        .range-slider-container__titles 
-                            h3.range-slider-container__title-one диапазон цены
-                            input.range-slider-container__title-two(type="text", id='js-range-slider-input-two')
-                        .range-slider#js-range-slider-two 
-                        span.range-slider-container__text Стоимость за сутки пребывания в номере
-                    .checkbox-buttons-container 
-                        h3.checkbox-buttons-container__title checkbox buttons
+                    .search-room__container-range-slider
+                        .search-room__range-slider-titles 
+                            h3.search-room__range-slider-title-one диапазон цены
+                            input.search-room__range-slider-title-two(type="text", id='js-range-slider-input-two')
+                        .search-room__range-slider#js-range-slider-two 
+                        span.search-room__range-slider-text Стоимость за сутки пребывания в номере
+                    .search-room__container-checkbox-buttons
+                        h3.search-room__checkbox-buttons-title checkbox buttons
                         include ../../components/checkbox-buttons/checkbox-buttons.pug
-                    .rich-checkbox-buttons-container 
-                        h3.rich-checkbox-buttons-container__title доступность
+                    .search-room__container-rich-checkbox-buttons
+                        h3.search-room__rich-checkbox-buttons-title доступность
                         include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
-                    .dropdown-number-container 
-                        h3.dropdown-number-container__title удобства номера 
+                    .search-room__container-dropdown-number
+                        h3.search-room__dropdown-number-title удобства номера 
                         #js-dropdown-number-two 
                     include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
                     +expandable-checkbox-list('дополнительные удобства')
-                .rooms
-                    h1.title Номера, которые мы для вас подобрали
-                    .pagination 
-                        .pagination__rooms-container#js-pagination__rooms-container-two
+                .search-room__rooms
+                    h1.search-room__title Номера, которые мы для вас подобрали
+                    .search-room__pagination 
+                        .search-room__container-pagination-rooms#js-search-room__container-pagination-rooms
                             include ../../components/room/room.pug 
                             - for(var i = 0; i <= 6; i++) 
                                 +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
@@ -77,7 +77,6 @@ html(lang="ru")
                             +room('room-ten.jpg', '666', '', '5 000', '5', '25')
                             +room('room-eleven.jpg', '444', '', '5 000', '3', '15')
                             +room('room-twelve.jpg', '352', '', '5 000', '3', '55')    
-                        .pagination__container#js-pagination__container-two
-            .line 
-            include ../../components/footer/footer.pug 
-            +footer()
+                        .search-room__container-pagination#js-search-room__container-pagination
+            .search-room__line 
+            include ../../components/footer/footer.pug

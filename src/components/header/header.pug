@@ -1,24 +1,25 @@
 mixin header(first_name, last_name)
     header.header.js-header 
-        img.logotip(src=require("../../images/logotip.svg").default, alt="Logotip")
-        nav.nav 
-            ul.nav__item-list
-                li.nav__item 
-                    a.nav__link.js-nav__link(href="#") О нас
-                li.nav__item
-                    a.nav__link.js-nav__link.nav__link_dropdown(href="#") Услуги
+        include ../logotip/logotip.pug 
+        +logotip('purple')
+        nav.header__nav 
+            ul.header__item-list
+                li.header__item 
+                    a.header__link.js-header__link(href="#") О нас
+                li.header__item
+                    a.header__link.js-header__link.header__link_dropdown(href="#") Услуги
                         i.icon-expand_more
-                li.nav__item
-                    a.nav__link.js-nav__link(href="#") Вакансии
-                li.nav__item
-                    a.nav__link.js-nav__link(href="#") Новости
-                li.nav__item
-                    a.nav__link.js-nav__link.nav__link_dropdown(href="#") Соглашения
+                li.header__item
+                    a.header__link.js-header__link(href="#") Вакансии
+                li.header__item
+                    a.header__link.js-header__link(href="#") Новости
+                li.header__item
+                    a.header__link.js-header__link.header__link_dropdown(href="#") Соглашения
                         i.icon-expand_more
         if(first_name == '' && last_name == '')
-            .buttons 
+            .header__buttons 
                 include ../buttons/buttons.pug 
-                +btn('button', 'btn_second btn_small', 'Войти')
-                +btn('button', 'btn_first btn_small', 'Зарегистрироваться')
+                +btn('button', 'btn_second btn_second-small', 'Войти')
+                +btn('button', 'btn_first btn_first-small', 'Зарегистрироваться')
         else 
-            span.name #{first_name} #{last_name}
+            span.header__name #{first_name} #{last_name}
