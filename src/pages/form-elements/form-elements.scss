@@ -28,6 +28,7 @@
     align-content: start;
     padding-bottom: 1.875rem;
     background: #ffffff;
+
     &__section-one {
         width: 72.5rem;
         justify-self: center;
@@ -36,12 +37,14 @@
         justify-content: space-between;
         margin: 4.0625rem 0 0 0;
     }
+
     @media(max-width: 90rem) {
         &__section-one {
             width: 100%;
             padding: 0 10%;
         }
     }
+
     @media(max-width: 80rem) {
         &__section-one {
             padding: 0 5%;
@@ -49,12 +52,14 @@
             justify-content: space-around;
         }
     }
+
     @media(max-width: 40rem) {
         &__section-one {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
+
     &__container-text-field,
     &__container-one-dropdown-guests,
     &__container-masked-text-field,
@@ -67,15 +72,18 @@
         display: grid;
         row-gap: 0.3125rem;
     }
+
     @media(max-width: 40rem) {
         &__container-two-dropdown-guests {
             margin-top: 2.5rem;
         }
     }
+
     &__container-one-dropdown-number,
     &__container-range-slider {
         width: 16.625rem;
     }
+
     &__container-checkbox-buttons,
     &__container-radio-buttons,
     &__container-toggle,
@@ -89,25 +97,30 @@
         display: grid;
         row-gap: 1rem;
     }
+
     @media(max-width: 80rem) {
         &__container-range-slider {
             margin-top: 2.5rem;
         }
     }
+
     @media(max-width: 40rem) {
         &__container-checkbox-buttons {
             margin-top: 2.5rem;
         }
     }
+    
     &__container-one-dropdown-guests,
     &__container-masked-text-field {
         margin-top: 1.25rem;
     }
+
     &__container-date-dropdown,
     &__container-filter-date-dropdown,
     &__container-subscription-text-field {
         margin-top: 2.5rem;
     }
+
     &__container-radio-buttons,
     &__container-toggle,
     &__container-like-button,
@@ -116,6 +129,7 @@
     &__container-pagination {
         margin-top: 2.5rem;
     }
+
     &__text-field-titles,
     &__dropdown-guests-titles,
     &__masked-text-field-titles,
@@ -125,11 +139,13 @@
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
     }
+
     &__date-dropdown-titles {
         display: grid;
         grid-template-columns: repeat(2, 9.375rem);
         column-gap: 1.25rem;
     }
+
     &__text-field-title-one,
     &__dropdown-guests-title-one,
     &__masked-text-field-title-one,
@@ -158,6 +174,7 @@
         text-transform: uppercase;
         color: $Dark-100;
     }
+
     &__text-field-title-two,
     &__dropdown-guests-title-two,
     &__masked-text-field-title-two,
@@ -171,6 +188,7 @@
         text-transform: uppercase;
         color: $Dark-50;
     }
+
     &__range-slider-title-two {
         border: none;
         background: #ffffff;
@@ -183,34 +201,41 @@
         text-transform: uppercase;
         color: $Dark-50;
     }
+
     &__toggle-tem-list {
         display: grid;
         row-gap: 0.625rem;
     }
+
     &__like-button-item-list {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         column-gap: 0.625rem;
     }
+    
     &__rate-button-item-list {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         column-gap: 1.25rem;
     }
+
     &__containers-buttons {
         display: grid;
         row-gap: 1.875rem;
     }
+
     &__container-one-buttons {
         display: grid;
         grid-template-columns: repeat(2, 6.1875rem);
         gap: 1.875rem 1.25rem;
     }
+
     &__container-two-buttons {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         column-gap: 1.25rem;
     }
+
     &__section-two {
         margin-top: 6.25rem;
         width: 72.5rem;
@@ -219,12 +244,14 @@
         grid-template-columns: repeat(3, 20rem);
         justify-content: space-between;
     }
+
     @media(max-width: 90rem) {
         &__section-two {
             width: 100%;
             padding: 0 10%;
         }
     }
+
     @media(max-width: 80rem) {
         &__section-two {
             grid-template-columns: repeat(2, 20rem);
@@ -232,12 +259,14 @@
             padding: 0 5%;
         }
     }
+
     @media(max-width: 40rem) {
         &__section-two {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
+    
     &__section-three {
         margin-top: 3.4375rem;
         width: 72.5rem;
@@ -246,12 +275,14 @@
         grid-template-columns: repeat(3, 20rem);
         justify-content: space-between;
     }
+
     @media(max-width: 90rem) {
         &__section-three {
             width: 100%;
             padding: 0 10%;
         }
     }
+
     @media(max-width: 80rem) {
         &__section-three {
             padding: 0 5%;
@@ -261,12 +292,14 @@
             row-gap: 2.5rem;
         }
     }
+
     @media(max-width: 40rem) {
         &__section-three {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
+
     &__section-four {
         margin-top: 6.25rem;
         width: 72.5rem;
@@ -276,12 +309,14 @@
         justify-content: space-between;
         padding-bottom: 1.875rem;
     }
+
     @media(max-width: 90rem) {
         &__section-four {
             width: 100%;
             padding: 0 10%;
         }
     }
+
     @media(max-width: 80rem) {
         &__section-four {
             width: 100%;
@@ -290,20 +325,24 @@
             justify-content: space-around;
         }
     }
+
     @media(max-width: 40rem) {
         &__section-four {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
+
     .comment {
         grid-column: 2 / 4;
     }
+
     @media(max-width: 80rem) {
         .comment {
             grid-column: 2 / 3;
         }
     }
+    
     @media(max-width: 40rem) {
         .comment {
             margin-top: 2.5rem;

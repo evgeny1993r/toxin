@@ -9,6 +9,7 @@
 .authorization {
     display: grid;
     grid-template-rows: max-content 43.75rem max-content;
+
     &__content {
         background: url('../../images/background-authorization-registration.jpg') no-repeat center;
         background-size: cover;
@@ -17,11 +18,13 @@
         align-content: center;
     }
 }
+
 @media(max-width: 64rem) {
     .authorization {
         grid-template-rows: max-content 31.25rem max-content;
     }
 }
+
 @media(max-width: 30rem) {
     .authorization {
         grid-template-rows: max-content 25rem max-content;

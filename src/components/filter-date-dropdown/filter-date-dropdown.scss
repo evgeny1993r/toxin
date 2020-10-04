@@ -4,7 +4,8 @@
     max-width: 16.625rem;
     display: grid;
     row-gap: 0.313rem;
-    .filter-date-dropdown__input {
+
+    &__input {
         max-width: 16.625rem;
         display: grid;
         grid-template-columns: auto 2.75rem;
@@ -19,6 +20,7 @@
         border-radius: 0.25rem;
         cursor: pointer;
     }
+
     .icon-expand_more {
         font-size: 0.75rem;
         line-height: 0.75rem;
@@ -26,5 +28,11 @@
         transform: rotate(-90deg);
         justify-self: center;
         align-self: center;
+    }
+
+    &__datepicker {
+        position: absolute;
+        z-index: 2;
+        margin-top: 3.0625rem;
     }
 }

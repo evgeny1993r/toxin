@@ -16,6 +16,7 @@
     grid-template-columns: 2.5rem auto;
     column-gap: 0.625rem;
     transition: 1s;
+
     &__input {
         position: relative;
         width: 2.5rem;
@@ -26,6 +27,7 @@
         -webkit-appearance: none;
         appearance: none;
     }
+
     &__input::before {
         position: absolute;
         width: 100%;
@@ -37,6 +39,7 @@
         border-radius: 0.625rem;
         box-sizing: border-box;
     }
+
     &__input::after {
         position: absolute;
         width: 0.75rem;
@@ -47,13 +50,16 @@
         background: $Dark-25;
         border-radius: 50%;
     }
+
     &__input:checked::before {
         border: 0.063rem solid $Purple;
     }
+
     &__input:checked::after {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         left: 1.5rem;
     }
+    
     &__label {
         font-family: Montserrat, sans-serif;
         font-style: normal;

@@ -17,6 +17,7 @@
     min-height: 100vh;
     justify-content: center;
     align-content: center;
+
     &__title-h1 {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -26,6 +27,7 @@
         color: $Dark-100;
         margin-top: 2.5rem;
     }
+
     &__title-h3 {
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -36,13 +38,16 @@
         color: $Dark-100;
         margin: 2.5rem 0 1rem 0;
     }
+
     &__list {
         display: grid;
         row-gap: 0.625rem;
     }
+
     &__item {
         list-style: none;
     }
+    
     &__link {
         font-family: Montserrat, sans-serif;
         font-style: normal;

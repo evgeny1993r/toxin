@@ -27,6 +27,7 @@
 
 .room-details {
     background: #ffffff;
+
     &__image-list {
         width: 100%;
         height: 33.6vw;
@@ -34,24 +35,28 @@
         grid-template-columns: 68% 32%;
         grid-template-rows: repeat(2, 1fr);
     }
+
     &__image-one {
         background: url('../../images/room-details-one.jpg') no-repeat center;
         background-size: cover;
         grid-column: 1 / 2;
         grid-row: 1 / 3;
     }
+
     &__image-two {
         background: url('../../images/room-details-two.jpg') no-repeat center;
         background-size: cover;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
     &__image-three {
         background: url('../../images/room-details-three.jpg') no-repeat center;
         background-size: cover;
         grid-column: 2 / 3;
         grid-row: 2 / 3;
     }
+
     &__content {
         width: 72.5rem;
         margin: 4.375rem auto;
@@ -60,60 +65,71 @@
         justify-content: space-between;
         align-items: start;
     }
+
     @media(max-width: 85.375rem) {
         &__content {
             padding: 0 5%;
             width: 100%; 
         }
     }
+
     @media(max-width: 80rem) {
         &__content {
             padding: 0 15%;
             grid-template-columns: 1fr;
         }
     }
+
     @media(max-width: 64rem) {
         &__content {
             padding: 0 10%;
         }
     }
+
     @media(max-width: 53.75rem) {
         &__content {
             padding: 0 5%;
         }
     }
+
     @media(max-width: 33.75rem) {
         &__content {
             padding: 0 3%;
         }
     }
+
     @media(max-width: 30rem) {
         &__content {
             padding: 0 1%;
         }
     }
+
     &__containers {
         display: grid;
         row-gap: 1.875rem;
     }
+
     &__container-one {
         display: grid;
         grid-template-columns: 17.5rem 21.875rem;
         justify-content: space-between;
         align-items: start;
     }
+
     @media(max-width: 48rem) {
         &__container-one {
             grid-template-columns: 1fr 1fr;
             column-gap: 1.875rem;
         }
     }
+
     @media(max-width: 36.25rem) {
         &__container-one {
             grid-template-columns: 1fr;
             column-gap: 0;
         }
     }
+
     &__intellegence-title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -123,21 +139,25 @@
         color: $Dark-100;
         margin-bottom: 1.4375rem;
     }
+
     @media(max-width: 36.25rem) {
         .impression {
             margin-top: 1.875rem;
         }
     }
+
     &__comments {
         margin-top: 0.3125rem;
         display: grid;
         row-gap: 1.25rem;
     }
+
     &__comments-titles {
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
     }
+
     &__comments-title-one {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -146,6 +166,7 @@
         line-height: 1.375rem;
         color: $Dark-100;
     }
+
     &__comments-title-two {
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -155,24 +176,28 @@
         color: $Dark-50;
         align-self: end;
     }
+
     &__container-three {
         display: grid;
         grid-template-columns: 17.5rem 21.875rem;
         justify-content: space-between;
         align-items: start;
     }
+
     @media(max-width: 48rem) {
         &__container-three {
             grid-template-columns: 1fr 1fr;
             column-gap: 1.875rem;
         }
     }
+
     @media(max-width: 36.25rem) {
         &__container-three {
             grid-template-columns: 1fr;
             column-gap: 0;
         }
     }
+
     &__bullet-list-title{
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -183,17 +208,20 @@
         margin-bottom: 1.25rem;
         padding-left: 1.25rem;
     }
+
     @media(max-width: 36.25rem) {
         .cancel {
             margin-top: 1.875rem;
         }
     }
+
     @media(max-width: 80rem) {
         .check {
             margin-top: 1.875rem;
             justify-self: center;
         }
     }
+    
     &__line {
         width: 100%;
         height: 0.0625rem;

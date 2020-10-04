@@ -20,6 +20,7 @@
     border: 0.063rem solid $Dark-25;
     border-radius: 0.25rem;
     cursor: pointer;
+
     &__input {
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -32,9 +33,11 @@
         border: none;
         border-radius: inherit;
     }
+
     &__input::placeholder {
         color: $Dark-25;
     }
+
     &__icon {
         font-size: 1.188rem;
         text-align: center;
@@ -45,6 +48,7 @@
         -moz-background-clip: text;
         background-clip: text;
     }
+    
     &:hover,
     &_active {
         border: 0.063rem solid $Dark-50;

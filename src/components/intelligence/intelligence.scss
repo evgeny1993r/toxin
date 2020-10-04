@@ -14,28 +14,34 @@
 
 .intelligence {
     width: 17.5rem;
+
     &__item {
         display: grid;
         grid-template-columns: 3rem auto;
         row-gap: 3rem;
         column-gap: 0.63rem;
     }
+
     &__item:nth-child(1) {
         padding-bottom: 1.25rem;;
     }
+
     &__item:nth-child(2) {
         padding: 1.25rem 0;
         border-top: 0.063rem solid rgba(31, 32, 65, 0.1);
         border-bottom: 0.063rem solid rgba(31, 32, 65, 0.1);
     }
+
     &__item:nth-child(3) {
         padding-top: 1.25rem;;
     }
+
     &__container-icon {
         display: grid;
         justify-content: center;
         align-content: center;
     }
+
     &__icon {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         color: transparent;
@@ -45,9 +51,11 @@
         -webkit-background-clip: text;
         background-clip: text;
     }
+
     &__container-texts {
         display: grid;
     }
+
     &__text-one, 
     &__text-two {
         font-family: Montserrat, sans-serif;
@@ -57,9 +65,11 @@
         line-height: 1.5rem;
         color: $Dark-75;        
     }
+
     &__text-one {
         font-weight: bold;
     }
+    
     &__text-two {
         font-weight: normal;
     }

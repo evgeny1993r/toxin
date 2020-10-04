@@ -23,6 +23,7 @@
     box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
     padding: 2.5rem 1.875rem 1.875rem 1.875rem;
+
     &__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -31,13 +32,16 @@
         line-height: 1.75rem;
         color: $Dark-100;
     }
+
     &__date-dropdown-titles {
         margin-top: 1.5625rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1.25rem;
     }
-    &__date-dropdown-title {
+
+    &__date-dropdown-title,
+    &__dropdown-guests-title {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -46,20 +50,16 @@
         text-transform: uppercase;
         color: $Dark-100;
     }
+
+    &__dropdown-guests-title {
+        margin-top: 1.25rem;
+    }
+
     .date-dropdown,
     .dropdown-guests {
         margin-top: 0.3125rem;
     }
-    &__dropdown-guests-title {
-        margin-top: 1.25rem;
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-transform: uppercase;
-        color: $Dark-100;
-    }
+    
     .btn.btn_fourth {
         margin-top: 1.875rem;
     }

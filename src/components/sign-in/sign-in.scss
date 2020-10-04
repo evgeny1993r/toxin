@@ -22,6 +22,7 @@
     box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
     padding: 2.5rem 1.875rem 1.875rem 1.875rem;
+
     &__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -30,14 +31,17 @@
         line-height: 1.75rem;
         color: $Dark-100;
     }
+
     &__text-fields {
         margin-top: 1.25rem;
         display: grid;
         row-gap: 0.625rem;
     }
+
     .btn.btn_fourth {
         margin-top: 1.25rem;
     }
+
     &__container-sign-up {
         margin-top: 1.875rem;
         display: grid;
@@ -45,6 +49,7 @@
         justify-content: space-between;
         align-items: center;
     }
+    
     &__sign-up-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;

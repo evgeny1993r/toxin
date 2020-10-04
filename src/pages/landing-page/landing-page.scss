@@ -15,26 +15,31 @@
 .landing-page {
     display: grid;
     grid-template-rows: max-content 56.25rem max-content;
+
     &__content {
         background: url('../../images/background-landing-page.jpg') no-repeat center;
         background-size: cover;
         padding: 4.375rem 0 0 8.75rem;
     }
+
     @media(max-width: 85.375rem) {
         &__content {
             padding: 4.375rem 5% 0 5%;
         }
     }
+
     @media(max-width: 48rem) {
         &__content {
             padding: 4.375rem 5%;
         }
     }
+
     @media(max-width: 33.75rem) {
         &__content {
             padding: 4.375rem 3%;
         }
     }
+
     @media(max-width: 30rem) {
         &__content {
             padding: 4.375rem 0;
@@ -43,16 +48,19 @@
         }
     }
 }
+
 @media(max-width: 80rem) {
     .landing-page {
         grid-template-rows: max-content 50rem max-content;
     }
 }
+
 @media(max-width: 64rem) {
     .landing-page {
         grid-template-rows: max-content 43.75rem max-content;
     }
 }
+
 @media(max-width: 48rem) {
     .landing-page {
         grid-template-rows: max-content auto max-content;

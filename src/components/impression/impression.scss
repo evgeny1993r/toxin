@@ -21,6 +21,7 @@
     grid-template-columns: 7.5rem auto;
     column-gap: 1.875rem;
     row-gap: 1.313rem;
+
     &__title {
         grid-column: 1 / 3;
         font-family: Quicksand, sans-serif;
@@ -30,6 +31,7 @@
         line-height: 1.5rem;
         color: $Dark-100;
     }
+
     &__diagram {
         width: 7.5rem;
         height: 7.5rem;
@@ -40,21 +42,25 @@
         border-radius: 50%;
         overflow: hidden;
     }
+
     &__sumptuously {
         grid-column: 1 / 2;
         grid-row: 1 / 3;
         background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
     }
+
     &__satisfactorily {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
+
     &__ok {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     }
+
     &__content {
         display: grid;
         justify-items: center;
@@ -68,6 +74,7 @@
         background: #FFFFFF;
         border-radius: 50%;
     }
+
     &__value-one {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -76,6 +83,7 @@
         line-height: 1.875rem;
         color: $Purple;
     }
+
     &__value-two {
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -86,33 +94,41 @@
         color: $Purple;
         padding-bottom: 0.188rem;
     }
+
     &__item-list {
         align-self: end;
         display: grid;
     }
+
     &__item {
         display: grid;
         grid-template-columns: 0.625rem auto;
         column-gap: 0.313rem;
+
         &:nth-child(1) .impression__circle {
             background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
         }
+
         &:nth-child(2) .impression__circle {
             background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         }
+
         &:nth-child(3) .impression__circle {
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         }
+
         &:nth-child(4) .impression__circle {
             background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
         }
     }
+
     &__circle {
         width: 0.625rem;
         height: 0.625rem;
         border-radius: 50%;
         align-self: center;
     }
+    
     &__text {
         font-family: Montserrat, sans-serif;
         font-style: normal;

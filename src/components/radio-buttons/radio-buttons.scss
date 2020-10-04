@@ -14,11 +14,13 @@
     display: grid;
     grid-template-columns: repeat(2, max-content);
     column-gap: 1.25rem;
+
     &__button {
         display: grid;
         grid-template-columns: 1.25rem auto;
         column-gap: 0.625rem;
     }
+
     &__input {
         position: relative;
         width: 1.25rem;
@@ -30,6 +32,7 @@
         -webkit-appearance: none;
         appearance: none;
     }
+
     &__input::before {
         position: absolute;
         width: 100%;
@@ -41,9 +44,11 @@
         border: 0.063rem solid $Dark-25;
         border-radius: 50%;
     }
+
     &__input:checked::before {
         border: 0.063rem solid $Purple;
     }
+
     &__input:checked::after {
         position: absolute;
         width: 0.75rem;
@@ -54,6 +59,7 @@
         justify-self: center;
         align-self: center;
     }
+    
     &__label {
         font-family: Montserrat, sans-serif;
         font-style: normal;

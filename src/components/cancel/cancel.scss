@@ -10,6 +10,7 @@
 .cancel {
     display: grid;
     row-gap: 1.063rem;
+
     &__title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -18,6 +19,7 @@
         line-height: 1.5rem;
         color: $Dark-100;
     }
+    
     &__text {
         font-family: Montserrat, sans-serif;
         font-style: normal;

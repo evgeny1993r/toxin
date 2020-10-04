@@ -20,8 +20,9 @@
     display: grid;
     grid-template-columns: repeat(2, 9.375rem);
     justify-content: space-between;
-    .date-dropdown__entry,
-    .date-dropdown__check-out {
+
+    &__entry,
+    &__check-out {
         display: grid;
         grid-template-columns: auto 2.75rem;
         border: 0.0625rem solid rgba(31, 32, 65, 0.25);
@@ -29,8 +30,9 @@
         border-radius: 0.25rem;
         cursor: pointer;
     }
-    .date-dropdown__input-entry,
-    .date-dropdown__input-check-out {
+
+    &__input-entry,
+    &__input-check-out {
         width: 100%;
         background: #ffffff;
         font-family: Montserrat, sans-serif;
@@ -45,6 +47,7 @@
         cursor: pointer;
         outline: none;
     }
+
     .icon-expand_more {
         justify-self: center;
         align-self: center;
@@ -55,7 +58,8 @@
         color: $Dark-50;
         transform: rotate(-90deg);
     }
-    .date-dropdown__container-datepicker {
+    
+    &__container-datepicker {
         position: absolute;
         left: 0;
         top: 0;

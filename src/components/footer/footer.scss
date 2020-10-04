@@ -35,11 +35,13 @@
         background: #FFFFFF;
         box-shadow: 0 0.063rem 0 rgba(31, 32, 65, 0.1);
     }
+
     @media(max-width: 85.375rem) {
         &__section-one {
             padding: 6.25rem 5%;
         }
     }
+
     @media(max-width: 80rem) {
         &__section-one {
             grid-template-columns: 1fr;
@@ -47,6 +49,7 @@
             padding: 7.5rem 0 0 0;
         }
     }
+
     &__logo-text {
         margin-top: 0.875rem;
         font-family: Montserrat, sans-serif;
@@ -56,24 +59,29 @@
         line-height: 1.5rem;
         color: $Dark-75;
     }
+
     @media(max-width: 80rem) {
         &__logo-text {
             display: none;
         }
     }
+
     &__nav {
         margin-top: 0.313rem;
     }
+
     @media(max-width: 80rem) {
         &__nav {
             display: none;
         }
     }
+
     &__item-list {
         display: grid;
         row-gap: 1.25rem;
         align-content: start;
     }
+
     &__item-total {
         list-style: none;
         font-family: Montserrat, sans-serif;
@@ -85,6 +93,7 @@
         color: $Dark-100;
         margin-bottom: 0.063rem;
     }
+
     &__item {
         list-style: none;
         font-family: Montserrat, sans-serif;
@@ -93,20 +102,24 @@
         font-size: 0.875rem;
         line-height: 1.125rem;
     }
+
     &__link {
         text-decoration: none;
         color: $Dark-50;
     }
+
     &__sublist {
         display: grid;
         align-content: start;
         margin-top: 0.313rem;
     }
+
     @media(max-width: 80rem) {
         &__sublist {
             display: none;
         }
     }
+
     &__sublist-total {
         list-style: none;
         display: inline-block;
@@ -118,6 +131,7 @@
         text-transform: uppercase;
         color: $Dark-100;
     }
+
     &__sublist-text {
         margin-top: 1.125rem;
         font-family: Montserrat, sans-serif;
@@ -127,9 +141,11 @@
         line-height: 1.5rem;
         color: $Dark-75;
     }
+
     .subscription-text-field {
         margin-top: 1.313rem;
     }
+
     &__section-two {
         background: #FFFFFF;
         box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
@@ -140,11 +156,13 @@
         justify-content: space-between;
         align-items: center;
     }
+
     @media(max-width: 85.375rem) {
         &__section-two {
             padding: 1.438rem 5%;
         }
     }
+
     @media(max-width: 80rem) {
         &__section-two {
             grid-template-columns: 1fr;
@@ -154,6 +172,7 @@
             padding: 1.25rem 0 7.5rem 0;
         }
     }
+
     &__right-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -162,11 +181,13 @@
         line-height: 1.063rem;
         color: $Dark-75;
     }
+
     &__social-networks-item-list {
         display: grid;
         grid-template-columns: repeat(3, max-content);
         column-gap: 1.25rem;
     }
+
     &__social-networks-item {
         list-style: none;
         font-style: normal;
@@ -174,6 +195,7 @@
         font-size: 1.375rem;
         line-height: 1.5rem;
     }
+    
     &__social-networks-link {
         color: transparent;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);

@@ -12,17 +12,20 @@
     display: grid;
     align-content: start;
     row-gap: 0.625rem;
+
     &__container-one,
     &__container-two {
         display: grid;
         grid-template-columns: 3.125rem auto;
         column-gap: 0.625rem;
     }
+
     &__img {
         width: 100%;
         border: 0.125rem solid #ffffff;
         border-radius: 50%;
     }
+
     &__title-one,
     &__title-two,
     &__text {
@@ -32,14 +35,17 @@
         line-height: 1.5rem;
         color: rgba(31, 32, 65, 0.75);
     }
+
     &__title-one {
         font-weight: bold;
     }
+
     &__title-two,
     &__text {
         font-weight: normal;
 
     }
+    
     & .like-button {
         justify-self: center;
     }

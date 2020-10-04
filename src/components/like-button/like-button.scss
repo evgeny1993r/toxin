@@ -16,6 +16,7 @@
     background: $Dark-25;
     padding: 0.063rem;
     cursor: pointer;
+
     &__container {
         height: 100%;
         display: grid;
@@ -24,17 +25,21 @@
         background: #FFFFFF;
         border-radius: inherit;
     }
+
     &__icon {
         font-size: 0.5rem;
         line-height: 0.5rem;
         justify-self: center;
     }
+
     .icon-like_button_inActive {
         color: $Dark-25;
     }
+
     .icon-like_button_active {
         color: $Purple;
     }
+
     &__value {
         font-family: Montserrat, sans-serif;
         font-style: normal;
@@ -43,9 +48,11 @@
         line-height: 0.75rem;
         color: $Dark-25;
     }
+
     &_active {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
+    
     &_active &__value {
         color: $Purple;
     }
