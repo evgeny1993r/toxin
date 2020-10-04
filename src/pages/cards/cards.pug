@@ -20,8 +20,9 @@ html(lang="ru")
                     +check('888', 'люкс', '9 990', 'js-date-dropdown-three', 'js-dropdown-guests-five')
                     include ../../components/sign-in/sign-in.pug
                 .cards__container-three
-                    include ../../components/date-dropdown/date-dropdown.pug 
-                    +date-dropdown('js-date-dropdown-four', false)
+                    .cards__container-datepicker
+                        include ../../components/date-dropdown/date-dropdown.pug 
+                        +date-dropdown('js-date-dropdown-four', false)
                     include ../../components/room/room.pug 
                     +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
                     +room('room-two.jpg', '840', '', '9 990', '4', '65')

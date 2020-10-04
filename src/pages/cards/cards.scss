@@ -12,6 +12,7 @@
 
 .cards {
     background: #E5E5E5;
+
     &__content {
         margin: 4.375rem auto 0 auto;
         max-width: 72.5rem;
@@ -21,6 +22,7 @@
         align-items: start;
         padding-bottom: 4.375rem;
     }
+
     @media(max-width: 90rem) {
         &__content {
             grid-template-columns: repeat(2, 23.75rem);
@@ -28,6 +30,7 @@
             row-gap: 2.5rem;
         }
     }
+
     @media(max-width: 64rem) {
         &__content {
             grid-template-columns: 1fr;
@@ -35,10 +38,16 @@
             justify-items: center;
         }
     }
+    
     &__container-one,
     &__container-two,
     &__container-three {
         display: grid;
         row-gap: 2.5rem;
+    }
+
+    &__container-datepicker .date-dropdown__container-datepicker {
+        position: relative;
+        margin-top: 0;
     }
 }
