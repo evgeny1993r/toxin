@@ -1,3 +1,6 @@
 import { LikeButton } from './Like-button'
 
-new LikeButton()
+const $likeButton = $('.js-like-button')
+$likeButton.each((_, likeButton) => {
+    new LikeButton(likeButton)    
+})

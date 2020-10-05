@@ -1,3 +1,6 @@
 import { SubscriptionTextField } from './Subscription-text-field'
 
-new SubscriptionTextField()
+const $subscriptionTextField = $('.js-subsciption-text-field')
+$subscriptionTextField.each((_, subscriptionTextField) => {
+    new SubscriptionTextField(subscriptionTextField)    
+})

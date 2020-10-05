@@ -1,3 +1,6 @@
 import { MaskedTextField } from './Masked-text-field'
 
-new MaskedTextField()
+const $maskedTextField = $('.masked-text-field__input')
+$maskedTextField.each((_, maskedTextField) => {
+    new MaskedTextField(maskedTextField)    
+})

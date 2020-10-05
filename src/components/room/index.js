@@ -1,3 +1,6 @@
 import { Room } from './Room'
 
-new Room()
+const $room = $('.room')
+$room.each((_, room) => {
+    new Room(room)
+})

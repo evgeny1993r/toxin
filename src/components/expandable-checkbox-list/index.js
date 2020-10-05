@@ -1,3 +1,6 @@
 import { ExpandableCheckboxList } from './Expandable-checkbox-list'
 
-new ExpandableCheckboxList()
+const $expandableCheckboxList = $('.js-expandable-checkbox-list')
+$expandableCheckboxList.each((_, expandableCheckboxList) => {
+    new ExpandableCheckboxList(expandableCheckboxList)
+})

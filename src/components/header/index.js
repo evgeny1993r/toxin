@@ -1,3 +1,6 @@
 import { Header } from './Header'
 
-new Header()
+const $header = $('.js-header')
+$header.each((_, header) => {
+    new Header(header)    
+})
