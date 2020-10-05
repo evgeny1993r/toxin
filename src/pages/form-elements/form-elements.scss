@@ -36,29 +36,24 @@
         grid-template-columns: 20rem 16.25rem 20rem;
         justify-content: space-between;
         margin: 4.0625rem 0 0 0;
-    }
 
-    @media(max-width: 90rem) {
-        &__section-one {
+        @media(max-width: 1440px) {
             width: 100%;
             padding: 0 10%;
         }
-    }
 
-    @media(max-width: 80rem) {
-        &__section-one {
+        @media(max-width: 1280px) {
             padding: 0 5%;
             grid-template-columns: 20rem 16.25rem;
             justify-content: space-around;
         }
-    }
 
-    @media(max-width: 40rem) {
-        &__section-one {
+        @media(max-width: 640px) {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
+
 
     &__container-text-field,
     &__container-one-dropdown-guests,
@@ -73,7 +68,7 @@
         row-gap: 0.3125rem;
     }
 
-    @media(max-width: 40rem) {
+    @media(max-width: 640px) {
         &__container-two-dropdown-guests {
             margin-top: 2.5rem;
         }
@@ -98,13 +93,13 @@
         row-gap: 1rem;
     }
 
-    @media(max-width: 80rem) {
+    @media(max-width: 1280px) {
         &__container-range-slider {
             margin-top: 2.5rem;
         }
     }
 
-    @media(max-width: 40rem) {
+    @media(max-width: 640px) {
         &__container-checkbox-buttons {
             margin-top: 2.5rem;
         }
@@ -243,30 +238,24 @@
         display: grid;
         grid-template-columns: repeat(3, 20rem);
         justify-content: space-between;
-    }
 
-    @media(max-width: 90rem) {
-        &__section-two {
+        @media(max-width: 1440px) {
             width: 100%;
             padding: 0 10%;
         }
-    }
 
-    @media(max-width: 80rem) {
-        &__section-two {
+        @media(max-width: 1280px) {
             grid-template-columns: repeat(2, 20rem);
             justify-content: space-around;
             padding: 0 5%;
         }
-    }
 
-    @media(max-width: 40rem) {
-        &__section-two {
+        @media(max-width: 640px) {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
     }
-    
+
     &__section-three {
         margin-top: 3.4375rem;
         width: 72.5rem;
@@ -274,27 +263,21 @@
         display: grid;
         grid-template-columns: repeat(3, 20rem);
         justify-content: space-between;
-    }
 
-    @media(max-width: 90rem) {
-        &__section-three {
+        @media(max-width: 1440px) {
             width: 100%;
             padding: 0 10%;
         }
-    }
 
-    @media(max-width: 80rem) {
-        &__section-three {
+        @media(max-width: 1280px) {
             padding: 0 5%;
             grid-template-columns: repeat(2, 20rem);
             grid-template-rows: 0.9375rem auto;
             justify-content: space-around;
             row-gap: 2.5rem;
         }
-    }
 
-    @media(max-width: 40rem) {
-        &__section-three {
+        @media(max-width: 640px) {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
@@ -308,26 +291,20 @@
         grid-template-columns: repeat(3, 20rem);
         justify-content: space-between;
         padding-bottom: 1.875rem;
-    }
 
-    @media(max-width: 90rem) {
-        &__section-four {
+        @media(max-width: 1440px) {
             width: 100%;
             padding: 0 10%;
         }
-    }
 
-    @media(max-width: 80rem) {
-        &__section-four {
+        @media(max-width: 1280px) {
             width: 100%;
             padding: 0 5%;
             grid-template-columns: repeat(2, 20rem);
             justify-content: space-around;
         }
-    }
 
-    @media(max-width: 40rem) {
-        &__section-four {
+        @media(max-width: 640px) {
             padding: 0 3%;
             grid-template-columns: 20rem;
         }
@@ -335,16 +312,12 @@
 
     .comment {
         grid-column: 2 / 4;
-    }
 
-    @media(max-width: 80rem) {
-        .comment {
+        @media(max-width: 1280px) {
             grid-column: 2 / 3;
         }
-    }
-    
-    @media(max-width: 40rem) {
-        .comment {
+        
+        @media(max-width: 640px) {
             margin-top: 2.5rem;
             grid-column: 1 / 2;
         }

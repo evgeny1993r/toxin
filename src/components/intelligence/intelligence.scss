@@ -20,20 +20,20 @@
         grid-template-columns: 3rem auto;
         row-gap: 3rem;
         column-gap: 0.63rem;
-    }
+        
+        &:nth-child(1) {
+            padding-bottom: 1.25rem;;
+        }
 
-    &__item:nth-child(1) {
-        padding-bottom: 1.25rem;;
-    }
+        &:nth-child(2) {
+            padding: 1.25rem 0;
+            border-top: 0.063rem solid rgba(31, 32, 65, 0.1);
+            border-bottom: 0.063rem solid rgba(31, 32, 65, 0.1);
+        }
 
-    &__item:nth-child(2) {
-        padding: 1.25rem 0;
-        border-top: 0.063rem solid rgba(31, 32, 65, 0.1);
-        border-bottom: 0.063rem solid rgba(31, 32, 65, 0.1);
-    }
-
-    &__item:nth-child(3) {
-        padding-top: 1.25rem;;
+        &:nth-child(3) {
+            padding-top: 1.25rem;;
+        }
     }
 
     &__container-icon {

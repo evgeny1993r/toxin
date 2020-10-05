@@ -1,9 +1,7 @@
 @import '../../styles/virables.scss';
 
 /*
-    1440px - 90rem +
     1140px - 71.25rem +
-    1024px - 64rem +
     445px - 27.8125rem +
     70px - 4.375rem +
     65px - 4.0625rem +
@@ -30,17 +28,13 @@
         grid-template-columns: max-content 27.8125rem;
         justify-content: space-between;
         background: #ffffff;
-    }
 
-    @media(max-width: 90rem) {
-        &__content {
+        @media(max-width: 1440px) {
             min-width: 100%;
             padding: 0 10%;
         }
-    }
 
-    @media(max-width: 64rem) {
-        &__content {
+        @media(max-width: 1024px) {
             grid-template-columns: 1fr;
             row-gap: 4.0625rem;
         }

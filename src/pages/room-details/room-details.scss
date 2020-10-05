@@ -64,42 +64,30 @@
         grid-template-columns: 44.375rem 23.75rem;
         justify-content: space-between;
         align-items: start;
-    }
 
-    @media(max-width: 85.375rem) {
-        &__content {
+        @media(max-width: 1366px) {
             padding: 0 5%;
-            width: 100%; 
+            width: 100%;
         }
-    }
 
-    @media(max-width: 80rem) {
-        &__content {
+        @media(max-width: 1280px) {
             padding: 0 15%;
             grid-template-columns: 1fr;
         }
-    }
 
-    @media(max-width: 64rem) {
-        &__content {
+        @media(max-width: 1024px) {
             padding: 0 10%;
         }
-    }
 
-    @media(max-width: 53.75rem) {
-        &__content {
+        @media(max-width: 860px) {
             padding: 0 5%;
         }
-    }
 
-    @media(max-width: 33.75rem) {
-        &__content {
+        @media(max-width: 540px) {
             padding: 0 3%;
         }
-    }
 
-    @media(max-width: 30rem) {
-        &__content {
+        @media(max-width: 480px) {
             padding: 0 1%;
         }
     }
@@ -114,17 +102,13 @@
         grid-template-columns: 17.5rem 21.875rem;
         justify-content: space-between;
         align-items: start;
-    }
 
-    @media(max-width: 48rem) {
-        &__container-one {
+        @media(max-width: 768px) {
             grid-template-columns: 1fr 1fr;
             column-gap: 1.875rem;
         }
-    }
 
-    @media(max-width: 36.25rem) {
-        &__container-one {
+        @media(max-width: 580px) {
             grid-template-columns: 1fr;
             column-gap: 0;
         }
@@ -140,7 +124,7 @@
         margin-bottom: 1.4375rem;
     }
 
-    @media(max-width: 36.25rem) {
+    @media(max-width: 580px) {
         .impression {
             margin-top: 1.875rem;
         }
@@ -182,17 +166,13 @@
         grid-template-columns: 17.5rem 21.875rem;
         justify-content: space-between;
         align-items: start;
-    }
 
-    @media(max-width: 48rem) {
-        &__container-three {
+        @media(max-width: 768px) {
             grid-template-columns: 1fr 1fr;
             column-gap: 1.875rem;
         }
-    }
 
-    @media(max-width: 36.25rem) {
-        &__container-three {
+        @media(max-width: 580px) {
             grid-template-columns: 1fr;
             column-gap: 0;
         }
@@ -209,13 +189,13 @@
         padding-left: 1.25rem;
     }
 
-    @media(max-width: 36.25rem) {
+    @media(max-width: 580px) {
         .cancel {
             margin-top: 1.875rem;
         }
     }
 
-    @media(max-width: 80rem) {
+    @media(max-width: 1280px) {
         .check {
             margin-top: 1.875rem;
             justify-self: center;

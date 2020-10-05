@@ -4,8 +4,13 @@
     width: 20rem;
     display: grid;
     row-gap: 0.313rem;
+    
+    @media(max-width: 30rem) {
+        max-width: 20rem;
+        width: auto;
+    }
 
-    .masked-text-field__input {
+    &__input {
         width: 100%;
         border: 0.063rem solid $Dark-25;
         border-radius: 0.25rem;
@@ -20,14 +25,7 @@
         cursor: pointer;
     }
 
-    .masked-text-field__input::placeholder {
+    &__input::placeholder {
         color: rgba(31, 32, 65, 0.25);
-    }
-}
-
-@media(max-width: 30rem) {
-    .masked-text-field {
-        max-width: 20rem;
-        width: auto;
     }
 }

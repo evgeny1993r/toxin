@@ -1,7 +1,6 @@
 @import '../../styles/virables.scss';
 
 /* 
-    1440px - 90rem +
     1160px - 72.5rem +
     1024px - 64rem +
     380px - 23.75rem +
@@ -21,24 +20,20 @@
         justify-content: space-between;
         align-items: start;
         padding-bottom: 4.375rem;
-    }
 
-    @media(max-width: 90rem) {
-        &__content {
+        @media(max-width: 1440px) {
             grid-template-columns: repeat(2, 23.75rem);
             justify-content: space-evenly;
             row-gap: 2.5rem;
         }
-    }
 
-    @media(max-width: 64rem) {
-        &__content {
+        @media(max-width: 1024px) {
             grid-template-columns: 1fr;
             padding: 0 10%;
             justify-items: center;
         }
     }
-    
+
     &__container-one,
     &__container-two,
     &__container-three {

@@ -1,31 +1,26 @@
 @import './virables.scss';
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@media(min-width: 1920px) {
-    html {
+html {
+    @media(min-width: 1920px) {
         font-size: 19px;
     }
-}
 
-@media(max-width: 1920px) {
-    html {
+    @media(max-width: 1920px) {
         font-size: 16px;
     }
-}
 
-@media(max-width: 768px) {
-    html {
+    @media(max-width: 768px) {
         font-size: 13px;
     }
-}
-
-body {
-    display: grid;
-    min-height: 100vh;
+    
+    body {
+        display: grid;
+        min-height: 100vh;
+    }
 }

@@ -21,9 +21,6 @@
     140px - 8.75rem +
     160px - 10rem +
     260px - 16.25rem +
-    840px - 52.5rem +
-    1280px - 80rem +
-    1366px - 85.375rem +
 */
 
 .footer {
@@ -34,16 +31,12 @@
         padding: 6.25rem 8.75rem;
         background: #FFFFFF;
         box-shadow: 0 0.063rem 0 rgba(31, 32, 65, 0.1);
-    }
 
-    @media(max-width: 85.375rem) {
-        &__section-one {
+        @media(max-width: 1366px) {
             padding: 6.25rem 5%;
         }
-    }
 
-    @media(max-width: 80rem) {
-        &__section-one {
+        @media(max-width: 1280px) {
             grid-template-columns: 1fr;
             justify-items: center;
             padding: 7.5rem 0 0 0;
@@ -58,20 +51,16 @@
         font-size: 0.875rem;
         line-height: 1.5rem;
         color: $Dark-75;
-    }
 
-    @media(max-width: 80rem) {
-        &__logo-text {
+        @media(max-width: 1280px) {
             display: none;
         }
     }
 
     &__nav {
         margin-top: 0.313rem;
-    }
 
-    @media(max-width: 80rem) {
-        &__nav {
+        @media(max-width: 1280px) {
             display: none;
         }
     }
@@ -112,10 +101,8 @@
         display: grid;
         align-content: start;
         margin-top: 0.313rem;
-    }
 
-    @media(max-width: 80rem) {
-        &__sublist {
+        @media(max-width: 1280px) {
             display: none;
         }
     }
@@ -155,16 +142,12 @@
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
         align-items: center;
-    }
 
-    @media(max-width: 85.375rem) {
-        &__section-two {
+        @media(max-width: 1366px) {
             padding: 1.438rem 5%;
         }
-    }
 
-    @media(max-width: 80rem) {
-        &__section-two {
+        @media(max-width: 1280px) {
             grid-template-columns: 1fr;
             justify-items: center;
             row-gap: 1.5625rem;
