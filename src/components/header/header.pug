@@ -1,25 +1,26 @@
 mixin header(first_name, last_name)
     header.header.js-header 
-        include ../logotip/logotip.pug 
-        +logotip('purple')
+        .header__container-logotip
+            include ../logotip/logotip.pug 
+            +logotip('purple')
         nav.header__nav 
             ul.header__item-list
                 li.header__item 
                     a.header__link.js-header__link(href="#") О нас
                 li.header__item
                     a.header__link.js-header__link.header__link_dropdown(href="#") Услуги
-                        i.icon-expand_more
+                        i.header__icon-expand-more.icon-expand_more
                 li.header__item
                     a.header__link.js-header__link(href="#") Вакансии
                 li.header__item
                     a.header__link.js-header__link(href="#") Новости
                 li.header__item
                     a.header__link.js-header__link.header__link_dropdown(href="#") Соглашения
-                        i.icon-expand_more
+                        i.header__icon-expand-more.icon-expand_more
         if(first_name == '' && last_name == '')
             .header__buttons 
-                include ../buttons/buttons.pug 
-                +btn('button', 'btn_second btn_second-small', 'Войти')
-                +btn('button', 'btn_first btn_first-small', 'Зарегистрироваться')
+                include ../button/button.pug 
+                +button('button', 'btn_white btn_small', 'Войти')
+                +button('button', 'btn_purple btn_small', 'Зарегистрироваться')
         else 
             span.header__name #{first_name} #{last_name}

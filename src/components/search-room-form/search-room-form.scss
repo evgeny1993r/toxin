@@ -15,7 +15,7 @@
     1px - 0.0625rem +
 */ 
 
-.search-number {
+.search-room-form {
     width: 23.75rem;
     background: #FFFFFF;
     border: 0.0625rem solid rgba(0, 0, 0, 0.12);
@@ -52,15 +52,14 @@
     }
 
     &__dropdown-guests-title {
-        margin-top: 1.25rem;
+        margin: 1.25rem 0 0.3125rem 0;
     }
 
-    .date-dropdown,
-    .dropdown-guests {
+    &__container-date-dropdown {
         margin-top: 0.3125rem;
     }
     
-    .btn.btn_fourth {
+    &__container-button {
         margin-top: 1.875rem;
     }
 }

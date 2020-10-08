@@ -30,14 +30,7 @@
         font-size: 0.5rem;
         line-height: 0.5rem;
         justify-self: center;
-    }
-
-    .icon-like_button_inActive {
         color: $Dark-25;
-    }
-
-    .icon-like_button_active {
-        color: $Purple;
     }
 
     &__value {
@@ -52,7 +45,11 @@
     &_active {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
-    
+
+    &_active &__icon {
+        color: $Purple;
+    }
+
     &_active &__value {
         color: $Purple;
     }

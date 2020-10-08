@@ -1,0 +1,14 @@
+mixin search-room-form(dateDropdownId, dropdownGuestsId)
+    form.search-room-form
+        h1.search-room-form__title Найдем номера под ваши пожелания
+        .search-room-form__date-dropdown-titles 
+            h3.search-room-form__date-dropdown-title прибытие
+            h3.search-room-form__date-dropdown-title выезд 
+        .search-room-form__container-date-dropdown 
+            include ../date-dropdown/date-dropdown.pug
+            +date-dropdown(dateDropdownId, true)
+        h3.search-room-form__dropdown-guests-title гости
+        div(id=dropdownGuestsId)
+        .search-room-form__container-button
+            include ../button/button.pug 
+            +button('submit', 'btn_big', 'Подобрать номер')

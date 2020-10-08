@@ -76,8 +76,6 @@ class DateDropdown {
                     click: () => this.$dateDropdown.hide()
                 })
             )
-
-            $(document).trigger('dateDropdownInitiated')
         }
     }
 }

@@ -7,7 +7,7 @@ class FilterDateDropdown {
         if(this.$filterDateDropdown.length !== 0) {
             this.$filterDateDropdownInput = this.$filterDateDropdown.siblings('.js-filter-date-dropdown__input')
             const $filterDateDropdownInput = this.$filterDateDropdownInput
-            const icon = `<i class="icon-expand_more"></i>`
+            const icon = `<i class="filter-date-dropdown__icon-expand-more icon-expand_more"></i>`
 
             this.$filterDateDropdown.datepicker({
                 classes: 'datepicker-filter-date-dropdown',

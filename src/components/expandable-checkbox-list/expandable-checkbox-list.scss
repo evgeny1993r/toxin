@@ -34,7 +34,7 @@
         cursor: pointer;
     }
 
-    .icon {
+    &__icon-expand-more {
         justify-self: center;
         transform: rotate(-90deg);
         color: $Dark-50;
@@ -111,7 +111,7 @@
         display: grid;
     }
     
-    &_active .icon {
+    &_active &__icon-expand-more {
         transform: rotate(90deg);
     }
 }

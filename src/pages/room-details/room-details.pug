@@ -16,10 +16,11 @@ html(lang="ru")
             .room-details__content 
                 .room-details__containers
                     .room-details__container-one
-                        .room-details__intelligence 
-                            h3.room-details__intellegence-title Сведения о номере
-                            include ../../components/intelligence/intelligence.pug 
-                        include ../../components/impression/impression.pug 
+                        .room-details__room-amenities 
+                            h3.room-details__room-amenities-title Сведения о номере
+                            .room-details__container-room-amenities
+                            include ../../components/room-amenities/room-amenities.pug 
+                        include ../../components/impression-of-the-room/impression-of-the-room.pug 
                     .room-details__container-two
                         .room-details__comments
                             .room-details__comments-titles 
@@ -31,9 +32,11 @@ html(lang="ru")
                     .room-details__container-three 
                         .room-details__bullet-list 
                             h3.room-details__bullet-list-title Правила
-                            include ../../components/bullet-list/bullet-list.pug 
-                        include ../../components/cancel/cancel.pug
-                include ../../components/check/check.pug 
-                +check('888', 'люкс', '9 990', 'js-date-dropdown-six', 'js-dropdown-guests-seven')
+                            include ../../components/bullet-list/bullet-list.pug
+                        .room-details__container-cancellation
+                            include ../../components/cancellation/cancellation.pug
+                .room-details__container-verification-form 
+                    include ../../components/verification-form/verification-form.pug 
+                    +verification-form('888', 'люкс', '9 990', 'js-date-dropdown-six', 'js-dropdown-guests-seven')
             .room-details__line 
             include ../../components/footer/footer.pug

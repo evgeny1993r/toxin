@@ -81,7 +81,7 @@
 
     &__container-checkbox-buttons,
     &__container-radio-buttons,
-    &__container-toggle,
+    &__container-subscription-switch,
     &__container-like-button,
     &__container-rate-button,
     &__container-pagination,
@@ -117,7 +117,7 @@
     }
 
     &__container-radio-buttons,
-    &__container-toggle,
+    &__container-subscription-switch,
     &__container-like-button,
     &__container-rate-button,
     &__container-buttons,
@@ -150,7 +150,7 @@
     &__subscription-text-field-title,
     &__checkbox-buttons-title,
     &__radio-buttons-title,
-    &__toggle-title,
+    &__subscription-switch-title,
     &__like-button-title,
     &__rate-button-title,
     &__range-slider-title-one,
@@ -197,7 +197,7 @@
         color: $Dark-50;
     }
 
-    &__toggle-tem-list {
+    &__subscription-switch-item-list {
         display: grid;
         row-gap: 0.625rem;
     }
@@ -310,7 +310,7 @@
         }
     }
 
-    .comment {
+    &__container-comment {
         grid-column: 2 / 4;
 
         @media(max-width: 1280px) {

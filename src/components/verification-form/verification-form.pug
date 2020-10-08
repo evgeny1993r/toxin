@@ -1,0 +1,38 @@
+mixin verification-form(numberValue, numberState, numberPrice, dateDropdownId, dropdownGuestsId)
+    form.verification-form 
+        .verification-form__room-data
+            p.verification-form__room-number
+                span.verification-form__room-number-symbol № 
+                span.verification-form__room-number-value #{numberValue}
+                span.verification-form__room-number-state #{numberState}
+            p.verification-form__room-price
+                span.verification-form__room-price-value #{numberPrice}₽
+                span.verification-form__room-price-text  в сутки
+        .verification-form__date-dropdown-container 
+            .verification-form__date-dropdown-titles 
+                h3.verification-form__date-dropdown-title-one прибытие 
+                h3.verification-form__date-dropdown-title-two выезд
+            include ../date-dropdown/date-dropdown.pug 
+            +date-dropdown(dateDropdownId, true)
+        .verification-form__dropdown-guests-container 
+            h3.verification-form__dropdown-guests-title гости
+            div(id=dropdownGuestsId)
+        .verification-form__data
+            p.verification-form__price
+                span.verification-form__price-text.js-verification-form__price-text
+                span.verification-form__price-value.js-verification-form__price-value
+            p.verification-form__discount
+                span.verification-form__discount-text.js-verification-form__discount-text 
+                span.verification-form__discount-icon i
+                span.verification-form__discount-price.js-verification-form__discount-price 
+            p.verification-form__collecting 
+                span.verification-form__collecting-text.js-verification-form__collecting-text
+                span.verification-form__collecting-icon i
+                span.verification-form__collecting-price.js-verification-form__collecting-price
+        .verification-form__total 
+            span.verification-form__total-title Итого 
+            span.verification-form__total-line
+            span.verification-form__total-price.js-verification-form__total-price
+        include ../button/button.pug 
+        +button('submit', 'btn_big', 'забронировать')
+

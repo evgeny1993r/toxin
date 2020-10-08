@@ -114,7 +114,7 @@
         }
     }
 
-    &__intellegence-title {
+    &__room-amenities-title {
         font-family: Quicksand, sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -125,7 +125,7 @@
     }
 
     @media(max-width: 580px) {
-        .impression {
+        &__container-room-amenities {
             margin-top: 1.875rem;
         }
     }
@@ -190,13 +190,13 @@
     }
 
     @media(max-width: 580px) {
-        .cancel {
+        &__container-cancellation {
             margin-top: 1.875rem;
         }
     }
 
     @media(max-width: 1280px) {
-        .check {
+        &__container-verification-form {
             margin-top: 1.875rem;
             justify-self: center;
         }

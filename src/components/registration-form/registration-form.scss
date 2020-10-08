@@ -20,7 +20,7 @@
 
 */ 
 
-.sign-up {
+.registration-form {
     max-width: 23.75rem;
     background: #FFFFFF;
     border: 0.0625rem solid rgba(0, 0, 0, 0.12);
@@ -44,7 +44,7 @@
         row-gap: 0.625rem;
     }
 
-    .radio-buttons {
+    &__container-radio-buttons {
         margin-top: 0.625rem;
     }
 
@@ -60,7 +60,7 @@
         color: $Dark-100;
     }
 
-    .masked-text-field {
+    &__container-masked-text-field {
         margin-top: 0.3125rem;
     }
 
@@ -70,11 +70,11 @@
         row-gap: 0.625rem;
     }
 
-    .toggle {
+    &__container-subscription-switch {
         margin-top: 0.625rem;
     }
 
-    .btn.btn_fourth {
+    &__container-button {
         margin-top: 1.4375rem;
     }
 

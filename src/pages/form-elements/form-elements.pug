@@ -54,12 +54,12 @@ html(lang="ru")
                         h3.form-elements__radio-buttons-title radio buttons 
                         include ../../components/radio-buttons/radio-buttons.pug 
 
-                    .form-elements__container-toggle
-                        h3.form-elements__toggle-title toggle 
-                        .form-elements__toggle-item-list 
-                            include ../../components/toggle/toggle.pug
-                            +toggle('toggle-one', true) 
-                            +toggle('toggle-two', false)
+                    .form-elements__container-subscription-switch
+                        h3.form-elements__subscription-switch-title toggle 
+                        .form-elements__subscription-switch-item-list 
+                            include ../../components/subscription-switch/subscription-switch.pug
+                            +subscription-switch('toggle-one', true) 
+                            +subscription-switch('toggle-two', false)
 
                     .form-elements__container-like-button
                         h3.form-elements__like-button-title like button 
@@ -84,17 +84,17 @@ html(lang="ru")
 
                     .form-elements__container-buttons
                         h3.form-elements__buttons-title buttons 
-                        include ../../components/buttons/buttons.pug 
+                        include ../../components/button/button.pug 
                         .form-elements__containers-buttons
                             .form-elements__container-one-buttons
-                                +btn('button', 'btn_first', 'click me')
-                                +btn('button', 'btn_first btn_first-not-active', 'click me')
-                                +btn('button', 'btn_second', 'click me')
-                                +btn('button', 'btn_second btn_second-not-active', 'click me')
+                                +button('button', 'btn_purple', 'click me')
+                                +button('button', 'btn_purple btn_transporent', 'click me')
+                                +button('button', 'btn_white', 'click me')
+                                +button('button', 'btn_white btn_transporent', 'click me')
                             .form-elements__container-two-buttons
-                                +btn('button', 'btn_third', 'click me')
-                                +btn('button', 'btn_third btn_third-not-active', 'click me')
-                            +btn('button', 'btn_fourth', 'Перейти к оплате')
+                                +button('button', 'btn_no-frame-purple', 'click me')
+                                +button('button', 'btn_no-frame-gray', 'click me')
+                            +button('button', 'btn_big', 'Перейти к оплате')
 
                     .form-elements__container-pagination
                         h3.form-elements__pagination-title pagination
@@ -129,18 +129,18 @@ html(lang="ru")
                     include ../../components/bullet-list/bullet-list.pug 
             
             section.form-elements__section-four 
-                include ../../components/intelligence/intelligence.pug 
-                include ../../components/comment/comment.pug 
-                +comment(
-                    'userpic-one.png', 
-                    'Мурад Сарафанов', 
-                    '5 дней назад', 
-                    'active', 
-                    '12', 
-                    ` 
-                        Великолепный матрас на кровати в основной спальне! 
-                        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
-                        Выкрикивал комплименты повару — никто не жаловался из соседей.
-                    `
-                )
-            
+                include ../../components/room-amenities/room-amenities.pug 
+                .form-elements__container-comment
+                    include ../../components/comment/comment.pug 
+                    +comment(
+                        'userpic-one.png', 
+                        'Мурад Сарафанов', 
+                        '5 дней назад', 
+                        'active', 
+                        '12', 
+                        ` 
+                            Великолепный матрас на кровати в основной спальне! 
+                            А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+                            Выкрикивал комплименты повару — никто не жаловался из соседей.
+                        `
+                    )

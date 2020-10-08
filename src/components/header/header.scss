@@ -47,7 +47,7 @@
         padding: 0.938rem 1%;
     }
 
-    .logotip {
+    &__container-logotip {
         width: 6.606rem;
         height: auto;
 
@@ -142,7 +142,7 @@
         grid-template-columns: auto 1.5rem;
     }
 
-    .icon-expand_more {
+    &__icon-expand-more {
         justify-self: center;
         align-self: center;
         transform: rotate(-90deg);

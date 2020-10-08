@@ -15,7 +15,7 @@
     1px - 0.0625rem
 */ 
 
-.sign-in {
+.authorization-form {
     max-width: 23.75rem;
     background: #FFFFFF;
     border: 0.0625rem solid rgba(0, 0, 0, 0.12);
@@ -38,7 +38,7 @@
         row-gap: 0.625rem;
     }
 
-    .btn.btn_fourth {
+    &__container-button {
         margin-top: 1.25rem;
     }
 
@@ -50,7 +50,7 @@
         align-items: center;
     }
     
-    &__sign-up-text {
+    &__registration-text {
         font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: normal;

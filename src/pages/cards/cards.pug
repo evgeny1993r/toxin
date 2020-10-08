@@ -11,14 +11,13 @@ html(lang="ru")
             +logotip('gray')
             .cards__content
                 .cards__container-one
-                    include ../../components/search-number/search-number.pug
-                    +search-number('js-date-dropdown-two', 'js-dropdown-guests-four')
-                    include ../../components/sign-up/sign-up.pug 
-                    +sign-up('js-masked-text-field')
+                    include ../../components/search-room-form/search-room-form.pug
+                    +search-room-form('js-date-dropdown-two', 'js-dropdown-guests-four')
+                    include ../../components/registration-form/registration-form.pug
                 .cards__container-two
-                    include ../../components/check/check.pug 
-                    +check('888', 'люкс', '9 990', 'js-date-dropdown-three', 'js-dropdown-guests-five')
-                    include ../../components/sign-in/sign-in.pug
+                    include ../../components/verification-form/verification-form.pug 
+                    +verification-form('888', 'люкс', '9 990', 'js-date-dropdown-three', 'js-dropdown-guests-five')
+                    include ../../components/authorization-form/authorization-form.pug
                 .cards__container-three
                     .cards__container-datepicker
                         include ../../components/date-dropdown/date-dropdown.pug 
