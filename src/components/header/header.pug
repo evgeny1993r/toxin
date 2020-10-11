@@ -1,3 +1,11 @@
+mixin item(url, text, icon)
+    li.header__item
+        if icon 
+            a.header__link.js-header__link(href=url) #{text}
+        else 
+            a.header__link.js-header__link.header__link_dropdown(href="#") Услуги
+                i.header__icon-expand-more.icon-expand_more
+
 mixin header(first_name, last_name)
     header.header.js-header 
         .header__container-logotip
@@ -5,18 +13,11 @@ mixin header(first_name, last_name)
             +logotip('purple')
         nav.header__nav 
             ul.header__item-list
-                li.header__item 
-                    a.header__link.js-header__link(href="#") О нас
-                li.header__item
-                    a.header__link.js-header__link.header__link_dropdown(href="#") Услуги
-                        i.header__icon-expand-more.icon-expand_more
-                li.header__item
-                    a.header__link.js-header__link(href="#") Вакансии
-                li.header__item
-                    a.header__link.js-header__link(href="#") Новости
-                li.header__item
-                    a.header__link.js-header__link.header__link_dropdown(href="#") Соглашения
-                        i.header__icon-expand-more.icon-expand_more
+                +item('#', 'О нас')
+                +item('#', 'Услуги', true)
+                +item('#', 'Вакансии')
+                +item('#', 'Новости')
+                +item('#', 'Соглошения', true)
         if(first_name == '' && last_name == '')
             .header__buttons 
                 include ../button/button.pug 

@@ -1,24 +1,19 @@
+mixin item(url, text)
+    li.navigation__item
+        a.navigation__link(href=url) #{text}
+
 nav.navigation 
     h1.navigation__title-h1 Pages & ui-kit 
     h3.navigation__title-h3 ui-kit 
     ul.navigation__list 
-        li.navigation__item
-            a.navigation__link(href="./pages/colors-type.html") Colors & Type
-        li.navigation__item 
-            a.navigation__link(href="./pages/cards.html") Cards
-        li.navigation__item 
-            a.navigation__link(href="./pages/headers-footers.html") Headers & Footers
-        li.navigation__item
-            a.navigation__link(href="./pages/form-elements.html") Form Elements 
+        +item('./pages/colors-type.html', 'Colors & Type')
+        +item('./pages/cards.html', 'Cards')
+        +item('./pages/headers-footers.html', 'Headers & Footers')
+        +item('./pages/form-elements.html', 'Form Elements')
     h3.navigation__title-h3 Pages 
     ul.navigation__list 
-        li.navigation__item 
-            a.navigation__link(href="./pages/landing-page.html") Landing Page
-        li.navigation__item
-            a.navigation__link(href="./pages/search-room.html") Search Room
-        li.navigation__item
-            a.navigation__link(href="./pages/room-details.html") Room Details
-        li.navigation__item 
-            a.navigation__link(href="./pages/registration.html") Registration
-        li.navigation__item
-            a.navigation__link(href='./pages/authorization.html') Authorization
+        +item('./pages/landing-page.html', 'Landing Page') 
+        +item('./pages/search-room.html', 'Search Room') 
+        +item('./pages/room-details.html', 'Room Details') 
+        +item('./pages/registration.html', 'Registration') 
+        +item('./pages/authorization.html', 'Authorization')
