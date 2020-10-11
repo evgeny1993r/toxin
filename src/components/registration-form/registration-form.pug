@@ -1,24 +1,27 @@
-form.registration-form 
-    h1.registration-form__title Регистрация аккаунта
-    include ../text-field/text-field.pug 
-    .registration-form__text-fields-one 
-        +text-field('text', 'Имя')
-        +text-field('text', 'Фамилия')
-    .registration-form__container-radio-buttons
-        include ../radio-buttons/radio-buttons.pug 
-    h3.registration-form__masked-text-field-title Дата рождения
-    .registration-form__container-masked-text-field
-        include ../masked-text-field/masked-text-field.pug
-    h3.registration-form__text-fields-title Данные для входа в сервис 
-    .registration-form__text-fields-two 
-        +text-field('email', 'Email')
-        +text-field('password', 'Пароль')
-    .registration-form__container-subscription-switch
-        include ../subscription-switch/subscription-switch.pug 
-        +subscription-switch('subscription-switch-one', false)
-    .registration-form__container-button 
-        include ../button/button.pug 
-        +button('submit', 'btn_big', 'Перейти к оплате')
-    .registration-form__container-sign-in 
-        span.registration-form__sign-in-text Уже есть аккаунт на Toxin
-        +button('button', 'btn_white', 'Войти')
+mixin registration-form()
+    form.registration-form 
+        h1.registration-form__title Регистрация аккаунта
+        include ../text-field/text-field.pug 
+        .registration-form__text-fields-one 
+            +text-field('text', 'Имя')
+            +text-field('text', 'Фамилия')
+        .registration-form__container-radio-buttons
+            include ../radio-buttons/radio-buttons.pug 
+            +radio-buttons()
+        h3.registration-form__masked-text-field-title Дата рождения
+        .registration-form__container-masked-text-field
+            include ../masked-text-field/masked-text-field.pug
+            +masked-text-field()
+        h3.registration-form__text-fields-title Данные для входа в сервис 
+        .registration-form__text-fields-two 
+            +text-field('email', 'Email')
+            +text-field('password', 'Пароль')
+        .registration-form__container-subscription-switch
+            include ../subscription-switch/subscription-switch.pug 
+            +subscription-switch('subscription-switch-one', false)
+        .registration-form__container-button 
+            include ../button/button.pug 
+            +button('submit', 'btn_big', 'Перейти к оплате')
+        .registration-form__container-sign-in 
+            span.registration-form__sign-in-text Уже есть аккаунт на Toxin
+            +button('button', 'btn_white', 'Войти')

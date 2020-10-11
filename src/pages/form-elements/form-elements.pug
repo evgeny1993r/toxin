@@ -28,6 +28,7 @@ html(lang="ru")
                             h3.form-elements__masked-text-field-title-one masked text field 
                             h3.form-elements__masked-text-field-title-two default
                         include ../../components/masked-text-field/masked-text-field.pug
+                        +masked-text-field()
 
                     .form-elements__container-date-dropdown
                         .form-elements__date-dropdown-titles 
@@ -44,15 +45,18 @@ html(lang="ru")
                     .form-elements__container-subscription-text-field
                         h3.form-elements__subscription-text-field-title subscription text field 
                         include ../../components/subscription-text-field/subscription-text-field.pug 
+                        +subscription-text-field()
 
                 .form-elements__container-two
                     .form-elements__container-checkbox-buttons
                         h3.form-elements__checkbox-buttons-title checkbox buttons 
                         include ../../components/checkbox-buttons/checkbox-buttons.pug 
+                        +checkbox-buttons()
 
                     .form-elements__container-radio-buttons
                         h3.form-elements__radio-buttons-title radio buttons 
                         include ../../components/radio-buttons/radio-buttons.pug 
+                        +radio-buttons()
 
                     .form-elements__container-subscription-switch
                         h3.form-elements__subscription-switch-title toggle 
@@ -124,12 +128,15 @@ html(lang="ru")
                 .form-elements__container-rich-checkbox-buttons
                     h3.form-elements__rich-checkbox-buttons-title rich checkbox buttons 
                     include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+                    +rich-checkbox-buttons()
                 .form-elements__container-bullet-list
                     h3.form-elements__bullet-list-title bullet list
                     include ../../components/bullet-list/bullet-list.pug 
+                    +bullet-list()
             
             section.form-elements__section-four 
                 include ../../components/room-amenities/room-amenities.pug 
+                +room-amenities()
                 .form-elements__container-comment
                     include ../../components/comment/comment.pug 
                     +comment(

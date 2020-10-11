@@ -8,7 +8,9 @@ html(lang="ru")
     body
         .authorization 
             include ../../components/header/header.pug 
-            +header('', '')
+            +header()
             .authorization__content 
                 include ../../components/authorization-form/authorization-form.pug 
+                +authorization-form()
             include ../../components/footer/footer.pug
+            +footer()

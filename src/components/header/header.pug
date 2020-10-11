@@ -3,10 +3,10 @@ mixin item(url, text, icon)
         if icon 
             a.header__link.js-header__link(href=url) #{text}
         else 
-            a.header__link.js-header__link.header__link_dropdown(href="#") Услуги
-                i.header__icon-expand-more.icon-expand_more
+            a.header__link.js-header__link.header__link_dropdown(href="#") #{text}
+                span.header__icon-expand-more.icon-expand_more
 
-mixin header(first_name, last_name)
+mixin header(firstName, lastName)
     header.header.js-header 
         .header__container-logotip
             include ../logotip/logotip.pug 
@@ -17,11 +17,11 @@ mixin header(first_name, last_name)
                 +item('#', 'Услуги', true)
                 +item('#', 'Вакансии')
                 +item('#', 'Новости')
-                +item('#', 'Соглошения', true)
-        if(first_name == '' && last_name == '')
+                +item('#', 'Соглашения', true)
+        if firstName == undefined && lastName == undefined
             .header__buttons 
                 include ../button/button.pug 
                 +button('button', 'btn_white btn_small', 'Войти')
                 +button('button', 'btn_purple btn_small', 'Зарегистрироваться')
         else 
-            span.header__name #{first_name} #{last_name}
+            span.header__name #{firstName} #{lastName}

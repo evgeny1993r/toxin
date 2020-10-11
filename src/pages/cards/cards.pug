@@ -14,10 +14,12 @@ html(lang="ru")
                     include ../../components/search-room-form/search-room-form.pug
                     +search-room-form('js-date-dropdown-two', 'js-dropdown-guests-four')
                     include ../../components/registration-form/registration-form.pug
+                    +registration-form()
                 .cards__container-two
                     include ../../components/verification-form/verification-form.pug 
                     +verification-form('888', 'люкс', '9 990', 'js-date-dropdown-three', 'js-dropdown-guests-five')
                     include ../../components/authorization-form/authorization-form.pug
+                    +authorization-form()
                 .cards__container-three
                     .cards__container-datepicker
                         include ../../components/date-dropdown/date-dropdown.pug 

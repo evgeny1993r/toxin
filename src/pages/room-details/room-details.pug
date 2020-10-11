@@ -8,7 +8,7 @@ html(lang="ru")
     body
         .room-details 
             include ../../components/header/header.pug 
-            +header('', '')
+            +header()
             .room-details__image-list
                 .room-details__image-one 
                 .room-details__image-two 
@@ -20,7 +20,9 @@ html(lang="ru")
                             h3.room-details__room-amenities-title Сведения о номере
                             .room-details__container-room-amenities
                             include ../../components/room-amenities/room-amenities.pug 
+                            +room-amenities()
                         include ../../components/impression-of-the-room/impression-of-the-room.pug 
+                        +impression-of-the-room()
                     .room-details__container-two
                         .room-details__comments
                             .room-details__comments-titles 
@@ -33,10 +35,13 @@ html(lang="ru")
                         .room-details__bullet-list 
                             h3.room-details__bullet-list-title Правила
                             include ../../components/bullet-list/bullet-list.pug
+                            +bullet-list()
                         .room-details__container-cancellation
                             include ../../components/cancellation/cancellation.pug
+                            +cancellation()
                 .room-details__container-verification-form 
                     include ../../components/verification-form/verification-form.pug 
                     +verification-form('888', 'люкс', '9 990', 'js-date-dropdown-six', 'js-dropdown-guests-seven')
             .room-details__line 
             include ../../components/footer/footer.pug
+            +footer()

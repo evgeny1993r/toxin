@@ -5,7 +5,8 @@ mixin item(id, label, text)
             label.rich-checkbox-buttons__label(for=id) #{label}
             span.rich-checkbox-buttons__text #{text}
 
-.rich-checkbox-buttons 
-    .rich-checkbox-buttons__item-list 
-        +item('corridor', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
-        +item('disabled', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
+mixin rich-checkbox-buttons()
+    .rich-checkbox-buttons 
+        .rich-checkbox-buttons__item-list 
+            +item('corridor', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+            +item('disabled', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')

@@ -5,7 +5,7 @@ mixin item(value, id, state)
 mixin expandable-checkbox-list(title)
     .expandable-checkbox-list.js-expandable-checkbox-list 
         h3.expandable-checkbox-list__title #{title}
-            i.expandable-checkbox-list__icon-expand-more.icon-expand_more
+            span.expandable-checkbox-list__icon-expand-more.icon-expand_more
         .expandable-checkbox-list__item-list 
             +item('Завтрак', 'breakfast', false)
             +item('Письменный стол', 'table', true)
