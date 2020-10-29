@@ -1,5 +1,5 @@
-mixin verification-form(numberValue, numberState, numberPrice, dateDropdownId, dropdownGuestsId)
-    form.verification-form 
+mixin verification-form(price, discount, collecting, numberValue, numberState, numberPrice, oneDate, twoDate)
+    form.verification-form(data-price=price, data-discount=discount, data-collecting=collecting)
         .verification-form__room-data
             p.verification-form__room-number
                 span.verification-form__room-number-symbol № 
@@ -13,10 +13,10 @@ mixin verification-form(numberValue, numberState, numberPrice, dateDropdownId, d
                 h3.verification-form__date-dropdown-title-one прибытие 
                 h3.verification-form__date-dropdown-title-two выезд
             include ../date-dropdown/date-dropdown.pug 
-            +date-dropdown(dateDropdownId, true)
+            +date-dropdown('true', oneDate, twoDate, 'false')
         .verification-form__dropdown-guests-container 
             h3.verification-form__dropdown-guests-title гости
-            div(id=dropdownGuestsId)
+            .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
         .verification-form__data
             p.verification-form__price
                 span.verification-form__price-text.js-verification-form__price-text

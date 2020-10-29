@@ -1,6 +1,6 @@
-import { Room } from './Room'
+import { Room } from './Room';
 
-const $room = $('.room')
+const $room = $('.room');
 $room.each((_, room) => {
-    new Room(room)
-})
+  new Room(room);
+});

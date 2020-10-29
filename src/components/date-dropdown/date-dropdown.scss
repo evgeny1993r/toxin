@@ -45,7 +45,7 @@
         transform: rotate(-90deg);
     }
     
-    &__container-datepicker {
+    &__datepicker {
         position: absolute;
         left: 0;
         top: 0;
@@ -53,5 +53,10 @@
         margin-top: 3.0625rem;
         background: #ffffff;
         z-index: 2;
+    }
+    
+    &__datepicker_show {
+        position: relative;
+        margin-top: 0;
     }
 }

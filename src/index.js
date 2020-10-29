@@ -1,5 +1,5 @@
 function importAll(r) {
-    r.keys().forEach(r)
+  r.keys().forEach(r);
 }
 
-importAll(require.context('../src', true, /\.scss$|\.css$|\.js$/))
+importAll(require.context('../src', true, /\.scss$|\.css$|\.js$/));

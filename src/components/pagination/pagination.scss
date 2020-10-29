@@ -1,5 +1,34 @@
 @import '../../styles/virables.scss';
 
+.pagination {
+    display: grid;
+
+    &_items-hide &__container-items {
+        display: none;
+    }
+
+    &_items-hide &__container {
+        margin: 0;
+        justify-self: start;
+    }
+
+    &__container-items {
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    &__container {
+        justify-self: center;
+        margin: 40px 0 70px 0;
+    }
+
+    &__container-items_hide {
+        display: none;
+    }
+}
+
 .paginationjs {
     width: max-content;
     display: grid;

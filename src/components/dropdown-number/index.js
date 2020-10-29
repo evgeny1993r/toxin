@@ -1,5 +1,6 @@
-const $dropdownNumberOne = $('#js-dropdown-number-one')
-$dropdownNumberOne.dropdownNumber([2, 2, 0])
+import { DropdownNumber } from './Dropdown-number';
 
-const $dropdownNumberTwo = $('#js-dropdown-number-two')
-$dropdownNumberTwo.dropdownNumber([2, 2, 0])
+const $dropdownNumber = $('.js-dropdown-number');
+$dropdownNumber.each((_, dropdownNumber) => {
+  new DropdownNumber(dropdownNumber);
+});

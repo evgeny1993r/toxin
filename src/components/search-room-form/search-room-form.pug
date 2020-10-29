@@ -1,4 +1,4 @@
-mixin search-room-form(dateDropdownId, dropdownGuestsId)
+mixin search-room-form(oneDate='', twoDate='')
     form.search-room-form
         h1.search-room-form__title Найдем номера под ваши пожелания
         .search-room-form__date-dropdown-titles 
@@ -6,9 +6,9 @@ mixin search-room-form(dateDropdownId, dropdownGuestsId)
             h3.search-room-form__date-dropdown-title выезд 
         .search-room-form__container-date-dropdown 
             include ../date-dropdown/date-dropdown.pug
-            +date-dropdown(dateDropdownId, true)
+            +date-dropdown(true, oneDate, twoDate, 'false')
         h3.search-room-form__dropdown-guests-title гости
-        div(id=dropdownGuestsId)
+        .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
         .search-room-form__container-button
             include ../button/button.pug 
             +button('submit', 'btn_big', 'Подобрать номер')

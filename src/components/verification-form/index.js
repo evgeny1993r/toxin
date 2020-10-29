@@ -1,3 +1,6 @@
-import { VerificationForm } from './Verification-form'
+import { VerificationForm } from './Verification-form';
 
-new VerificationForm(9990, 2179, 300)
+const $verificationForm = $('.verification-form');
+$verificationForm.each((_, verificationForm) => {
+  new VerificationForm(verificationForm);
+});

@@ -14,15 +14,15 @@ html(lang="ru")
                     .search-room__container-filter-date-dropdown
                         h3.search-room__filter-date-dropdown-title даты пребывания в отеле
                         include ../../components/filter-date-dropdown/filter-date-dropdown.pug 
-                        +filter-date-dropdown('js-filter-date-dropdown-two')
+                        +filter-date-dropdown('20 October, 2020', '25 October, 2020')
                     .search-room__container-dropdown-guests
                         h3.search-room__dropdown-guests-title гости 
-                        #js-dropdown-guests-eight 
+                        .js-dropdown-guests(data-adults="2", data-children="0", data-babies="1")  
                     .search-room__container-range-slider
                         .search-room__range-slider-titles 
                             h3.search-room__range-slider-title-one диапазон цены
-                            input.search-room__range-slider-title-two(type="text", id='js-range-slider-input-two')
-                        .search-room__range-slider#js-range-slider-two 
+                            input.search-room__range-slider-title-two.js-range-slider-input(type="text")
+                        .search-room__range-slider.js-range-slider
                         span.search-room__range-slider-text Стоимость за сутки пребывания в номере
                     .search-room__container-checkbox-buttons
                         h3.search-room__checkbox-buttons-title checkbox buttons
@@ -34,53 +34,14 @@ html(lang="ru")
                         +rich-checkbox-buttons()
                     .search-room__container-dropdown-number
                         h3.search-room__dropdown-number-title удобства номера 
-                        #js-dropdown-number-two 
+                        .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0") 
                     .search-room__container-expandable-checkbox-list
                     include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
                     +expandable-checkbox-list('дополнительные удобства')
                 .search-room__rooms
                     h1.search-room__title Номера, которые мы для вас подобрали
-                    .search-room__pagination 
-                        .search-room__container-pagination-rooms#js-search-room__container-pagination-rooms
-                            include ../../components/room/room.pug 
-                            - for(var i = 0; i <= 6; i++) 
-                                +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
-                                +room('room-two.jpg', '840', '', '9 990', '4', '65')
-                                +room('room-three.jpg', '980', 'люкс', '8 500', '3', '35')
-                                +room('room-four.jpg', '856', '', '7 300', '5', '19')
-                                +room('room-five.jpg', '740', '', '6 000', '4', '44')
-                                +room('room-six.jpg', '982', '', '5 800', '3', '56')
-                                +room('room-seven.jpg', '678', '', '5 500', '5', '45')
-                                +room('room-eight.jpg', '450', '', '5 300', '4', '39')
-                                +room('room-nine.jpg', '350', '', '5 000', '3', '77')
-                                +room('room-ten.jpg', '666', '', '5 000', '5', '25')
-                                +room('room-eleven.jpg', '444', '', '5 000', '3', '15')
-                                +room('room-twelve.jpg', '352', '', '5 000', '3', '55') 
-                                +room('room-twelve.jpg', '352', '', '5 000', '3', '55')
-                                +room('room-eleven.jpg', '444', '', '5 000', '3', '15')
-                                +room('room-ten.jpg', '666', '', '5 000', '5', '25')
-                                +room('room-nine.jpg', '350', '', '5 000', '3', '77')
-                                +room('room-eight.jpg', '450', '', '5 300', '4', '39')
-                                +room('room-seven.jpg', '678', '', '5 500', '5', '45')
-                                +room('room-six.jpg', '982', '', '5 800', '3', '56')
-                                +room('room-five.jpg', '740', '', '6 000', '4', '44')
-                                +room('room-four.jpg', '856', '', '7 300', '5', '19')
-                                +room('room-three.jpg', '980', 'люкс', '8 500', '3', '35')
-                                +room('room-two.jpg', '840', '', '9 990', '4', '65')
-                                +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
-                            +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
-                            +room('room-two.jpg', '840', '', '9 990', '4', '65')
-                            +room('room-three.jpg', '980', 'люкс', '8 500', '3', '35')
-                            +room('room-four.jpg', '856', '', '7 300', '5', '19')
-                            +room('room-five.jpg', '740', '', '6 000', '4', '44')
-                            +room('room-six.jpg', '982', '', '5 800', '3', '56')
-                            +room('room-seven.jpg', '678', '', '5 500', '5', '45')
-                            +room('room-eight.jpg', '450', '', '5 300', '4', '39')
-                            +room('room-nine.jpg', '350', '', '5 000', '3', '77')
-                            +room('room-ten.jpg', '666', '', '5 000', '5', '25')
-                            +room('room-eleven.jpg', '444', '', '5 000', '3', '15')
-                            +room('room-twelve.jpg', '352', '', '5 000', '3', '55')    
-                        .search-room__container-pagination#js-search-room__container-pagination
+                    include ../../components/pagination/pagination.pug
+                    +pagination()
             .search-room__line 
             include ../../components/footer/footer.pug
             +footer()

@@ -12,18 +12,18 @@ html(lang="ru")
             .cards__content
                 .cards__container-one
                     include ../../components/search-room-form/search-room-form.pug
-                    +search-room-form('js-date-dropdown-two', 'js-dropdown-guests-four')
+                    +search-room-form()
                     include ../../components/registration-form/registration-form.pug
                     +registration-form()
                 .cards__container-two
                     include ../../components/verification-form/verification-form.pug 
-                    +verification-form('888', 'люкс', '9 990', 'js-date-dropdown-three', 'js-dropdown-guests-five')
+                    +verification-form('9990', '2179', '300', '888', 'люкс', '9 990', '20 October, 2020', '24 October, 2020')
                     include ../../components/authorization-form/authorization-form.pug
                     +authorization-form()
                 .cards__container-three
-                    .cards__container-datepicker
+                    .cards__container-date-dropdown-datepicker
                         include ../../components/date-dropdown/date-dropdown.pug 
-                        +date-dropdown('js-date-dropdown-four', false)
+                        +date-dropdown(false, '20 October, 2020', '25 October, 2020', 'true')
                     include ../../components/room/room.pug 
                     +room('room-one.jpg', '888', 'люкс', '9 990', '5', '145')
                     +room('room-two.jpg', '840', '', '9 990', '4', '65')

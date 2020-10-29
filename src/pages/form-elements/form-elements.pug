@@ -21,7 +21,7 @@ html(lang="ru")
                         .form-elements__dropdown-guests-titles 
                             h3.form-elements__dropdown-guests-title-one dropdown 
                             h3.form-elements__dropdown-guests-title-two default
-                        #js-dropdown-guests-one 
+                        .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
                     
                     .form-elements__container-masked-text-field
                         .form-elements__masked-text-field-titles
@@ -35,12 +35,12 @@ html(lang="ru")
                             h3.form-elements__date-dropdown-title-one date dropdown 
                             h3.form-elements__date-dropdown-title-two date dropdown 
                         include ../../components/date-dropdown/date-dropdown.pug 
-                        +date-dropdown('js-date-dropdown-one', true)
+                        +date-dropdown(true, '20 October, 2020', '', true)
 
                     .form-elements__container-filter-date-dropdown
                         h3.form-elements__filter-date-dropdown-title filter date dropdown 
                         include ../../components/filter-date-dropdown/filter-date-dropdown.pug
-                        +filter-date-dropdown('js-filter-date-dropdown-one') 
+                        +filter-date-dropdown('20 October, 2020', '25 October, 2020') 
 
                     .form-elements__container-subscription-text-field
                         h3.form-elements__subscription-text-field-title subscription text field 
@@ -83,8 +83,8 @@ html(lang="ru")
                     .form-elements__container-range-slider
                         .form-elements__range-slider-titles 
                             h3.form-elements__range-slider-title-one range slider
-                            input.form-elements__range-slider-title-two(type="text", id="js-range-slider-input-one")
-                        #js-range-slider-one
+                            input.form-elements__range-slider-title-two.js-range-slider-input(type="text")
+                        .js-range-slider
 
                     .form-elements__container-buttons
                         h3.form-elements__buttons-title buttons 
@@ -102,25 +102,21 @@ html(lang="ru")
 
                     .form-elements__container-pagination
                         h3.form-elements__pagination-title pagination
-                        .form-elements__pagination 
-                            .form-elements__container-items-pagintaion#js-form-elements__container-items-pagintaionjs
-                                - for(var i = 0; i <= 170; i++) 
-                                    .form-elements__pagination-item.js-form-elements__pagination-item
-                            .form-elements__container-paginationjs#js-form-elements__container-paginationjs
+                        include ../../components/pagination/pagination.pug 
+                        +pagination('pagination_items-hide')
 
-            
             section.form-elements__section-two 
                 .form-elements__container-one-dropdown-number
                     .form-elements__dropdown-number-titles
                         h3.form-elements__dropdown-number-title-one dropdown
                         h3.form-elements__dropdown-number-title-two default
-                    #js-dropdown-number-one
+                    .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0")
                 .form-elements__container-two-dropdown-guests
                     h3.form-elements__dropdown-guests-title dropdown 
-                    #js-dropdown-guests-two
+                    .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
                 .form-elements__container-three-dropdown-guests
                     h3.form-elements__dropdown-guests-title dropdown
-                    #js-dropdown-guests-three
+                    .js-dropdown-guests(data-adults="2", data-children="1", data-babies="0") 
 
             section.form-elements__section-three 
                 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
