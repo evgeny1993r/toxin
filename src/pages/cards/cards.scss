@@ -25,9 +25,7 @@
     }
   }
 
-  &__container-one,
-  &__container-two,
-  &__container-three {
+  &__container {
     display: grid;
     row-gap: 2.5rem;
   }

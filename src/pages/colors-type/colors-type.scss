@@ -41,8 +41,8 @@
     align-content: center;
   }
 
-  &__colors-text-one, 
-  &__colors-text-two {
+  &__colors-text-first, 
+  &__colors-text-second {
     font-family: 'Quicksand', open-sans;
     font-style: normal;
     font-size: 1.1875rem;
@@ -52,11 +52,11 @@
     color: $Dark-100;
   }
 
-  &__colors-text-one {
+  &__colors-text-first {
     font-weight: bold;
   }
 
-  &__colors-text-two {
+  &__colors-text-second {
     font-weight: normal;
   }
 
@@ -72,7 +72,7 @@
     column-gap: 1.875rem;
   }
 
-  &__type-h1-one {
+  &__type-h1-first {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -82,7 +82,7 @@
     color: $Dark-25;
   }
 
-  &__type-h1-two {
+  &__type-h1-second {
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -91,7 +91,7 @@
     color: $Dark-100;
   }
 
-  &__type-h2-one {
+  &__type-h2-first {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -101,7 +101,7 @@
     color: $Dark-25;
   }
 
-  &__type-h2-two {
+  &__type-h2-second {
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -110,7 +110,7 @@
     color: $Dark-100;
   }
 
-  &__type-h3-one {
+  &__type-h3-first {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -120,7 +120,7 @@
     color: $Dark-25;
   }
 
-  &__type-h3-two {
+  &__type-h3-second {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -130,7 +130,7 @@
     color: $Dark-100;
   }
 
-  &__type-body-one {
+  &__type-body-first {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -140,7 +140,7 @@
     color: $Dark-25;
   }
   
-  &__type-body-two {
+  &__type-body-second {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;

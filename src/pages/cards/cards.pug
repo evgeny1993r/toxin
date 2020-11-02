@@ -10,17 +10,17 @@ html(lang="ru")
       include ../../components/logotip/logotip.pug 
       +logotip('gray')
       .cards__content
-        .cards__container-one
+        .cards__container
           include ../../components/search-room-form/search-room-form.pug
           +search-room-form()
           include ../../components/registration-form/registration-form.pug
           +registration-form()
-        .cards__container-two
+        .cards__container
           include ../../components/verification-form/verification-form.pug 
           +verification-form('9990', '2179', '300', '888', 'люкс', '9 990', '20 October, 2020', '24 October, 2020')
           include ../../components/authorization-form/authorization-form.pug
           +authorization-form()
-        .cards__container-three
+        .cards__container
           .cards__container-date-dropdown-datepicker
             include ../../components/date-dropdown/date-dropdown.pug 
             +date-dropdown(false, '20 October, 2020', '25 October, 2020', 'true')

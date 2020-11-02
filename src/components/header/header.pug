@@ -21,7 +21,7 @@ mixin header(firstName, lastName)
     if firstName == undefined && lastName == undefined
       .header__buttons 
         include ../button/button.pug 
-        +button('button', 'btn_white btn_small', 'Войти')
-        +button('button', 'btn_purple btn_small', 'Зарегистрироваться')
+        +button('button', 'btn_white-and-small', 'Войти')
+        +button('button', 'btn_purple-and-small', 'Зарегистрироваться')
     else 
       span.header__name #{firstName} #{lastName}
