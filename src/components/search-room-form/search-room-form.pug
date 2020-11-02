@@ -1,14 +1,14 @@
 mixin search-room-form(oneDate='', twoDate='')
-    form.search-room-form
-        h1.search-room-form__title Найдем номера под ваши пожелания
-        .search-room-form__date-dropdown-titles 
-            h3.search-room-form__date-dropdown-title прибытие
-            h3.search-room-form__date-dropdown-title выезд 
-        .search-room-form__container-date-dropdown 
-            include ../date-dropdown/date-dropdown.pug
-            +date-dropdown(true, oneDate, twoDate, 'false')
-        h3.search-room-form__dropdown-guests-title гости
-        .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
-        .search-room-form__container-button
-            include ../button/button.pug 
-            +button('submit', 'btn_big', 'Подобрать номер')
+  form.search-room-form
+    h1.search-room-form__title Найдем номера под ваши пожелания
+    .search-room-form__date-dropdown-titles 
+      h3.search-room-form__date-dropdown-title прибытие
+      h3.search-room-form__date-dropdown-title выезд 
+    .search-room-form__container-date-dropdown 
+      include ../date-dropdown/date-dropdown.pug
+      +date-dropdown(true, oneDate, twoDate, 'false')
+    h3.search-room-form__dropdown-guests-title гости
+    .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
+    .search-room-form__container-button
+      include ../button/button.pug 
+      +button('submit', 'btn_big', 'Подобрать номер')

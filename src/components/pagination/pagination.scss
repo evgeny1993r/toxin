@@ -1,121 +1,121 @@
 @import '../../styles/virables.scss';
 
 .pagination {
+  display: grid;
+
+  &_items-hide &__container-items {
+    display: none;
+  }
+
+  &_items-hide &__container {
+    margin: 0;
+    justify-self: start;
+  }
+
+  &__container-items {
     display: grid;
+    grid-template-columns: repeat(4, 270px);
+    justify-content: space-between;
+    row-gap: 20px;
+  }
 
-    &_items-hide &__container-items {
-        display: none;
-    }
+  &__container {
+    justify-self: center;
+    margin: 40px 0 70px 0;
+  }
 
-    &_items-hide &__container {
-        margin: 0;
-        justify-self: start;
-    }
-
-    &__container-items {
-        display: grid;
-        grid-template-columns: repeat(4, 270px);
-        justify-content: space-between;
-        row-gap: 20px;
-    }
-
-    &__container {
-        justify-self: center;
-        margin: 40px 0 70px 0;
-    }
-
-    &__container-items_hide {
-        display: none;
-    }
+  &__container-items_hide {
+    display: none;
+  }
 }
 
 .paginationjs {
-    width: max-content;
+  width: max-content;
+  display: grid;
+  row-gap: 0.625rem;
+
+  &-pages ul {
+    display: flex;
+  }
+
+  &-page {
+    width: 2.5rem;
+    height: 2.5rem;
+    list-style: none;
     display: grid;
-    row-gap: 0.625rem;
+    justify-content: center;
+    align-content: center;
+  }
 
-    &-pages ul {
-        display: flex;
-    }
+  &-page.active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 1.375rem;
+  }
 
-    &-page {
-        width: 2.5rem;
-        height: 2.5rem;
-        list-style: none;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-    }
+  &-page a {
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: $Dark-50;
+  }
 
-    &-page.active {
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border-radius: 1.375rem;
-    }
+  &-page.active a {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #FFFFFF;
+  }
 
-    &-page a {
-        text-decoration: none;
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 0.938rem;
-        color: $Dark-50;
-    }
+  &-ellipsis {
+    width: 2.5rem;
+    height: 2.5rem;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
 
-    &-page.active a {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.938rem;
-        color: #FFFFFF;
-    }
+  &-ellipsis a {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: $Dark-50;
+  }
 
-    &-ellipsis {
-        width: 2.5rem;
-        height: 2.5rem;
-        list-style: none;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-    }
+  &-next {
+    width: 2.5rem;
+    height: 2.5rem;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 50%;
+  }
 
-    &-ellipsis a {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 0.938rem;
-        color: $Dark-50;
-    }
-
-    &-next {
-        width: 2.5rem;
-        height: 2.5rem;
-        list-style: none;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-        border-radius: 50%;
-    }
-
-    &-next a {
-        text-decoration: none;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.063rem;
-        line-height: 1.063rem;
-        color: #FFFFFF;        
-    }
-    
-    &-nav {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        color: $Dark-75;
-        text-align: center;
-    }
+  &-next a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.063rem;
+    line-height: 1.063rem;
+    color: #FFFFFF;        
+  }
+  
+  &-nav {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $Dark-75;
+    text-align: center;
+  }
 }

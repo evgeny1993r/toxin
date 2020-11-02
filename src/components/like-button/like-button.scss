@@ -1,47 +1,47 @@
 @import '../../styles/virables.scss'; 
 
 .like-button {
-    width: 2.5rem;
-    height: 1.25rem;
-    border-radius: 0.625rem;
-    background: $Dark-25;
-    padding: 0.063rem;
-    cursor: pointer;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 0.625rem;
+  background: $Dark-25;
+  padding: 0.063rem;
+  cursor: pointer;
 
-    &__container {
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        background: #FFFFFF;
-        border-radius: inherit;
-    }
+  &__container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: inherit;
+  }
 
-    &__icon {
-        font-size: 0.5rem;
-        line-height: 0.5rem;
-        justify-self: center;
-        color: $Dark-25;
-    }
+  &__icon {
+    font-size: 0.5rem;
+    line-height: 0.5rem;
+    justify-self: center;
+    color: $Dark-25;
+  }
 
-    &__value {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.625rem;
-        line-height: 0.75rem;
-        color: $Dark-25;
-    }
+  &__value {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    color: $Dark-25;
+  }
 
-    &_active {
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    }
+  &_active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
 
-    &_active &__icon {
-        color: $Purple;
-    }
+  &_active &__icon {
+    color: $Purple;
+  }
 
-    &_active &__value {
-        color: $Purple;
-    }
+  &_active &__value {
+    color: $Purple;
+  }
 }

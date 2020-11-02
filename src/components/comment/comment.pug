@@ -1,12 +1,12 @@
 mixin comment(imgName, name, time, likeButtonClass, likeButtonValue, text)
-    .comment
-        .comment__container-one
-            img.comment__img(src=require(`../../images/${imgName}`).default, alt="Userpic")
-            .comment__titles 
-                h3.comment__title-one #{name}
-                h3.comment__title-two #{time}
-        .comment__container-two
-            .comment__container-like-button 
-                include ../like-button/like-button.pug 
-                +like-button(likeButtonClass, likeButtonValue)
-            .comment__text #{text}
+  .comment
+    .comment__container-one
+      img.comment__img(src=require(`../../images/${imgName}`).default, alt="Userpic")
+      .comment__titles 
+        h3.comment__title-one #{name}
+        h3.comment__title-two #{time}
+    .comment__container-two
+      .comment__container-like-button 
+        include ../like-button/like-button.pug 
+        +like-button(likeButtonClass, likeButtonValue)
+      .comment__text #{text}

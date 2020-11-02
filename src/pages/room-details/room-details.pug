@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="icon" href="../src/images/logotip-gray.svg")
-        title Room Details
-    body
-        .room-details 
-            include ../../components/header/header.pug 
-            +header()
-            .room-details__image-list
-                .room-details__image-one 
-                .room-details__image-two 
-                .room-details__image-three
-            .room-details__content 
-                .room-details__containers
-                    .room-details__container-one
-                        .room-details__room-amenities 
-                            h3.room-details__room-amenities-title Сведения о номере
-                            .room-details__container-room-amenities
-                            include ../../components/room-amenities/room-amenities.pug 
-                            +room-amenities()
-                        include ../../components/impression-of-the-room/impression-of-the-room.pug 
-                        +impression-of-the-room()
-                    .room-details__container-two
-                        .room-details__comments
-                            .room-details__comments-titles 
-                                h3.room-details__comments-title-one Отзывы посетителей номера
-                                h3.room-details__comments-title-two 2 отзыва
-                            include ../../components/comment/comment.pug 
-                            +comment('userpic-one.png', 'Мурад Сарафанов', '5 дней назад', 'active', '12', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-                            +comment('userpic-two.png', 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
-                    .room-details__container-three 
-                        .room-details__bullet-list 
-                            h3.room-details__bullet-list-title Правила
-                            include ../../components/bullet-list/bullet-list.pug
-                            +bullet-list()
-                        .room-details__container-cancellation
-                            include ../../components/cancellation/cancellation.pug
-                            +cancellation()
-                .room-details__container-verification-form 
-                    include ../../components/verification-form/verification-form.pug 
-                    +verification-form('9990', '2179', '300', '888', 'люкс', '9 990', '20 October, 2020', '25 October, 2020')
-            .room-details__line 
-            include ../../components/footer/footer.pug
-            +footer()
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon" href="../src/images/logotip-gray.svg")
+    title Room Details
+  body
+    .room-details 
+      include ../../components/header/header.pug 
+      +header()
+      .room-details__image-list
+        .room-details__image-one 
+        .room-details__image-two 
+        .room-details__image-three
+      .room-details__content 
+        .room-details__containers
+          .room-details__container-one
+            .room-details__room-amenities 
+              h3.room-details__room-amenities-title Сведения о номере
+              .room-details__container-room-amenities
+              include ../../components/room-amenities/room-amenities.pug 
+              +room-amenities()
+            include ../../components/impression-of-the-room/impression-of-the-room.pug 
+            +impression-of-the-room()
+          .room-details__container-two
+            .room-details__comments
+              .room-details__comments-titles 
+                h3.room-details__comments-title-one Отзывы посетителей номера
+                h3.room-details__comments-title-two 2 отзыва
+              include ../../components/comment/comment.pug 
+              +comment('userpic-one.png', 'Мурад Сарафанов', '5 дней назад', 'active', '12', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+              +comment('userpic-two.png', 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+          .room-details__container-three 
+            .room-details__bullet-list 
+              h3.room-details__bullet-list-title Правила
+              include ../../components/bullet-list/bullet-list.pug
+              +bullet-list()
+            .room-details__container-cancellation
+              include ../../components/cancellation/cancellation.pug
+              +cancellation()
+        .room-details__container-verification-form 
+          include ../../components/verification-form/verification-form.pug 
+          +verification-form('9990', '2179', '300', '888', 'люкс', '9 990', '20 October, 2020', '25 October, 2020')
+      .room-details__line 
+      include ../../components/footer/footer.pug
+      +footer()

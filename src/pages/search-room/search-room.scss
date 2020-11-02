@@ -1,130 +1,130 @@
 @import '../../styles/virables.scss';
 
 .search-room {
-    background: #ffffff;
+  background: #ffffff;
 
-    &__content {
-        margin-top: 1.875rem;
-        padding: 0 8.75rem;
-        display: grid;
-        grid-template-columns: 16.625rem auto;
-        column-gap: 3.75rem;
-        align-items: start;
+  &__content {
+    margin-top: 1.875rem;
+    padding: 0 8.75rem;
+    display: grid;
+    grid-template-columns: 16.625rem auto;
+    column-gap: 3.75rem;
+    align-items: start;
 
-        @media(max-width: 1366px) {
-            padding: 0 5%;
-        }
+    @media(max-width: 1366px) {
+      padding: 0 5%;
+    }
 
-        @media(max-width: 1024px) {
-            grid-template-columns: 16.625rem auto;
-            justify-content: space-between;
-        }
-
-        @media(max-width: 540px) {
-            grid-template-columns: 1fr;
-        }
+    @media(max-width: 1024px) {
+      grid-template-columns: 16.625rem auto;
+      justify-content: space-between;
     }
 
     @media(max-width: 540px) {
-        &__sidebar {
-            max-width: 16.625rem;
-        }
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media(max-width: 540px) {
+    &__sidebar {
+        max-width: 16.625rem;
+    }
+  }
+
+  &__container-dropdown-guests {
+    margin-top: 1.25rem;
+  }
+
+  &__container-range-slider,
+  &__container-checkbox-buttons,
+  &__container-rich-checkbox-buttons,
+  &__container-dropdown-number,
+  &__container-expandable-checkbox-list {
+    margin-top: 1.875rem;
+  }
+
+  &__container-filter-date-dropdown,
+  &__container-dropdown-guests,
+  &__container-dropdown-number {
+    display: grid;
+    row-gap: 0.3125rem;
+  }
+
+  &__container-checkbox-buttons,
+  &__container-rich-checkbox-buttons {
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  &__range-slider-titles {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+
+  &__filter-date-dropdown-title,
+  &__dropdown-guests-title,
+  &__range-slider-title-one,
+  &__checkbox-buttons-title,
+  &__rich-checkbox-buttons-title,
+  &__dropdown-number-title {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: $Dark-100;
+  }
+
+  &__range-slider-title-two {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: $Dark-50;
+    text-align: right;
+    background: none;
+    border: none;
+    width: 6.25rem;
+  }
+
+  &__range-slider {
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  &__range-slider-text {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    color: $Dark-50;
+  }
+
+  &__title {
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: $Dark-100;
+    margin-bottom: 1.25rem;
+
+    @media(max-width: 1500px) {
+      text-align: center;
     }
 
-    &__container-dropdown-guests {
-        margin-top: 1.25rem;
+    @media(max-width: 540px) {
+      margin-top: 2rem;
     }
-
-    &__container-range-slider,
-    &__container-checkbox-buttons,
-    &__container-rich-checkbox-buttons,
-    &__container-dropdown-number,
-    &__container-expandable-checkbox-list {
-        margin-top: 1.875rem;
-    }
-
-    &__container-filter-date-dropdown,
-    &__container-dropdown-guests,
-    &__container-dropdown-number {
-        display: grid;
-        row-gap: 0.3125rem;
-    }
-
-    &__container-checkbox-buttons,
-    &__container-rich-checkbox-buttons {
-        display: grid;
-        row-gap: 1rem;
-    }
-
-    &__range-slider-titles {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        justify-content: space-between;
-    }
-
-    &__filter-date-dropdown-title,
-    &__dropdown-guests-title,
-    &__range-slider-title-one,
-    &__checkbox-buttons-title,
-    &__rich-checkbox-buttons-title,
-    &__dropdown-number-title {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-transform: uppercase;
-        color: $Dark-100;
-    }
-
-    &__range-slider-title-two {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-transform: uppercase;
-        color: $Dark-50;
-        text-align: right;
-        background: none;
-        border: none;
-        width: 6.25rem;
-    }
-
-    &__range-slider {
-        margin: 1rem 0 0.5rem 0;
-    }
-
-    &__range-slider-text {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 0.875rem;
-        color: $Dark-50;
-    }
-
-    &__title {
-        font-family: Quicksand, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 1.75rem;
-        color: $Dark-100;
-        margin-bottom: 1.25rem;
-
-        @media(max-width: 1500px) {
-            text-align: center;
-        }
-
-        @media(max-width: 540px) {
-            margin-top: 2rem;
-        }
-    }
-    
-    &__line {
-        width: 100%;
-        height: 0.0625rem;
-        background: $Dark-25;
-    }
+  }
+  
+  &__line {
+    width: 100%;
+    height: 0.0625rem;
+    background: $Dark-25;
+  }
 }

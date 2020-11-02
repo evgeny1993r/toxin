@@ -1,46 +1,46 @@
 @import '../../styles/virables.scss';
 
 .authorization-form {
-    max-width: 23.75rem;
-    background: #FFFFFF;
-    border: 0.0625rem solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
-    border-radius: 0.25rem;
-    padding: 2.5rem 1.875rem 1.875rem 1.875rem;
+  max-width: 23.75rem;
+  background: #FFFFFF;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  padding: 2.5rem 1.875rem 1.875rem 1.875rem;
 
-    &__title {
-        font-family: Quicksand, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 1.75rem;
-        color: $Dark-100;
-    }
+  &__title {
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: $Dark-100;
+  }
 
-    &__text-fields {
-        margin-top: 1.25rem;
-        display: grid;
-        row-gap: 0.625rem;
-    }
+  &__text-fields {
+    margin-top: 1.25rem;
+    display: grid;
+    row-gap: 0.625rem;
+  }
 
-    &__container-button {
-        margin-top: 1.25rem;
-    }
+  &__container-button {
+    margin-top: 1.25rem;
+  }
 
-    &__container-sign-up {
-        margin-top: 1.875rem;
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    &__registration-text {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-        color: #000000;
-    }
+  &__container-sign-up {
+    margin-top: 1.875rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__registration-text {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #000000;
+  }
 }

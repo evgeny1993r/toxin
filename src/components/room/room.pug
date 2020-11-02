@@ -1,33 +1,33 @@
 mixin room(roomImgName, roomNumber, roomState, roomPrice, rateButtonValue, commentsValue)
-    .room
-        .room__slider
-            .room__images 
-                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
-                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
-                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
-                img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
-            .room__btn-left 
-                i.icon-expand_more 
-            .room__btn-right 
-                i.icon-expand_more 
-            .room__circles
-                .room__circle.room__circle_active 
-                .room__circle
-                .room__circle
-                .room__circle
-        .room__info 
-            .room__container-one
-                p.room__number
-                    span.room__number-symbol № 
-                    span.room__number-value #{roomNumber}
-                    span.room__number-state #{roomState}
-                p.room__price
-                    span.room__price-value #{roomPrice}₽ 
-                    span.room__price-text в сутки
-            .room__line
-            .room__container-two
-                include ../rate-button/rate-button.pug
-                +rate-button(rateButtonValue)
-                p.room__comments
-                    span.room__comments-value #{commentsValue} 
-                    span.room__comments-text Отзывов
+  .room
+    .room__slider
+      .room__images 
+        img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+        img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+        img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+        img.room__image(src=require(`../../images/rooms/${roomImgName}`).default, alt="Image room")
+      .room__btn-left 
+        span.icon-expand_more 
+      .room__btn-right 
+        span.icon-expand_more 
+      .room__circles
+        .room__circle.room__circle_active 
+        .room__circle
+        .room__circle
+        .room__circle
+    .room__info 
+      .room__container-one
+        p.room__number
+          span.room__number-symbol № 
+          span.room__number-value #{roomNumber}
+          span.room__number-state #{roomState}
+        p.room__price
+          span.room__price-value #{roomPrice}₽ 
+          span.room__price-text в сутки
+      .room__line
+      .room__container-two
+        include ../rate-button/rate-button.pug
+        +rate-button(rateButtonValue)
+        p.room__comments
+          span.room__comments-value #{commentsValue} 
+          span.room__comments-text Отзывов

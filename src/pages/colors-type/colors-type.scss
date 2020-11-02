@@ -1,151 +1,151 @@
 @import '../../styles/virables.scss';
 
 .colors-type {
-    &__content {
-        max-width: 71.25rem;
-        margin: 4.0625rem auto 0 auto;
-        display: grid;
-        grid-template-columns: max-content 27.8125rem;
-        justify-content: space-between;
-        background: #ffffff;
+  &__content {
+    max-width: 71.25rem;
+    margin: 4.0625rem auto 0 auto;
+    display: grid;
+    grid-template-columns: max-content 27.8125rem;
+    justify-content: space-between;
+    background: #ffffff;
 
-        @media(max-width: 1440px) {
-            min-width: 100%;
-            padding: 0 10%;
-        }
-
-        @media(max-width: 1024px) {
-            grid-template-columns: 1fr;
-            row-gap: 4.0625rem;
-        }
+    @media(max-width: 1440px) {
+      min-width: 100%;
+      padding: 0 10%;
     }
 
-    &__colors-item-list {
-        display: grid;
-        row-gap: 1.25rem;
+    @media(max-width: 1024px) {
+      grid-template-columns: 1fr;
+      row-gap: 4.0625rem;
     }
+  }
 
-    &__colors-item {
-        display: grid;
-        grid-template-columns: 4.375rem auto;
-        grid-template-rows: 4.375rem;
-        column-gap: 2.5rem;
-    }
+  &__colors-item-list {
+    display: grid;
+    row-gap: 1.25rem;
+  }
 
-    &__colors-color {
-        border-radius: 0.375rem;
-    }
+  &__colors-item {
+    display: grid;
+    grid-template-columns: 4.375rem auto;
+    grid-template-rows: 4.375rem;
+    column-gap: 2.5rem;
+  }
 
-    &__colors-texts {
-        display: grid;
-        align-content: center;
-    }
+  &__colors-color {
+    border-radius: 0.375rem;
+  }
 
-    &__colors-text-one, 
-    &__colors-text-two {
-        font-family: 'Quicksand', open-sans;
-        font-style: normal;
-        font-size: 1.1875rem;
-        line-height: 1.8125rem;
-        display: flex;
-        align-items: center;
-        color: $Dark-100;
-    }
+  &__colors-texts {
+    display: grid;
+    align-content: center;
+  }
 
-    &__colors-text-one {
-        font-weight: bold;
-    }
+  &__colors-text-one, 
+  &__colors-text-two {
+    font-family: 'Quicksand', open-sans;
+    font-style: normal;
+    font-size: 1.1875rem;
+    line-height: 1.8125rem;
+    display: flex;
+    align-items: center;
+    color: $Dark-100;
+  }
 
-    &__colors-text-two {
-        font-weight: normal;
-    }
+  &__colors-text-one {
+    font-weight: bold;
+  }
 
-    &__type-item-list {
-        list-style: none;
-        display: grid;
-        row-gap: 3.125rem;
-    }
+  &__colors-text-two {
+    font-weight: normal;
+  }
 
-    &__type-item {
-        display: grid;
-        grid-template-columns: 2.3125rem auto;
-        column-gap: 1.875rem;
-    }
+  &__type-item-list {
+    list-style: none;
+    display: grid;
+    row-gap: 3.125rem;
+  }
 
-    &__type-h1-one {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.5rem;
-        line-height: 1.8125rem;
-        text-align: right;
-        color: $Dark-25;
-    }
+  &__type-item {
+    display: grid;
+    grid-template-columns: 2.3125rem auto;
+    column-gap: 1.875rem;
+  }
 
-    &__type-h1-two {
-        font-family: 'Quicksand', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 1.875rem;
-        color: $Dark-100;
-    }
+  &__type-h1-one {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+    text-align: right;
+    color: $Dark-25;
+  }
 
-    &__type-h2-one {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.1875rem;
-        line-height: 1.4375rem;
-        text-align: right;
-        color: $Dark-25;
-    }
+  &__type-h1-two {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color: $Dark-100;
+  }
 
-    &__type-h2-two {
-        font-family: 'Quicksand', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.1875rem;
-        line-height: 1.5rem;
-        color: $Dark-100;
-    }
+  &__type-h2-one {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1875rem;
+    line-height: 1.4375rem;
+    text-align: right;
+    color: $Dark-25;
+  }
 
-    &__type-h3-one {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-align: right;
-        color: $Dark-25;
-    }
+  &__type-h2-two {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1875rem;
+    line-height: 1.5rem;
+    color: $Dark-100;
+  }
 
-    &__type-h3-two {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-transform: uppercase;
-        color: $Dark-100;
-    }
+  &__type-h3-one {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-align: right;
+    color: $Dark-25;
+  }
 
-    &__type-body-one {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-        text-align: right;
-        color: $Dark-25;
-    }
-    
-    &__type-body-two {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-        color: $Dark-75;
-    }    
+  &__type-h3-two {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: $Dark-100;
+  }
+
+  &__type-body-one {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    text-align: right;
+    color: $Dark-25;
+  }
+  
+  &__type-body-two {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $Dark-75;
+  }    
 }

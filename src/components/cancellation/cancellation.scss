@@ -1,24 +1,24 @@
 @import '../../styles/virables.scss';
 
 .cancellation {
-    display: grid;
-    row-gap: 1.063rem;
+  display: grid;
+  row-gap: 1.063rem;
 
-    &__title {
-        font-family: Quicksand, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.188rem;
-        line-height: 1.5rem;
-        color: $Dark-100;
-    }
-    
-    &__text {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-        color: $Dark-75;
-    }
+  &__title {
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.188rem;
+    line-height: 1.5rem;
+    color: $Dark-100;
+  }
+  
+  &__text {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $Dark-75;
+  }
 }

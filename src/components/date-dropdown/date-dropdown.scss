@@ -1,62 +1,62 @@
 @import '../../styles/virables.scss';
 
 .date-dropdown {
-    position: relative;
-    max-width: 20rem;
+  position: relative;
+  max-width: 20rem;
+  display: grid;
+  grid-template-columns: repeat(2, 9.375rem);
+  justify-content: space-between;
+
+  &__entry,
+  &__check-out {
     display: grid;
-    grid-template-columns: repeat(2, 9.375rem);
-    justify-content: space-between;
+    grid-template-columns: auto 2.75rem;
+    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
 
-    &__entry,
-    &__check-out {
-        display: grid;
-        grid-template-columns: auto 2.75rem;
-        border: 0.0625rem solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-        border-radius: 0.25rem;
-        cursor: pointer;
-    }
+  &__input-entry,
+  &__input-check-out {
+    width: 100%;
+    background: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: $Dark-75;
+    padding: 0.75rem 0 0.75rem 0.9375rem;
+    border: none;
+    border-radius: inherit;
+    cursor: pointer;
+    outline: none;
+  }
 
-    &__input-entry,
-    &__input-check-out {
-        width: 100%;
-        background: #ffffff;
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-        color: $Dark-75;
-        padding: 0.75rem 0 0.75rem 0.9375rem;
-        border: none;
-        border-radius: inherit;
-        cursor: pointer;
-        outline: none;
-    }
-
-    &__icon-expand-more {
-        justify-self: center;
-        align-self: center;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.8125rem;
-        line-height: 0.8125rem;
-        color: $Dark-50;
-        transform: rotate(-90deg);
-    }
-    
-    &__datepicker {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        margin-top: 3.0625rem;
-        background: #ffffff;
-        z-index: 2;
-    }
-    
-    &__datepicker_show {
-        position: relative;
-        margin-top: 0;
-    }
+  &__icon-expand-more {
+    justify-self: center;
+    align-self: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8125rem;
+    line-height: 0.8125rem;
+    color: $Dark-50;
+    transform: rotate(-90deg);
+  }
+  
+  &__datepicker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    margin-top: 3.0625rem;
+    background: #ffffff;
+    z-index: 2;
+  }
+  
+  &__datepicker_show {
+    position: relative;
+    margin-top: 0;
+  }
 }

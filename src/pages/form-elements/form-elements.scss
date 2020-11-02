@@ -1,302 +1,302 @@
 @import '../../styles/virables.scss';
 
 .form-elements {
+  display: grid;
+  align-content: start;
+  padding-bottom: 1.875rem;
+  background: #ffffff;
+
+  &__section-one {
+    width: 72.5rem;
+    justify-self: center;
     display: grid;
-    align-content: start;
-    padding-bottom: 1.875rem;
-    background: #ffffff;
+    grid-template-columns: 20rem 16.25rem 20rem;
+    justify-content: space-between;
+    margin: 4.0625rem 0 0 0;
 
-    &__section-one {
-        width: 72.5rem;
-        justify-self: center;
-        display: grid;
-        grid-template-columns: 20rem 16.25rem 20rem;
-        justify-content: space-between;
-        margin: 4.0625rem 0 0 0;
-
-        @media(max-width: 1440px) {
-            width: 100%;
-            padding: 0 10%;
-        }
-
-        @media(max-width: 1280px) {
-            padding: 0 5%;
-            grid-template-columns: 20rem 16.25rem;
-            justify-content: space-around;
-        }
-
-        @media(max-width: 640px) {
-            padding: 0 3%;
-            grid-template-columns: 20rem;
-        }
-    }
-
-
-    &__container-text-field,
-    &__container-one-dropdown-guests,
-    &__container-masked-text-field,
-    &__container-date-dropdown,
-    &__container-filter-date-dropdown,
-    &__container-subscription-text-field,
-    &__container-one-dropdown-number,
-    &__container-two-dropdown-guests,
-    &__container-three-dropdown-guests {
-        display: grid;
-        row-gap: 0.3125rem;
-    }
-
-    @media(max-width: 640px) {
-        &__container-two-dropdown-guests {
-            margin-top: 2.5rem;
-        }
-    }
-
-    &__container-one-dropdown-number,
-    &__container-range-slider {
-        width: 16.625rem;
-    }
-
-    &__container-checkbox-buttons,
-    &__container-radio-buttons,
-    &__container-subscription-switch,
-    &__container-like-button,
-    &__container-rate-button,
-    &__container-pagination,
-    &__container-range-slider,
-    &__container-buttons,
-    &__container-rich-checkbox-buttons,
-    &__container-bullet-list {
-        display: grid;
-        row-gap: 1rem;
+    @media(max-width: 1440px) {
+      width: 100%;
+      padding: 0 10%;
     }
 
     @media(max-width: 1280px) {
-        &__container-range-slider {
-            margin-top: 2.5rem;
-        }
+      padding: 0 5%;
+      grid-template-columns: 20rem 16.25rem;
+      justify-content: space-around;
     }
 
     @media(max-width: 640px) {
-        &__container-checkbox-buttons {
-            margin-top: 2.5rem;
-        }
+      padding: 0 3%;
+      grid-template-columns: 20rem;
+    }
+  }
+
+
+  &__container-text-field,
+  &__container-one-dropdown-guests,
+  &__container-masked-text-field,
+  &__container-date-dropdown,
+  &__container-filter-date-dropdown,
+  &__container-subscription-text-field,
+  &__container-one-dropdown-number,
+  &__container-two-dropdown-guests,
+  &__container-three-dropdown-guests {
+    display: grid;
+    row-gap: 0.3125rem;
+  }
+
+  @media(max-width: 640px) {
+    &__container-two-dropdown-guests {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__container-one-dropdown-number,
+  &__container-range-slider {
+    width: 16.625rem;
+  }
+
+  &__container-checkbox-buttons,
+  &__container-radio-buttons,
+  &__container-subscription-switch,
+  &__container-like-button,
+  &__container-rate-button,
+  &__container-pagination,
+  &__container-range-slider,
+  &__container-buttons,
+  &__container-rich-checkbox-buttons,
+  &__container-bullet-list {
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  @media(max-width: 1280px) {
+    &__container-range-slider {
+      margin-top: 2.5rem;
+    }
+  }
+
+  @media(max-width: 640px) {
+    &__container-checkbox-buttons {
+      margin-top: 2.5rem;
+    }
+  }
+  
+  &__container-one-dropdown-guests,
+  &__container-masked-text-field {
+    margin-top: 1.25rem;
+  }
+
+  &__container-date-dropdown,
+  &__container-filter-date-dropdown,
+  &__container-subscription-text-field {
+    margin-top: 2.5rem;
+  }
+
+  &__container-radio-buttons,
+  &__container-subscription-switch,
+  &__container-like-button,
+  &__container-rate-button,
+  &__container-buttons,
+  &__container-pagination {
+    margin-top: 2.5rem;
+  }
+
+  &__text-field-titles,
+  &__dropdown-guests-titles,
+  &__masked-text-field-titles,
+  &__dropdown-number-titles,
+  &__range-slider-titles {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+
+  &__date-dropdown-titles {
+    display: grid;
+    grid-template-columns: repeat(2, 9.375rem);
+    column-gap: 1.25rem;
+  }
+
+  &__text-field-title-one,
+  &__dropdown-guests-title-one,
+  &__masked-text-field-title-one,
+  &__date-dropdown-title-one,
+  &__date-dropdown-title-two,
+  &__filter-date-dropdown-title,
+  &__subscription-text-field-title,
+  &__checkbox-buttons-title,
+  &__radio-buttons-title,
+  &__subscription-switch-title,
+  &__like-button-title,
+  &__rate-button-title,
+  &__range-slider-title-one,
+  &__buttons-title,
+  &__pagination-title,
+  &__dropdown-number-title-one,
+  &__dropdown-guests-title,
+  &__dropdown-guests-title,
+  &__rich-checkbox-buttons-title,
+  &__bullet-list-title {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: $Dark-100;
+  }
+
+  &__text-field-title-two,
+  &__dropdown-guests-title-two,
+  &__masked-text-field-title-two,
+  &__dropdown-number-title-two {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-align: right;
+    text-transform: uppercase;
+    color: $Dark-50;
+  }
+
+  &__range-slider-title-two {
+    border: none;
+    background: #ffffff;
+    text-align: right;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: $Dark-50;
+  }
+
+  &__subscription-switch-item-list {
+    display: grid;
+    row-gap: 0.625rem;
+  }
+
+  &__like-button-item-list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 0.625rem;
+  }
+  
+  &__rate-button-item-list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 1.25rem;
+  }
+
+  &__containers-buttons {
+    display: grid;
+    row-gap: 1.875rem;
+  }
+
+  &__container-one-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 6.1875rem);
+    gap: 1.875rem 1.25rem;
+  }
+
+  &__container-two-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 1.25rem;
+  }
+
+  &__section-two {
+    margin-top: 6.25rem;
+    width: 72.5rem;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    justify-content: space-between;
+
+    @media(max-width: 1440px) {
+      width: 100%;
+      padding: 0 10%;
+    }
+
+    @media(max-width: 1280px) {
+      grid-template-columns: repeat(2, 20rem);
+      justify-content: space-around;
+      padding: 0 5%;
+    }
+
+    @media(max-width: 640px) {
+      padding: 0 3%;
+      grid-template-columns: 20rem;
+    }
+  }
+
+  &__section-three {
+    margin-top: 3.4375rem;
+    width: 72.5rem;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    justify-content: space-between;
+
+    @media(max-width: 1440px) {
+      width: 100%;
+      padding: 0 10%;
+    }
+
+    @media(max-width: 1280px) {
+      padding: 0 5%;
+      grid-template-columns: repeat(2, 20rem);
+      grid-template-rows: 0.9375rem auto;
+      justify-content: space-around;
+      row-gap: 2.5rem;
+    }
+
+    @media(max-width: 640px) {
+      padding: 0 3%;
+      grid-template-columns: 20rem;
+    }
+  }
+
+  &__section-four {
+    margin-top: 6.25rem;
+    width: 72.5rem;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    justify-content: space-between;
+    padding-bottom: 1.875rem;
+
+    @media(max-width: 1440px) {
+      width: 100%;
+      padding: 0 10%;
+    }
+
+    @media(max-width: 1280px) {
+      width: 100%;
+      padding: 0 5%;
+      grid-template-columns: repeat(2, 20rem);
+      justify-content: space-around;
+    }
+
+    @media(max-width: 640px) {
+      padding: 0 3%;
+      grid-template-columns: 20rem;
+    }
+  }
+
+  &__container-comment {
+    grid-column: 2 / 4;
+
+    @media(max-width: 1280px) {
+      grid-column: 2 / 3;
     }
     
-    &__container-one-dropdown-guests,
-    &__container-masked-text-field {
-        margin-top: 1.25rem;
+    @media(max-width: 640px) {
+      margin-top: 2.5rem;
+      grid-column: 1 / 2;
     }
-
-    &__container-date-dropdown,
-    &__container-filter-date-dropdown,
-    &__container-subscription-text-field {
-        margin-top: 2.5rem;
-    }
-
-    &__container-radio-buttons,
-    &__container-subscription-switch,
-    &__container-like-button,
-    &__container-rate-button,
-    &__container-buttons,
-    &__container-pagination {
-        margin-top: 2.5rem;
-    }
-
-    &__text-field-titles,
-    &__dropdown-guests-titles,
-    &__masked-text-field-titles,
-    &__dropdown-number-titles,
-    &__range-slider-titles {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        justify-content: space-between;
-    }
-
-    &__date-dropdown-titles {
-        display: grid;
-        grid-template-columns: repeat(2, 9.375rem);
-        column-gap: 1.25rem;
-    }
-
-    &__text-field-title-one,
-    &__dropdown-guests-title-one,
-    &__masked-text-field-title-one,
-    &__date-dropdown-title-one,
-    &__date-dropdown-title-two,
-    &__filter-date-dropdown-title,
-    &__subscription-text-field-title,
-    &__checkbox-buttons-title,
-    &__radio-buttons-title,
-    &__subscription-switch-title,
-    &__like-button-title,
-    &__rate-button-title,
-    &__range-slider-title-one,
-    &__buttons-title,
-    &__pagination-title,
-    &__dropdown-number-title-one,
-    &__dropdown-guests-title,
-    &__dropdown-guests-title,
-    &__rich-checkbox-buttons-title,
-    &__bullet-list-title {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-transform: uppercase;
-        color: $Dark-100;
-    }
-
-    &__text-field-title-two,
-    &__dropdown-guests-title-two,
-    &__masked-text-field-title-two,
-    &__dropdown-number-title-two {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-align: right;
-        text-transform: uppercase;
-        color: $Dark-50;
-    }
-
-    &__range-slider-title-two {
-        border: none;
-        background: #ffffff;
-        text-align: right;
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-transform: uppercase;
-        color: $Dark-50;
-    }
-
-    &__subscription-switch-item-list {
-        display: grid;
-        row-gap: 0.625rem;
-    }
-
-    &__like-button-item-list {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        column-gap: 0.625rem;
-    }
-    
-    &__rate-button-item-list {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        column-gap: 1.25rem;
-    }
-
-    &__containers-buttons {
-        display: grid;
-        row-gap: 1.875rem;
-    }
-
-    &__container-one-buttons {
-        display: grid;
-        grid-template-columns: repeat(2, 6.1875rem);
-        gap: 1.875rem 1.25rem;
-    }
-
-    &__container-two-buttons {
-        display: grid;
-        grid-template-columns: repeat(2, max-content);
-        column-gap: 1.25rem;
-    }
-
-    &__section-two {
-        margin-top: 6.25rem;
-        width: 72.5rem;
-        justify-self: center;
-        display: grid;
-        grid-template-columns: repeat(3, 20rem);
-        justify-content: space-between;
-
-        @media(max-width: 1440px) {
-            width: 100%;
-            padding: 0 10%;
-        }
-
-        @media(max-width: 1280px) {
-            grid-template-columns: repeat(2, 20rem);
-            justify-content: space-around;
-            padding: 0 5%;
-        }
-
-        @media(max-width: 640px) {
-            padding: 0 3%;
-            grid-template-columns: 20rem;
-        }
-    }
-
-    &__section-three {
-        margin-top: 3.4375rem;
-        width: 72.5rem;
-        justify-self: center;
-        display: grid;
-        grid-template-columns: repeat(3, 20rem);
-        justify-content: space-between;
-
-        @media(max-width: 1440px) {
-            width: 100%;
-            padding: 0 10%;
-        }
-
-        @media(max-width: 1280px) {
-            padding: 0 5%;
-            grid-template-columns: repeat(2, 20rem);
-            grid-template-rows: 0.9375rem auto;
-            justify-content: space-around;
-            row-gap: 2.5rem;
-        }
-
-        @media(max-width: 640px) {
-            padding: 0 3%;
-            grid-template-columns: 20rem;
-        }
-    }
-
-    &__section-four {
-        margin-top: 6.25rem;
-        width: 72.5rem;
-        justify-self: center;
-        display: grid;
-        grid-template-columns: repeat(3, 20rem);
-        justify-content: space-between;
-        padding-bottom: 1.875rem;
-
-        @media(max-width: 1440px) {
-            width: 100%;
-            padding: 0 10%;
-        }
-
-        @media(max-width: 1280px) {
-            width: 100%;
-            padding: 0 5%;
-            grid-template-columns: repeat(2, 20rem);
-            justify-content: space-around;
-        }
-
-        @media(max-width: 640px) {
-            padding: 0 3%;
-            grid-template-columns: 20rem;
-        }
-    }
-
-    &__container-comment {
-        grid-column: 2 / 4;
-
-        @media(max-width: 1280px) {
-            grid-column: 2 / 3;
-        }
-        
-        @media(max-width: 640px) {
-            margin-top: 2.5rem;
-            grid-column: 1 / 2;
-        }
-    }
+  }
 }

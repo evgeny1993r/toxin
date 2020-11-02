@@ -1,34 +1,34 @@
 @import '../../styles/virables.scss';
 
 .cards {
-    background: #E5E5E5;
+  background: #E5E5E5;
 
-    &__content {
-        margin: 4.375rem auto 0 auto;
-        max-width: 72.5rem;
-        display: grid;
-        grid-template-columns: 23.75rem 23.75rem 20rem;
-        justify-content: space-between;
-        align-items: start;
-        padding-bottom: 4.375rem;
+  &__content {
+    margin: 4.375rem auto 0 auto;
+    max-width: 72.5rem;
+    display: grid;
+    grid-template-columns: 23.75rem 23.75rem 20rem;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 4.375rem;
 
-        @media(max-width: 1440px) {
-            grid-template-columns: repeat(2, 23.75rem);
-            justify-content: space-evenly;
-            row-gap: 2.5rem;
-        }
-
-        @media(max-width: 1024px) {
-            grid-template-columns: 1fr;
-            padding: 0 10%;
-            justify-items: center;
-        }
+    @media(max-width: 1440px) {
+      grid-template-columns: repeat(2, 23.75rem);
+      justify-content: space-evenly;
+      row-gap: 2.5rem;
     }
 
-    &__container-one,
-    &__container-two,
-    &__container-three {
-        display: grid;
-        row-gap: 2.5rem;
+    @media(max-width: 1024px) {
+      grid-template-columns: 1fr;
+      padding: 0 10%;
+      justify-items: center;
     }
+  }
+
+  &__container-one,
+  &__container-two,
+  &__container-three {
+    display: grid;
+    row-gap: 2.5rem;
+  }
 }

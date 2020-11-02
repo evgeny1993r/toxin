@@ -1,38 +1,38 @@
 @import '../../styles/virables.scss';
 
 .filter-date-dropdown {
+  max-width: 16.625rem;
+  display: grid;
+  row-gap: 0.313rem;
+
+  &__input {
     max-width: 16.625rem;
     display: grid;
-    row-gap: 0.313rem;
+    grid-template-columns: auto 2.75rem;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $Dark-75;
+    padding: 0.563rem 0 0.563rem 0.875rem;
+    border: 0.063rem solid $Dark-25;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
 
-    &__input {
-        max-width: 16.625rem;
-        display: grid;
-        grid-template-columns: auto 2.75rem;
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-        color: $Dark-75;
-        padding: 0.563rem 0 0.563rem 0.875rem;
-        border: 0.063rem solid $Dark-25;
-        border-radius: 0.25rem;
-        cursor: pointer;
-    }
+  &__icon-expand-more {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    color: $Dark-50;
+    transform: rotate(-90deg);
+    justify-self: center;
+    align-self: center;
+  }
 
-    &__icon-expand-more {
-        font-size: 0.75rem;
-        line-height: 0.75rem;
-        color: $Dark-50;
-        transform: rotate(-90deg);
-        justify-self: center;
-        align-self: center;
-    }
-
-    &__datepicker {
-        position: absolute;
-        z-index: 2;
-        margin-top: 3.0625rem;
-    }
+  &__datepicker {
+    position: absolute;
+    z-index: 2;
+    margin-top: 3.0625rem;
+  }
 }

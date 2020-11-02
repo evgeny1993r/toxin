@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="icon" href="../src/images/logotip-gray.svg")
-        title Landing Page
-    body
-        .landing-page 
-            include ../../components/header/header.pug 
-            +header()
-            .landing-page__content 
-                include ../../components/search-room-form/search-room-form.pug 
-                +search-room-form('', '', 'js-dropdown-guests-six')
-            include ../../components/footer/footer.pug 
-            +footer()
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon" href="../src/images/logotip-gray.svg")
+    title Landing Page
+  body
+    .landing-page 
+      include ../../components/header/header.pug 
+      +header()
+      .landing-page__content 
+        include ../../components/search-room-form/search-room-form.pug 
+        +search-room-form()
+      include ../../components/footer/footer.pug 
+      +footer()
                 

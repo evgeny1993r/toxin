@@ -1,48 +1,48 @@
 @import '../../styles/virables.scss';
 
 .navigation {
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+
+  &__title-h1 {
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: $Dark-100;
+    margin-top: 2.5rem;
+  }
+
+  &__title-h3 {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: $Dark-100;
+    margin: 2.5rem 0 1rem 0;
+  }
+
+  &__list {
     display: grid;
-    min-height: 100vh;
-    justify-content: center;
-    align-content: center;
+    row-gap: 0.625rem;
+  }
 
-    &__title-h1 {
-        font-family: Quicksand, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 1.75rem;
-        color: $Dark-100;
-        margin-top: 2.5rem;
-    }
-
-    &__title-h3 {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 0.75rem;
-        line-height: 0.9375rem;
-        text-transform: uppercase;
-        color: $Dark-100;
-        margin: 2.5rem 0 1rem 0;
-    }
-
-    &__list {
-        display: grid;
-        row-gap: 0.625rem;
-    }
-
-    &__item {
-        list-style: none;
-    }
-    
-    &__link {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.0625rem;
-        color: $Dark-50;
-        text-decoration: none;
-    }
+  &__item {
+    list-style: none;
+  }
+  
+  &__link {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    color: $Dark-50;
+    text-decoration: none;
+  }
 }

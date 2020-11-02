@@ -1,74 +1,74 @@
 @import '../../styles/virables.scss';
 
 .btn {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
-    text-transform: uppercase;
-    outline: none;
-    cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
 
-    &_purple {
-        min-width: 6.1875rem;
-        padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
-        color: #FFFFFF;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border-radius: 1.375rem;
-        border: none;
-    }
+  &_purple {
+    min-width: 6.1875rem;
+    padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 1.375rem;
+    border: none;
+  }
 
-    &_transporent {
-        opacity: 0.5;
-    }
+  &_transporent {
+    opacity: 0.5;
+  }
 
-    &_purple {
-        &.btn_small {
-            min-width: auto;
-            padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
-        }
+  &_purple {
+    &.btn_small {
+      min-width: auto;
+      padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
     }
+  }
 
-    &_white {
-        min-width: 6.1875rem;
-        padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
-        color: $Purple;
-        background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
-        background-origin: border-box;
-        background-clip: border-box, content-box;
-        border: 0.125rem solid transparent;
-        border-radius: 1.375rem;
-        box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
-    }
+  &_white {
+    min-width: 6.1875rem;
+    padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
+    color: $Purple;
+    background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-origin: border-box;
+    background-clip: border-box, content-box;
+    border: 0.125rem solid transparent;
+    border-radius: 1.375rem;
+    box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
+  }
 
-    &_white { 
-        &.btn_small {
-            min-width: auto;
-            padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
-        }
+  &_white { 
+    &.btn_small {
+      min-width: auto;
+      padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
     }
+  }
 
-    &_no-frame-purple {
-        color: $Purple;
-        border: none;
-        background: none;
-    }
+  &_no-frame-purple {
+    color: $Purple;
+    border: none;
+    background: none;
+  }
 
-    &_no-frame-gray {
-        color: $Dark-50;
-        border: none;
-        background: none;
-    }
-    
-    &_big {
-        width: 20rem;
-        padding: 0.875rem 0 0.9375rem 0;
-        color: #FFFFFF;
-        background: url('../../images/arrow-forward.svg') no-repeat right center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border: none;
-        border-radius: 1.375rem;
-    }
+  &_no-frame-gray {
+    color: $Dark-50;
+    border: none;
+    background: none;
+  }
+  
+  &_big {
+    width: 20rem;
+    padding: 0.875rem 0 0.9375rem 0;
+    color: #FFFFFF;
+    background: url('../../images/arrow-forward.svg') no-repeat right center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border: none;
+    border-radius: 1.375rem;
+  }
 }
 
 

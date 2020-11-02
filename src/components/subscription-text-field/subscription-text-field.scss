@@ -1,43 +1,43 @@
 @import '../../styles/virables.scss';
 
 .subscription-text-field {
-    max-width: 16.625rem;
-    display: grid;
-    grid-template-columns: auto 2.75rem;
-    border: 0.063rem solid $Dark-25;
-    border-radius: 0.25rem;
-    cursor: pointer;
+  max-width: 16.625rem;
+  display: grid;
+  grid-template-columns: auto 2.75rem;
+  border: 0.063rem solid $Dark-25;
+  border-radius: 0.25rem;
+  cursor: pointer;
 
-    &__input {
-        font-family: Montserrat, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-        color: $Dark-75;
-        padding: 9px 0 9px 0.875rem;
-        outline: none;
-        border: none;
-        border-radius: inherit;
-    }
+  &__input {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $Dark-75;
+    padding: 9px 0 9px 0.875rem;
+    outline: none;
+    border: none;
+    border-radius: inherit;
+  }
 
-    &__input::placeholder {
-        color: $Dark-25;
-    }
+  &__input::placeholder {
+    color: $Dark-25;
+  }
 
-    &__icon {
-        font-size: 1.188rem;
-        text-align: center;
-        align-self: center;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        color: transparent;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-    }
-    
-    &:hover,
-    &_active {
-        border: 0.063rem solid $Dark-50;
-    }
+  &__icon {
+    font-size: 1.188rem;
+    text-align: center;
+    align-self: center;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+  
+  &:hover,
+  &_active {
+    border: 0.063rem solid $Dark-50;
+  }
 }

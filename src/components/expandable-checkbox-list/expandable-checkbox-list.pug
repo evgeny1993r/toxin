@@ -1,18 +1,17 @@
 mixin item(value, id, state)
-    .expandable-checkbox-list__item 
-        input.expandable-checkbox-list__input(type="checkbox" id= id checked= state)
-        label.expandable-checkbox-list__label(for= id) #{value}
+  .expandable-checkbox-list__item 
+    input.expandable-checkbox-list__input(type="checkbox" id= id checked= state)
+    label.expandable-checkbox-list__label(for= id) #{value}
 mixin expandable-checkbox-list(title)
-    .expandable-checkbox-list.js-expandable-checkbox-list 
-        h3.expandable-checkbox-list__title #{title}
-            span.expandable-checkbox-list__icon-expand-more.icon-expand_more
-        .expandable-checkbox-list__item-list 
-            +item('Завтрак', 'breakfast', false)
-            +item('Письменный стол', 'table', true)
-            +item('Стул для кормления', 'chair', true)
-            +item('Кроватка', 'bed', true)
-            +item('Телевизор', 'television-one', false)
-            +item('Шампунь', 'shampoo-one', false)
-            +item('Телевизор', 'television-two', false)
-            +item('Шампунь', 'shampoo-two', false)
-
+  .expandable-checkbox-list.js-expandable-checkbox-list 
+    h3.expandable-checkbox-list__title #{title}
+      span.expandable-checkbox-list__icon-expand-more.icon-expand_more
+    .expandable-checkbox-list__item-list 
+      +item('Завтрак', 'breakfast', false)
+      +item('Письменный стол', 'table', true)
+      +item('Стул для кормления', 'chair', true)
+      +item('Кроватка', 'bed', true)
+      +item('Телевизор', 'television-one', false)
+      +item('Шампунь', 'shampoo-one', false)
+      +item('Телевизор', 'television-two', false)
+      +item('Шампунь', 'shampoo-two', false)
