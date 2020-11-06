@@ -1,10 +1,10 @@
 mixin item(url, text, icon)
   li.header__item
     if icon 
-      a.header__link.js-header__link(href=url) #{text}
-    else 
       a.header__link.js-header__link.header__link_dropdown(href="#") #{text}
         span.header__icon-expand-more.icon-expand_more
+    else 
+      a.header__link.js-header__link(href=url) #{text}
 
 mixin header(firstName, lastName)
   header.header.js-header 

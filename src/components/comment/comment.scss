@@ -3,13 +3,14 @@
 .comment {
   display: grid;
   align-content: start;
-  row-gap: 0.625rem;
+  row-gap: 0.313rem;
 
-  &__container-one,
-  &__container-two {
+  &__container-first,
+  &__container-second {
+    margin-top: 0.188rem;
     display: grid;
     grid-template-columns: 3.125rem auto;
-    column-gap: 0.625rem;
+    column-gap: 0.438rem;
   }
 
   &__img {
@@ -18,8 +19,8 @@
     border-radius: 50%;
   }
 
-  &__title-one,
-  &__title-two,
+  &__title-first,
+  &__title-second,
   &__text {
     font-family: Montserrat;
     font-style: normal;
@@ -28,11 +29,11 @@
     color: rgba(31, 32, 65, 0.75);
   }
 
-  &__title-one {
+  &__title-first {
     font-weight: bold;
   }
 
-  &__title-two,
+  &__title-second,
   &__text {
     font-weight: normal;
   }

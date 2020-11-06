@@ -14,14 +14,28 @@
 
   &__container-items {
     display: grid;
-    grid-template-columns: repeat(4, 270px);
+    grid-template-columns: repeat(4, 16.875rem);
     justify-content: space-between;
-    row-gap: 20px;
+    grid-gap: 1.25rem 0.625rem;
+
+    @media(max-width: 1728px) {
+      grid-template-columns: repeat(3, 16.875rem);
+    }
+
+    @media(max-width: 1439px) {
+      grid-template-columns: repeat(2, 16.875rem);
+      justify-content: space-around;
+    }
+
+    @media(max-width: 1024px) {
+      grid-template-columns: 16.875rem;
+      justify-content: center;
+    }
   }
 
   &__container {
     justify-self: center;
-    margin: 40px 0 70px 0;
+    margin: 2.375rem 0 4.688rem 0;
   }
 
   &__container-items_hide {

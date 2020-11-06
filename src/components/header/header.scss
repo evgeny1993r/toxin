@@ -34,7 +34,7 @@
 
   &__container-logotip {
     width: 6.606rem;
-    height: auto;
+    display: grid;
 
     @media(max-width: 980px) {
       grid-column: 1 / 2;
