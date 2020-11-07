@@ -1,4 +1,4 @@
-import './range-slider-plugin';
+import './range-slider-plugin/range-slider-plugin';
 
 class RangeSlider {
   constructor(rangeSlider) {
