@@ -7,7 +7,7 @@ mixin item-link(url, text)
 
 mixin item-link-icon(url, icon)
   li.footer__social-networks-item 
-    a.footer__social-networks-link(href=url target="_blank")
+    a.footer__social-networks-link(href=url target="_blank" rel="noopener noreferrer")
       span(class=icon)
 
 mixin footer() 
