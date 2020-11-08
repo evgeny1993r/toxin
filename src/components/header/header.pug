@@ -1,4 +1,7 @@
-mixin item(url, text, icon)
+include ../logotip/logotip.pug 
+include ../button/button.pug 
+
+mixin header-link(url, text, icon)
   li.header__item
     if icon 
       a.header__link.js-header__link.header__link_dropdown(href="#") #{text}
@@ -9,18 +12,16 @@ mixin item(url, text, icon)
 mixin header(firstName, lastName)
   header.header.js-header 
     .header__container-logotip
-      include ../logotip/logotip.pug 
       +logotip('purple')
     nav.header__nav 
       ul.header__item-list
-        +item('#', 'О нас')
-        +item('#', 'Услуги', true)
-        +item('#', 'Вакансии')
-        +item('#', 'Новости')
-        +item('#', 'Соглашения', true)
+        +header-link('#', 'О нас')
+        +header-link('#', 'Услуги', true)
+        +header-link('#', 'Вакансии')
+        +header-link('#', 'Новости')
+        +header-link('#', 'Соглашения', true)
     if firstName == undefined && lastName == undefined
       .header__buttons 
-        include ../button/button.pug 
         +button('button', 'btn_white-and-small', 'Войти')
         +button('button', 'btn_purple-and-small', 'Зарегистрироваться')
     else 

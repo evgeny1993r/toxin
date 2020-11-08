@@ -1,3 +1,7 @@
+include ../../components/header/header.pug
+include ../../components/registration-form/registration-form.pug
+include ../../components/footer/footer.pug
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -6,11 +10,8 @@ html(lang="ru")
     link(rel="icon" href="../src/images/logotip-gray.svg")
     title Registration
   body
-    .registration 
-      include ../../components/header/header.pug 
+    .registration  
       +header()
       .registration__content 
-        include ../../components/registration-form/registration-form.pug
         +registration-form()
-      include ../../components/footer/footer.pug
       +footer()

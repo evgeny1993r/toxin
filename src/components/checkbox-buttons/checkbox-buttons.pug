@@ -1,4 +1,4 @@
-mixin item(value, id, state)
+mixin chckbox-button(value, id, state)
   .checkbox-buttons__item 
     input.checkbox-buttons__input(type="checkbox" id= id checked= state)
     label.checkbox-buttons__label(for= id) #{value}
@@ -6,6 +6,6 @@ mixin item(value, id, state)
 mixin checkbox-buttons()
   .checkbox-buttons 
     .checkbox-buttons__item-list
-      +item('Можно курить', 'smoke', false)
-      +item('Можно с питомцами', 'pets', true)
-      +item('Можно пригласить гостей (до 10 человек)', 'guests', true)
+      +chckbox-button('Можно курить', 'smoke', false)
+      +chckbox-button('Можно с питомцами', 'pets', true)
+      +chckbox-button('Можно пригласить гостей (до 10 человек)', 'guests', true)

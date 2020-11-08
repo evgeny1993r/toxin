@@ -1,3 +1,22 @@
+include ../../components/logotip/logotip.pug
+include ../../components/text-field/text-field.pug  
+include ../../components/masked-text-field/masked-text-field.pug
+include ../../components/date-dropdown/date-dropdown.pug 
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+include ../../components/subscription-text-field/subscription-text-field.pug 
+include ../../components/checkbox-buttons/checkbox-buttons.pug 
+include ../../components/radio-buttons/radio-buttons.pug 
+include ../../components/subscription-switch/subscription-switch.pug
+include ../../components/like-button/like-button.pug 
+include ../../components/rate-button/rate-button.pug 
+include ../../components/button/button.pug
+include ../../components/pagination/pagination.pug 
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+include ../../components/bullet-list/bullet-list.pug 
+include ../../components/room-amenities/room-amenities.pug 
+include ../../components/comment/comment.pug 
+
 <!DOCTYPE html>
 html(lang="ru")
     head
@@ -7,15 +26,13 @@ html(lang="ru")
         title Form Elements 
     body
       .form-elements 
-        include ../../components/logotip/logotip.pug 
         +logotip('gray')
         section.form-elements__component-list-first
           .form-elements__column 
             .form-elements__container-text-field 
               .form-elements__titles
                 h3.form-elements__title text field
-                h3.form-elements__state-name default
-              include ../../components/text-field/text-field.pug  
+                h3.form-elements__state-name default 
               +text-field('text', 'Email')
 
             .form-elements__container-dropdown-guests
@@ -28,55 +45,46 @@ html(lang="ru")
               .form-elements__titles
                 h3.form-elements__title masked text field 
                 h3.form-elements__state-name default
-              include ../../components/masked-text-field/masked-text-field.pug
               +masked-text-field()
 
             .form-elements__container-date-dropdown
               .form-elements__titles 
                 h3.form-elements__title date dropdown 
                 h3.form-elements__title date dropdown 
-              include ../../components/date-dropdown/date-dropdown.pug 
               +date-dropdown(true, '20 October, 2020', '', true)
 
             .form-elements__container-filter-date-dropdown
               h3.form-elements__title filter date dropdown 
-              include ../../components/filter-date-dropdown/filter-date-dropdown.pug
               +filter-date-dropdown('20 October, 2020', '25 October, 2020') 
 
             .form-elements__container-subscription-text-field
               h3.form-elements__title subscription text field 
-              include ../../components/subscription-text-field/subscription-text-field.pug 
               +subscription-text-field()
 
           .form-elements__column 
             .form-elements__container-checkbox-buttons
               h3.form-elements__title checkbox buttons 
-              include ../../components/checkbox-buttons/checkbox-buttons.pug 
               +checkbox-buttons()
 
             .form-elements__container-radio-buttons
               h3.form-elements__title radio buttons 
-              include ../../components/radio-buttons/radio-buttons.pug 
               +radio-buttons()
 
             .form-elements__container-subscription-switch
               h3.form-elements__title toggle 
               .form-elements__subscription-switch-item-list 
-                include ../../components/subscription-switch/subscription-switch.pug
                 +subscription-switch('toggle-one', true) 
                 +subscription-switch('toggle-two', false)
 
             .form-elements__container-like-button
               h3.form-elements__title like button 
               .form-elements__like-button-item-list 
-                include ../../components/like-button/like-button.pug 
                 +like-button('inActive', '2')
                 +like-button('active', '12')
 
             .form-elements__container-rate-button
               h3.form-elements__title rate button 
               .form-elements__rate-button-item-list 
-                include ../../components/rate-button/rate-button.pug 
                 +rate-button('4')
                 +rate-button('5')
 
@@ -88,8 +96,7 @@ html(lang="ru")
               .js-range-slider
 
             .form-elements__container-buttons
-              h3.form-elements__title buttons 
-              include ../../components/button/button.pug 
+              h3.form-elements__title buttons  
               .form-elements__buttons-item-list
                 +button('button', 'btn_purple', 'click me')
                 +button('button', 'btn_purple btn_transporent', 'click me')
@@ -101,7 +108,6 @@ html(lang="ru")
 
             .form-elements__container-pagination
               h3.form-elements__title pagination
-              include ../../components/pagination/pagination.pug 
               +pagination('pagination_items-hide')
 
         section.form-elements__component-list-second 
@@ -118,22 +124,17 @@ html(lang="ru")
             .js-dropdown-guests(data-adults="2", data-children="1", data-babies="0") 
 
         section.form-elements__component-list-third
-          include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
           +expandable-checkbox-list('expandable checkbox list')
           .form-elements__container-rich-checkbox-buttons
             h3.form-elements__title rich checkbox buttons 
-            include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
             +rich-checkbox-buttons()
           .form-elements__container-bullet-list
             h3.form-elements__title bullet list
-            include ../../components/bullet-list/bullet-list.pug 
             +bullet-list()
         
         section.form-elements__component-list-fourth
-          include ../../components/room-amenities/room-amenities.pug 
           +room-amenities()
           .form-elements__container-comment
-            include ../../components/comment/comment.pug 
             +comment(
               'userpic-one.png', 
               'Мурад Сарафанов', 

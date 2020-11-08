@@ -1,3 +1,7 @@
+include ../../components/header/header.pug 
+include ../../components/search-room-form/search-room-form.pug 
+include ../../components/footer/footer.pug 
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -7,12 +11,9 @@ html(lang="ru")
     title Landing Page
   body
     .landing-page 
-      include ../../components/header/header.pug 
       +header()
       .landing-page__content 
-        include ../../components/search-room-form/search-room-form.pug 
         +search-room-form()
         p.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-      include ../../components/footer/footer.pug 
       +footer()
                 

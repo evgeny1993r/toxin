@@ -1,3 +1,7 @@
+include ../../components/logotip/logotip.pug 
+include ../../components/header/header.pug 
+include ../../components/footer/footer.pug
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -7,11 +11,8 @@ html(lang="ru")
     title Headers & Footers
   body
     .headers-footers
-      include ../../components/logotip/logotip.pug 
       +logotip('gray')
       .headers-footers__content  
-        include ../../components/header/header.pug 
         +header()
         +header('Юлий', 'Цезарь')
-        include ../../components/footer/footer.pug
         +footer()

@@ -1,3 +1,11 @@
+include ../../components/header/header.pug 
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug 
+include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../components/pagination/pagination.pug
+include ../../components/footer/footer.pug
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -7,13 +15,11 @@ html(lang="ru")
     title Search Room
   body
     .search-room 
-      include ../../components/header/header.pug 
       +header()
       .search-room__content 
         .search-room__sidebar 
           .search-room__container-filter-date-dropdown
             h3.search-room__filter-date-dropdown-title даты пребывания в отеле
-            include ../../components/filter-date-dropdown/filter-date-dropdown.pug 
             +filter-date-dropdown('20 October, 2020', '25 October, 2020')
           .search-room__container-dropdown-guests
             h3.search-room__dropdown-guests-title гости 
@@ -26,22 +32,17 @@ html(lang="ru")
             span.search-room__range-slider-text Стоимость за сутки пребывания в номере
           .search-room__container-checkbox-buttons
             h3.search-room__checkbox-buttons-title checkbox buttons
-            include ../../components/checkbox-buttons/checkbox-buttons.pug
             +checkbox-buttons()
           .search-room__container-rich-checkbox-buttons
             h3.search-room__rich-checkbox-buttons-title доступность
-            include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
             +rich-checkbox-buttons()
           .search-room__container-dropdown-number
             h3.search-room__dropdown-number-title удобства номера 
             .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0") 
           .search-room__container-expandable-checkbox-list
-          include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
           +expandable-checkbox-list('дополнительные удобства')
         .search-room__rooms
           h1.search-room__title Номера, которые мы для вас подобрали
-          include ../../components/pagination/pagination.pug
           +pagination()
       .search-room__line 
-      include ../../components/footer/footer.pug
       +footer()

@@ -1,3 +1,5 @@
+include ../like-button/like-button.pug 
+
 mixin comment(imgName, name, time, likeButtonClass, likeButtonValue, text)
   .comment
     .comment__container-first
@@ -7,6 +9,5 @@ mixin comment(imgName, name, time, likeButtonClass, likeButtonValue, text)
         h3.comment__title-second #{time}
     .comment__container-second
       .comment__container-like-button 
-        include ../like-button/like-button.pug 
         +like-button(likeButtonClass, likeButtonValue)
       .comment__text #{text}

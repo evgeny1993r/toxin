@@ -1,4 +1,4 @@
-mixin item(id, label, text)
+mixin rich-checkbox-button(id, label, text)
   .rich-checkbox-buttons__item 
     input.rich-checkbox-buttons__input(type="checkbox" id=id)
     .rich-checkbox-buttons__container 
@@ -8,5 +8,5 @@ mixin item(id, label, text)
 mixin rich-checkbox-buttons()
   .rich-checkbox-buttons 
     .rich-checkbox-buttons__item-list 
-      +item('corridor', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
-      +item('disabled', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
+      +rich-checkbox-button('corridor', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+      +rich-checkbox-button('disabled', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')

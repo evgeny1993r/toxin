@@ -1,4 +1,7 @@
-mixin verification-form(price, discount, collecting, numberValue, numberState, numberPrice, oneDate, twoDate)
+include ../date-dropdown/date-dropdown.pug 
+include ../button/button.pug 
+
+mixin verification-form({ price, discount, collecting, numberValue, numberState, numberPrice, oneDate, twoDate })
   form.verification-form(data-price=price, data-discount=discount, data-collecting=collecting)
     .verification-form__room-data
       p.verification-form__room-number
@@ -12,7 +15,6 @@ mixin verification-form(price, discount, collecting, numberValue, numberState, n
       .verification-form__date-dropdown-titles 
         h3.verification-form__date-dropdown-title-one прибытие 
         h3.verification-form__date-dropdown-title-two выезд
-      include ../date-dropdown/date-dropdown.pug 
       +date-dropdown('true', oneDate, twoDate, 'false')
     .verification-form__dropdown-guests-container 
       h3.verification-form__dropdown-guests-title гости
@@ -33,5 +35,4 @@ mixin verification-form(price, discount, collecting, numberValue, numberState, n
       span.verification-form__total-title Итого 
       span.verification-form__total-line
       span.verification-form__total-price.js-verification-form__total-price
-    include ../button/button.pug 
     +button('submit', 'btn_big', 'забронировать')

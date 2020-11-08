@@ -1,12 +1,13 @@
+include ../text-field/text-field.pug
+include ../button/button.pug 
+
 mixin authorization-form()
   form.authorization-form 
     .authorization-form__title Войти 
-    .authorization-form__text-fields
-      include ../text-field/text-field.pug 
+    .authorization-form__text-fields 
       +text-field('email', 'Email')
       +text-field('password', 'Пароль')
     .authorization-form__container-button
-      include ../button/button.pug 
       +button('submit', 'btn_big', 'Войти')
     .authorization-form__container-sign-up 
       span.authorization-form__registration-text Нет аккаунта на Toxin?

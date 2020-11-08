@@ -1,4 +1,4 @@
-mixin item(icon, textOne, textTwo)
+mixin convenience(icon, textOne, textTwo)
   .room-amenities__item 
     .room-amenities__container-icon
       span(class=`room-amenities__icon ${icon}`)
@@ -9,6 +9,6 @@ mixin item(icon, textOne, textTwo)
 mixin room-amenities()
   .room-amenities 
     .room-amenities__item-list 
-      +item('icon-emoticon', 'Комфорт', 'Шумопоглощающие стены')
-      +item('icon-location_city', 'Удобство', 'Окно в каждой из спален')
-      +item('icon-whatshot', 'Уют', 'Номер оснащён камином')
+      +convenience('icon-emoticon', 'Комфорт', 'Шумопоглощающие стены')
+      +convenience('icon-location_city', 'Удобство', 'Окно в каждой из спален')
+      +convenience('icon-whatshot', 'Уют', 'Номер оснащён камином')

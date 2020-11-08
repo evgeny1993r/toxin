@@ -1,4 +1,4 @@
-mixin item(url, text)
+mixin navigation-link(url, text)
   li.navigation__item
     a.navigation__link(href=url) #{text}
 
@@ -7,14 +7,14 @@ mixin navigation()
     h1.navigation__title-h1 Pages & ui-kit 
     h3.navigation__title-h3 ui-kit 
     ul.navigation__list 
-      +item('./pages/colors-type.html', 'Colors & Type')
-      +item('./pages/cards.html', 'Cards')
-      +item('./pages/headers-footers.html', 'Headers & Footers')
-      +item('./pages/form-elements.html', 'Form Elements')
+      +navigation-link('./pages/colors-type.html', 'Colors & Type')
+      +navigation-link('./pages/cards.html', 'Cards')
+      +navigation-link('./pages/headers-footers.html', 'Headers & Footers')
+      +navigation-link('./pages/form-elements.html', 'Form Elements')
     h3.navigation__title-h3 Pages 
     ul.navigation__list 
-      +item('./pages/landing-page.html', 'Landing Page') 
-      +item('./pages/search-room.html', 'Search Room') 
-      +item('./pages/room-details.html', 'Room Details') 
-      +item('./pages/registration.html', 'Registration') 
-      +item('./pages/authorization.html', 'Authorization')
+      +navigation-link('./pages/landing-page.html', 'Landing Page') 
+      +navigation-link('./pages/search-room.html', 'Search Room') 
+      +navigation-link('./pages/room-details.html', 'Room Details') 
+      +navigation-link('./pages/registration.html', 'Registration') 
+      +navigation-link('./pages/authorization.html', 'Authorization')

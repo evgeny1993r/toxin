@@ -1,4 +1,6 @@
-mixin room(roomImgName, roomNumber, roomState, roomPrice, rateButtonValue, commentsValue)
+include ../rate-button/rate-button.pug
+
+mixin room({ roomImgName, roomNumber, roomState, roomPrice, rateButtonValue, commentsValue })
   .room
     .room__slider
       .room__images 
@@ -26,7 +28,6 @@ mixin room(roomImgName, roomNumber, roomState, roomPrice, rateButtonValue, comme
           span.room__price-text в сутки
       .room__line
       .room__container-two
-        include ../rate-button/rate-button.pug
         +rate-button(rateButtonValue)
         p.room__comments
           span.room__comments-value #{commentsValue} 

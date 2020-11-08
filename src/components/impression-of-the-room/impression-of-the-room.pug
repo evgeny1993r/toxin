@@ -1,4 +1,4 @@
-mixin item(text)
+mixin impression(text)
   .impression-of-the-room__item 
     .impression-of-the-room__circle 
     span.impression-of-the-room__text #{text}
@@ -14,7 +14,7 @@ mixin impression-of-the-room()
         span.impression-of-the-room__value-one 260
         span.impression-of-the-room__value-two голосов
     .impression-of-the-room__item-list 
-      +item('Великолепно')
-      +item('Хорошо')
-      +item('Удовлетворительно')
-      +item('Разочарован')
+      +impression('Великолепно')
+      +impression('Хорошо')
+      +impression('Удовлетворительно')
+      +impression('Разочарован')

@@ -1,3 +1,6 @@
+include ../logotip/logotip.pug
+include ../subscription-text-field/subscription-text-field.pug
+
 mixin item-total(text)
   li.footer__item-total #{text}
 
@@ -14,7 +17,6 @@ mixin footer()
   footer.footer
     section.footer__section-one
       .footer__logo
-        include ../logotip/logotip.pug
         +logotip('purple') 
         p.footer__logo-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
       nav.footer__nav
@@ -41,7 +43,6 @@ mixin footer()
         span.footer__sublist-total Подписка 
         p.footer__sublist-text Получайте специальные предложения и новости сервиса
         .footer__container-subscription-text-field 
-          include ../subscription-text-field/subscription-text-field.pug
           +subscription-text-field()
     section.footer__section-two 
       span.footer__right-text Copyright © 2018 Toxin отель. Все права зачищены.

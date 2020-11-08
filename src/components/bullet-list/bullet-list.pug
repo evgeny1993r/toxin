@@ -1,4 +1,4 @@
-mixin item(text)
+mixin marker(text)
   li.bullet-list__item 
     .bullet-list__circle 
     span.bullet-list__text #{text}
@@ -6,6 +6,6 @@ mixin item(text)
 mixin bullet-list()
   .bullet-list 
     ul.bullet-list__item-list 
-      +item('Нельзя с питомцами')
-      +item('Без вечеринок и мероприятий')
-      +item('Время прибытия — после 13:00, а выезд до 12:00')
+      +marker('Нельзя с питомцами')
+      +marker('Без вечеринок и мероприятий')
+      +marker('Время прибытия — после 13:00, а выезд до 12:00')
