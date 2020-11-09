@@ -1,10 +1,18 @@
 @import '../../styles/virables.scss';
 
-.subscription-switch {
-  display: grid;
-  grid-template-columns: 2.5rem auto;
-  column-gap: 0.625rem;
-  transition: 1s;
+.toggle {
+  &__label {
+    display: grid;
+    grid-template-columns: 2.5rem auto;
+    column-gap: 0.625rem;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $Dark-75;
+    cursor: pointer;
+  }
 
   &__input {
     position: relative;
@@ -49,13 +57,4 @@
     left: 1.5rem;
   }
   
-  &__label {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: $Dark-75;
-    cursor: pointer;
-  }
 }

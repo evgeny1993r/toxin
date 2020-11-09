@@ -9,10 +9,21 @@
   }
 
   &__item {
+  }
+
+  &__label {
     display: grid;
     grid-template-columns: 1.25rem auto;
     align-items: start;
     column-gap: 0.625rem;
+    width: max-content;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $Dark-75;
+    cursor: pointer;
   }
 
   &__input {
@@ -60,19 +71,9 @@
     display: grid;
     row-gap: 0.25rem;
   }
-
-  &__label {
-    width: max-content;
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: $Dark-75;
-    cursor: pointer;
-  }
   
   &__text {
+    padding-left: 1.875rem;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: normal;

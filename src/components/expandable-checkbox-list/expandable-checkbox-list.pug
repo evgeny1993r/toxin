@@ -1,17 +1,18 @@
-mixin expandable-checkbox(value, id, state)
+mixin expandable-checkbox(value, state)
   .expandable-checkbox-list__item 
-    input.expandable-checkbox-list__input(type="checkbox" id= id checked= state)
-    label.expandable-checkbox-list__label(for= id) #{value}
+    label.expandable-checkbox-list__label
+      input.expandable-checkbox-list__input(type="checkbox" checked= state)
+      |#{value}
 mixin expandable-checkbox-list(title)
   .expandable-checkbox-list.js-expandable-checkbox-list 
     h3.expandable-checkbox-list__title #{title}
       span.expandable-checkbox-list__icon-expand-more.icon-expand_more
     .expandable-checkbox-list__item-list 
-      +expandable-checkbox('Завтрак', 'breakfast', false)
-      +expandable-checkbox('Письменный стол', 'table', true)
-      +expandable-checkbox('Стул для кормления', 'chair', true)
-      +expandable-checkbox('Кроватка', 'bed', true)
-      +expandable-checkbox('Телевизор', 'television-one', false)
-      +expandable-checkbox('Шампунь', 'shampoo-one', false)
-      +expandable-checkbox('Телевизор', 'television-two', false)
-      +expandable-checkbox('Шампунь', 'shampoo-two', false)
+      +expandable-checkbox('Завтрак', false)
+      +expandable-checkbox('Письменный стол', true)
+      +expandable-checkbox('Стул для кормления', true)
+      +expandable-checkbox('Кроватка', true)
+      +expandable-checkbox('Телевизор', false)
+      +expandable-checkbox('Шампунь', false)
+      +expandable-checkbox('Телевизор', false)
+      +expandable-checkbox('Шампунь', false)

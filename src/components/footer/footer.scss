@@ -1,7 +1,7 @@
 @import '../../styles/virables.scss';
 
 .footer {
-  &__section-one {
+  &__section-first {
     display: grid;
     grid-template-columns: 16.25rem repeat(3, 10rem) 16.25rem;
     justify-content: space-between;
@@ -110,7 +110,7 @@
     margin-top: 1.313rem;
   }
 
-  &__section-two {
+  &__section-second {
     background: #FFFFFF;
     box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     margin-top: 0.063rem;

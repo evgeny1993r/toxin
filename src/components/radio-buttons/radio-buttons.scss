@@ -6,10 +6,17 @@
   grid-template-columns: repeat(2, max-content);
   column-gap: 1.25rem;
 
-  &__button {
+  &__label {
     display: grid;
     grid-template-columns: 1.25rem auto;
     column-gap: 0.625rem;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $Dark-75;
+    cursor: pointer;
   }
 
   &__input {
@@ -50,14 +57,5 @@
     justify-self: center;
     align-self: center;
   }
-  
-  &__label {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: $Dark-75;
-    cursor: pointer;
-  }
+
 }

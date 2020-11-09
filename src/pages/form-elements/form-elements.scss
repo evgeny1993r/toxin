@@ -56,7 +56,7 @@
 
   &__container-checkbox-buttons,
   &__container-radio-buttons,
-  &__container-subscription-switch,
+  &__container-toggle,
   &__container-like-button,
   &__container-rate-button,
   &__container-pagination,
@@ -92,7 +92,7 @@
   }
 
   &__container-radio-buttons,
-  &__container-subscription-switch,
+  &__container-toggle,
   &__container-like-button,
   &__container-rate-button,
   &__container-buttons,
@@ -146,7 +146,7 @@
     color: $Dark-50;
   }
 
-  &__subscription-switch-item-list {
+  &__toggle-item-list {
     display: grid;
     row-gap: 0.625rem;
   }

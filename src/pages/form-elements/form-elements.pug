@@ -6,7 +6,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/subscription-text-field/subscription-text-field.pug 
 include ../../components/checkbox-buttons/checkbox-buttons.pug 
 include ../../components/radio-buttons/radio-buttons.pug 
-include ../../components/subscription-switch/subscription-switch.pug
+include ../../components/toggle/toggle.pug
 include ../../components/like-button/like-button.pug 
 include ../../components/rate-button/rate-button.pug 
 include ../../components/button/button.pug
@@ -70,11 +70,11 @@ html(lang="ru")
               h3.form-elements__title radio buttons 
               +radio-buttons()
 
-            .form-elements__container-subscription-switch
+            .form-elements__container-toggle
               h3.form-elements__title toggle 
-              .form-elements__subscription-switch-item-list 
-                +subscription-switch('toggle-one', true) 
-                +subscription-switch('toggle-two', false)
+              .form-elements__toggle-item-list 
+                +toggle(true) 
+                +toggle(false)
 
             .form-elements__container-like-button
               h3.form-elements__title like button 
@@ -98,13 +98,13 @@ html(lang="ru")
             .form-elements__container-buttons
               h3.form-elements__title buttons  
               .form-elements__buttons-item-list
-                +button('button', 'btn_purple', 'click me')
-                +button('button', 'btn_purple btn_transporent', 'click me')
-                +button('button', 'btn_white', 'click me')
-                +button('button', 'btn_white btn_transporent', 'click me')
-                +button('button', 'btn_no-frame-purple', 'click me')
-                +button('button', 'btn_no-frame-gray', 'click me')
-                +button('button', 'btn_big', 'Перейти к оплате')
+                +button('btn_background-purple btn_white', 'click me')
+                +button('btn_background-purple btn_white btn_transporent', 'click me')
+                +button('btn_background-white btn_purple', 'click me')
+                +button('btn_background-white btn_purple btn_transporent', 'click me')
+                +button('btn_no-background btn_purple', 'click me')
+                +button('btn_no-background btn_gray', 'click me')
+                +button('btn_big btn_white', 'Перейти к оплате')
 
             .form-elements__container-pagination
               h3.form-elements__title pagination

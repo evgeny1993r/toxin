@@ -9,62 +9,38 @@
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
+  white-space: nowrap;
 
-  &_purple {
+  &_background-purple {
     width: 6.1875rem;
     padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
-    color: #FFFFFF;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 1.375rem;
     border: none;
+    
+    &.btn_small {
+      width: auto;
+      padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
+    }
   }
 
-  &_transporent {
-    opacity: 0.5;
-  }
-
-  &_purple-and-small {
-    min-width: auto;
-    padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
-    color: #FFFFFF;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 1.375rem;
-    border: none;
-  }
-
-  &_white {
+  &_background-white {
     width: 6.1875rem;
     padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
-    color: $Purple;
     background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
     background-origin: border-box;
     background-clip: border-box, content-box;
     border: 0.125rem solid transparent;
     border-radius: 1.375rem;
     box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
+
+    &.btn_small {
+      width: auto;
+      padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
+    }
   }
 
-  &_white-and-small {
-    min-width: auto;
-    padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
-    color: $Purple;
-    background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
-    background-origin: border-box;
-    background-clip: border-box, content-box;
-    border: 0.125rem solid transparent;
-    border-radius: 1.375rem;
-    box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
-  }
-
-  &_no-frame-purple {
-    color: $Purple;
-    border: none;
-    background: none;
-    text-align: left;
-  }
-
-  &_no-frame-gray {
-    color: $Dark-50;
+  &_no-background {
     border: none;
     background: none;
     text-align: left;
@@ -73,10 +49,25 @@
   &_big {
     width: 20rem;
     padding: 0.875rem 0 0.9375rem 0;
-    color: #FFFFFF;
     background: url('../../images/arrow-forward.svg') no-repeat right center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border: none;
     border-radius: 1.375rem;
+  }
+
+  &_purple {
+    color: $Purple;
+  }
+
+  &_white {
+    color: #ffffff;
+  }
+  
+  &_gray {
+    color: $Dark-50;
+  }
+
+  &_transporent {
+    opacity: 0.5;
   }
 }
 
