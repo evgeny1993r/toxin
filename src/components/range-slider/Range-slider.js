@@ -1,16 +1,12 @@
-import './range-slider-plugin/range-slider-plugin';
+import './slider-plugin/slider-plugin';
 
 class RangeSlider {
   constructor(rangeSlider) {
     this.$rangeSlider = $(rangeSlider);
     this.$rangeSlider.slider({
-      position: 'gorizontal',
-      interval: true,
-      min_value: 0,
-      max_value: 15000,
-      current_value_min: 5000,
-      current_value_max: 10000,
-      $input: $('.js-range-slider-input'),
+      maxValue: 15000,
+      currentValue: [5000, 10000],
+      $inputElement: $('.js-range-slider-input'),
       symbol: '₽',
     });
   }

@@ -19,7 +19,7 @@ class Pagination {
       pageRange: 1,
       showNavigator: true,
       formatNavigator: '<span>1 - 12 из 100+ вариантов аренды</span>',
-      callback: (data) => this.callback(data),
+      callback: (data) => { this.callback(data) },
     });
   }
 
