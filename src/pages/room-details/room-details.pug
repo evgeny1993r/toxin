@@ -18,30 +18,27 @@ html(lang="ru")
     .room-details  
       +header()
       .room-details__image-list
-        .room-details__image-first
-        .room-details__image-second
-        .room-details__image-third 
+        .room-details__image
+        .room-details__image
+        .room-details__image
       .room-details__content 
         .room-details__containers
-          .room-details__container-first 
-            .room-details__room-amenities 
-              h3.room-details__room-amenities-title Сведения о номере
-              .room-details__container-room-amenities
-              +room-amenities() 
-            +impression-of-the-room()
-          .room-details__container-second 
-            .room-details__comments
-              .room-details__comments-titles 
-                h3.room-details__comments-title-first Отзывы посетителей номера
-                h3.room-details__comments-title-second 2 отзыва
-              +comment('userpic-one.png', 'Мурад Сарафанов', '5 дней назад', 'active', '12', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-              +comment('userpic-two.png', 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
-          .room-details__container-third 
-            .room-details__bullet-list 
-              h3.room-details__bullet-list-title Правила
-              +bullet-list()
-            .room-details__container-cancellation
-              +cancellation()
+          .room-details__room-amenities 
+            h3.room-details__room-amenities-title Сведения о номере
+            .room-details__container-room-amenities
+            +room-amenities() 
+          +impression-of-the-room()
+          .room-details__comments
+            .room-details__comments-titles 
+              h3.room-details__comments-title-text Отзывы посетителей номера
+              h3.room-details__comments-title-value 2 отзыва
+            +comment('userpic-one.png', 'Мурад Сарафанов', '5 дней назад', 'active', '12', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+            +comment('userpic-two.png', 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+          .room-details__bullet-list 
+            h3.room-details__bullet-list-title Правила
+            +bullet-list()
+          .room-details__container-cancellation
+            +cancellation()
         .room-details__container-verification-form 
           +verification-form({ price: '9990', discount: '2179', collecting: '300', numberValue: '888', numberState: 'люкс', numberPrice: '9 990', oneDate: '20 October, 2020', twoDate: '24 October, 2020' })
       .room-details__line 

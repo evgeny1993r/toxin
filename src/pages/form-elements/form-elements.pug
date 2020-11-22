@@ -27,123 +27,124 @@ html(lang="ru")
     body
       .form-elements 
         +logotip('gray')
-        section.form-elements__component-list-first
-          .form-elements__column 
-            .form-elements__container-text-field 
-              .form-elements__titles
-                h3.form-elements__title text field
-                h3.form-elements__state-name default 
-              +text-field('text', 'Email')
+        .form-elements__content
+          section.form-elements__component-list
+            .form-elements__column 
+              .form-elements__container-text-field 
+                .form-elements__titles
+                  h3.form-elements__title text field
+                  h3.form-elements__state-name default 
+                +text-field('text', 'Email')
 
+              .form-elements__container-dropdown-guests
+                .form-elements__titles 
+                  h3.form-elements__title dropdown 
+                  h3.form-elements__state-name default
+                .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
+              
+              .form-elements__container-masked-text-field
+                .form-elements__titles
+                  h3.form-elements__title masked text field 
+                  h3.form-elements__state-name default
+                +masked-text-field()
+
+              .form-elements__container-date-dropdown
+                .form-elements__titles 
+                  h3.form-elements__title date dropdown 
+                  h3.form-elements__title date dropdown 
+                +date-dropdown(true, '20 October, 2020', '', true)
+
+              .form-elements__container-filter-date-dropdown
+                h3.form-elements__title filter date dropdown 
+                +filter-date-dropdown('20 October, 2020', '25 October, 2020') 
+
+              .form-elements__container-subscription-text-field
+                h3.form-elements__title subscription text field 
+                +subscription-text-field()
+
+            .form-elements__column 
+              .form-elements__container-checkbox-buttons
+                h3.form-elements__title checkbox buttons 
+                +checkbox-buttons()
+
+              .form-elements__container-radio-buttons
+                h3.form-elements__title radio buttons 
+                +radio-buttons()
+
+              .form-elements__container-toggle
+                h3.form-elements__title toggle 
+                .form-elements__toggle-item-list 
+                  +toggle(true) 
+                  +toggle(false)
+
+              .form-elements__container-like-button
+                h3.form-elements__title like button 
+                .form-elements__like-button-item-list 
+                  +like-button('inActive', '2')
+                  +like-button('active', '12')
+
+              .form-elements__container-rate-button
+                h3.form-elements__title rate button 
+                .form-elements__rate-button-item-list 
+                  +rate-button('4')
+                  +rate-button('5')
+
+            .form-elements__column 
+              .form-elements__container-range-slider
+                .form-elements__titles 
+                  h3.form-elements__title range slider
+                  input.form-elements__range-slider-input.js-range-slider-input(type="text")
+                .js-range-slider
+
+              .form-elements__container-buttons
+                h3.form-elements__title buttons  
+                .form-elements__buttons-item-list
+                  +button('btn_background_purple btn_color_white', 'click me')
+                  +button('btn_background_purple btn_color_white btn_transporent', 'click me')
+                  +button('btn_background_white btn_color_purple', 'click me')
+                  +button('btn_background_white btn_color_purple btn_transporent', 'click me')
+                  +button('btn_background_none btn_color_purple', 'click me')
+                  +button('btn_background_none btn_color_gray', 'click me')
+                  +button('btn_size_big btn_color_white', 'Перейти к оплате')
+
+              .form-elements__container-pagination
+                h3.form-elements__title pagination
+                +pagination('pagination_items-hide')
+
+          section.form-elements__component-list
+            .form-elements__container-dropdown-number
+              .form-elements__titles
+                h3.form-elements__title dropdown
+                h3.form-elements__state-name default
+              .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0")
             .form-elements__container-dropdown-guests
-              .form-elements__titles 
-                h3.form-elements__title dropdown 
-                h3.form-elements__state-name default
+              h3.form-elements__title dropdown 
               .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
-            
-            .form-elements__container-masked-text-field
-              .form-elements__titles
-                h3.form-elements__title masked text field 
-                h3.form-elements__state-name default
-              +masked-text-field()
-
-            .form-elements__container-date-dropdown
-              .form-elements__titles 
-                h3.form-elements__title date dropdown 
-                h3.form-elements__title date dropdown 
-              +date-dropdown(true, '20 October, 2020', '', true)
-
-            .form-elements__container-filter-date-dropdown
-              h3.form-elements__title filter date dropdown 
-              +filter-date-dropdown('20 October, 2020', '25 October, 2020') 
-
-            .form-elements__container-subscription-text-field
-              h3.form-elements__title subscription text field 
-              +subscription-text-field()
-
-          .form-elements__column 
-            .form-elements__container-checkbox-buttons
-              h3.form-elements__title checkbox buttons 
-              +checkbox-buttons()
-
-            .form-elements__container-radio-buttons
-              h3.form-elements__title radio buttons 
-              +radio-buttons()
-
-            .form-elements__container-toggle
-              h3.form-elements__title toggle 
-              .form-elements__toggle-item-list 
-                +toggle(true) 
-                +toggle(false)
-
-            .form-elements__container-like-button
-              h3.form-elements__title like button 
-              .form-elements__like-button-item-list 
-                +like-button('inActive', '2')
-                +like-button('active', '12')
-
-            .form-elements__container-rate-button
-              h3.form-elements__title rate button 
-              .form-elements__rate-button-item-list 
-                +rate-button('4')
-                +rate-button('5')
-
-          .form-elements__column 
-            .form-elements__container-range-slider
-              .form-elements__titles 
-                h3.form-elements__title range slider
-                input.form-elements__range-slider-input.js-range-slider-input(type="text")
-              .js-range-slider
-
-            .form-elements__container-buttons
-              h3.form-elements__title buttons  
-              .form-elements__buttons-item-list
-                +button('btn_background-purple btn_white', 'click me')
-                +button('btn_background-purple btn_white btn_transporent', 'click me')
-                +button('btn_background-white btn_purple', 'click me')
-                +button('btn_background-white btn_purple btn_transporent', 'click me')
-                +button('btn_no-background btn_purple', 'click me')
-                +button('btn_no-background btn_gray', 'click me')
-                +button('btn_big btn_white', 'Перейти к оплате')
-
-            .form-elements__container-pagination
-              h3.form-elements__title pagination
-              +pagination('pagination_items-hide')
-
-        section.form-elements__component-list-second 
-          .form-elements__container-dropdown-number
-            .form-elements__titles
+            .form-elements__container-dropdown-guests
               h3.form-elements__title dropdown
-              h3.form-elements__state-name default
-            .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0")
-          .form-elements__container-dropdown-guests
-            h3.form-elements__title dropdown 
-            .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
-          .form-elements__container-dropdown-guests
-            h3.form-elements__title dropdown
-            .js-dropdown-guests(data-adults="2", data-children="1", data-babies="0") 
+              .js-dropdown-guests(data-adults="2", data-children="1", data-babies="0") 
 
-        section.form-elements__component-list-third
-          +expandable-checkbox-list('expandable checkbox list')
-          .form-elements__container-rich-checkbox-buttons
-            h3.form-elements__title rich checkbox buttons 
-            +rich-checkbox-buttons()
-          .form-elements__container-bullet-list
-            h3.form-elements__title bullet list
-            +bullet-list()
-        
-        section.form-elements__component-list-fourth
-          +room-amenities()
-          .form-elements__container-comment
-            +comment(
-              'userpic-one.png', 
-              'Мурад Сарафанов', 
-              '5 дней назад', 
-              'active', 
-              '12', 
-              ` 
-                  Великолепный матрас на кровати в основной спальне! 
-                  А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
-                  Выкрикивал комплименты повару — никто не жаловался из соседей.
-              `
-            )
+          section.form-elements__component-list
+            +expandable-checkbox-list('expandable checkbox list')
+            .form-elements__container-rich-checkbox-buttons
+              h3.form-elements__title rich checkbox buttons 
+              +rich-checkbox-buttons()
+            .form-elements__container-bullet-list
+              h3.form-elements__title bullet list
+              +bullet-list()
+          
+          section.form-elements__component-list
+            +room-amenities()
+            .form-elements__container-comment
+              +comment(
+                'userpic-one.png', 
+                'Мурад Сарафанов', 
+                '5 дней назад', 
+                'active', 
+                '12', 
+                ` 
+                    Великолепный матрас на кровати в основной спальне! 
+                    А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+                    Выкрикивал комплименты повару — никто не жаловался из соседей.
+                `
+              )

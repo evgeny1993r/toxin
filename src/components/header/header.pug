@@ -22,7 +22,7 @@ mixin header(firstName, lastName)
         +header-link('#', 'Соглашения', true)
     if firstName == undefined && lastName == undefined
       .header__buttons 
-        +button('btn_background-white btn_purple btn_small', 'Войти')
-        +button('btn_background-purple btn_white btn_small', 'Зарегистрироваться')
+        +button('btn_background_white btn_color_purple btn_size_small', 'Войти')
+        +button('btn_background_purple btn_color_white btn_size_small', 'Зарегистрироваться')
     else 
       span.header__name #{firstName} #{lastName}
