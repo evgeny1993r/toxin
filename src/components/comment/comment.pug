@@ -2,12 +2,12 @@ include ../like-button/like-button.pug
 
 mixin comment(imgName, name, time, likeButtonClass, likeButtonValue, text)
   .comment
-    .comment__container-first
+    .comment__container-names
       img.comment__img(src=require(`../../images/${imgName}`).default, alt="Userpic")
       .comment__titles 
-        h3.comment__title-first #{name}
-        h3.comment__title-second #{time}
-    .comment__container-second
+        h3.comment__title-name #{name}
+        h3.comment__title-time #{time}
+    .comment__container-comment
       .comment__container-like-button 
         +like-button(likeButtonClass, likeButtonValue)
       .comment__text #{text}

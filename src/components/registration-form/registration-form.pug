@@ -7,7 +7,7 @@ include ../button/button.pug
 mixin registration-form()
   form.registration-form 
     h1.registration-form__title Регистрация аккаунта
-    .registration-form__text-fields-one 
+    .registration-form__text-fields-names
       +text-field('text', 'Имя')
       +text-field('text', 'Фамилия')
     .registration-form__container-radio-buttons
@@ -16,7 +16,7 @@ mixin registration-form()
     .registration-form__container-masked-text-field
       +masked-text-field()
     h3.registration-form__text-fields-title Данные для входа в сервис 
-    .registration-form__text-fields-two 
+    .registration-form__text-fields-mail-password
       +text-field('email', 'Email')
       +text-field('password', 'Пароль')
     .registration-form__container-subscription-switch 

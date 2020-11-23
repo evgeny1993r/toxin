@@ -44,8 +44,8 @@
     display: grid;
   }
 
-  &__text-one, 
-  &__text-two {
+  &__title, 
+  &__text {
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -54,11 +54,11 @@
     color: $Dark-75;        
   }
 
-  &__text-one {
+  &__title {
     font-weight: bold;
   }
   
-  &__text-two {
+  &__text {
     font-weight: normal;
   }
 }

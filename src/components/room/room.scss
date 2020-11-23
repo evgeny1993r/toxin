@@ -86,7 +86,7 @@
     row-gap: 0.625rem;
   }
 
-  &__container-one {
+  &__container {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
@@ -147,7 +147,7 @@
     height: 0.0625rem;
   }
 
-  &__container-two {
+  &__container-comments {
     display: grid;
     grid-template-columns: 120px auto;
     justify-content: space-between;

@@ -18,7 +18,7 @@ mixin room({ roomImgName, roomNumber, roomState, roomPrice, rateButtonValue, com
         .room__circle
         .room__circle
     .room__info 
-      .room__container-one
+      .room__container
         p.room__number
           span.room__number-symbol № 
           span.room__number-value #{roomNumber}
@@ -27,7 +27,7 @@ mixin room({ roomImgName, roomNumber, roomState, roomPrice, rateButtonValue, com
           span.room__price-value #{roomPrice}₽ 
           span.room__price-text в сутки
       .room__line
-      .room__container-two
+      .room__container-comments
         +rate-button(rateButtonValue)
         p.room__comments
           span.room__comments-value #{commentsValue} 

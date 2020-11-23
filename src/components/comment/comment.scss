@@ -5,8 +5,8 @@
   align-content: start;
   row-gap: 0.4375rem;
 
-  &__container-first,
-  &__container-second {
+  &__container-names,
+  &__container-comment {
     margin-top: 0.188rem;
     display: grid;
     grid-template-columns: 2.875rem auto;
@@ -19,8 +19,8 @@
     border-radius: 50%;
   }
 
-  &__title-first,
-  &__title-second,
+  &__title-name,
+  &__title-time,
   &__text {
     font-family: Montserrat;
     font-style: normal;
@@ -29,11 +29,11 @@
     color: rgba(31, 32, 65, 0.75);
   }
 
-  &__title-first {
+  &__title-name {
     font-weight: bold;
   }
 
-  &__title-second,
+  &__title-time,
   &__text {
     font-weight: normal;
   }

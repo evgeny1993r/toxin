@@ -1,10 +1,10 @@
-mixin convenience(icon, textOne, textTwo)
+mixin convenience(icon, title, text)
   .room-amenities__item 
     .room-amenities__container-icon
       span(class=`room-amenities__icon ${icon}`)
     .room-amenities__container-texts
-      span.room-amenities__text-one #{textOne}
-      span.room-amenities__text-two #{textTwo}
+      span.room-amenities__title #{title}
+      span.room-amenities__text #{text}
 
 mixin room-amenities()
   .room-amenities 
