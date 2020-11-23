@@ -3,14 +3,14 @@
 .comment {
   display: grid;
   align-content: start;
-  row-gap: 0.313rem;
+  row-gap: 0.4375rem;
 
   &__container-first,
   &__container-second {
     margin-top: 0.188rem;
     display: grid;
-    grid-template-columns: 3.125rem auto;
-    column-gap: 0.438rem;
+    grid-template-columns: 2.875rem auto;
+    column-gap: 0.625rem;
   }
 
   &__img {

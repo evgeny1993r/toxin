@@ -35,10 +35,22 @@
     margin-top: 1.25rem;
   }
 
-  &__container-range-slider,
-  &__container-checkbox-buttons,
-  &__container-rich-checkbox-buttons,
-  &__container-dropdown-number,
+  &__container-range-slider {
+    margin-top: 2rem;
+  }
+
+  &__container-checkbox-buttons {
+    margin-top: 1.8125rem;
+  }
+
+  &__container-rich-checkbox-buttons {
+    margin-top: 2rem;
+  }
+
+  &__container-dropdown-number {
+    margin-top: 1.875rem;
+  }
+
   &__container-expandable-checkbox-list {
     margin-top: 1.875rem;
   }
@@ -58,8 +70,7 @@
 
   &__range-slider-titles {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 50%);
   }
 
   &__filter-date-dropdown-title,
@@ -88,7 +99,8 @@
     text-align: right;
     background: none;
     border: none;
-    width: 6.25rem;
+    justify-self: end;
+    letter-spacing: 0.019rem;
   }
 
   &__range-slider {
@@ -112,6 +124,7 @@
     line-height: 1.875rem;
     color: $Dark-100;
     padding-bottom: 1.25rem;
+    letter-spacing: 0.0375rem;
 
     @media(max-width: 1439px) {
       text-align: center;

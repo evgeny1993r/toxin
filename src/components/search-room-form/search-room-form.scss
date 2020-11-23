@@ -14,12 +14,13 @@
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 1.8125rem;
+    letter-spacing: 0.075rem;
     color: $Dark-100;
   }
 
   &__date-dropdown-titles {
-    margin-top: 1.5625rem;
+    margin-top: 1.3125rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.25rem;
@@ -45,6 +46,6 @@
   }
   
   &__container-button {
-    margin-top: 1.875rem;
+    margin-top: 2.0625rem;
   }
 }

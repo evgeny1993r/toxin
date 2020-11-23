@@ -52,6 +52,7 @@
     font-size: 0.875rem;
     line-height: 1.125rem;
     color: $Dark-50;
+    letter-spacing: 0.0437rem;
   }
 
   &__room-price-text {
@@ -166,6 +167,10 @@
     font-size: 1.1875rem;
     line-height: 1.125rem;
     color:$Dark-100;
+  }
+
+  &__total-title {
+    letter-spacing: 0.0625rem;
   }
   
   &__total-line {

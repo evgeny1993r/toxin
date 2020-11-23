@@ -81,7 +81,7 @@
   }
 
   &__info {
-    padding: 1.25rem;
+    padding: 1.4375rem 1rem 1rem 1.25rem;
     display: grid;
     row-gap: 0.625rem;
   }
@@ -133,11 +133,13 @@
   &__price-value {
     font-weight: bold;
     font-size: 0.875rem;
+    letter-spacing: 0.0375rem;
   }
 
   &__price-text {
     font-weight: normal;
     font-size: 0.75rem;
+    letter-spacing: 0.0125rem;
   }
 
   &__line {
@@ -150,6 +152,7 @@
     grid-template-columns: 120px auto;
     justify-content: space-between;
     align-items: center;
+    margin-right: 0.3125rem;
   }
   
   &__comments {
