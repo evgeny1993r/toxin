@@ -8,10 +8,17 @@ class FilterDateDropdown {
     this.twoDate = this.$filterDateDropdown.data('two-date');
     this.$filterDateDropdownInput = this.$filterDateDropdown.siblings('.js-filter-date-dropdown__input');
     this.icon = '<span class="filter-date-dropdown__icon-expand-more icon-expand_more"></span>';
+    this.isShowDatepicker = false;
     this.init();
 
     this.$filterDateDropdownInput.on('click', () => {
-      this.$filterDateDropdown.show();
+      if (this.isShowDatepicker) {
+        this.$filterDateDropdown.hide();
+        this.isShowDatepicker = false;
+      } else {
+        this.$filterDateDropdown.show();
+        this.isShowDatepicker = true;
+      }
     });
 
     $(document).on('click', (e) => this.onClickDocument(e));
@@ -59,7 +66,10 @@ class FilterDateDropdown {
       text: 'Применить',
       'data-action': 'hide',
       on: {
-        click: () => this.$filterDateDropdown.hide(),
+        click: () => {
+          this.$filterDateDropdown.hide();
+          this.isShowDatepicker = false;
+        },
       },
     });
     this.$datepickerButtons.append(this.buttonApply);
@@ -68,8 +78,10 @@ class FilterDateDropdown {
   onClickDocument(e) {
     if ($(e.target).attr('class') === undefined) {
       this.$filterDateDropdown.hide();
+      this.isShowDatepicker = false;
     } else if ($(e.target).attr('class') !== undefined && $(`.${$(e.target).attr('class').split(' ')[0]}`).parents('.filter-date-dropdown').length === 0) {
       this.$filterDateDropdown.hide();
+      this.isShowDatepicker = false;
     }
   }
 }

@@ -15,18 +15,30 @@ class DateDropdown {
       .parent('.js-date-dropdown')
       .find('.js-date-dropdown__check-out');
     this.$checkOutInput = this.$checkOut.children('.js-date-dropdown__input-check-out');
-    this.dateDropdownDatepickerIsShow = this.$dateDropdownDatepicker.data('is-show');
+    this.isShowDatepicker = false;
 
     this.init();
 
     this.onSelectDates();
 
     this.$entry.on('click', () => {
-      this.$dateDropdownDatepicker.show();
+      if (this.isShowDatepicker) {
+        this.$dateDropdownDatepicker.hide();
+        this.isShowDatepicker = false;
+      } else {
+        this.$dateDropdownDatepicker.show();
+        this.isShowDatepicker = true;
+      }
     });
 
     this.$checkOut.on('click', () => {
-      this.$dateDropdownDatepicker.show();
+      if (this.isShowDatepicker) {
+        this.$dateDropdownDatepicker.hide();
+        this.isShowDatepicker = false;
+      } else {
+        this.$dateDropdownDatepicker.show();
+        this.isShowDatepicker = true;
+      }
     });
 
     $(document).on('click', (e) => {
@@ -65,6 +77,7 @@ class DateDropdown {
       });
     } else {
       this.$dateDropdownDatepicker.hide();
+      this.isShowDatepicker = false;
     }
   }
 
@@ -75,7 +88,10 @@ class DateDropdown {
         class: 'datepicker--button js-datepicker__apply',
         text: 'Применить',
         'data-action': 'hide',
-        click: () => this.$dateDropdownDatepicker.hide(),
+        click: () => {
+          this.$dateDropdownDatepicker.hide();
+          this.isShowDatepicker = false;
+        },
       }),
     );
   }
@@ -109,8 +125,10 @@ class DateDropdown {
     if (this.dateDropdownDatepickerIsShow) return;
     if ($(e.target).attr('class') === undefined) {
       this.$dateDropdownDatepicker.hide();
+      this.isShowDatepicker = false;
     } else if ($(e.target).attr('class') !== undefined && $(`.${$(e.target).attr('class').split(' ')[0]}`).parents('.js-date-dropdown').length === 0) {
       this.$dateDropdownDatepicker.hide();
+      this.isShowDatepicker = false;
     }
   }
 }

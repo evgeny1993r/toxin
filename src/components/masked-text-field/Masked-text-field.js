@@ -4,6 +4,8 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class MaskedTextField {
   constructor(maskedTextField) {
     this.$maskedTextField = $(maskedTextField);
+    this.$maskedTextFieldInput = this.$maskedTextField.parent().find('.masked-text-field__input');
+    this.isShowDatepicker = false;
     this.init();
   }
 
@@ -25,8 +27,33 @@ class MaskedTextField {
       `,
       offset: 7,
       clearButton: true,
+      onSelect: (fd) => this.onSelect(fd),
     });
+
     this.addButtonApply();
+    this.$maskedTextField.hide();
+
+    this.$maskedTextFieldInput.on('click', () => {
+      if (this.isShowDatepicker) {
+        this.$maskedTextField.hide();
+        this.isShowDatepicker = false;
+      } else {
+        this.$maskedTextField.show();
+        this.isShowDatepicker = true;
+      }
+    });
+
+    $(document).on('click', (e) => {
+      this.onClickDocument(e);
+    });
+  }
+
+  onSelect(fd) {
+    if (fd !== '') {
+      this.$maskedTextFieldInput.text(fd);
+    } else {
+      this.$maskedTextFieldInput.text('ДД.ММ.ГГГГ');
+    }
   }
 
   addButtonApply() {
@@ -34,9 +61,23 @@ class MaskedTextField {
       class: 'datepicker--button',
       text: 'Применить',
       'data-action': 'hide',
+      click: () => {
+        this.$maskedTextField.hide();
+        this.isShowDatepicker = false;
+      },
     });
     this.$datepickerButtons = $('.datepicker-masked-text-field').find('.datepicker--buttons');
     this.$datepickerButtons.append(this.buttonApply);
+  }
+
+  onClickDocument(e) {
+    if ($(e.target).attr('class') === undefined) {
+      this.$maskedTextField.hide();
+      this.isShowDatepicker = false;
+    } else if ($(e.target).attr('class') !== undefined && $(`.${$(e.target).attr('class').split(' ')[0]}`).parents('.masked-text-field').length === 0) {
+      this.$maskedTextField.hide();
+      this.isShowDatepicker = false;
+    }
   }
 }
 

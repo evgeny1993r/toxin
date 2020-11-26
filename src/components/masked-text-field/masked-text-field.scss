@@ -25,7 +25,9 @@
     cursor: pointer;
   }
 
-  &__input::placeholder {
-    color: rgba(31, 32, 65, 0.25);
+  &__datepicker {    
+    position: absolute;
+    z-index: 2;
+    margin-top: 3.0625rem;
   }
 }
