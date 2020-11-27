@@ -1,4 +1,4 @@
-include ../../components/logotip/logotip.pug
+include ../../components/company-logo/company-logo.pug
 include ../../components/text-field/text-field.pug  
 include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/date-dropdown/date-dropdown.pug 
@@ -26,7 +26,7 @@ html(lang="ru")
         title Form Elements 
     body
       .form-elements 
-        +logotip('gray')
+        +company-logo()
         .form-elements__content
           section.form-elements__component-list
             .form-elements__column 
@@ -65,7 +65,11 @@ html(lang="ru")
             .form-elements__column 
               .form-elements__container-checkbox-buttons
                 h3.form-elements__title checkbox buttons 
-                +checkbox-buttons()
+                +checkbox-buttons([
+                  { value: 'Можно курить', checked: false }, 
+                  { value: 'Можно с питомцами', checked: true }, 
+                  { value: 'Можно пригласить гостей (до 10 человек)', checked: true }
+                ])
 
               .form-elements__container-radio-buttons
                 h3.form-elements__title radio buttons 
@@ -125,16 +129,32 @@ html(lang="ru")
               .js-dropdown-guests(data-adults="2", data-children="1", data-babies="0") 
 
           section.form-elements__component-list
-            +expandable-checkbox-list('expandable checkbox list')
+            +expandable-checkbox-list('expandable checkbox list', [
+              { value: 'Завтрак', checked: false },
+              { value: 'Письменный стол', checked: true },
+              { value: 'Стул для кормления', checked: true },
+              { value: 'Кроватка', checked: true },
+              { value: 'Телевизор', checked: false },
+              { value: 'Шампунь', checked: false },
+              { value: 'Телевизор', checked: false },
+              { value: 'Шампунь', checked: false }
+            ])
             .form-elements__container-rich-checkbox-buttons
               h3.form-elements__title rich checkbox buttons 
-              +rich-checkbox-buttons()
+              +rich-checkbox-buttons([
+                { title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.' }, 
+                { title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.' }
+              ])
             .form-elements__container-bullet-list
               h3.form-elements__title bullet list
-              +bullet-list()
+              +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
           
           section.form-elements__component-list
-            +room-amenities()
+            +room-amenities([
+              { icon: 'icon-emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены' },
+              { icon: 'icon-location_city', title: 'Удобство', text: 'Окно в каждой из спален' },
+              { icon: 'icon-whatshot', title: 'Уют', text: 'Номер оснащён камином' }
+            ])
             .form-elements__container-comment
               +comment(
                 'userpic-one.png', 

@@ -1,8 +1,3 @@
-mixin impression(text)
-  .impression-of-the-room__item 
-    .impression-of-the-room__circle 
-    span.impression-of-the-room__text #{text}
-
 mixin impression-of-the-room()      
   .impression-of-the-room 
     h3.impression-of-the-room__title Впечатления от номера
@@ -13,8 +8,16 @@ mixin impression-of-the-room()
       .impression-of-the-room__content 
         span.impression-of-the-room__value 260
         span.impression-of-the-room__value-text голосов
-    .impression-of-the-room__item-list 
-      +impression('Великолепно')
-      +impression('Хорошо')
-      +impression('Удовлетворительно')
-      +impression('Разочарован')
+    .impression-of-the-room__item-list
+      .impression-of-the-room__item 
+        .impression-of-the-room__circle 
+        span.impression-of-the-room__text Великолепно
+      .impression-of-the-room__item 
+        .impression-of-the-room__circle 
+        span.impression-of-the-room__text Хорошо
+      .impression-of-the-room__item 
+        .impression-of-the-room__circle 
+        span.impression-of-the-room__text Удовлетворен
+      .impression-of-the-room__item 
+        .impression-of-the-room__circle 
+        span.impression-of-the-room__text Разочарован

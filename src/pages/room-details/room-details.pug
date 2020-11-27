@@ -26,7 +26,11 @@ html(lang="ru")
           .room-details__room-amenities 
             h3.room-details__room-amenities-title Сведения о номере
             .room-details__container-room-amenities
-              +room-amenities() 
+              +room-amenities([
+                { icon: 'icon-emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены' },
+                { icon: 'icon-location_city', title: 'Удобство', text: 'Окно в каждой из спален' },
+                { icon: 'icon-whatshot', title: 'Уют', text: 'Номер оснащён камином' }
+              ])
           +impression-of-the-room()
           .room-details__comments
             .room-details__comments-titles 
@@ -36,7 +40,11 @@ html(lang="ru")
             +comment('userpic-two.png', 'Патрисия Стёклышкова', 'Неделю назад', 'inActive', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
           .room-details__bullet-list 
             h3.room-details__bullet-list-title Правила
-            +bullet-list()
+            +bullet-list([
+              'Нельзя с питомцами', 
+              'Без вечеринок и мероприятий', 
+              'Время прибытия — после 13:00, а выезд до 12:00'
+            ])
           .room-details__container-cancellation
             +cancellation()
         .room-details__container-verification-form 

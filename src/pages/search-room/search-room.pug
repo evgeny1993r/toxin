@@ -32,15 +32,31 @@ html(lang="ru")
             span.search-room__range-slider-text Стоимость за сутки пребывания в номере
           .search-room__container-checkbox-buttons
             h3.search-room__checkbox-buttons-title checkbox buttons
-            +checkbox-buttons()
+            +checkbox-buttons([
+              { value: 'Можно курить', checked: false }, 
+              { value: 'Можно с питомцами', checked: true }, 
+              { value: 'Можно пригласить гостей (до 10 человек)', checked: true }
+            ])
           .search-room__container-rich-checkbox-buttons
             h3.search-room__rich-checkbox-buttons-title доступность
-            +rich-checkbox-buttons()
+            +rich-checkbox-buttons([
+              { title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.' }, 
+              { title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.' }
+            ])
           .search-room__container-dropdown-number
             h3.search-room__dropdown-number-title удобства номера 
             .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0") 
           .search-room__container-expandable-checkbox-list
-          +expandable-checkbox-list('дополнительные удобства')
+          +expandable-checkbox-list('дополнительные удобства', [
+            { value: 'Завтрак', checked: false },
+            { value: 'Письменный стол', checked: true },
+            { value: 'Стул для кормления', checked: true },
+            { value: 'Кроватка', checked: true },
+            { value: 'Телевизор', checked: false },
+            { value: 'Шампунь', checked: false },
+            { value: 'Телевизор', checked: false },
+            { value: 'Шампунь', checked: false }
+          ])
         .search-room__rooms
           h1.search-room__title Номера, которые мы для вас подобрали
           +pagination()

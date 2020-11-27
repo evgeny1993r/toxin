@@ -1,4 +1,4 @@
-include ../../components/logotip/logotip.pug 
+include ../../components/company-logo/company-logo.pug
 include ../../components/search-room-form/search-room-form.pug
 include ../../components/registration-form/registration-form.pug
 include ../../components/verification-form/verification-form.pug 
@@ -15,7 +15,7 @@ html(lang="ru")
     title Cards
   body
     .cards 
-      +logotip('gray')
+      +company-logo()
       .cards__content
         .cards__container
           +search-room-form()

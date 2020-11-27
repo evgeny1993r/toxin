@@ -1,14 +1,10 @@
-mixin convenience(icon, title, text)
-  .room-amenities__item 
-    .room-amenities__container-icon
-      span(class=`room-amenities__icon ${icon}`)
-    .room-amenities__container-texts
-      span.room-amenities__title #{title}
-      span.room-amenities__text #{text}
-
-mixin room-amenities()
+mixin room-amenities(data)
   .room-amenities 
     .room-amenities__item-list 
-      +convenience('icon-emoticon', 'Комфорт', 'Шумопоглощающие стены')
-      +convenience('icon-location_city', 'Удобство', 'Окно в каждой из спален')
-      +convenience('icon-whatshot', 'Уют', 'Номер оснащён камином')
+      each item in data
+        .room-amenities__item 
+          .room-amenities__container-icon
+            span(class=`room-amenities__icon ${item.icon}`)
+          .room-amenities__container-texts
+            span.room-amenities__title #{item.title}
+            span.room-amenities__text #{item.text}

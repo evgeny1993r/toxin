@@ -1,25 +1,24 @@
 include ../logotip/logotip.pug 
 include ../button/button.pug 
 
-mixin header-link(url, text, icon)
-  li.header__item
-    if icon 
-      a.header__link.js-header__link.header__link_dropdown(href="#") #{text}
-        span.header__icon-expand-more.icon-expand_more
-    else 
-      a.header__link.js-header__link(href=url) #{text}
-
 mixin header(firstName, lastName)
   header.header.js-header 
     .header__container-logotip
-      +logotip('purple')
+      +logotip()
     nav.header__nav 
       ul.header__item-list
-        +header-link('#', 'О нас')
-        +header-link('#', 'Услуги', true)
-        +header-link('#', 'Вакансии')
-        +header-link('#', 'Новости')
-        +header-link('#', 'Соглашения', true)
+        li.header__item
+          a.header__link.js-header__link(href="#") О нас
+        li.header__item
+            a.header__link.js-header__link.header__link_dropdown(href="#") Услуги
+              span.header__icon-expand-more.icon-expand_more
+        li.header__item
+          a.header__link.js-header__link(href="#") Вакансии
+        li.header__item
+          a.header__link.js-header__link(href="#") Новости
+        li.header__item
+            a.header__link.js-header__link.header__link_dropdown(href="#") Соглашения
+              span.header__icon-expand-more.icon-expand_more
     if firstName == undefined && lastName == undefined
       .header__buttons 
         +button('btn_background_white btn_color_purple btn_size_small', 'Войти')

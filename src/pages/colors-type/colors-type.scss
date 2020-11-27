@@ -8,6 +8,7 @@
     grid-template-columns: max-content 27.8125rem;
     justify-content: space-between;
     background: #ffffff;
+    padding-bottom: 6.25rem;
 
     @media(max-width: 1440px) {
       min-width: 100%;
@@ -72,80 +73,52 @@
     column-gap: 1.875rem;
   }
 
-  &__type-h1-name {
-    font-family: 'Montserrat', sans-serif;
+  &__type-title {
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.5rem;
-    line-height: 1.8125rem;
     text-align: right;
     color: $Dark-25;
   }
 
-  &__type-h1-text {
-    font-family: 'Quicksand', sans-serif;
+  &__type-text {
+    font-family: Montserrat, sans-serif;
     font-style: normal;
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    color: $Dark-100;
-  }
-
-  &__type-h2-name {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.1875rem;
-    line-height: 1.4375rem;
-    text-align: right;
-    color: $Dark-25;
-  }
-
-  &__type-h2-text {
-    font-family: 'Quicksand', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.1875rem;
-    line-height: 1.5rem;
-    color: $Dark-100;
-  }
-
-  &__type-h3-name {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
-    text-align: right;
-    color: $Dark-25;
-  }
-
-  &__type-h3-text {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
-    text-transform: uppercase;
-    color: $Dark-100;
-  }
-
-  &__type-body-name {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    text-align: right;
-    color: $Dark-25;
   }
   
-  &__type-body-stext {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
+  &__type-title_size_big,
+  &__type-text_size_big {
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+  }
+
+  &__type-title_size_medium,
+  &__type-text_size_medium {
+    font-size: 1.1875rem;
+    line-height: 1.4375rem;
+  }
+
+  &__type-title_size_small,
+  &__type-text_size_small {
     font-size: 0.875rem;
     line-height: 1.5rem;
+  }
+
+  &__type-title_size_very-small,
+  &__type-text_size_very-small {
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+  }
+
+  &__type-text_transform_uppercase {
+    text-transform: uppercase;
+  }
+
+  &__type-text_color_dark-100 {
+    color: $Dark-100;
+  }
+
+  &__type-text_color_dark-75 {
     color: $Dark-75;
-  }    
+  }
 }

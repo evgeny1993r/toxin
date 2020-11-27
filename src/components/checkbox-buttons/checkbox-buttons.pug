@@ -1,12 +1,8 @@
-mixin checkbox-button(value, state)
-  .checkbox-buttons__item 
-    label.checkbox-buttons__label 
-      input.checkbox-buttons__input(type="checkbox" checked= state)
-      |#{value}
-
-mixin checkbox-buttons()
-  .checkbox-buttons 
-    .checkbox-buttons__item-list
-      +checkbox-button('Можно курить', false)
-      +checkbox-button('Можно с питомцами', true)
-      +checkbox-button('Можно пригласить гостей (до 10 человек)', true)
+mixin checkbox-buttons(data)
+  .checkbox-buttons
+    .checkbox-buttons__item-list 
+      each item in data
+        .checkbox-buttons__item 
+          label.checkbox-buttons__label 
+            input.checkbox-buttons__input(type="checkbox" checked= item.checked)
+            |#{item.value}

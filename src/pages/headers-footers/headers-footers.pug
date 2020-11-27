@@ -1,4 +1,4 @@
-include ../../components/logotip/logotip.pug 
+include ../../components/company-logo/company-logo.pug
 include ../../components/header/header.pug 
 include ../../components/footer/footer.pug
 
@@ -11,7 +11,7 @@ html(lang="ru")
     title Headers & Footers
   body
     .headers-footers
-      +logotip('gray')
+      +company-logo()
       .headers-footers__content  
         +header()
         +header('Юлий', 'Цезарь')

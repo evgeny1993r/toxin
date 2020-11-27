@@ -1,10 +1,10 @@
-mixin radio-button(text, checked)
-  .radio-buttons__button
-    label.radio-buttons__label 
-      input.radio-buttons__input(type="radio" name="gender" checked=checked) 
-      |#{text}
-
 mixin radio-buttons()
   .radio-buttons 
-    +radio-button('Мужчина', true)
-    +radio-button('Женщина', false)
+    .radio-buttons__button
+      label.radio-buttons__label 
+        input.radio-buttons__input(type="radio" name="gender" checked) 
+        |Мужчина
+    .radio-buttons__button
+      label.radio-buttons__label 
+        input.radio-buttons__input(type="radio" name="gender") 
+        |Женщина

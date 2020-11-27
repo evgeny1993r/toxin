@@ -1,11 +1,7 @@
-mixin marker(text)
-  li.bullet-list__item 
-    .bullet-list__circle 
-    span.bullet-list__text #{text}
-
-mixin bullet-list()
+mixin bullet-list(data)
   .bullet-list 
     ul.bullet-list__item-list 
-      +marker('Нельзя с питомцами')
-      +marker('Без вечеринок и мероприятий')
-      +marker('Время прибытия — после 13:00, а выезд до 12:00')
+    each val in data
+      li.bullet-list__item 
+        .bullet-list__circle 
+        span.bullet-list__text #{val}

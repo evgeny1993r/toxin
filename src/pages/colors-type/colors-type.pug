@@ -1,4 +1,4 @@
-include ../../components/logotip/logotip.pug
+include ../../components/company-logo/company-logo.pug
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -8,36 +8,57 @@ html(lang="ru")
     link(rel="icon" href="../src/images/logotip-gray.svg")
     title Colors & Type
   body
-    mixin colorsItem(color, opacity, textOne, textTwo)
-      li.colors-type__colors-item
-        .colors-type__colors-color(style={background: color, opacity: opacity})
-        .colors-type__colors-texts
-          span.colors-type__colors-text-title #{textOne} 
-          span.colors-type__colors-text-text #{textTwo}
-
     .colors-type
-      +logotip('gray')
+      +company-logo()
       .colors-type__content 
         .colors-type__colors
           ul.colors-type__colors-item-list
-            +colorsItem('#1F2041', '', 'Dark Shade 100%', '#1F2041')
-            +colorsItem('#1F2041', '0.75', 'Dark Shade 75% ', '#1F2041')
-            +colorsItem('#1F2041', '0.5', 'Dark Shade 50% ', '#1F2041')
-            +colorsItem('#1F2041', '0.25', 'Dark Shade 25%', '#1F2041')
-            +colorsItem('#1F2041', '0.05', 'Dark Shade 5%', '#1F2041')
-            +colorsItem('#BC9CFF', '', 'Purple', '#BC9CFF')
-            +colorsItem('#6FCF97', '', 'Green', '#6FCF97')
+            li.colors-type__colors-item
+              .colors-type__colors-color(style={ background: '#1F2041' })
+              .colors-type__colors-texts
+                span.colors-type__colors-text-title Dark Shade 100% 
+                span.colors-type__colors-text-text #1F2041
+            li.colors-type__colors-item
+              .colors-type__colors-color(style={ background: '#1F2041', opacity: 0.75 })
+              .colors-type__colors-texts
+                span.colors-type__colors-text-title Dark Shade 75% 
+                span.colors-type__colors-text-text #1F2041
+            li.colors-type__colors-item
+              .colors-type__colors-color(style={ background: '#1F2041', opacity: 0.5 })
+              .colors-type__colors-texts
+                span.colors-type__colors-text-title Dark Shade 50% 
+                span.colors-type__colors-text-text #1F2041
+            li.colors-type__colors-item
+              .colors-type__colors-color(style={ background: '#1F2041', opacity: 0.25 })
+              .colors-type__colors-texts
+                span.colors-type__colors-text-title Dark Shade 25% 
+                span.colors-type__colors-text-text #1F2041
+            li.colors-type__colors-item
+              .colors-type__colors-color(style={ background: '#1F2041', opacity: 0.05 })
+              .colors-type__colors-texts
+                span.colors-type__colors-text-title Dark Shade 5% 
+                span.colors-type__colors-text-text #1F2041
+            li.colors-type__colors-item
+              .colors-type__colors-color(style={ background: '#BC9CFF' })
+              .colors-type__colors-texts
+                span.colors-type__colors-text-title Purple 
+                span.colors-type__colors-text-text #BC9CFF
+            li.colors-type__colors-item
+              .colors-type__colors-color(style={ background: '#6FCF97' })
+              .colors-type__colors-texts
+                span.colors-type__colors-text-title Green
+                span.colors-type__colors-text-text #6FCF97
         .colors-type__type
           ul.colors-type__type-item-list
             li.colors-type__type-item
-              h1.colors-type__type-h1-name H1
-              h1.colors-type__type-h1-text This one is the sub-section or widget title
+              h1.colors-type__type-title.colors-type__type-title_size_big H1
+              h1.colors-type__type-text.colors-type__type-text_size_big.colors-type__type-text_color_dark-100 This one is the sub-section or widget title
             li.colors-type__type-item
-              h2.colors-type__type-h2-name H2
-              h2.colors-type__type-h2-text Next one is the item title inside widgets
+              h2.colors-type__type-title.colors-type__type-title_size_medium H2
+              h2.colors-type__type-text.colors-type__type-text_size_medium.colors-type__type-text_color_dark-100 Next one is the item title inside widgets
             li.colors-type__type-item
-              h3.colors-type__type-h3-name H3
-              h3.colors-type__type-h3-text This is a label or CTA text
+              h3.colors-type__type-title.colors-type__type-title_size_very-small H3
+              h3.colors-type__type-text.colors-type__type-text_size_very-small.colors-type__type-text_transform_uppercase.colors-type__type-text_color_dark-100 This is a label or CTA text
             li.colors-type__type-item
-              p.colors-type__type-body-name Body 
-              p.colors-type__type-body-text This is the body text which is used for most of the design, like paragraphs, lists, etc
+              p.colors-type__type-title.colors-type__type-title_size_small Body 
+              p.colors-type__type-text.colors-type__type-text_size_small.colors-type__type-text_color_dark-75 This is the body text which is used for most of the design, like paragraphs, lists, etc
