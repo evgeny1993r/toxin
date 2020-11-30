@@ -49,6 +49,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.pug',
       filename: 'index.html',
+      favicon: './src/images/favicon.svg',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/colors-type/colors-type.pug',
