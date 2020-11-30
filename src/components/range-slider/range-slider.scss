@@ -1,0 +1,47 @@
+@import '../../styles/virables.scss';
+
+.range-slider {
+  display: grid;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-align: right;
+    text-transform: uppercase;
+    color: $Dark-50;
+    background: none;
+    border: none;
+  }
+
+  &__slider {
+    margin-top: 1rem;
+  }
+
+  &__text {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    color: $Dark-50;
+    margin-top: 0.75rem;
+  }
+}

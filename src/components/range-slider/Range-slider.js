@@ -6,7 +6,7 @@ class RangeSlider {
     this.$rangeSlider.slider({
       maxValue: 15000,
       currentValue: [5000, 10000],
-      $inputElement: $('.js-range-slider-input'),
+      $inputElement: $('.js-range-slider__input'),
       symbol: '₽',
     });
   }

@@ -68,11 +68,6 @@
     row-gap: 1rem;
   }
 
-  &__range-slider-titles {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-  }
-
   &__filter-date-dropdown-title,
   &__dropdown-guests-title,
   &__range-slider-title,
@@ -86,34 +81,6 @@
     line-height: 0.9375rem;
     text-transform: uppercase;
     color: $Dark-100;
-  }
-
-  &__range-slider-input {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
-    text-transform: uppercase;
-    color: $Dark-50;
-    text-align: right;
-    background: none;
-    border: none;
-    justify-self: end;
-    letter-spacing: 0.019rem;
-  }
-
-  &__range-slider {
-    margin: 1rem 0 0.5rem 0;
-  }
-
-  &__range-slider-text {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.75rem;
-    line-height: 0.875rem;
-    color: $Dark-50;
   }
 
   &__title {

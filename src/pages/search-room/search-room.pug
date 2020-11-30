@@ -1,7 +1,10 @@
 include ../../components/header/header.pug 
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug 
+include ../../components/dropdown-guests/dropdown-guests.pug 
+include ../../components/range-slider/range-slider.pug 
 include ../../components/checkbox-buttons/checkbox-buttons.pug
 include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+include ../../components/dropdown-number/dropdown-number.pug 
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/pagination/pagination.pug
 include ../../components/footer/footer.pug
@@ -23,13 +26,9 @@ html(lang="ru")
             +filter-date-dropdown('20 October, 2020', '25 October, 2020')
           .search-room__container-dropdown-guests
             h3.search-room__dropdown-guests-title гости 
-            .js-dropdown-guests(data-adults="2", data-children="0", data-babies="1")  
-          .search-room__container-range-slider
-            .search-room__range-slider-titles 
-              h3.search-room__range-slider-title диапазон цены
-              input.search-room__range-slider-input.js-range-slider-input(type="text")
-            .search-room__range-slider.js-range-slider
-            span.search-room__range-slider-text Стоимость за сутки пребывания в номере
+            +dropdownGuests(2, 0, 1) 
+          .search-room__container-range-slider 
+            +range-slider('диапазон цены', 'Стоимость за сутки пребывания в номере')
           .search-room__container-checkbox-buttons
             h3.search-room__checkbox-buttons-title checkbox buttons
             +checkbox-buttons([
@@ -45,7 +44,7 @@ html(lang="ru")
             ])
           .search-room__container-dropdown-number
             h3.search-room__dropdown-number-title удобства номера 
-            .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0") 
+            +dropdownNumber(2, 2, 0) 
           .search-room__container-expandable-checkbox-list
           +expandable-checkbox-list('дополнительные удобства', [
             { value: 'Завтрак', checked: false },

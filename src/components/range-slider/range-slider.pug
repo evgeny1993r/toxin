@@ -1,7 +1,8 @@
-mixin range-slider()
+mixin range-slider(title, text= '')
   .range-slider 
     .range-slider__container
-      h3.range-slider__title Диапазон цены
-      span.range-slider__value 5 000₽ - 10 000₽
-    input(type="hidden").range-slider__input
-    span.range-slider__text Стоимость за сутки пребывания в номере
+      h3.range-slider__title #{title}
+      input(type="text").range-slider__input.js-range-slider__input
+    .range-slider__slider.js-range-slider__slider 
+    if text != ''
+      span.range-slider__text #{text}

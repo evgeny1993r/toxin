@@ -1,3 +1,4 @@
+include ../dropdown-guests/dropdown-guests.pug
 include ../date-dropdown/date-dropdown.pug 
 include ../button/button.pug 
 
@@ -18,7 +19,7 @@ mixin verification-form({ price, discount, collecting, numberValue, numberState,
       +date-dropdown('true', oneDate, twoDate, 'false')
     .verification-form__dropdown-guests-container 
       h3.verification-form__dropdown-guests-title гости
-      .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
+      +dropdownGuests(0, 0, 0) 
     .verification-form__data
       p.verification-form__price
         span.verification-form__price-text.js-verification-form__price-text

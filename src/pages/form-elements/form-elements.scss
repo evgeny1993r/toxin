@@ -148,20 +148,6 @@
     color: $Dark-50;
   }
 
-  &__container-range-slider 
-  &__range-slider-input {
-    border: none;
-    background: #ffffff;
-    text-align: right;
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
-    text-transform: uppercase;
-    color: $Dark-50;
-  }
-
   &__toggle-item-list {
     display: grid;
     row-gap: 0.625rem;

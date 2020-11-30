@@ -1,5 +1,6 @@
 include ../../components/company-logo/company-logo.pug
-include ../../components/text-field/text-field.pug  
+include ../../components/text-field/text-field.pug
+include ../../components/dropdown-guests/dropdown-guests.pug 
 include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/date-dropdown/date-dropdown.pug 
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
@@ -9,7 +10,9 @@ include ../../components/radio-buttons/radio-buttons.pug
 include ../../components/toggle/toggle.pug
 include ../../components/like-button/like-button.pug 
 include ../../components/rate-button/rate-button.pug 
+include ../../components/range-slider/range-slider.pug
 include ../../components/button/button.pug
+include ../../components/dropdown-number/dropdown-number.pug  
 include ../../components/pagination/pagination.pug 
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
 include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
@@ -40,7 +43,7 @@ html(lang="ru")
                 .form-elements__titles 
                   h3.form-elements__title dropdown 
                   h3.form-elements__state-name default
-                .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
+                +dropdownGuests(0, 0, 0) 
               
               .form-elements__container-masked-text-field
                 .form-elements__titles
@@ -95,10 +98,7 @@ html(lang="ru")
 
             .form-elements__column 
               .form-elements__container-range-slider
-                .form-elements__titles 
-                  h3.form-elements__title range slider
-                  input.form-elements__range-slider-input.js-range-slider-input(type="text")
-                .js-range-slider
+                +range-slider('range slider')
 
               .form-elements__container-buttons
                 h3.form-elements__title buttons  
@@ -120,13 +120,13 @@ html(lang="ru")
               .form-elements__titles
                 h3.form-elements__title dropdown
                 h3.form-elements__state-name default
-              .js-dropdown-number(data-bedrooms="2", data-beds="2", data-bathrooms="0")
+              +dropdownNumber(2, 2, 0)
             .form-elements__container-dropdown-guests
               h3.form-elements__title dropdown 
-              .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
+              +dropdownGuests(0, 0, 0)
             .form-elements__container-dropdown-guests
               h3.form-elements__title dropdown
-              .js-dropdown-guests(data-adults="2", data-children="1", data-babies="0") 
+              +dropdownGuests(2, 1, 0) 
 
           section.form-elements__component-list
             +expandable-checkbox-list('expandable checkbox list', [

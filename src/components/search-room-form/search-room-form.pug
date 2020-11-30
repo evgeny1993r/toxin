@@ -1,3 +1,4 @@
+include ../dropdown-guests/dropdown-guests.pug 
 include ../date-dropdown/date-dropdown.pug
 include ../button/button.pug 
 
@@ -10,6 +11,6 @@ mixin search-room-form(oneDate='', twoDate='')
     .search-room-form__container-date-dropdown 
       +date-dropdown(true, oneDate, twoDate, 'false')
     h3.search-room-form__dropdown-guests-title гости
-    .js-dropdown-guests(data-adults="0", data-children="0", data-babies="0") 
+    +dropdownGuests(0, 0, 0) 
     .search-room-form__container-button
       +button('btn_size_big btn_color_white', 'Подобрать номер')
