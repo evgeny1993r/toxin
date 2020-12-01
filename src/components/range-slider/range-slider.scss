@@ -5,7 +5,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: max-content 7.5rem;
     justify-content: space-between;
   }
 
@@ -16,6 +16,7 @@
     font-size: 0.75rem;
     line-height: 0.9375rem;
     text-transform: uppercase;
+    white-space: nowrap;
   }
 
   &__input {

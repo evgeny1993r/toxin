@@ -15,6 +15,7 @@
     display: grid;
     grid-template-columns: 2.75rem 11.375rem 2.75rem;
     overflow: hidden;
+    border-radius: 0.25rem 0.25rem 0 0;
   }
 
   &__images {
@@ -23,6 +24,7 @@
     display: grid;
     grid-template-columns: repeat(4, 16.875rem);
     transition: 1s;
+    border-radius: 0.25rem 0.25rem 0 0;
   }
 
   &__image {
