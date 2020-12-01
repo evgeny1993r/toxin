@@ -16,7 +16,7 @@ mixin verification-form({ price, discount, collecting, numberValue, numberState,
       .verification-form__date-dropdown-titles 
         h3.verification-form__date-dropdown-title-entry прибытие 
         h3.verification-form__date-dropdown-title-output выезд
-      +date-dropdown('true', oneDate, twoDate, 'false')
+      +date-dropdown(oneDate, twoDate)
     .verification-form__dropdown-guests-container 
       h3.verification-form__dropdown-guests-title гости
       +dropdownGuests(0, 0, 0) 

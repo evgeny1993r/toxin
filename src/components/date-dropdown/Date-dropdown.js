@@ -1,10 +1,10 @@
-import $ from 'jquery';
 import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.min.css';
 
 class DateDropdown {
   constructor(dateDropdownDatepicker) {
     this.$dateDropdownDatepicker = $(dateDropdownDatepicker);
+    this.$dateDropdown = this.$dateDropdownDatepicker.parents('.js-date-dropdown');
     this.oneDate = this.$dateDropdownDatepicker.data('one-date');
     this.twoDate = this.$dateDropdownDatepicker.data('two-date');
     this.$entry = this.$dateDropdownDatepicker
@@ -18,6 +18,8 @@ class DateDropdown {
     this.isShowDatepicker = false;
 
     this.init();
+
+    this.$dateDropdownItems = this.$dateDropdown.find('*');
 
     this.onSelectDates();
 
@@ -54,31 +56,22 @@ class DateDropdown {
       },
       nextHtml: `
         <svg class="datepicker--next-html" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
+          <path class="datepicker--next-html" d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
         </svg>
       `,
       prevHtml: `
         <svg class="datepicker--prev-html" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z" fill="#BC9CFF"/>
+          <path class="datepicker--prev-html" d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z" fill="#BC9CFF"/>
         </svg>
       `,
       clearButton: true,
       range: true,
-      minDate: new Date(),
       onSelect: (fd, date) => this.onSelect(fd, date),
     });
 
     this.addButtonApply();
 
-    if (this.dateDropdownDatepickerIsShow) {
-      this.$dateDropdownDatepicker.css({
-        position: 'relative',
-        'margin-top': '0',
-      });
-    } else {
-      this.$dateDropdownDatepicker.hide();
-      this.isShowDatepicker = false;
-    }
+    this.$dateDropdownDatepicker.hide();
   }
 
   addButtonApply() {
@@ -122,11 +115,17 @@ class DateDropdown {
   }
 
   onClickDocument(e) {
-    if (this.dateDropdownDatepickerIsShow) return;
-    if ($(e.target).attr('class') === undefined) {
-      this.$dateDropdownDatepicker.hide();
-      this.isShowDatepicker = false;
-    } else if ($(e.target).attr('class') !== undefined && $(`.${$(e.target).attr('class').split(' ')[0]}`).parents('.js-date-dropdown').length === 0) {
+    const classes = [];
+
+    this.$dateDropdownItems.each((_, el) => {
+      if ($(el).attr('class') !== undefined) {
+        if ($.inArray($(el).attr('class').split(' ')[0], classes) < 0) {
+          classes.push($(el).attr('class').split(' ')[0]);
+        }
+      }
+    });
+
+    if ($.inArray($(e.target).attr('class').split(' ')[0], classes) < 0) {
       this.$dateDropdownDatepicker.hide();
       this.isShowDatepicker = false;
     }

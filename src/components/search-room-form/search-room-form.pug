@@ -9,7 +9,7 @@ mixin search-room-form(oneDate='', twoDate='')
       h3.search-room-form__date-dropdown-title прибытие
       h3.search-room-form__date-dropdown-title выезд 
     .search-room-form__container-date-dropdown 
-      +date-dropdown(true, oneDate, twoDate, 'false')
+      +date-dropdown(oneDate, twoDate)
     h3.search-room-form__dropdown-guests-title гости
     +dropdownGuests(0, 0, 0) 
     .search-room-form__container-button

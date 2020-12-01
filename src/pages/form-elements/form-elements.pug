@@ -55,12 +55,12 @@ html(lang="ru")
               .form-elements__container-date-dropdown
                 .form-elements__titles 
                   h3.form-elements__title date dropdown 
-                  h3.form-elements__title date dropdown 
-                +date-dropdown(true, '20 January, 2020', '', true)
+                  h3.form-elements__title date dropdown
+                +date-dropdown('20 October, 2020', '')
 
               .form-elements__container-filter-date-dropdown
                 h3.form-elements__title filter date dropdown 
-                +filter-date-dropdown('20 January, 2020', '25 January, 2020') 
+                +filter-date-dropdown('20 October, 2020', '25 October, 2020') 
 
               .form-elements__container-subscription-text-field
                 h3.form-elements__title subscription text field 
@@ -105,9 +105,9 @@ html(lang="ru")
                 h3.form-elements__title buttons  
                 .form-elements__buttons-item-list
                   +button('btn_background_purple btn_color_white', 'click me')
-                  +button('btn_background_purple btn_color_white btn_transporent', 'click me')
+                  +button('btn_background_purple btn_color_white btn_transparent', 'click me')
                   +button('btn_background_white btn_color_purple', 'click me')
-                  +button('btn_background_white btn_color_purple btn_transporent', 'click me')
+                  +button('btn_background_white btn_color_purple btn_transparent', 'click me')
                   +button('btn_background_none btn_color_purple', 'click me')
                   +button('btn_background_none btn_color_gray', 'click me')
                   +button('btn_size_big btn_color_white', 'Перейти к оплате')
@@ -164,8 +164,7 @@ html(lang="ru")
                 'active', 
                 '12', 
                 ` 
-                    Великолепный матрас на кровати в основной спальне! 
-                    А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
-                    Выкрикивал комплименты повару — никто не жаловался из соседей.
-                `
-              )
+                  Великолепный матрас на кровати в основной спальне! 
+                  А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+                  Выкрикивал комплименты повару — никто не жаловался из соседей.
+                `)
