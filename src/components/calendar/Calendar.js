@@ -1,15 +1,18 @@
 import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.min.css';
 
-class Datepicker {
-  constructor(dateDropdownDatepicker) {
-    this.$dateDropdownDatepicker = $(dateDropdownDatepicker);
+class Calendar {
+  constructor(calendar) {
+    this.$calendar = $(calendar);
+    this.oneDate = this.$calendar.data('one-date');
+    this.twoDate = this.$calendar.data('two-date');
     this.init();
     this.addButtonApply();
+    this.selectedDates();
   }
 
   init() {
-    this.$dateDropdownDatepicker.datepicker({
+    this.$calendar.datepicker({
       navTitles: {
         days: 'MM <i>yyyy</i>',
       },
@@ -29,20 +32,27 @@ class Datepicker {
   }
 
   addButtonApply() {
-    this.$datepickerButtons = this.$dateDropdownDatepicker.find('.datepicker--buttons');
+    this.$datepickerButtons = this.$calendar.find('.datepicker--buttons');
     this.$datepickerButtons.append(
       $('<span>', {
         class: 'datepicker--button js-datepicker__apply',
         text: 'Применить',
         'data-action': 'hide',
         click: () => {
-          this.$dateDropdownDatepicker.hide();
+          this.$datepicker.hide();
         },
       }),
     );
   }
+
+  selectedDates() {
+    this.$calendar.data('datepicker').selectDate([
+      new Date(this.oneDate),
+      new Date(this.twoDate),
+    ]);
+  }
 }
 
 export {
-  Datepicker,
+  Calendar,
 };

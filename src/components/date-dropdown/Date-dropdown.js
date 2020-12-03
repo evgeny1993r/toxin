@@ -2,18 +2,14 @@ import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.min.css';
 
 class DateDropdown {
-  constructor(dateDropdownDatepicker) {
-    this.$dateDropdownDatepicker = $(dateDropdownDatepicker);
-    this.$dateDropdown = this.$dateDropdownDatepicker.parents('.js-date-dropdown');
+  constructor(dateDropdown) {
+    this.$dateDropdown = $(dateDropdown);
+    this.$dateDropdownDatepicker = this.$dateDropdown.find('.js-date-dropdown__datepicker');
     this.oneDate = this.$dateDropdownDatepicker.data('one-date');
     this.twoDate = this.$dateDropdownDatepicker.data('two-date');
-    this.$entry = this.$dateDropdownDatepicker
-      .parent('.js-date-dropdown')
-      .find('.js-date-dropdown__entry');
+    this.$entry = this.$dateDropdown.find('.js-date-dropdown__entry');
     this.$entryInput = this.$entry.children('.js-date-dropdown__input-entry');
-    this.$checkOut = this.$dateDropdownDatepicker
-      .parent('.js-date-dropdown')
-      .find('.js-date-dropdown__check-out');
+    this.$checkOut = this.$dateDropdown.find('.js-date-dropdown__check-out');
     this.$checkOutInput = this.$checkOut.children('.js-date-dropdown__input-check-out');
     this.isShowDatepicker = false;
 

@@ -3,7 +3,7 @@ include ../../components/search-room-form/search-room-form.pug
 include ../../components/registration-form/registration-form.pug
 include ../../components/verification-form/verification-form.pug 
 include ../../components/authorization-form/authorization-form.pug
-include ../../components/date-dropdown-datepicker/date-dropdown-datepicker.pug 
+include ../../components/calendar/calendar.pug 
 include ../../components/room/room.pug 
 
 <!DOCTYPE html>
@@ -34,8 +34,11 @@ html(lang="ru")
           })
           +authorization-form()
         .cards__container
-          .cards__container-date-dropdown-datepicker
-            +date-dropdown-datepicker()
+          .cards__container-calendar
+            +calendar({
+              oneDate: '20 October, 2020', 
+              twoDate: '24 October, 2020'
+            })
           +room({ 
             roomImgName: 'room-one.jpg',
             roomNumber: '888',
