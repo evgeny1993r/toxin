@@ -28,15 +28,11 @@
     }
 
     @media(max-width: 768px) {
-      padding: 4.375rem 5%;
+      padding: 4.375rem 5% 0 5%;
     }
 
     @media(max-width: 540px) {
-      padding: 4.375rem 3%;
-    }
-
-    @media(max-width: 480px) {
-      padding: 4.375rem 0;
+      padding: 4.375rem 3% 0 3%;
       display: grid;
       justify-content: center;
     }
@@ -53,6 +49,16 @@
     width: 18.75rem;
     justify-self: end;
     align-self: end;
-    margin: 0 8.438rem 1.25rem 0;
+    margin: 0 0 1.25rem 0;
+
+    @media(max-width: 768px) {
+      margin: 1.25rem 0;
+    }
+
+    @media(max-width: 540px) {
+      text-align: center;
+      justify-self: center;
+    }
   }
+
 }
