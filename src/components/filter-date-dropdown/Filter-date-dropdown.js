@@ -4,14 +4,20 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class FilterDateDropdown {
   constructor(filterDateDropdown) {
     this.$filterDateDropdown = $(filterDateDropdown);
-    this.oneDate = this.$filterDateDropdown.data('one-date');
-    this.twoDate = this.$filterDateDropdown.data('two-date');
-    this.$filterDateDropdownInput = this.$filterDateDropdown.siblings('.js-filter-date-dropdown__input');
+    this.$filterDateDropdownInput = this.$filterDateDropdown.find('.js-filter-date-dropdown__input');
+    this.$filterDateDropdownDatepicker = this.$filterDateDropdown.find('.js-filter-date-dropdown__datepicker');
+    this.oneDate = this.$filterDateDropdownDatepicker.data('one-date');
+    this.twoDate = this.$filterDateDropdownDatepicker.data('two-date');
     this.icon = '<span class="filter-date-dropdown__icon-expand-more icon-expand_more"></span>';
     this.isShowDatepicker = false;
+
     this.init();
+
     this.addButtonApply();
-    this.$filterDateDropdown.hide();
+
+    this.$filterDateDropdownItems = this.$filterDateDropdown.find('*');
+
+    this.$filterDateDropdownDatepicker.hide();
 
     this.$filterDateDropdownInput.on('click', () => {
       this.handleFilterDateDropdownClick();
@@ -23,19 +29,19 @@ class FilterDateDropdown {
   }
 
   init() {
-    this.$filterDateDropdown.datepicker({
+    this.$filterDateDropdownDatepicker.datepicker({
       classes: 'datepicker-filter-date-dropdown',
       navTitles: {
         days: 'MM <i>yyyy</i>',
       },
       nextHtml: `
-        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
+        <svg class="datepicker--next-html" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="datepicker--next-html" d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
         </svg>
       `,
       prevHtml: `
-        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z" fill="#BC9CFF"/>
+        <svg class="datepicker--prev-html" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="datepicker--prev-html" d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z" fill="#BC9CFF"/>
         </svg>
       `,
       offset: 7,
@@ -59,7 +65,7 @@ class FilterDateDropdown {
   }
 
   addButtonApply() {
-    this.$datepickerButtons = this.$filterDateDropdown.find('.datepicker--buttons');
+    this.$datepickerButtons = this.$filterDateDropdownDatepicker.find('.datepicker--buttons');
     this.buttonApply = $('<span>', {
       class: 'datepicker--button',
       text: 'Применить',
@@ -76,25 +82,34 @@ class FilterDateDropdown {
 
   handleFilterDateDropdownClick() {
     if (this.isShowDatepicker) {
-      this.$filterDateDropdown.hide();
+      this.$filterDateDropdownDatepicker.hide();
       this.isShowDatepicker = false;
     } else {
-      this.$filterDateDropdown.show();
+      this.$filterDateDropdownDatepicker.show();
       this.isShowDatepicker = true;
     }
   }
 
   handleButtonApplyClick() {
-    this.$filterDateDropdown.hide();
+    this.$filterDateDropdownDatepicker.hide();
     this.isShowDatepicker = false;
   }
 
   handleDocumentClick(e) {
-    if ($(e.target).attr('class') === undefined) {
-      this.$filterDateDropdown.hide();
-      this.isShowDatepicker = false;
-    } else if ($(e.target).attr('class') !== undefined && $(`.${$(e.target).attr('class').split(' ')[0]}`).parents('.filter-date-dropdown').length === 0) {
-      this.$filterDateDropdown.hide();
+    const classes = [];
+
+    function isElementInArray(el) {
+      return $(el).attr('class') !== undefined && $.inArray($(el).attr('class').split(' ')[0], classes) < 0;
+    }
+
+    this.$filterDateDropdownItems.each((_, el) => {
+      if (isElementInArray(el)) {
+        classes.push($(el).attr('class').split(' ')[0]);
+      }
+    });
+
+    if ($.inArray($(e.target).attr('class').split(' ')[0], classes) < 0) {
+      this.$filterDateDropdownDatepicker.hide();
       this.isShowDatepicker = false;
     }
   }

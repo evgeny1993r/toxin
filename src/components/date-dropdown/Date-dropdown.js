@@ -15,6 +15,8 @@ class DateDropdown {
 
     this.init();
 
+    this.$dateDropdownDatepicker.hide();
+
     this.addButtonApply();
 
     this.$dateDropdownItems = this.$dateDropdown.find('*');
@@ -54,8 +56,6 @@ class DateDropdown {
       range: true,
       onSelect: (fd, date) => this.onSelect(fd, date),
     });
-
-    this.$dateDropdownDatepicker.hide();
   }
 
   addButtonApply() {
@@ -87,9 +87,17 @@ class DateDropdown {
   }
 
   onSelectDates() {
-    if (this.oneDate !== '' && this.twoDate === '') {
+    function isSelectDate(oneDate, twoDate) {
+      return oneDate !== '' && twoDate === '';
+    }
+
+    function isSelectDates(oneDate, twoDate) {
+      return oneDate !== '' && twoDate !== '';
+    }
+
+    if (isSelectDate(this.oneDate, this.twoDate)) {
       this.$dateDropdownDatepicker.data('datepicker').selectDate(new Date(this.oneDate));
-    } else if (this.oneDate !== '' && this.twoDate !== '') {
+    } else if (isSelectDates(this.oneDate, this.twoDate)) {
       this.$dateDropdownDatepicker.data('datepicker').selectDate([
         new Date(this.oneDate),
         new Date(this.twoDate),
@@ -125,11 +133,13 @@ class DateDropdown {
   handleDocumentClick(e) {
     const classes = [];
 
+    function isElementInArray(el) {
+      return $(el).attr('class') !== undefined && $.inArray($(el).attr('class').split(' ')[0], classes) < 0;
+    }
+
     this.$dateDropdownItems.each((_, el) => {
-      if ($(el).attr('class') !== undefined) {
-        if ($.inArray($(el).attr('class').split(' ')[0], classes) < 0) {
-          classes.push($(el).attr('class').split(' ')[0]);
-        }
+      if (isElementInArray(el)) {
+        classes.push($(el).attr('class').split(' ')[0]);
       }
     });
 
