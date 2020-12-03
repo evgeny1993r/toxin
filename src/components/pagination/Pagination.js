@@ -4,14 +4,14 @@ class Pagination {
   constructor(pagination) {
     this.$pagination = $(pagination);
     this.$paginationContainerItems = this.$pagination.children('.js-pagination__container-items');
-    this.$paginationConatainer = this.$pagination.children('.js-pagination__container');
+    this.$paginationContainer = this.$pagination.children('.js-pagination__container');
     this.items = this.$paginationContainerItems.children();
     this.classNameItem = this.items.attr('class');
     this.init();
   }
 
   init() {
-    this.$paginationConatainer.pagination({
+    this.$paginationContainer.pagination({
       dataSource: this.createSource(),
       pageSize: 12,
       showPrevious: false,
@@ -19,7 +19,7 @@ class Pagination {
       pageRange: 1,
       showNavigator: true,
       formatNavigator: '<span>1 - 12 из 100+ вариантов аренды</span>',
-      callback: (data) => { this.callback(data) },
+      callback: (data) => this.callback(data),
     });
   }
 

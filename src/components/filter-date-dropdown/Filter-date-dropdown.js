@@ -10,18 +10,16 @@ class FilterDateDropdown {
     this.icon = '<span class="filter-date-dropdown__icon-expand-more icon-expand_more"></span>';
     this.isShowDatepicker = false;
     this.init();
+    this.addButtonApply();
+    this.$filterDateDropdown.hide();
 
     this.$filterDateDropdownInput.on('click', () => {
-      if (this.isShowDatepicker) {
-        this.$filterDateDropdown.hide();
-        this.isShowDatepicker = false;
-      } else {
-        this.$filterDateDropdown.show();
-        this.isShowDatepicker = true;
-      }
+      this.handleFilterDateDropdownClick();
     });
 
-    $(document).on('click', (e) => this.onClickDocument(e));
+    $(document).on('click', (e) => {
+      this.handleDocumentClick(e);
+    });
   }
 
   init() {
@@ -46,9 +44,10 @@ class FilterDateDropdown {
       dateFormat: 'd M',
       multipleDatesSeparator: ' - ',
       onSelect: (fd) => this.onSelect(fd),
-    }).data('datepicker').selectDate([new Date(this.oneDate), new Date(this.twoDate)]);
-    this.$filterDateDropdown.hide();
-    this.addButtonApply();
+    }).data('datepicker').selectDate([
+      new Date(this.oneDate),
+      new Date(this.twoDate),
+    ]);
   }
 
   onSelect(fd) {
@@ -67,15 +66,30 @@ class FilterDateDropdown {
       'data-action': 'hide',
       on: {
         click: () => {
-          this.$filterDateDropdown.hide();
-          this.isShowDatepicker = false;
+          this.handleButtonApplyClick();
         },
       },
     });
+
     this.$datepickerButtons.append(this.buttonApply);
   }
 
-  onClickDocument(e) {
+  handleFilterDateDropdownClick() {
+    if (this.isShowDatepicker) {
+      this.$filterDateDropdown.hide();
+      this.isShowDatepicker = false;
+    } else {
+      this.$filterDateDropdown.show();
+      this.isShowDatepicker = true;
+    }
+  }
+
+  handleButtonApplyClick() {
+    this.$filterDateDropdown.hide();
+    this.isShowDatepicker = false;
+  }
+
+  handleDocumentClick(e) {
     if ($(e.target).attr('class') === undefined) {
       this.$filterDateDropdown.hide();
       this.isShowDatepicker = false;

@@ -31,6 +31,13 @@ class Calendar {
     });
   }
 
+  selectedDates() {
+    this.$calendar.data('datepicker').selectDate([
+      new Date(this.oneDate),
+      new Date(this.twoDate),
+    ]);
+  }
+
   addButtonApply() {
     this.$datepickerButtons = this.$calendar.find('.datepicker--buttons');
     this.$datepickerButtons.append(
@@ -39,17 +46,14 @@ class Calendar {
         text: 'Применить',
         'data-action': 'hide',
         click: () => {
-          this.$datepicker.hide();
+          this.handleButtonApplyClick();
         },
       }),
     );
   }
 
-  selectedDates() {
-    this.$calendar.data('datepicker').selectDate([
-      new Date(this.oneDate),
-      new Date(this.twoDate),
-    ]);
+  handleButtonApplyClick() {
+    this.$datepicker.hide();
   }
 }
 

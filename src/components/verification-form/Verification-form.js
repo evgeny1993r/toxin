@@ -14,10 +14,11 @@ class VerificationForm {
     this.$collectingPrice = this.$verificationForm.find('.js-verification-form__collecting-price');
     this.$totalPrice = this.$verificationForm.find('.js-verification-form__total-price');
     this.$dateDropdownBtnApply = this.$verificationForm.find('.js-datepicker__apply');
+
     this.$dateDropdownBtnApply.on('click', () => {
-      this.createStringPrice();
-      this.createStringTotal();
+      this.handleButtonApply();
     });
+
     this.createStringPrice();
     this.createStringDiscount();
     this.createStringCollection();
@@ -57,6 +58,11 @@ class VerificationForm {
 
   createStringTotal() {
     this.$totalPrice.text(`${this.createTextPrice(((this.$dateDropdownCheckOutInput.data('date') - this.$dateDropdownEntryInput.data('date')) / 86400000) * this.price - this.discount + this.collecting)}₽`);
+  }
+
+  handleButtonApply() {
+    this.createStringPrice();
+    this.createStringTotal();
   }
 }
 

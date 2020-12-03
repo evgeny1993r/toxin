@@ -15,32 +15,22 @@ class DateDropdown {
 
     this.init();
 
+    this.addButtonApply();
+
     this.$dateDropdownItems = this.$dateDropdown.find('*');
 
     this.onSelectDates();
 
     this.$entry.on('click', () => {
-      if (this.isShowDatepicker) {
-        this.$dateDropdownDatepicker.hide();
-        this.isShowDatepicker = false;
-      } else {
-        this.$dateDropdownDatepicker.show();
-        this.isShowDatepicker = true;
-      }
+      this.handleEntryClick();
     });
 
     this.$checkOut.on('click', () => {
-      if (this.isShowDatepicker) {
-        this.$dateDropdownDatepicker.hide();
-        this.isShowDatepicker = false;
-      } else {
-        this.$dateDropdownDatepicker.show();
-        this.isShowDatepicker = true;
-      }
+      this.handleCheckOutClick();
     });
 
     $(document).on('click', (e) => {
-      this.onClickDocument(e);
+      this.handleDocumentClick(e);
     });
   }
 
@@ -65,8 +55,6 @@ class DateDropdown {
       onSelect: (fd, date) => this.onSelect(fd, date),
     });
 
-    this.addButtonApply();
-
     this.$dateDropdownDatepicker.hide();
   }
 
@@ -78,8 +66,7 @@ class DateDropdown {
         text: 'Применить',
         'data-action': 'hide',
         click: () => {
-          this.$dateDropdownDatepicker.hide();
-          this.isShowDatepicker = false;
+          this.handleButtonApplyClick();
         },
       }),
     );
@@ -110,7 +97,32 @@ class DateDropdown {
     }
   }
 
-  onClickDocument(e) {
+  handleEntryClick() {
+    if (this.isShowDatepicker) {
+      this.$dateDropdownDatepicker.hide();
+      this.isShowDatepicker = false;
+    } else {
+      this.$dateDropdownDatepicker.show();
+      this.isShowDatepicker = true;
+    }
+  }
+
+  handleCheckOutClick() {
+    if (this.isShowDatepicker) {
+      this.$dateDropdownDatepicker.hide();
+      this.isShowDatepicker = false;
+    } else {
+      this.$dateDropdownDatepicker.show();
+      this.isShowDatepicker = true;
+    }
+  }
+
+  handleButtonApplyClick() {
+    this.$dateDropdownDatepicker.hide();
+    this.isShowDatepicker = false;
+  }
+
+  handleDocumentClick(e) {
     const classes = [];
 
     this.$dateDropdownItems.each((_, el) => {

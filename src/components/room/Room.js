@@ -12,15 +12,17 @@ class Room {
     });
     this.WIDTH_$IMAGE = this.$image.width();
     this.translateValue = 0;
+
     this.$btnLeft.on('click', () => {
-      this.onBtnLeftClick();
+      this.handleBtnLeftClick();
     });
+
     this.$btnRight.on('click', () => {
-      this.onBtnRightClick();
+      this.handleBtnRightClick();
     });
   }
 
-  onBtnLeftClick() {
+  handleBtnLeftClick() {
     if (this.translateValue >= 0) return;
     this.translateValue += this.WIDTH_$IMAGE;
     this.$images.css({ transform: `translateX(${this.translateValue}px)` });
@@ -37,7 +39,7 @@ class Room {
     $(this.$circle[newIdx]).addClass('room__circle_active');
   }
 
-  onBtnRightClick() {
+  handleBtnRightClick() {
     if (this.translateValue <= this.width$images + this.WIDTH_$IMAGE) return;
     this.translateValue -= this.WIDTH_$IMAGE;
     this.$images.css({ transform: `translateX(${this.translateValue}px)` });

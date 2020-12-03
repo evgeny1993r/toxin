@@ -6,7 +6,20 @@ class MaskedTextField {
     this.$maskedTextField = $(maskedTextField);
     this.$maskedTextFieldInput = this.$maskedTextField.parent().find('.masked-text-field__input');
     this.isShowDatepicker = false;
+
     this.init();
+
+    this.addButtonApply();
+
+    this.$maskedTextField.hide();
+
+    this.$maskedTextFieldInput.on('click', () => {
+      this.handleMaskedTextFieldClick();
+    });
+
+    $(document).on('click', (e) => {
+      this.handleDocumentClick(e);
+    });
   }
 
   init() {
@@ -29,23 +42,6 @@ class MaskedTextField {
       clearButton: true,
       onSelect: (fd) => this.onSelect(fd),
     });
-
-    this.addButtonApply();
-    this.$maskedTextField.hide();
-
-    this.$maskedTextFieldInput.on('click', () => {
-      if (this.isShowDatepicker) {
-        this.$maskedTextField.hide();
-        this.isShowDatepicker = false;
-      } else {
-        this.$maskedTextField.show();
-        this.isShowDatepicker = true;
-      }
-    });
-
-    $(document).on('click', (e) => {
-      this.onClickDocument(e);
-    });
   }
 
   onSelect(fd) {
@@ -62,15 +58,29 @@ class MaskedTextField {
       text: 'Применить',
       'data-action': 'hide',
       click: () => {
-        this.$maskedTextField.hide();
-        this.isShowDatepicker = false;
+        this.addButtonApplyClick();
       },
     });
     this.$datepickerButtons = $('.datepicker-masked-text-field').find('.datepicker--buttons');
     this.$datepickerButtons.append(this.buttonApply);
   }
 
-  onClickDocument(e) {
+  handleButtonApplyClick() {
+    this.$maskedTextField.hide();
+    this.isShowDatepicker = false;
+  }
+
+  handleMaskedTextFieldClick() {
+    if (this.isShowDatepicker) {
+      this.$maskedTextField.hide();
+      this.isShowDatepicker = false;
+    } else {
+      this.$maskedTextField.show();
+      this.isShowDatepicker = true;
+    }
+  }
+
+  handleDocumentClick(e) {
     if ($(e.target).attr('class') === undefined) {
       this.$maskedTextField.hide();
       this.isShowDatepicker = false;
