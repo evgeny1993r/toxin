@@ -7,11 +7,6 @@
   grid-template-columns: repeat(2, 9.375rem);
   justify-content: space-between;
 
-  &_datepicker_show &__entry,
-  &_datepicker_show &__check-out {
-    display: none;
-  }
-
   &__entry,
   &__check-out {
     display: grid;
@@ -57,10 +52,6 @@
     content: '';
     margin-top: 3.0625rem;
     z-index: 2;
-    background: #FFFFFF;
-    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     border-radius: 0.25rem;
   }
 }
