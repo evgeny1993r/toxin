@@ -90,7 +90,11 @@ class MaskedTextField {
       }
     });
 
-    if ($.inArray($(e.target).attr('class').split(' ')[0], classes) < 0) {
+    function isClassInArray() {
+      return $.inArray($(e.target).attr('class').split(' ')[0], classes) < 0;
+    }
+
+    if (isClassInArray()) {
       this.$maskedTextFieldDatepicker.hide();
       this.isShowDatepicker = false;
     }

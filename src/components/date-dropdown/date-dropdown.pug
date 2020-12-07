@@ -1,4 +1,4 @@
-mixin date-dropdown(oneDate, twoDate)
+mixin date-dropdown(entryDate, checkOutDate)
   .date-dropdown.js-date-dropdown
     .date-dropdown__entry.js-date-dropdown__entry
       input.date-dropdown__input-entry.js-date-dropdown__input-entry(type="text" value="ДД.ММ.ГГГГ" readonly) 
@@ -6,4 +6,4 @@ mixin date-dropdown(oneDate, twoDate)
     .date-dropdown__check-out.js-date-dropdown__check-out
       input.date-dropdown__input-check-out.js-date-dropdown__input-check-out(type="text" value="ДД.ММ.ГГГГ" readonly)
       span.date-dropdown__icon-expand-more.icon-expand_more 
-    div.date-dropdown__datepicker.js-date-dropdown__datepicker(data-one-date=oneDate, data-two-date=twoDate)
+    div.date-dropdown__datepicker.js-date-dropdown__datepicker(data-entry-date= entryDate, data-check-out-date= checkOutDate)

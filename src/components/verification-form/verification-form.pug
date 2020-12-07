@@ -2,7 +2,7 @@ include ../dropdown-guests/dropdown-guests.pug
 include ../date-dropdown/date-dropdown.pug 
 include ../button/button.pug 
 
-mixin verification-form({ price, discount, collecting, numberValue, numberState, numberPrice, oneDate, twoDate })
+mixin verification-form({ price, discount, collecting, numberValue, numberState, numberPrice, entryDate, checkOutDate })
   form.verification-form(data-price=price, data-discount=discount, data-collecting=collecting)
     .verification-form__room-data
       p.verification-form__room-number
@@ -16,7 +16,7 @@ mixin verification-form({ price, discount, collecting, numberValue, numberState,
       .verification-form__date-dropdown-titles 
         h3.verification-form__date-dropdown-title-entry прибытие 
         h3.verification-form__date-dropdown-title-output выезд
-      +date-dropdown(oneDate, twoDate)
+      +date-dropdown(entryDate, checkOutDate)
     .verification-form__dropdown-guests-container 
       h3.verification-form__dropdown-guests-title гости
       +dropdownGuests(0, 0, 0) 

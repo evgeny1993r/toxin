@@ -5,8 +5,8 @@ class DateDropdown {
   constructor(dateDropdown) {
     this.$dateDropdown = $(dateDropdown);
     this.$dateDropdownDatepicker = this.$dateDropdown.find('.js-date-dropdown__datepicker');
-    this.oneDate = this.$dateDropdownDatepicker.data('one-date');
-    this.twoDate = this.$dateDropdownDatepicker.data('two-date');
+    this.entryDate = this.$dateDropdownDatepicker.data('entry-date');
+    this.checkOutDate = this.$dateDropdownDatepicker.data('check-out-date');
     this.$entry = this.$dateDropdown.find('.js-date-dropdown__entry');
     this.$entryInput = this.$entry.children('.js-date-dropdown__input-entry');
     this.$checkOut = this.$dateDropdown.find('.js-date-dropdown__check-out');
@@ -79,20 +79,20 @@ class DateDropdown {
   }
 
   onSelectDates() {
-    function isSelectDate(oneDate, twoDate) {
-      return oneDate !== '' && twoDate === '';
+    function isDateSelected(entryDate, checkOutDate) {
+      return entryDate !== '' && checkOutDate === '';
     }
 
-    function isSelectDates(oneDate, twoDate) {
-      return oneDate !== '' && twoDate !== '';
+    function isDatesSelected(entryDate, checkOutDate) {
+      return entryDate !== '' && checkOutDate !== '';
     }
 
-    if (isSelectDate(this.oneDate, this.twoDate)) {
-      this.$dateDropdownDatepicker.data('datepicker').selectDate(new Date(this.oneDate));
-    } else if (isSelectDates(this.oneDate, this.twoDate)) {
+    if (isDateSelected(this.entryDate, this.checkOutDate)) {
+      this.$dateDropdownDatepicker.data('datepicker').selectDate(new Date(this.entryDate));
+    } else if (isDatesSelected(this.entryDate, this.checkOutDate)) {
       this.$dateDropdownDatepicker.data('datepicker').selectDate([
-        new Date(this.oneDate),
-        new Date(this.twoDate),
+        new Date(this.entryDate),
+        new Date(this.checkOutDate),
       ]);
     }
   }
@@ -125,7 +125,11 @@ class DateDropdown {
       }
     });
 
-    if ($.inArray($(e.target).attr('class').split(' ')[0], classes) < 0) {
+    function isClassInArray() {
+      return $.inArray($(e.target).attr('class').split(' ')[0], classes) < 0;
+    }
+
+    if (isClassInArray()) {
       this.$dateDropdownDatepicker.hide();
       this.isShowDatepicker = false;
     }

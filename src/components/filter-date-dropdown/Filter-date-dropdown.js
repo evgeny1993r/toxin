@@ -6,8 +6,8 @@ class FilterDateDropdown {
     this.$filterDateDropdown = $(filterDateDropdown);
     this.$filterDateDropdownInput = this.$filterDateDropdown.find('.js-filter-date-dropdown__input');
     this.$filterDateDropdownDatepicker = this.$filterDateDropdown.find('.js-filter-date-dropdown__datepicker');
-    this.oneDate = this.$filterDateDropdownDatepicker.data('one-date');
-    this.twoDate = this.$filterDateDropdownDatepicker.data('two-date');
+    this.entryDate = this.$filterDateDropdownDatepicker.data('entry-date');
+    this.checkOutDate = this.$filterDateDropdownDatepicker.data('check-out-date');
     this.icon = '<span class="filter-date-dropdown__icon-expand-more icon-expand_more"></span>';
     this.isShowDatepicker = false;
 
@@ -19,13 +19,9 @@ class FilterDateDropdown {
 
     this.$filterDateDropdownDatepicker.hide();
 
-    this.$filterDateDropdownInput.on('click', () => {
-      this.handleFilterDateDropdownClick();
-    });
+    this.$filterDateDropdownInput.on('click', () => this.handleFilterDateDropdownClick());
 
-    $(document).on('click', (e) => {
-      this.handleDocumentClick(e);
-    });
+    $(document).on('click', (e) => this.handleDocumentClick(e));
   }
 
   init() {
@@ -51,8 +47,8 @@ class FilterDateDropdown {
       multipleDatesSeparator: ' - ',
       onSelect: (fd) => this.onSelect(fd),
     }).data('datepicker').selectDate([
-      new Date(this.oneDate),
-      new Date(this.twoDate),
+      new Date(this.entryDate),
+      new Date(this.checkOutDate),
     ]);
   }
 
@@ -106,7 +102,11 @@ class FilterDateDropdown {
       }
     });
 
-    if ($.inArray($(e.target).attr('class').split(' ')[0], classes) < 0) {
+    function isClassInArray() {
+      return $.inArray($(e.target).attr('class').split(' ')[0], classes) < 0;
+    }
+
+    if (isClassInArray()) {
       this.$filterDateDropdownDatepicker.hide();
       this.isShowDatepicker = false;
     }

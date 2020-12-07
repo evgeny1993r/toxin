@@ -4,8 +4,8 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class Calendar {
   constructor(calendar) {
     this.$calendar = $(calendar);
-    this.oneDate = this.$calendar.data('one-date');
-    this.twoDate = this.$calendar.data('two-date');
+    this.entryDate = this.$calendar.data('entry-date');
+    this.checkOutDate = this.$calendar.data('check-out-date');
     this.init();
     this.addButtonApply();
     this.selectedDates();
@@ -33,8 +33,8 @@ class Calendar {
 
   selectedDates() {
     this.$calendar.data('datepicker').selectDate([
-      new Date(this.oneDate),
-      new Date(this.twoDate),
+      new Date(this.entryDate),
+      new Date(this.checkOutDate),
     ]);
   }
 
