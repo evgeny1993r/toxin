@@ -3,13 +3,9 @@ class SubscriptionTextField {
     this.$subscriptionTextField = $(subscriptionTextField);
     this.$subscriptionTextFieldInput = this.$subscriptionTextField.find('.js-subscription-text-field__input');
 
-    this.$subscriptionTextFieldInput.on('focus', () => {
-      this.handleSubscriptionTextFieldFocus();
-    });
+    this.$subscriptionTextFieldInput.on('focus', () => this.handleSubscriptionTextFieldFocus());
 
-    this.$subscriptionTextFieldInput.on('blur', () => {
-      this.handleSubscriptionTextFieldBlur();
-    });
+    this.$subscriptionTextFieldInput.on('blur', () => this.handleSubscriptionTextFieldBlur());
   }
 
   handleSubscriptionTextFieldFocus() {

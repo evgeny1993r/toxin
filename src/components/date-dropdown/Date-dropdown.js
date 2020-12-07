@@ -23,17 +23,11 @@ class DateDropdown {
 
     this.onSelectDates();
 
-    this.$entry.on('click', () => {
-      this.handleEntryClick();
-    });
+    this.$entry.on('click', () => this.handleInputClick());
 
-    this.$checkOut.on('click', () => {
-      this.handleCheckOutClick();
-    });
+    this.$checkOut.on('click', () => this.handleInputClick());
 
-    $(document).on('click', (e) => {
-      this.handleDocumentClick(e);
-    });
+    $(document).on('click', (e) => this.handleDocumentClick(e));
   }
 
   init() {
@@ -65,9 +59,7 @@ class DateDropdown {
         class: 'datepicker--button js-datepicker__apply',
         text: 'Применить',
         'data-action': 'hide',
-        click: () => {
-          this.handleButtonApplyClick();
-        },
+        click: () => this.handleButtonApplyClick(),
       }),
     );
   }
@@ -105,17 +97,7 @@ class DateDropdown {
     }
   }
 
-  handleEntryClick() {
-    if (this.isShowDatepicker) {
-      this.$dateDropdownDatepicker.hide();
-      this.isShowDatepicker = false;
-    } else {
-      this.$dateDropdownDatepicker.show();
-      this.isShowDatepicker = true;
-    }
-  }
-
-  handleCheckOutClick() {
+  handleInputClick() {
     if (this.isShowDatepicker) {
       this.$dateDropdownDatepicker.hide();
       this.isShowDatepicker = false;

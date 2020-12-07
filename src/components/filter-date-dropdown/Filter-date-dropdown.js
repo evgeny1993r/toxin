@@ -71,9 +71,7 @@ class FilterDateDropdown {
       text: 'Применить',
       'data-action': 'hide',
       on: {
-        click: () => {
-          this.handleButtonApplyClick();
-        },
+        click: () => this.handleButtonApplyClick(),
       },
     });
 

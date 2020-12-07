@@ -45,9 +45,7 @@ class Calendar {
         class: 'datepicker--button js-datepicker__apply',
         text: 'Применить',
         'data-action': 'hide',
-        click: () => {
-          this.handleButtonApplyClick();
-        },
+        click: () => this.handleButtonApplyClick(),
       }),
     );
   }

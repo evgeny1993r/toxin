@@ -7,19 +7,12 @@ class ExpandableCheckboxList {
       this.handleExpandableCheckboxListClick();
     });
 
-    $(document).on('click', (e) => {
-      this.handleDocumentClick(e);
-    });
+    $(document).on('click', (e) => this.handleDocumentClick(e));
   }
 
   handleExpandableCheckboxListClick() {
-    if (this.isShowExpandableCheckboxList) {
-      this.$expandableCheckboxList.removeClass('expandable-checkbox-list_active');
-      this.isShowExpandableCheckboxList = false;
-    } else {
-      this.$expandableCheckboxList.addClass('expandable-checkbox-list_active');
-      this.isShowExpandableCheckboxList = true;
-    }
+    this.$expandableCheckboxList.toggleClass('expandable-checkbox-list_active');
+    this.isShowExpandableCheckboxList = !this.isShowExpandableCheckboxList;
   }
 
   handleDocumentClick(e) {

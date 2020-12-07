@@ -16,13 +16,9 @@ class MaskedTextField {
 
     this.$maskedTextFieldDatepicker.hide();
 
-    this.$maskedTextFieldInput.on('click', () => {
-      this.handleMaskedTextFieldClick();
-    });
+    this.$maskedTextFieldInput.on('click', () => this.handleMaskedTextFieldClick());
 
-    $(document).on('click', (e) => {
-      this.handleDocumentClick(e);
-    });
+    $(document).on('click', (e) => this.handleDocumentClick(e));
   }
 
   init() {
@@ -60,9 +56,7 @@ class MaskedTextField {
       class: 'datepicker--button',
       text: 'Применить',
       'data-action': 'hide',
-      click: () => {
-        this.addButtonApplyClick();
-      },
+      click: () => this.addButtonApplyClick(),
     });
     this.$datepickerButtons = this.$maskedTextField.find('.datepicker--buttons');
     this.$datepickerButtons.append(this.buttonApply);

@@ -15,9 +15,7 @@ class VerificationForm {
     this.$totalPrice = this.$verificationForm.find('.js-verification-form__total-price');
     this.$dateDropdownBtnApply = this.$verificationForm.find('.js-datepicker__apply');
 
-    this.$dateDropdownBtnApply.on('click', () => {
-      this.handleButtonApply();
-    });
+    this.$dateDropdownBtnApply.on('click', () => this.handleButtonApply());
 
     this.createStringPrice();
     this.createStringDiscount();

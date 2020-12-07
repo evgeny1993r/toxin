@@ -4,9 +4,7 @@ class LikeButton {
     this.$icon = this.$likeButton.find('.js-like-button__icon');
     this.$likeButtonValue = this.$likeButton.find('.js-like-button__value');
 
-    this.$likeButton.on('click', () => {
-      this.handleLikeButton();
-    });
+    this.$likeButton.on('click', () => this.handleLikeButton());
   }
 
   handleLikeButton() {

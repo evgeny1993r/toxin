@@ -13,13 +13,9 @@ class Room {
     this.WIDTH_$IMAGE = this.$image.width();
     this.translateValue = 0;
 
-    this.$btnLeft.on('click', () => {
-      this.handleBtnLeftClick();
-    });
+    this.$btnLeft.on('click', () => this.handleBtnLeftClick());
 
-    this.$btnRight.on('click', () => {
-      this.handleBtnRightClick();
-    });
+    this.$btnRight.on('click', () => this.handleBtnRightClick());
   }
 
   handleBtnLeftClick() {

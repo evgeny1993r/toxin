@@ -3,9 +3,7 @@ class Header {
     this.$header = $(header);
     this.$headerLink = this.$header.find('.js-header__link');
 
-    this.$headerLink.on('click', (e) => {
-      this.handleHeaderLinkClick(e);
-    });
+    this.$headerLink.on('click', (e) => this.handleHeaderLinkClick(e));
   }
 
   handleHeaderLinkClick(e) {
