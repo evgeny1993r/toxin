@@ -1,6 +1,6 @@
 include ../like-button/like-button.pug 
 
-mixin comment(imgName, name, time, likeButtonClass, likeButtonValue, text)
+mixin comment({ imgName, name, time, likeButtonClass, likeButtonValue, text })
   .comment
     .comment__container-names
       img.comment__img(src=require(`../../images/${imgName}`).default, alt="Userpic")

@@ -21,7 +21,7 @@ mixin header(firstName, lastName)
               span.header__icon-expand-more.icon-expand_more
     if firstName == undefined && lastName == undefined
       .header__buttons 
-        +button('btn_background_white btn_color_purple btn_size_small', 'Войти')
-        +button('btn_background_purple btn_color_white btn_size_small', 'Зарегистрироваться')
+        +button({ modifier: 'btn_background_white btn_color_purple btn_size_small', text: 'Войти' })
+        +button({ modifier: 'btn_background_purple btn_color_white btn_size_small', text: 'Зарегистрироваться' })
     else 
       span.header__name #{firstName} #{lastName}
