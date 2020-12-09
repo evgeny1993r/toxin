@@ -56,7 +56,7 @@ class MaskedTextField {
       class: 'datepicker--button',
       text: 'Применить',
       'data-action': 'hide',
-      click: () => this.addButtonApplyClick(),
+      click: () => this.handleButtonApplyClick(),
     });
     this.$datepickerButtons = this.$maskedTextField.find('.datepicker--buttons');
     this.$datepickerButtons.append(this.buttonApply);
