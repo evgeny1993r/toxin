@@ -12,12 +12,14 @@
   white-space: nowrap;
 
   &_background_purple {
-    width: 6.1875rem;
-    padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 1.375rem;
     border: none;
     
+    &.btn_size_middle {
+      width: 6.1875rem;
+      padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
+    }
     &.btn_size_small {
       width: auto;
       padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
@@ -25,8 +27,6 @@
   }
 
   &_background_white {
-    width: 6.1875rem;
-    padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
     background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
     background-origin: border-box;
     background-clip: border-box, content-box;
@@ -34,6 +34,10 @@
     border-radius: 1.375rem;
     box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
 
+    &.btn_size_middle {
+      width: 6.1875rem;
+      padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
+    }
     &.btn_size_small {
       width: auto;
       padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
@@ -46,7 +50,7 @@
     text-align: left;
   }
 
-  &_transparent {
+  &_transparent_true {
     opacity: 0.5;
   }
   

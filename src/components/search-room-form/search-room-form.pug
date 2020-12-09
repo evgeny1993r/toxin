@@ -13,4 +13,8 @@ mixin search-room-form(entryDate='', checkOutDate='')
     h3.search-room-form__dropdown-guests-title гости
     +dropdownGuests(0, 0, 0) 
     .search-room-form__container-button
-      +button({ modifier: 'btn_size_big btn_color_white', text: 'Подобрать номер' })
+      +button({
+        size: 'big',
+        color: 'white', 
+        text: 'Подобрать номер' 
+      })

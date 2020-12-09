@@ -104,13 +104,47 @@ html(lang="ru")
               .form-elements__container-buttons
                 h3.form-elements__title buttons  
                 .form-elements__buttons-item-list
-                  +button({ modifier: 'btn_background_purple btn_color_white', text: 'click me' })
-                  +button({ modifier: 'btn_background_purple btn_color_white btn_transparent', text: 'click me' })
-                  +button({ modifier: 'btn_background_white btn_color_purple', text: 'click me' })
-                  +button({ modifier: 'btn_background_white btn_color_purple btn_transparent', text: 'click me' })
-                  +button({ modifier: 'btn_background_none btn_color_purple', text: 'click me' })
-                  +button({ modifier: 'btn_background_none btn_color_gray', text: 'click me' })
-                  +button({ modifier: 'btn_size_big btn_color_white', text: 'Перейти к оплате' })
+                  +button({
+                    size: 'middle',
+                    background: 'purple', 
+                    color: 'white',
+                    text: 'click me'
+                  })
+                  +button({ 
+                    size: 'middle',
+                    background: 'purple',
+                    color: 'white',
+                    transparent: 'true', 
+                    text: 'click me' 
+                  })
+                  +button({ 
+                    size: 'middle',
+                    background: 'white',
+                    color: 'purple', 
+                    text: 'click me' 
+                  })
+                  +button({ 
+                    size: 'middle',
+                    background: 'white',
+                    color:  'purple' ,
+                    transparent: true, 
+                    text: 'click me' 
+                  })
+                  +button({
+                    background: 'none',
+                    color: 'purple', 
+                    text: 'click me' 
+                  })
+                  +button({ 
+                    background: 'none', 
+                    color: 'gray', 
+                    text: 'click me' 
+                  })
+                  +button({ 
+                    size: 'big',
+                    color: 'white', 
+                    text: 'Перейти к оплате' 
+                  })
 
               .form-elements__container-pagination
                 h3.form-elements__title pagination
