@@ -1,5 +1,3 @@
 mixin button({ size, background, color, transparent, text })
-  if transparent
-    button(class=`btn btn_size_${size} btn_background_${background} btn_color_${color} btn_transparent`) #{text}
-  else
-    button(class=`btn btn_size_${size} btn_background_${background} btn_color_${color}`) #{text}      
+  - const isTransparent = transparent ? 'btn_transparent' : 0 
+  button(class=`btn btn_size_${size} btn_background_${background} btn_color_${color} ${isTransparent}`) #{text}  
