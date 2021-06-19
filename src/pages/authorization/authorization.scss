@@ -1,20 +1,20 @@
 .authorization {
   display: grid;
-  grid-template-rows: max-content 43.813rem max-content;
-
-  @media(max-width: 1024px) {
-    grid-template-rows: max-content 31.25rem max-content;
-  }
-
-  @media(max-width: 480px) {
-    grid-template-rows: max-content 25rem max-content;
-  }
+  grid-template-rows: max-content auto max-content;
 
   &__content {
     background: url('../../images/background-authorization-registration.jpg') no-repeat center;
     background-size: cover;
     display: grid;
     justify-content: center;
-    align-content: center;
+    padding: 10.75rem 0;
+
+    @media(max-width: 640px) {
+      padding: 5.375rem 0;
+    }
+  }
+
+  &__container-footer {
+    grid-row: 3 / 4;
   }
 }

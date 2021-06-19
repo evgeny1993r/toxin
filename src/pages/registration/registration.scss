@@ -1,5 +1,7 @@
 .registration {
-    
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+
   &__content {
     display: grid;
     justify-content: center;
@@ -7,5 +9,9 @@
     height: 42.75rem;
     background: url('../../images/background-authorization-registration.jpg') no-repeat center;
     background-size: cover;
+  }
+
+  &__container-footer {
+    grid-row: 3 / 4;
   }
 }
