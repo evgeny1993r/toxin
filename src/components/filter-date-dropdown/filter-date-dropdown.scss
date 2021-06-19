@@ -1,12 +1,10 @@
 @import '../../styles/virables.scss';
 
 .filter-date-dropdown {
-  max-width: 16.625rem;
   display: grid;
   row-gap: 0.313rem;
 
   &__input {
-    max-width: 16.625rem;
     display: grid;
     grid-template-columns: auto 2.75rem;
     font-family: Montserrat, sans-serif;

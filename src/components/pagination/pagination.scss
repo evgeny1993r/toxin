@@ -28,8 +28,14 @@
     }
 
     @media(max-width: 1024px) {
-      grid-template-columns: 16.875rem;
-      justify-content: center;
+      grid-template-columns: auto;
+      justify-content: normal;
+    }
+  }
+
+  @media(max-width: 1024px) {
+    &__container-items .room:nth-child(even) {
+      justify-self: end;
     }
   }
 

@@ -1,4 +1,6 @@
 .logotip {
-  width: auto;
-  height: 2.5rem;
+  &__logo {
+    width: auto;
+    height: 2.5rem;
+  }
 }

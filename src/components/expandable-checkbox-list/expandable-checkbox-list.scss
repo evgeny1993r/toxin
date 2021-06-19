@@ -1,7 +1,8 @@
 @import '../../styles/virables.scss'; 
 
 .expandable-checkbox-list {
-  width: 16.625rem;
+  width: 100%;
+  position: relative;
 
   &__title {
     font-family: Montserrat, sans-serif;
@@ -25,7 +26,7 @@
 
   &__item-list {
     z-index: 3;
-    width: 16.625rem;
+    width: 100%;
     position: absolute;
     background: #FFFFFF;
     display: none;

@@ -25,9 +25,12 @@
     cursor: pointer;
   }
 
-  &__datepicker {    
-    position: absolute;
-    z-index: 2;
-    margin-top: 3.0625rem;
+  &__input:focus, 
+  &__input:hover {
+    border: 0.0625rem solid $Dark-50;
+  }
+  
+  &__input::placeholder {
+    color: $Dark-25;
   }
 }

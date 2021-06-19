@@ -1,7 +1,7 @@
 @import '../../styles/virables.scss';
 
 .checkbox-buttons {
-  width: 16.625rem;
+  width: 100%;
 
   &__item-list {
     display: grid;
@@ -19,7 +19,6 @@
     line-height: 1.125rem;
     color: $Dark-50;
     cursor: pointer;
-    max-width: 15.375rem
   }
 
   &__input {

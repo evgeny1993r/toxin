@@ -1,102 +1,113 @@
-import 'air-datepicker';
-import 'air-datepicker/dist/css/datepicker.min.css';
-
 class MaskedTextField {
-  constructor(maskedTextField) {
-    this.$maskedTextField = $(maskedTextField);
-    this.$maskedTextFieldInput = this.$maskedTextField.find('.js-masked-text-field__input');
-    this.$maskedTextFieldDatepicker = this.$maskedTextField.find('.js-masked-text-field__datepicker');
-    this.isShowDatepicker = false;
-
+  constructor() {
     this.init();
-
-    this.addButtonApply();
-
-    this.$maskedTextFieldItems = this.$maskedTextField.find('*');
-
-    this.$maskedTextFieldDatepicker.hide();
-
-    this.$maskedTextFieldInput.on('click', () => this.handleMaskedTextFieldClick());
-
-    $(document).on('click', (e) => this.handleDocumentClick(e));
   }
 
   init() {
-    this.$maskedTextFieldDatepicker.datepicker({
-      classes: 'datepicker-masked-text-field',
-      navTitles: {
-        days: 'MM <i>yyyy</i>',
-      },
-      nextHtml: `
-        <svg class="datepicker--next-html" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="datepicker--next-html" d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
-        </svg>
-      `,
-      prevHtml: `
-        <svg class="datepicker--prev-html" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="datepicker--prev-html" d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z" fill="#BC9CFF"/>
-        </svg>
-      `,
-      offset: 7,
-      clearButton: true,
-      onSelect: (fd) => this.onSelect(fd),
-    });
+    this.dateValue = '';
+    this.$maskedTextField = $('.js-masked-text-field');
+    this.$maskedTextFieldInput = this.$maskedTextField.find('.masked-text-field__input');
+    this.$maskedTextFieldInput.on('keyup', (e) => this.handleMaskedTextFieldInputKeyup(e));
   }
 
-  onSelect(fd) {
-    if (fd !== '') {
-      this.$maskedTextFieldInput.text(fd);
+  // eslint-disable-next-line class-methods-use-this
+  isValidateValue(value, minValue, maxValue) {
+    if (!/[a-zа-яё]/i.test(value) && value >= minValue && value <= maxValue) return true;
+    return false;
+  }
+
+  onBackspace() {
+    const arr = this.dateValue.split('');
+    const arrLength = arr.length;
+    if (arr[arrLength - 1] === '.') {
+      arr.splice(arrLength - 2, 2);
+      this.dateValue = arr.join('');
+      this.$maskedTextFieldInput.val(this.dateValue);
+    }
+  }
+
+  onChange(value) {
+    switch (value.length) {
+      case 0:
+        this.dateValue = '';
+        this.$maskedTextFieldInput.val(this.dateValue);
+        break;
+      case 1:
+        if (this.isValidateValue(value, 1, 31)) {
+          this.dateValue = value;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      case 2:
+        if (this.isValidateValue(value, 1, 31)) {
+          this.dateValue = `${value}.`;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      case 4:
+        if (this.isValidateValue(value.split('.')[1], 1, 12)) {
+          this.dateValue = value;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      case 5:
+        if (this.isValidateValue(value.split('.')[1], 1, 12)) {
+          this.dateValue = `${value}.`;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      case 7:
+        if (this.isValidateValue(value.split('.')[2], 0, 2003)) {
+          this.dateValue = value;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      case 8:
+        if (this.isValidateValue(value.split('.')[2], 0, 2003)) {
+          this.dateValue = value;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      case 9:
+        if (this.isValidateValue(value.split('.')[2], 0, 2003)) {
+          this.dateValue = value;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      case 10:
+        if (this.isValidateValue(value.split('.')[2], 1900, 2003)) {
+          this.dateValue = value;
+          this.$maskedTextFieldInput.val(this.dateValue);
+        } else {
+          this.$maskedTextFieldInput.val(this.dateValue);
+        }
+        break;
+      default:
+        this.$maskedTextFieldInput.val(this.dateValue);
+    }
+  }
+
+  handleMaskedTextFieldInputKeyup(e) {
+    const { value } = e.currentTarget;
+
+    if (e.key === 'Backspace') {
+      this.onBackspace();
     } else {
-      this.$maskedTextFieldInput.text('ДД.ММ.ГГГГ');
-    }
-  }
-
-  addButtonApply() {
-    this.buttonApply = $('<span>', {
-      class: 'datepicker--button',
-      text: 'Применить',
-      'data-action': 'hide',
-      click: () => this.handleButtonApplyClick(),
-    });
-    this.$datepickerButtons = this.$maskedTextField.find('.datepicker--buttons');
-    this.$datepickerButtons.append(this.buttonApply);
-  }
-
-  handleButtonApplyClick() {
-    this.$maskedTextFieldDatepicker.hide();
-    this.isShowDatepicker = false;
-  }
-
-  handleMaskedTextFieldClick() {
-    if (this.isShowDatepicker) {
-      this.$maskedTextFieldDatepicker.hide();
-      this.isShowDatepicker = false;
-    } else {
-      this.$maskedTextFieldDatepicker.show();
-      this.isShowDatepicker = true;
-    }
-  }
-
-  handleDocumentClick(e) {
-    const classes = [];
-
-    function isElementInArray(el) {
-      return $(el).attr('class') !== undefined && $.inArray($(el).attr('class').split(' ')[0], classes) < 0;
-    }
-
-    this.$maskedTextFieldItems.each((_, el) => {
-      if (isElementInArray(el)) {
-        classes.push($(el).attr('class').split(' ')[0]);
-      }
-    });
-
-    function isClassInArray() {
-      return $.inArray($(e.target).attr('class').split(' ')[0], classes) < 0;
-    }
-
-    if (isClassInArray()) {
-      this.$maskedTextFieldDatepicker.hide();
-      this.isShowDatepicker = false;
+      this.onChange(value);
     }
   }
 }

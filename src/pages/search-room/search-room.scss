@@ -17,17 +17,10 @@
 
     @media(max-width: 1024px) {
       grid-template-columns: 16.625rem auto;
-      justify-content: space-between;
     }
 
     @media(max-width: 580px) {
       grid-template-columns: 1fr;
-    }
-  }
-
-  @media(max-width: 580px) {
-    &__sidebar {
-        max-width: 16.625rem;
     }
   }
 
