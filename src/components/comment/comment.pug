@@ -3,7 +3,7 @@ include ../like-button/like-button.pug
 mixin comment({ imgName, name, time, likeButtonClass, likeButtonValue, text })
   .comment
     .comment__container-names
-      img.comment__img(src=require(`../../../assets/images/${imgName}`).default, alt="Userpic")
+      img.comment__img(src=require(`../../../src/components/comment/images/${imgName}`).default, alt="Userpic")
       .comment__titles 
         h3.comment__title-name #{name}
         h3.comment__title-time #{time}
