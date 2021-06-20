@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --config ./configs/webpack.config.js --mode development --open",
+    "build": "webpack --config ./configs/webpack.config.js --mode production",
     "deploy": "gh-pages -d dist"
   },
   "author": "Evgeny Radevsky",
