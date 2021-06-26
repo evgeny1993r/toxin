@@ -122,7 +122,7 @@
   }
 
   &__room-amenities-title {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.1875rem;
@@ -151,7 +151,7 @@
   }
 
   &__comments-title-text {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.1875rem;
@@ -161,7 +161,7 @@
   }
 
   &__comments-title-value {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -181,7 +181,7 @@
   }
 
   &__bullet-list-title {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.1875rem;

@@ -12,13 +12,17 @@
     display: grid;
     grid-template-columns: 1.25rem auto;
     column-gap: 0.625rem;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
     line-height: 1.125rem;
     color: $Dark-50;
     cursor: pointer;
+  }
+
+  &__label_focus {
+    color: $Dark-100;
   }
 
   &__input {
@@ -47,7 +51,7 @@
   }
 
   &__input:checked::before {
-    border: 0.063rem solid $Purple;
+    border: 0.063rem solid $Primary;
   }
 
   &__input:checked::after {
@@ -57,7 +61,7 @@
     align-self: center;
     justify-self: center;
     content: '';
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
     transform: rotate(45deg);
     clip-path: polygon(0 0.375rem, 0.25rem  0.375rem, 0.25rem  0, 0.375rem 0, 0.375rem 0.5rem, 0 0.5rem);
   }

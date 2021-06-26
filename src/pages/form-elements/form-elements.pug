@@ -12,7 +12,7 @@ include ../../components/like-button/like-button.pug
 include ../../components/rate-button/rate-button.pug 
 include ../../components/range-slider/range-slider.pug
 include ../../components/button/button.pug
-include ../../components/dropdown-number/dropdown-number.pug  
+include ../../components/dropdown-room/dropdown-room.pug  
 include ../../components/pagination/pagination.pug 
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
 include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
@@ -151,11 +151,11 @@ html(lang="ru")
                 +pagination('pagination_items-hide')
 
           section.form-elements__component-list
-            .form-elements__container-dropdown-number
+            .form-elements__container-dropdown-room
               .form-elements__titles
                 h3.form-elements__title dropdown
                 h3.form-elements__state-name default
-              +dropdownNumber(2, 2, 0)
+              +dropdownRoom(2, 2, 0)
             .form-elements__container-dropdown-guests
               h3.form-elements__title dropdown 
               +dropdownGuests(0, 0, 0)

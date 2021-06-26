@@ -4,7 +4,7 @@ class DropdownGuests {
     this.adults = this.$dropdownGuests.data('adults');
     this.children = this.$dropdownGuests.data('children');
     this.babies = this.$dropdownGuests.data('babies');
-    this.$dropdownGuests.dropdownGuests([this.adults, this.children, this.babies]);
+    this.$dropdownGuests.dropdownGuestList([this.adults, this.children, this.babies]);
   }
 }
 

@@ -1,9 +1,9 @@
 mixin date-dropdown(entryDate, checkOutDate)
   .date-dropdown.js-date-dropdown
     .date-dropdown__entry.js-date-dropdown__entry
-      input.date-dropdown__input-entry.js-date-dropdown__input-entry(type="text" value="ДД.ММ.ГГГГ" readonly) 
-      span.date-dropdown__icon-expand-more.icon-expand_more 
+      span.date-dropdown__input-entry.js-date-dropdown__input-entry ДД.ММ.ГГГГ 
+      span.date-dropdown__icon-expand-more.icon-expand_more
     .date-dropdown__check-out.js-date-dropdown__check-out
-      input.date-dropdown__input-check-out.js-date-dropdown__input-check-out(type="text" value="ДД.ММ.ГГГГ" readonly)
+      span.date-dropdown__input-check-out.js-date-dropdown__input-check-out ДД.ММ.ГГГГ
       span.date-dropdown__icon-expand-more.icon-expand_more 
-    div.date-dropdown__datepicker.js-date-dropdown__datepicker(data-entry-date= entryDate, data-check-out-date= checkOutDate)
+    input.date-dropdown__datepicker.js-date-dropdown__datepicker(type="text" data-entry-date= entryDate, data-check-out-date= checkOutDate)

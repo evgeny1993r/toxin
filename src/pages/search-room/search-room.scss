@@ -42,7 +42,7 @@
     margin-top: 2rem;
   }
 
-  &__container-dropdown-number {
+  &__container-dropdown-room {
     margin-top: 1.875rem;
   }
 
@@ -52,7 +52,7 @@
 
   &__container-filter-date-dropdown,
   &__container-dropdown-guests,
-  &__container-dropdown-number {
+  &__container-dropdown-room {
     display: grid;
     row-gap: 0.3125rem;
   }
@@ -68,8 +68,8 @@
   &__range-slider-title,
   &__checkbox-buttons-title,
   &__rich-checkbox-buttons-title,
-  &__dropdown-number-title {
-    font-family: Montserrat, sans-serif;
+  &__dropdown-room-title {
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -79,7 +79,7 @@
   }
 
   &__title {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;

@@ -100,7 +100,7 @@
   }
 
   &__number-symbol {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-weight: bold;
     font-size: 0.875rem;
     line-height: 1rem;
@@ -108,7 +108,7 @@
   }
   
   &__number-value {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-weight: bold;
     font-size: 1.1875rem;
     line-height: 1.375rem;
@@ -116,17 +116,17 @@
   }
 
   &__number-state {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-weight: bold;
     font-size: 0.75rem;
     line-height: 0.9375rem;
     text-transform: uppercase;
-    color: $Purple;
+    color: $Primary;
     margin-left: 0.3125rem;
   }
 
   &__price {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     color: $Dark-50;
     line-height: 1.125rem;
@@ -158,7 +158,7 @@
   }
   
   &__comments {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-size: 0.875rem;
     line-height: 1.125rem;

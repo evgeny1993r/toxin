@@ -10,7 +10,7 @@
   }
 
   &__title {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -20,7 +20,7 @@
   }
 
   &__input {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75rem;
@@ -30,6 +30,12 @@
     color: $Dark-50;
     background: none;
     border: none;
+    outline: none;
+    user-select: none;
+
+    &:focus {
+      color: $Dark-100;
+    }
   }
 
   &__slider {
@@ -37,7 +43,7 @@
   }
 
   &__text {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75rem;

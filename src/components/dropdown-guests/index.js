@@ -1,4 +1,4 @@
-import { DropdownGuests } from './Dropdown-guests';
+import { DropdownGuests } from './DropdownGuests';
 
 const $dropdownGuests = $('.js-dropdown-guests');
 $dropdownGuests.each((_, dropdownGuests) => {

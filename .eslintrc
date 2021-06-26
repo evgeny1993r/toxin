@@ -3,7 +3,7 @@
   "rules": {
     "no-new": 0,
     "import/prefer-default-export": 0,
-    "class-methods-use-this": ["error", { "exceptMethods": ["createTextPrice"] }]
+    "class-methods-use-this": "off"
   },
   "env": {
     "jquery": true

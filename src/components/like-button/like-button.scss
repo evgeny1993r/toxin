@@ -25,7 +25,7 @@
   }
 
   &__value {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.625rem;
@@ -34,14 +34,14 @@
   }
 
   &_active {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
   }
 
   &_active &__icon {
-    color: $Purple;
+    color: $Primary;
   }
 
   &_active &__value {
-    color: $Purple;
+    color: $Primary;
   }
 }

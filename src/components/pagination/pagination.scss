@@ -68,22 +68,27 @@
   }
 
   &-page.active {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
     border-radius: 1.375rem;
   }
 
   &-page a {
     text-decoration: none;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75rem;
     line-height: 0.938rem;
     color: $Dark-50;
+    outline: none;
+
+    &:focus {
+      color: $Dark-100;
+    }
   }
 
   &-page.active a {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -101,7 +106,7 @@
   }
 
   &-ellipsis a {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75rem;
@@ -116,7 +121,7 @@
     display: grid;
     justify-content: center;
     align-content: center;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $SecondaryLinearGradient;
     border-radius: 50%;
   }
 
@@ -126,11 +131,16 @@
     font-weight: normal;
     font-size: 1.063rem;
     line-height: 1.063rem;
-    color: #FFFFFF;        
+    color: #FFFFFF;
+    outline: none;
+    
+    &:focus {
+      opacity: 0.5;
+    }
   }
   
   &-nav {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;

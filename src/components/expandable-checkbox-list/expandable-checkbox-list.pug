@@ -5,6 +5,6 @@ mixin expandable-checkbox-list(title, data)
     .expandable-checkbox-list__item-list 
       each item in data 
         .expandable-checkbox-list__item 
-          label.expandable-checkbox-list__label
-            input.expandable-checkbox-list__input(type="checkbox" checked= item.checked)
+          label.expandable-checkbox-list__label.js-expandable-checkbox-list__label
+            input.expandable-checkbox-list__input.js-expandable-checkbox-list__input(type="checkbox" checked= item.checked)
             |#{item.value}

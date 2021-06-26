@@ -1,8 +1,8 @@
 mixin checkbox-buttons(data)
-  .checkbox-buttons
+  .checkbox-buttons.js-checkbox-buttons
     .checkbox-buttons__item-list 
       each item in data
-        .checkbox-buttons__item 
+        .checkbox-buttons__item
           label.checkbox-buttons__label 
-            input.checkbox-buttons__input(type="checkbox" checked= item.checked)
+            input.checkbox-buttons__input.js-checkbox-buttons__input(type="checkbox" checked= item.checked)
             |#{item.value}

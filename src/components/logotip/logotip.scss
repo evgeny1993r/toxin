@@ -1,4 +1,10 @@
 .logotip {
+  outline: none;
+
+  &:focus {
+    opacity: 0.5;
+  }
+
   &__logo {
     width: auto;
     height: 2.5rem;

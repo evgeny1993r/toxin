@@ -1,3 +1,5 @@
+@import '../../styles/virables.scss';
+
 .rate-button {
   display: grid;
   grid-template-columns: repeat(5, 1.5rem);
@@ -13,7 +15,7 @@
   
   &__icon {
     font-size: 1.125rem;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;

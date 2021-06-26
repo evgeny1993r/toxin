@@ -29,14 +29,14 @@
   }
 
   &--nav-action svg path {
-    fill: $Purple;
+    fill: $Primary;
     stroke: none;
     stroke-width: 0;
   }
 
   &--nav-title, 
   &--nav-title i {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.188rem;
@@ -68,18 +68,18 @@
 
   &--day-name {
     height: 2.5rem;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
     line-height: 0.75rem;
-    color: $Purple;
+    color: $Primary;
   }
 
   &--cell {
     width: 100%;
     height: 2.5rem;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75rem;
@@ -89,8 +89,8 @@
   }
 
   &--cell.-focus- {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    font-family: Montserrat, sans-serif;
+    background: $PrimaryLinearGradient;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -107,8 +107,8 @@
   }
 
   &--cell.-current- {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    font-family: Montserrat, sans-serif;
+    background: $SecondaryLinearGradient;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -120,13 +120,13 @@
 
   &--cell.-current-.-focus-,
   &--cell.-current-.-selected- {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
     color: #FFFFFF;
   }
 
   &--cell.-current-.-in-range- {
     position: relative;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $SecondaryLinearGradient;
     color: #FFFFFF;
   }
 
@@ -146,8 +146,8 @@
   }
 
   &--cell.-selected- {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    font-family: Montserrat, sans-serif;
+    background: $PrimaryLinearGradient;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -156,7 +156,7 @@
   }
 
   &--cell.-selected-.-focus- {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
   }
 
   &--cell.-range-from-, 
@@ -192,8 +192,8 @@
 
   &--cell.-in-range-.-focus- {
     position: relative;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    font-family: Montserrat, sans-serif;
+    background: $PrimaryLinearGradient;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -221,7 +221,7 @@
   }
 
   &--button {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -238,6 +238,6 @@
   }
 
   &--button:nth-child(2) {
-    color: $Purple;
+    color: $Primary;
   }
 }

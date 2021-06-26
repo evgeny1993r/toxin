@@ -22,7 +22,7 @@
 
   &__logo-text {
     margin-top: 0.875rem;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -50,7 +50,7 @@
 
   &__item-total {
     list-style: none;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -62,7 +62,7 @@
 
   &__item {
     list-style: none;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -70,8 +70,13 @@
   }
 
   &__link {
+    outline: none;
     text-decoration: none;
     color: $Dark-50;
+
+    &:focus {
+      color: $Dark-100;
+    }
   }
 
   &__sublist {
@@ -80,14 +85,14 @@
     margin-top: 0.313rem;
 
     @media(max-width: 1280px) {
-        display: none;
+      display: none;
     }
   }
 
   &__sublist-total {
     list-style: none;
     display: inline-block;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -98,7 +103,7 @@
 
   &__sublist-text {
     margin-top: 1.125rem;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -134,7 +139,7 @@
   }
 
   &__right-text {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -159,9 +164,14 @@
   &__social-networks-link {
     display: block;
     color: transparent;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
+    outline: none;
+
+    &:focus {
+      opacity: 0.5;
+    }
   }    
 }

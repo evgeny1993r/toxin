@@ -22,11 +22,11 @@
   &__title-name,
   &__title-time,
   &__text {
-    font-family: Montserrat;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-size: 0.875rem;
     line-height: 1.5rem;
-    color: rgba(31, 32, 65, 0.75);
+    color: $Dark-75;
   }
 
   &__title-name {

@@ -17,7 +17,7 @@
   }
 
   &__room-number-symbol {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.875rem;
@@ -26,7 +26,7 @@
   }
 
   &__room-number-value {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
@@ -35,18 +35,18 @@
   }
 
   &__room-number-state {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
     line-height: 0.9375rem;
     text-transform: uppercase;
-    color: $Purple;
+    color: $Primary;
     margin-left: 0.3125rem;
   }
 
   &__room-price-value {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.875rem;
@@ -56,7 +56,7 @@
   }
 
   &__room-price-text {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75rem;
@@ -77,7 +77,7 @@
   &__date-dropdown-title-entry,
   &__date-dropdown-title-output,
   &__dropdown-guests-title {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -100,7 +100,7 @@
   &__price, 
   &__discount, 
   &__collecting {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -137,7 +137,7 @@
     height: 1.25rem;
     border: 0.0625rem solid $Dark-25;
     border-radius: 50%;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -161,7 +161,7 @@
 
   &__total-title,
   &__total-price {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.1875rem;

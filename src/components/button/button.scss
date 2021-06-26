@@ -1,7 +1,7 @@
 @import '../../styles/virables.scss';
 
 .btn {
-  font-family: Montserrat, sans-serif;
+  font-family: $PrimaryFontFamily;
   font-style: normal;
   font-weight: bold;
   font-size: 0.75rem;
@@ -11,40 +11,40 @@
   cursor: pointer;
   white-space: nowrap;
 
-  &_background_purple {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  &_background-primary-linear-gradient {
+    background: $PrimaryLinearGradient;
     border-radius: 1.375rem;
     border: none;
     
-    &.btn_size_middle {
+    &.btn_size-middle {
       width: 6.1875rem;
       padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
     }
-    &.btn_size_small {
+    &.btn_size-small {
       width: auto;
       padding: 0.5625rem 1.25rem 0.625rem 1.25rem;
     }
   }
 
-  &_background_white {
-    background: linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
+  &_background-white {
+    background: $PrimaryLinearGradient;
     background-origin: border-box;
     background-clip: border-box, content-box;
     border: 0.125rem solid transparent;
     border-radius: 1.375rem;
     box-shadow: 0.125rem 6.25rem 0.0625rem #ffffff inset;
 
-    &.btn_size_middle {
+    &.btn_size-middle {
       width: 6.1875rem;
       padding: 0.75rem 1.125rem 0.8125rem 1.125rem;
     }
-    &.btn_size_small {
+    &.btn_size-small {
       width: auto;
       padding: 0.4375rem 1.125rem 0.5rem 1.125rem;
     }
   }
 
-  &_background_none {
+  &_background-none {
     border: none;
     background: none;
     text-align: left;
@@ -54,40 +54,28 @@
     opacity: 0.5;
   }
   
-  &_size_big {
+  &_size-big {
     width: 20rem;
     padding: 0.875rem 0.3125rem 0.9375rem 0;
-    background: url('../../../assets/images/arrow-forward.svg') no-repeat right center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: url('../../../assets/images/arrow-forward.svg') no-repeat right center, $PrimaryLinearGradient;
     border: none;
     border-radius: 1.375rem;
   }
 
-  &_color_purple {
-    color: $Purple;
+  &_color-primary {
+    color: $Primary;
   }
 
-  &_color_white {
+  &_color-white {
     color: #ffffff;
   }
   
-  &_color_gray {
+  &_color-gray {
     color: $Dark-50;
   }
 
+  &:focus,
   &:hover {
     opacity: 0.5;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

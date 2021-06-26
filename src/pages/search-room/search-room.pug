@@ -4,7 +4,7 @@ include ../../components/dropdown-guests/dropdown-guests.pug
 include ../../components/range-slider/range-slider.pug 
 include ../../components/checkbox-buttons/checkbox-buttons.pug
 include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
-include ../../components/dropdown-number/dropdown-number.pug 
+include ../../components/dropdown-room/dropdown-room.pug 
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/pagination/pagination.pug
 include ../../components/footer/footer.pug
@@ -45,9 +45,9 @@ html(lang="ru")
               { title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.' }, 
               { title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.' }
             ])
-          .search-room__container-dropdown-number
-            h3.search-room__dropdown-number-title удобства номера 
-            +dropdownNumber(2, 2, 0) 
+          .search-room__container-dropdown-room
+            h3.search-room__dropdown-room-title удобства номера 
+            +dropdownRoom(2, 2, 0) 
           .search-room__container-expandable-checkbox-list
           +expandable-checkbox-list('дополнительные удобства', [
             { value: 'Завтрак', checked: false },

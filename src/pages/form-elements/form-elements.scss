@@ -1,14 +1,5 @@
 @import '../../styles/virables.scss';
 
-/*
-  1160px - 72.5rem
-  320px - 32rem
-  130px - 8.125rem +
-  100px - 6.25rem +
-  65px - 4.0625rem +
-  40px - 2.5rem
-*/ 
-
 .form-elements {
   background: #ffffff;
 
@@ -70,12 +61,12 @@
   &__container-date-dropdown,
   &__container-filter-date-dropdown,
   &__container-subscription-text-field,
-  &__container-dropdown-number {
+  &__container-dropdown-room {
     display: grid;
     row-gap: 0.3125rem;
   }
 
-  &__container-dropdown-number,
+  &__container-dropdown-room,
   &__container-range-slider {
     width: 16.625rem;
   }

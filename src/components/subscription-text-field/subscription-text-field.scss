@@ -9,7 +9,7 @@
   cursor: pointer;
 
   &__input {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -29,13 +29,13 @@
     font-size: 1.188rem;
     text-align: center;
     align-self: center;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
     color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
   }
-  
+
   &:hover,
   &_active {
     border: 0.063rem solid $Dark-50;

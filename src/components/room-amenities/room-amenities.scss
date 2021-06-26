@@ -31,7 +31,7 @@
   }
 
   &__icon {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $PrimaryLinearGradient;
     color: transparent;
     font-size: 2.563rem;
     line-height: 2.563rem;
@@ -46,7 +46,7 @@
 
   &__title, 
   &__text {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;

@@ -4,24 +4,14 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 class FilterDateDropdown {
   constructor(filterDateDropdown) {
     this.$filterDateDropdown = $(filterDateDropdown);
+    this.$filterDateDropdownContainer = this.$filterDateDropdown.find('.js-filter-date-dropdown__container');
     this.$filterDateDropdownInput = this.$filterDateDropdown.find('.js-filter-date-dropdown__input');
     this.$filterDateDropdownDatepicker = this.$filterDateDropdown.find('.js-filter-date-dropdown__datepicker');
     this.entryDate = this.$filterDateDropdownDatepicker.data('entry-date');
     this.checkOutDate = this.$filterDateDropdownDatepicker.data('check-out-date');
-    this.icon = '<span class="filter-date-dropdown__icon-expand-more icon-expand_more"></span>';
-    this.isShowDatepicker = false;
-
     this.init();
 
     this.addButtonApply();
-
-    this.$filterDateDropdownItems = this.$filterDateDropdown.find('*');
-
-    this.$filterDateDropdownDatepicker.hide();
-
-    this.$filterDateDropdownInput.on('click', () => this.handleFilterDateDropdownClick());
-
-    $(document).on('click', (e) => this.handleDocumentClick(e));
   }
 
   init() {
@@ -54,62 +44,21 @@ class FilterDateDropdown {
 
   onSelect(fd) {
     if (fd === '') {
-      this.$filterDateDropdownInput.html(`ДД.ММ - ДД.ММ ${this.icon}`);
+      this.$filterDateDropdownInput.text('ДД.ММ - ДД.ММ');
     } else {
-      this.$filterDateDropdownInput.html(`${fd} ${this.icon}`);
+      this.$filterDateDropdownInput.text(`${fd}`);
     }
   }
 
   addButtonApply() {
-    this.$datepickerButtons = this.$filterDateDropdownDatepicker.find('.datepicker--buttons');
+    this.$datepickerButtons = $(document).find('.datepicker--buttons');
     this.buttonApply = $('<span>', {
       class: 'datepicker--button',
       text: 'Применить',
       'data-action': 'hide',
-      on: {
-        click: () => this.handleButtonApplyClick(),
-      },
     });
 
     this.$datepickerButtons.append(this.buttonApply);
-  }
-
-  handleFilterDateDropdownClick() {
-    if (this.isShowDatepicker) {
-      this.$filterDateDropdownDatepicker.hide();
-      this.isShowDatepicker = false;
-    } else {
-      this.$filterDateDropdownDatepicker.show();
-      this.isShowDatepicker = true;
-    }
-  }
-
-  handleButtonApplyClick() {
-    this.$filterDateDropdownDatepicker.hide();
-    this.isShowDatepicker = false;
-  }
-
-  handleDocumentClick(e) {
-    const classes = [];
-
-    function isElementInArray(el) {
-      return $(el).attr('class') !== undefined && $.inArray($(el).attr('class').split(' ')[0], classes) < 0;
-    }
-
-    this.$filterDateDropdownItems.each((_, el) => {
-      if (isElementInArray(el)) {
-        classes.push($(el).attr('class').split(' ')[0]);
-      }
-    });
-
-    function isClassInArray() {
-      return $.inArray($(e.target).attr('class').split(' ')[0], classes) < 0;
-    }
-
-    if (isClassInArray()) {
-      this.$filterDateDropdownDatepicker.hide();
-      this.isShowDatepicker = false;
-    }
   }
 }
 

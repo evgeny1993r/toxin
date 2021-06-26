@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1.25rem auto;
     column-gap: 0.625rem;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
@@ -29,6 +29,10 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+
+    &:focus {
+      opacity: 0.5;
+    }
   }
 
   &__input::before {
@@ -44,7 +48,7 @@
   }
 
   &__input:checked::before {
-    border: 0.063rem solid $Purple;
+    border: 0.063rem solid $Primary;
   }
 
   &__input:checked::after {
@@ -52,7 +56,7 @@
     width: 0.75rem;
     height: 0.75rem;
     content: '';
-    background: $Purple;
+    background: $Primary;
     border-radius: 50%;
     justify-self: center;
     align-self: center;

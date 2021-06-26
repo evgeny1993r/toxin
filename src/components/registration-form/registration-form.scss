@@ -10,7 +10,7 @@
   padding: 2.5rem 1.875rem 1.875rem 1.875rem;
 
   &__title {
-    font-family: Quicksand, sans-serif;
+    font-family: $SecondaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
@@ -32,7 +32,7 @@
   &__masked-text-field-title,
   &__text-fields-title {
     margin-top: 1.25rem;
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
@@ -68,7 +68,7 @@
   }
   
   &__sign-in-text {
-    font-family: Montserrat, sans-serif;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;

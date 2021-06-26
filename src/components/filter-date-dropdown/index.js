@@ -1,4 +1,4 @@
-import { FilterDateDropdown } from './Filter-date-dropdown';
+import { FilterDateDropdown } from './FilterDateDropdown';
 
 const $filterDteDropdown = $('.js-filter-date-dropdown');
 $filterDteDropdown.each((_, filterDateDropdown) => {

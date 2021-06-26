@@ -1,4 +1,4 @@
-import { MaskedTextField } from './Masked-text-field';
+import { MaskedTextField } from './MaskedTextField';
 
 const $maskedTextField = $('.js-masked-text-field');
 $maskedTextField.each((_, maskedTextField) => {
