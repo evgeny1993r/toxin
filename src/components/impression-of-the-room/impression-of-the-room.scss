@@ -8,7 +8,7 @@
 
   &__title {
     grid-column: 1 / 3;
-    font-family: $SecondaryFontFamily;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.188rem;
@@ -61,7 +61,7 @@
   }
 
   &__value {
-    font-family: $SecondaryFontFamily;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;

@@ -8,7 +8,7 @@ module.exports = {
     index: './src/index',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: './scripts/[name].js',
   },
   module: {
@@ -36,7 +36,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|svg|eot|otf|woff|ttf)$/,
+        test: /\.(jpg|svg|woff|woff2)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/[name].[ext]',

@@ -17,7 +17,7 @@
   }
 
   &__room-number-symbol {
-    font-family: $SecondaryFontFamily;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 0.875rem;
@@ -26,7 +26,7 @@
   }
 
   &__room-number-value {
-    font-family: $SecondaryFontFamily;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
@@ -161,7 +161,7 @@
 
   &__total-title,
   &__total-price {
-    font-family: $SecondaryFontFamily;
+    font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;
     font-size: 1.1875rem;

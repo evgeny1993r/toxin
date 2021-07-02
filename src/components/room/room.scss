@@ -100,7 +100,7 @@
   }
 
   &__number-symbol {
-    font-family: $SecondaryFontFamily;
+    font-family: $PrimaryFontFamily;
     font-weight: bold;
     font-size: 0.875rem;
     line-height: 1rem;
@@ -108,7 +108,7 @@
   }
   
   &__number-value {
-    font-family: $SecondaryFontFamily;
+    font-family: $PrimaryFontFamily;
     font-weight: bold;
     font-size: 1.1875rem;
     line-height: 1.375rem;
