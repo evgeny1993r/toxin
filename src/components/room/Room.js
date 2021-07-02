@@ -1,11 +1,12 @@
 class Room {
   constructor(room) {
     this.$room = $(room);
-    this.$btnLeft = this.$room.find('.room__btn-left');
-    this.$btnRight = this.$room.find('.room__btn-right');
-    this.$images = this.$room.find('.room__images');
-    this.$image = this.$room.find('.room__image');
-    this.$circle = this.$room.find('.room__circle');
+    this.$btnLeft = this.$room.find('.js-room__btn-left');
+    this.$btnRight = this.$room.find('.js-room__btn-right');
+    this.$images = this.$room.find('.js-room__images');
+    this.$image = this.$room.find('.js-room__image');
+    this.$circle = this.$room.find('.js-room__circle');
+    this.roomCircleClassActive = 'room__circle_active';
     this.width$images = 0;
     this.$image.each((_, el) => {
       this.width$images -= $(el).width();
@@ -26,13 +27,13 @@ class Room {
     let newIdx = 0;
 
     this.$circle.each((idx, el) => {
-      if ($(el).hasClass('room__circle_active')) {
-        $(el).removeClass('room__circle_active');
+      if ($(el).hasClass(this.roomCircleClassActive)) {
+        $(el).removeClass(this.roomCircleClassActive);
         newIdx = idx - 1;
       }
     });
 
-    $(this.$circle[newIdx]).addClass('room__circle_active');
+    $(this.$circle[newIdx]).addClass(this.roomCircleClassActive);
   }
 
   handleBtnRightClick() {
@@ -43,13 +44,13 @@ class Room {
     let newIdx = 0;
 
     this.$circle.each((idx, el) => {
-      if ($(el).hasClass('room__circle_active')) {
-        $(el).removeClass('room__circle_active');
+      if ($(el).hasClass(this.roomCircleClassActive)) {
+        $(el).removeClass(this.roomCircleClassActive);
         newIdx = idx + 1;
       }
     });
 
-    $(this.$circle[newIdx]).addClass('room__circle_active');
+    $(this.$circle[newIdx]).addClass(this.roomCircleClassActive);
   }
 }
 

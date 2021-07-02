@@ -2,6 +2,11 @@ class RichCheckboxButtons {
   constructor(richCheckboxButtons) {
     this.$richCheckboxButtons = $(richCheckboxButtons);
     this.$richCheckboxButtonsInputs = this.$richCheckboxButtons.find('.js-rich-checkbox-buttons__input');
+    this.richCheckboxButtonsContainerClass = '.js-rich-checkbox-buttons__container';
+    this.richCheckboxButtonsLabelClass = '.js-rich-checkbox-buttons__label';
+    this.richCheckboxButtonsTextClass = '.js-rich-checkbox-buttons__text';
+    this.richCheckboxButtonsLabelClassFocus = 'rich-checkbox-buttons__label_focus';
+    this.richCheckboxButtonsTextClassFocus = 'rich-checkbox-buttons__text_focus';
     this.init();
   }
 
@@ -14,26 +19,26 @@ class RichCheckboxButtons {
 
   handleRichCheckboxButtonsInputFocus(e) {
     $(e.target)
-      .parents('.js-rich-checkbox-buttons__container')
-      .find('.js-rich-checkbox-buttons__label')
-      .addClass('rich-checkbox-buttons__label_focus');
+      .parents(this.richCheckboxButtonsContainerClass)
+      .find(this.richCheckboxButtonsLabelClass)
+      .addClass(this.richCheckboxButtonsLabelClassFocus);
 
     $(e.target)
-      .parents('.js-rich-checkbox-buttons__container')
-      .find('.js-rich-checkbox-buttons__text')
-      .addClass('rich-checkbox-buttons__text_focus');
+      .parents(this.richCheckboxButtonsContainerClass)
+      .find(this.richCheckboxButtonsTextClass)
+      .addClass(this.richCheckboxButtonsTextClassFocus);
   }
 
   handleRichCheckboxButtonsInputBlur(e) {
     $(e.target)
-      .parents('.js-rich-checkbox-buttons__container')
-      .find('.js-rich-checkbox-buttons__label')
-      .removeClass('rich-checkbox-buttons__label_focus');
+      .parents(this.richCheckboxButtonsContainerClass)
+      .find(this.richCheckboxButtonsLabelClass)
+      .removeClass(this.richCheckboxButtonsLabelClassFocus);
 
     $(e.target)
-      .parents('.js-rich-checkbox-buttons__container')
-      .find('.js-rich-checkbox-buttons__text')
-      .removeClass('rich-checkbox-buttons__text_focus');
+      .parents(this.richCheckboxButtonsContainerClass)
+      .find(this.richCheckboxButtonsTextClass)
+      .removeClass(this.richCheckboxButtonsTextClassFocus);
   }
 }
 

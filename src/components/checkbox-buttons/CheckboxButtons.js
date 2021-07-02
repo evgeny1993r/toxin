@@ -2,6 +2,7 @@ class CheckboxButtons {
   constructor(checkboxButtons) {
     this.$checkboxButtons = $(checkboxButtons);
     this.$checkboxButtonsInputs = this.$checkboxButtons.find('.js-checkbox-buttons__input');
+    this.checkboxButtonsClassLabelFocus = 'checkbox-buttons__label_focus';
     this.init();
   }
 
@@ -16,11 +17,11 @@ class CheckboxButtons {
   }
 
   handleCheckboxInputFocus(e) {
-    $(e.target).parent().addClass('checkbox-buttons__label_focus');
+    $(e.target).parent().addClass(this.checkboxButtonsClassLabelFocus);
   }
 
   handleCheckboxInputBlur(e) {
-    $(e.target).parent().removeClass('checkbox-buttons__label_focus');
+    $(e.target).parent().removeClass(this.checkboxButtonsClassLabelFocus);
   }
 }
 
