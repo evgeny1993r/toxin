@@ -114,9 +114,10 @@
   }
 
   &__container-impression-of-the-room {
-    margin-top: 3rem;
+    margin-top: 1.375rem;
 
     @media(max-width: 640px) {
+      margin-top: 3rem;
       justify-self: center;
     }
   }

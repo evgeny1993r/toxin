@@ -35,7 +35,7 @@ html(lang="ru")
                 { icon: 'icon-cosiness', title: 'Уют', text: 'Номер оснащён камином' }
               ])
           .room-details__container-impression-of-the-room
-            +impression-of-the-room()
+            +impression-of-the-room({ perfectly: 130, good: 65, satisfactory: 65, bad: 0 })
           .room-details__comments
             .room-details__comments-titles 
               h3.room-details__comments-title-text Отзывы посетителей номера

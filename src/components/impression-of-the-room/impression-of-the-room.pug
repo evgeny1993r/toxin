@@ -1,12 +1,40 @@
-mixin impression-of-the-room()      
-  .impression-of-the-room 
+mixin impression-of-the-room({ perfectly, good, satisfactory, bad })
+  - const count = perfectly + good + satisfactory + bad;
+  - const perfectlyPercent = Math.round(perfectly / count * 97);
+  - const perfectlyPercentString = `${perfectlyPercent} 100`;
+  - const satisfactoryPercent = Math.round(satisfactory / count * 97)
+  - const satisfactoryPercentString = `${satisfactoryPercent} 100`;
+  - const satisfactoryIndent = perfectlyPercent * -2 / 2 - 1;
+  - const goodPercent = Math.round(good / count * 97);
+  - const goodPercentSting = `${goodPercent} 100`;
+  - const goodIndent = perfectlyPercent * -2 / 2 + satisfactoryPercent * -2 / 2 - 2;
+  - const badPercent = Math.round(bad / count * 97);
+  - const badPercentString = `${badPercent} 100`;
+  - const badIndent = perfectlyPercent * -2 / 2 + satisfactoryPercent * -2 / 2 + goodPercent * -2 / 2 - 3;
+
+  .impression-of-the-room
     h3.impression-of-the-room__title Впечатления от номера
-    .impression-of-the-room__diagram 
-      .impression-of-the-room__sumptuously
-      .impression-of-the-room__satisfactorily
-      .impression-of-the-room__ok 
-      .impression-of-the-room__content 
-        span.impression-of-the-room__value 260
+    .impression-of-the-room__diagram
+      svg(viewBox="0 0 33 33")
+        defs
+          linearGradient#gradientPerfectly(x1="0%" y1="0%" x2="0%" y2="100%" gradientTransform="rotate(-90)")
+            stop(offset="0%" stop-color="#FFE39C")
+            stop(offset="100%" stop-color="#FFBA9C")
+          linearGradient#gradientSatisfactory(x1="0%" y1="0%" x2="0%" y2="100%")
+            stop(offset="0%" stop-color="#BC9CFF")
+            stop(offset="100%" stop-color="#8BA4F9")
+          linearGradient#gradientGood(x1="0%" y1="0%" x2="0%" y2="100%")
+            stop(offset="0%" stop-color="#6FCF97")
+            stop(offset="100%" stop-color="#66D2EA")
+          linearGradient#gradientBad(x1="0%" y1="0%" x2="0%" y2="100%")
+            stop(offset="0%" stop-color="#919191")
+            stop(offset="100%" stop-color="#3D4975")
+        circle(r="15.9" cx="50%" cy="50%" stroke-width="1" fill="none" stroke-dasharray= perfectlyPercentString stroke="url(#gradientPerfectly)")
+        circle(r="15.9" cx="50%" cy="50%" stroke-width="1" fill="none" stroke-dasharray= satisfactoryPercentString stroke-dashoffset= satisfactoryIndent stroke="url(#gradientSatisfactory)")
+        circle(r="15.9" cx="50%" cy="50%" stroke-width="1" fill="none" stroke-dasharray= goodPercentSting stroke-dashoffset= goodIndent stroke="url(#gradientGood)")
+        circle(r="15.9" cx="50%" cy="50%" stroke-width="1" fill="none" stroke-dasharray= badPercentString stroke-dashoffset= badIndent stroke="url(#gradientBad)")
+      .impression-of-the-room__container-value
+        span.impression-of-the-room__value #{count}
         span.impression-of-the-room__value-text голосов
     .impression-of-the-room__item-list
       .impression-of-the-room__item 
