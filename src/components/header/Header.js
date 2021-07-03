@@ -8,7 +8,7 @@ class Header {
   }
 
   handleHeaderLinkClick(e) {
-    this.$headerLink.removeClass();
+    this.$headerLink.removeClass(this.headerLinkClassActive);
     $(e.currentTarget).addClass(this.headerLinkClassActive);
   }
 }
