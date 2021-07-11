@@ -1,18 +1,18 @@
 import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.min.css';
 
-class Calendar {
-  constructor(calendar) {
-    this.$calendar = $(calendar);
-    this.entryDate = this.$calendar.data('entry-date');
-    this.checkOutDate = this.$calendar.data('check-out-date');
+class ProxyDatepicker {
+  constructor(datepicker) {
+    this.$datepicker = $(datepicker);
+    this.entryDate = this.$datepicker.data('entry-date');
+    this.checkOutDate = this.$datepicker.data('check-out-date');
     this.init();
     this.addButtonApply();
     this.selectedDates();
   }
 
   init() {
-    this.$calendar.datepicker({
+    this.$datepicker.datepicker({
       navTitles: {
         days: 'MM <i>yyyy</i>',
       },
@@ -28,18 +28,19 @@ class Calendar {
       `,
       clearButton: true,
       range: true,
+      inline: true,
     });
   }
 
   selectedDates() {
-    this.$calendar.data('datepicker').selectDate([
+    this.$datepicker.data('datepicker').selectDate([
       new Date(this.entryDate),
       new Date(this.checkOutDate),
     ]);
   }
 
   addButtonApply() {
-    this.$datepickerButtons = this.$calendar.find('.datepicker--buttons');
+    this.$datepickerButtons = this.$datepicker.siblings('.datepicker-inline').find('.datepicker--buttons');
     this.$datepickerButtons.append(
       $('<span>', {
         class: 'datepicker--button js-datepicker__apply',
@@ -49,12 +50,8 @@ class Calendar {
       }),
     );
   }
-
-  handleButtonApplyClick() {
-    this.$datepicker.hide();
-  }
 }
 
 export {
-  Calendar,
+  ProxyDatepicker,
 };

@@ -1,7 +1,7 @@
-import slider from './range-slider-plugin/range-slider-plugin';
+import './range-slider-plugin/range-slider-plugin';
 import './range-slider-plugin/range-slider-plugin.css';
 
-class RangeSlider {
+class ProxyRangeSlider {
   constructor(rangeSlider) {
     this.$rangeSlider = $(rangeSlider);
     this.init();
@@ -18,5 +18,5 @@ class RangeSlider {
 }
 
 export {
-  RangeSlider,
+  ProxyRangeSlider,
 };

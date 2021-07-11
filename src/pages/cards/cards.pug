@@ -3,7 +3,7 @@ include ../../components/search-room-form/search-room-form.pug
 include ../../components/registration-form/registration-form.pug
 include ../../components/verification-form/verification-form.pug 
 include ../../components/authorization-form/authorization-form.pug
-include ../../components/calendar/calendar.pug 
+include ../../components/datepicker/datepicker.pug 
 include ../../components/room/room.pug 
 
 <!DOCTYPE html>
@@ -34,8 +34,8 @@ html(lang="ru")
           })
           +authorization-form()
         .cards__container
-          .cards__container-calendar
-            +calendar({
+          .cards__container-datepicker
+            +datepicker({
               entryDate: '20 October, 2020', 
               checkOutDate: '24 October, 2020'
             })

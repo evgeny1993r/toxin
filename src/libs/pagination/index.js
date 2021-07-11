@@ -1,6 +1,6 @@
 import 'paginationjs/dist/pagination';
 
-class Pagination {
+class ProxyPagination {
   constructor(pagination) {
     this.$pagination = $(pagination);
     this.$paginationContainerItems = this.$pagination.children('.js-pagination__container-items');
@@ -43,5 +43,5 @@ class Pagination {
 }
 
 export {
-  Pagination,
+  ProxyPagination,
 };

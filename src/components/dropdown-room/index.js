@@ -1,6 +1,6 @@
-import { DropdownRoom } from './DropdownRoom';
+import { ProxyDropdownRoom } from '../../libs/dropdown-room';
 
 const $dropdownRoom = $('.js-dropdown-room');
 $dropdownRoom.each((_, dropdownRoom) => {
-  new DropdownRoom(dropdownRoom);
+  new ProxyDropdownRoom(dropdownRoom);
 });

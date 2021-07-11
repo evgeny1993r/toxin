@@ -1,6 +1,6 @@
-import { DateDropdown } from './DateDropdown';
+import { ProxyDateDropdown } from '../../libs/date-dropdown';
 
 const $dateDropdownDatepicker = $('.js-date-dropdown');
 $dateDropdownDatepicker.each((_, dateDropdownDatepicker) => {
-  new DateDropdown(dateDropdownDatepicker);
+  new ProxyDateDropdown(dateDropdownDatepicker);
 });

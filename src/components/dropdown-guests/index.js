@@ -1,6 +1,6 @@
-import { DropdownGuests } from './DropdownGuests';
+import { ProxyDropdownGuests } from '../../libs/dropdown-guests';
 
 const $dropdownGuests = $('.js-dropdown-guests');
 $dropdownGuests.each((_, dropdownGuests) => {
-  new DropdownGuests(dropdownGuests);
+  new ProxyDropdownGuests(dropdownGuests);
 });

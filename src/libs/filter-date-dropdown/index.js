@@ -1,7 +1,6 @@
 import 'air-datepicker';
-import 'air-datepicker/dist/css/datepicker.min.css';
 
-class FilterDateDropdown {
+class ProxyFilterDateDropdown {
   constructor(filterDateDropdown) {
     this.$filterDateDropdown = $(filterDateDropdown);
     this.$filterDateDropdownContainer = this.$filterDateDropdown.find('.js-filter-date-dropdown__container');
@@ -63,5 +62,5 @@ class FilterDateDropdown {
 }
 
 export {
-  FilterDateDropdown,
+  ProxyFilterDateDropdown,
 };

@@ -1,6 +1,6 @@
-import { Pagination } from './Pagination';
+import { ProxyPagination } from '../../libs/pagination';
 
 const $pagination = $('.js-pagination');
 $pagination.each((_, pagination) => {
-  new Pagination(pagination);
+  new ProxyPagination(pagination);
 });

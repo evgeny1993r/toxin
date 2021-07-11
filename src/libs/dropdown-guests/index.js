@@ -1,4 +1,6 @@
-class DropdownGuests {
+import './dropdown-guests-plugin/dropdown-guests-plugin';
+
+class ProxyDropdownGuests {
   constructor(dropdownGuestsElement) {
     this.$dropdownGuests = $(dropdownGuestsElement);
     this.adults = this.$dropdownGuests.data('adults');
@@ -9,5 +11,5 @@ class DropdownGuests {
 }
 
 export {
-  DropdownGuests,
+  ProxyDropdownGuests,
 };

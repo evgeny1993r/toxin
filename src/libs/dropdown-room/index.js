@@ -1,4 +1,6 @@
-class DropdownRoom {
+import './dropdown-room-plugin/dropdown-room-plugin';
+
+class ProxyDropdownRoom {
   constructor(dropdownRoomElement) {
     this.$dropdownRoom = $(dropdownRoomElement);
     this.bedrooms = this.$dropdownRoom.data('bedrooms');
@@ -9,5 +11,5 @@ class DropdownRoom {
 }
 
 export {
-  DropdownRoom,
+  ProxyDropdownRoom,
 };

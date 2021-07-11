@@ -1,6 +1,6 @@
-import { RangeSlider } from './RangeSlider';
+import { ProxyRangeSlider } from '../../libs/range-slider';
 
 const $rangeSlider = $('.js-range-slider__slider');
 $rangeSlider.each((_, rangeSlider) => {
-  new RangeSlider(rangeSlider);
+  new ProxyRangeSlider(rangeSlider);
 });
