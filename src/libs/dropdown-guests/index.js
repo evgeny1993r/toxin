@@ -1,4 +1,4 @@
-import './dropdown-guests-plugin/dropdown-guests-plugin';
+import '../../vendors/dropdown-guests-plugin/dropdown-guests-plugin';
 
 class ProxyDropdownGuests {
   constructor(dropdownGuestsElement) {

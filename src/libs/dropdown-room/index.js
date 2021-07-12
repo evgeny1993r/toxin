@@ -1,4 +1,4 @@
-import './dropdown-room-plugin/dropdown-room-plugin';
+import '../../vendors/dropdown-room-plugin/dropdown-room-plugin';
 
 class ProxyDropdownRoom {
   constructor(dropdownRoomElement) {
