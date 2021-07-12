@@ -70,12 +70,16 @@
   }
 
   &__link {
-    outline: none;
     text-decoration: none;
     color: $Dark-50;
 
+    &:hover {
+      color: $Dark-25;
+    }
+
     &:focus {
-      color: $Dark-100;
+      outline: 0.063rem solid $Dark-50;
+      outline-offset: 0.25rem;
     }
   }
 
@@ -170,8 +174,13 @@
     background-clip: text;
     outline: none;
 
-    &:focus {
+    &:hover {
       opacity: 0.5;
+    }
+
+    &:focus {
+      outline: 0.063rem solid $Dark-50;
+      outline-offset: 0.25rem;
     }
   }    
 }

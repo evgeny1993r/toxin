@@ -1,4 +1,4 @@
-$Dark-100:#1F2041;
+$Dark-100: #1F2041;
 $Dark-75: rgba(31, 32, 65, 0.75);
 $Dark-50: rgba(31, 32, 65, 0.5);
 $Dark-25: rgba(31, 32, 65, 0.25);
@@ -6,6 +6,7 @@ $Dark-5: rgba(31, 32, 65, 0.05);
 $Primary: #BC9CFF;
 $Secondary:  #6FCF97;
 $PrimaryLinearGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$PrimaryLinearGradientTransparent: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 $SecondaryLinearGradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 $DefaultFontFamily: sans-serif;
 $PrimaryFontFamily: Montserrat;

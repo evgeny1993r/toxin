@@ -17,6 +17,10 @@
     line-height: 1.5rem;
     color: $Dark-75;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__input {
@@ -24,14 +28,14 @@
     width: 1.25rem;
     height: 1.25rem;
     display: grid;
-    outline: none;
     cursor: pointer;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
 
     &:focus {
-      opacity: 0.5;
+      outline: 0.063rem solid $Dark-50;
+      outline-offset: 0.25rem;
     }
   }
 

@@ -117,10 +117,14 @@
     padding: 0.438rem 0 0.375rem 0;
     color: $Dark-50;
     letter-spacing: 0.0063rem;
-    outline: none;
+
+    &:hover {
+      color: $Dark-25;
+    }
 
     &:focus {
-      color: $Dark-100;
+      outline: 0.063rem solid $Dark-50;
+      outline-offset: 0.25rem;
     }
   }
 

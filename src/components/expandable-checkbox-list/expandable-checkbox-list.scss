@@ -45,10 +45,10 @@
     line-height: 1.125rem;
     color: $Dark-50;
     cursor: pointer;
-  }
 
-  &__label_focus {
-    color: $Dark-100;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__input {
@@ -57,10 +57,14 @@
     width: 1.25rem;
     height: 1.25rem;
     cursor: pointer;
-    outline: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+        
+    &:focus {
+      outline: 0.063rem solid $Dark-50;
+      outline-offset: 0.25rem;
+    }
   }
 
   &__input::before {

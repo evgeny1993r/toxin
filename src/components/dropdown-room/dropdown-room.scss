@@ -103,9 +103,14 @@
     outline: none;
   }
 
-  &__btn:focus {
+  &__btn:hover {
     border: 0.063rem solid $Dark-75;
     color: $Dark-50;
+  }
+
+  &__btn:focus {
+    outline: 0.063rem solid $Dark-50;
+    outline-offset: 0.25rem;
   }
 
   &__value {

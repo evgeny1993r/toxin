@@ -56,13 +56,16 @@ class ProxyDateDropdown {
     if (date.length === 0) {
       this.$entryInput.text('ДД.ММ.ГГГГ');
       this.$checkOutInput.text('ДД.ММ.ГГГГ');
+      this.$dateDropdown.trigger('clearDates');
     } else if (date.length === 1) {
       this.$entryInput.text(`${fd}`);
+      this.$dateDropdown.trigger('clearDates');
     } else if (date.length === 2) {
       this.$entryInput.text(fd.split(',')[0]);
       this.$entryInput.data('date', date[0]);
       this.$checkOutInput.text(fd.split(',')[1]);
       this.$checkOutInput.data('date', date[1]);
+      this.$dateDropdown.trigger('updateDates');
     }
   }
 
