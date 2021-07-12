@@ -24,31 +24,31 @@ html(lang="ru")
       +header()
       .search-room__content 
         .search-room__sidebar 
-          .search-room__container-filter-date-dropdown
-            h3.search-room__filter-date-dropdown-title даты пребывания в отеле
+          .search-room__container
+            h3.search-room__label даты пребывания в отеле
             +filter-date-dropdown('20 October, 2020', '25 October, 2020')
-          .search-room__container-dropdown-guests
-            h3.search-room__dropdown-guests-title гости 
+          .search-room__container
+            h3.search-room__label гости 
             +dropdownGuests(2, 0, 1) 
-          .search-room__container-range-slider 
+          .search-room__container
             +range-slider('диапазон цены', 'Стоимость за сутки пребывания в номере')
-          .search-room__container-checkbox-buttons
-            h3.search-room__checkbox-buttons-title checkbox buttons
+          .search-room__container
+            h3.search-room__label checkbox buttons
             +checkbox-buttons([
               { value: 'Можно курить', checked: false }, 
               { value: 'Можно с питомцами', checked: true }, 
               { value: 'Можно пригласить гостей (до 10 человек)', checked: true }
             ])
-          .search-room__container-rich-checkbox-buttons
-            h3.search-room__rich-checkbox-buttons-title доступность
+          .search-room__container
+            h3.search-room__label доступность
             +rich-checkbox-buttons([
               { title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.' }, 
               { title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.' }
             ])
-          .search-room__container-dropdown-room
-            h3.search-room__dropdown-room-title удобства номера 
+          .search-room__container
+            h3.search-room__label удобства номера 
             +dropdownRoom(2, 2, 0) 
-          .search-room__container-expandable-checkbox-list
+          .search-room__container
           +expandable-checkbox-list('дополнительные удобства', [
             { value: 'Завтрак', checked: false },
             { value: 'Письменный стол', checked: true },

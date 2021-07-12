@@ -26,49 +26,35 @@
     }
   }
 
-  &__container-dropdown-guests {
+  &__container:nth-child(2){
     margin-top: 1.25rem;
   }
 
-  &__container-range-slider {
+  &__container:nth-child(3),
+  &__container:nth-child(5) {
     margin-top: 2rem;
   }
 
-  &__container-checkbox-buttons {
+  &__container:nth-child(4),
+  &__container:nth-child(6),
+  &__container:nth-child(7) {
     margin-top: 1.8125rem;
   }
 
-  &__container-rich-checkbox-buttons {
-    margin-top: 2rem;
-  }
-
-  &__container-dropdown-room {
-    margin-top: 1.875rem;
-  }
-
-  &__container-expandable-checkbox-list {
-    margin-top: 1.875rem;
-  }
-
-  &__container-filter-date-dropdown,
-  &__container-dropdown-guests,
-  &__container-dropdown-room {
+  &__container:nth-child(1),
+  &__container:nth-child(2),
+  &__container:nth-child(6) {
     display: grid;
     row-gap: 0.3125rem;
   }
 
-  &__container-checkbox-buttons,
-  &__container-rich-checkbox-buttons {
+  &__container:nth-child(4),
+  &__container:nth-child(5) {
     display: grid;
     row-gap: 1rem;
   }
 
-  &__filter-date-dropdown-title,
-  &__dropdown-guests-title,
-  &__range-slider-title,
-  &__checkbox-buttons-title,
-  &__rich-checkbox-buttons-title,
-  &__dropdown-room-title {
+  &__label {
     font-family: $PrimaryFontFamily;
     font-style: normal;
     font-weight: bold;

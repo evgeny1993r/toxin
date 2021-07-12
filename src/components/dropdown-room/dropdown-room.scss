@@ -1,6 +1,8 @@
 @import '../../styles/virables.scss';
 
 .dropdown-room-list {
+  $block: &;
+
   width: 100%;
   position: relative;
 
@@ -58,11 +60,11 @@
     border-radius: 0 0 0.25rem 0.25rem;
   }
 
-  &.dropdown-room-list_active .dropdown-room-list__container {
+  &#{$block}_active &__container {
     display: grid;
   }
 
-  &.dropdown-room-list_active .dropdown-room-list__expression {
+  &#{$block}_active &__expression {
     border: 0.063rem solid $Dark-50;
     border-radius: 0.25rem 0.25rem 0 0;
   }

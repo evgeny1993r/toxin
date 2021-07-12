@@ -1,6 +1,8 @@
 @import '../../styles/virables.scss'; 
 
 .impression-of-the-room {
+  $block: &;
+
   display: grid;
   grid-template-columns: 120px auto;
   column-gap: 1.875rem;
@@ -79,19 +81,19 @@
     grid-template-columns: 0.625rem auto;
     column-gap: 0.313rem;
 
-    &:nth-child(1) .impression-of-the-room__circle {
+    &:nth-child(1) #{$block}__circle {
       background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
     }
 
-    &:nth-child(2) .impression-of-the-room__circle {
+    &:nth-child(2) #{$block}__circle {
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     }
 
-    &:nth-child(3) .impression-of-the-room__circle {
+    &:nth-child(3) #{$block}__circle {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
 
-    &:nth-child(4) .impression-of-the-room__circle {
+    &:nth-child(4) #{$block}__circle {
       background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
     }
   }
