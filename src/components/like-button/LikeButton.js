@@ -3,6 +3,11 @@ class LikeButton {
     this.$likeButton = $(likeButton);
     this.$icon = this.$likeButton.find('.js-like-button__icon');
     this.$likeButtonValue = this.$likeButton.find('.js-like-button__value');
+
+    this.init();
+  }
+
+  init() {
     this.likeButtonClassActive = 'like-button_active';
     this.iconLikeButtonClassActive = 'icon-like_button_active';
     this.iconLikeButtonClassInActive = 'icon-like_button_inActive';

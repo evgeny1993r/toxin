@@ -1,9 +1,6 @@
 class VerificationForm {
   constructor(verificationForm) {
     this.$verificationForm = $(verificationForm);
-    this.price = this.$verificationForm.data('price');
-    this.discount = this.$verificationForm.data('discount');
-    this.collecting = this.$verificationForm.data('collecting');
     this.$dateDropdown = this.$verificationForm.find('.js-date-dropdown');
     this.$dateDropdownEntryInput = this.$verificationForm.find('.js-date-dropdown__input-entry');
     this.$dateDropdownCheckOutInput = this.$verificationForm
@@ -18,13 +15,20 @@ class VerificationForm {
     this.$totalPrice = this.$verificationForm.find('.js-verification-form__total-price');
     this.$dateDropdownBtnApply = this.$verificationForm.find('.js-datepicker__apply');
 
+    this.init();
+  }
+
+  init() {
+    this.price = this.$verificationForm.data('price');
+    this.discount = this.$verificationForm.data('discount');
+    this.collecting = this.$verificationForm.data('collecting');
+
     this.createStringPrice();
     this.createStringDiscount();
     this.createStringCollection();
     this.createStringTotal();
 
     this.$dateDropdownBtnApply.on('click', this.handleButtonApply);
-
     this.$dateDropdown.on('updateDates', () => this.handleDateDropdownUpdateDates());
     this.$dateDropdown.on('clearDates', () => this.handleDateDropdownClearDates());
   }

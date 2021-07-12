@@ -1,18 +1,22 @@
 class MaskedTextField {
-  constructor() {
+  constructor(maskedTextField) {
+    this.$maskedTextField = $(maskedTextField);
+    this.$maskedTextFieldInput = this.$maskedTextField.find('.js-masked-text-field__input');
     this.init();
   }
 
   init() {
+    this.regularExpressionText = /[a-zа-яё]/i;
     this.dateValue = '';
-    this.$maskedTextField = $('.js-masked-text-field');
-    this.$maskedTextFieldInput = this.$maskedTextField.find('.masked-text-field__input');
     this.$maskedTextFieldInput.on('keyup', (e) => this.handleMaskedTextFieldInputKeyup(e));
   }
 
-  // eslint-disable-next-line class-methods-use-this
   isValidateValue(value, minValue, maxValue) {
-    if (!/[a-zа-яё]/i.test(value) && value >= minValue && value <= maxValue) return true;
+    if (
+      !this.regularExpressionText.test(value)
+      && value >= minValue
+      && value <= maxValue
+    ) return true;
     return false;
   }
 

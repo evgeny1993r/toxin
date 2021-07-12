@@ -6,22 +6,26 @@ class Room {
     this.$images = this.$room.find('.js-room__images');
     this.$image = this.$room.find('.js-room__image');
     this.$circle = this.$room.find('.js-room__circle');
+
+    this.init();
+  }
+
+  init() {
     this.roomCircleClassActive = 'room__circle_active';
     this.width$images = 0;
     this.$image.each((_, el) => {
       this.width$images -= $(el).width();
     });
-    this.WIDTH_$IMAGE = this.$image.width();
+    this.widthImage = this.$image.width();
     this.translateValue = 0;
 
     this.$btnLeft.on('click', () => this.handleBtnLeftClick());
-
     this.$btnRight.on('click', () => this.handleBtnRightClick());
   }
 
   handleBtnLeftClick() {
     if (this.translateValue >= 0) return;
-    this.translateValue += this.WIDTH_$IMAGE;
+    this.translateValue += this.widthImage;
     this.$images.css({ transform: `translateX(${this.translateValue}px)` });
 
     let newIdx = 0;
@@ -37,8 +41,8 @@ class Room {
   }
 
   handleBtnRightClick() {
-    if (this.translateValue <= this.width$images + this.WIDTH_$IMAGE) return;
-    this.translateValue -= this.WIDTH_$IMAGE;
+    if (this.translateValue <= this.width$images + this.widthImage) return;
+    this.translateValue -= this.widthImage;
     this.$images.css({ transform: `translateX(${this.translateValue}px)` });
 
     let newIdx = 0;

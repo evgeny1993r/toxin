@@ -2,6 +2,11 @@ class Header {
   constructor(header) {
     this.$header = $(header);
     this.$headerLink = this.$header.find('.js-header__link');
+
+    this.init();
+  }
+
+  init() {
     this.headerLinkClassActive = 'header__link_active';
 
     this.$headerLink.on('click', (e) => this.handleHeaderLinkClick(e));
